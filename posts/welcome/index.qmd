@@ -1,12 +1,13 @@
 ---
 title: "Welcome To My Blog"
 author: "Tristan O'Malley"
-date: "2022-09-21"
-categories: [news]
+date: "Week 1"
 ---
 
-This is the first post in a Quarto blog. Welcome!
+Welcome to Data Science Society's R Bootcamp
 
 ![](thumbnail.jpg)
 
 Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+
+![](C:/Users/Bethany/Downloads/myblog/website_thumbnail.png)

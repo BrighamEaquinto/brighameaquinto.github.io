@@ -2,7 +2,8 @@ project:
   type: website
 
 website:
-  title: "myblog"
+  title: "DSS BootCamp"
+  image: website_thumbnail.png
   navbar:
     right:
       - about.qmd
