@@ -1,7 +1,7 @@
 ---
 title: "Wrangling Data"
 author: "Brigham Eaquinto"
-date: "2022-09-21"
+date: "Week 3"
 categories: [R]
 ---
 

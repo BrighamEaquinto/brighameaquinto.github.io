@@ -1,7 +1,7 @@
 ---
 title: "Reading Data"
 author: "Brigham Eaquinto"
-date: "2022-09-21"
+date: "Week 2"
 categories: [R]
 ---
 
