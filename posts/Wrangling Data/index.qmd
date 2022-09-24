@@ -1,0 +1,9 @@
+---
+title: "Wrangling Data"
+author: "Brigham Eaquinto"
+date: "2022-09-21"
+categories: [R]
+---
+
+
+"It's working! IT'S WORKING!!"
