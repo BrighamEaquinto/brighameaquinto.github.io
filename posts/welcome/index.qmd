@@ -8,23 +8,57 @@ Welcome to Data Science Society's R Bootcamp
 
 ![](RStudio-Logo-Flat.jpg)
 
-Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+
+## Course Outline: 
+
+__Installation__
+
+What kind of data are we using?
+
+__Reading in Data__
+
+- BaseR and Tidyverse
+- there's a from readr option using the "import dataset" option from the environment pane
+
+__Wrangling Data__
+
+- dplyr, for data manipulation
+- tidyr, for data tidying
+- cleaning, the difference between them all, and when they should all take place in the process
+
+__Visualization of Data__
+
+- the glory of ggplot
+
+```{r}
+#| eval: false
+#| include: true
+#| message: false
+#| warning: false
+
+library(tidyverse)
+iris %>%
+    ggplot()+
+    geom_point(aes(Sepal.Length, Sepal.Width, color = Species))+
+    labs(
+        title = "Title here",
+        x = "Sepal Length", 
+        y = "Sepal Width"
+        )
+```
 
 
 
-Course Outline: 
-
-Installation
-    What kind of data are we using?
-    Reading in data
-        - BaseR and Tidyverse
-        - there's a from readr option using the "import dataset" option from the environment pane
-    Wrangling data
-    - dplyr, for data manipulation
-    - tidyr, for data tidying
-    - cleaning, the difference between them all, and when they should all take place in the process
-    Visualization of data
-        - the glory of ggplot
-
+## Ideas 
 
 - Have a notes to instructors page or part of the repo
+- have a page just for the interface of RStudio
+  - hot keys
+  - shortcuts
+  - such and such
+- have a page for R/Python equivalents
+- have a page for other generally useful things
+    - setting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows
+
+
+please please 

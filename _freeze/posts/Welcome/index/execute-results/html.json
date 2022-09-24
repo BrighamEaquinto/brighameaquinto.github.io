@@ -1,0 +1,14 @@
+{
+  "hash": "026a0e92b2f29b8e670717f0ab6c2b8c",
+  "result": {
+    "markdown": "---\ntitle: \"Welcome to Bootcamp\"\nauthor: \"Brigham Eaquinto\"\ndate: \"Week 1\"\n---\n\n\nWelcome to Data Science Society's R Bootcamp\n\n![](RStudio-Logo-Flat.jpg)\n\n\n## Course Outline: \n\n__Installation__\n\nWhat kind of data are we using?\n\n__Reading in Data__\n\n- BaseR and Tidyverse\n- there's a from readr option using the \"import dataset\" option from the environment pane\n\n__Wrangling Data__\n\n- dplyr, for data manipulation\n- tidyr, for data tidying\n- cleaning, the difference between them all, and when they should all take place in the process\n\n__Visualization of Data__\n\n- the glory of ggplot\n\n```{{r}}\n#| eval: false\n#| include: false\n#| message: false\n#| warning: false\n\nlibrary(tidyverse)\niris %>%\n    ggplot()+\n    geom_point(aes(Sepal.Length, Sepal.Width, color = Species))+\n    labs(\n        title = \"Title here\",\n        x = \"Sepal Length\", \n        y = \"Sepal Width\"\n        )\n```\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\niris %>%\n    ggplot()+\n    geom_point(aes(Sepal.Length, Sepal.Width, color = Species))+\n    labs(\n        title = \"Title here\",\n        x = \"Sepal Length\", \n        y = \"Sepal Width\"\n        )\n```\n:::\n\n\n\n## Ideas \n\n- Have a notes to instructors page or part of the repo\n- have a page just for the interface of RStudio\n  - hot keys\n  - shortcuts\n  - such and such\n- have a page for R/Python equivalents\n- have a page for other generally useful things\n    - setting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows\n\n\nplease please ",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
