@@ -1,13 +1,30 @@
 ---
-title: "Welcome To My Blog"
-author: "Tristan O'Malley"
+title: "Welcome to Bootcamp"
+author: "Brigham Eaquinto"
 date: "Week 1"
 ---
 
 Welcome to Data Science Society's R Bootcamp
 
-![](thumbnail.jpg)
+![](RStudio-Logo-Flat.jpg)
 
 Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
 
-![](C:/Users/Bethany/Downloads/myblog/website_thumbnail.png)
+
+
+Course Outline: 
+
+Installation
+    What kind of data are we using?
+    Reading in data
+        - BaseR and Tidyverse
+        - there's a from readr option using the "import dataset" option from the environment pane
+    Wrangling data
+    - dplyr, for data manipulation
+    - tidyr, for data tidying
+    - cleaning, the difference between them all, and when they should all take place in the process
+    Visualization of data
+        - the glory of ggplot
+
+
+- Have a notes to instructors page or part of the repo
