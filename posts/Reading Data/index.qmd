@@ -9,3 +9,4 @@ categories: [R]
 This will teach about how to get a dataset into RStudio so that we can use it. 
 
 There are different types of data, we won't get into the nitty-gritty parts of it, but there is structured, semi-structured, and ustructured data. We will be playing around with structured data (think excel files). Examples of the other types of data are pictures, video, and audio files. 
+
