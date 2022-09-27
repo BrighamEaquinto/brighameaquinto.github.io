@@ -1,21 +1,34 @@
 project:
   type: website
   output-dir: docs
+  preview:
+    port: 314
 
 website:
   title: "DSS BootCamp"
   image: website_thumbnail.png
+  description: "Notes by Brigham Eaquinto. I've learned that data science is information using. More specifically information organizing and applied guessing."
+  repo-actions: [issue]
   navbar:
-    right:
-      - about.qmd
+    background: primary
+    pinned: true
+  page-footer: 
+    left: 
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/BrighamEaquinto
+      - icon: linkedin
+        href: https://www.linkedin.com/in/brighameaquinto/
+    background: secondary
 format:
   html:
-    theme: cosmo
+    code-copy: true
+    code-overflow: wrap
+    smooth-scroll: true
+    theme: 
+      light: flatly
+      dark: darkly
     css: styles.css
+
 
 
 

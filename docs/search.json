@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "posts/Welcome/index.html",
+    "href": "posts/Welcome/index.html",
+    "title": "Welcome to Bootcamp",
+    "section": "",
+    "text": "Welcome to Data Science Society’s R Bootcamp"
+  },
+  {
+    "objectID": "posts/Welcome/index.html#course-outline",
+    "href": "posts/Welcome/index.html#course-outline",
+    "title": "Welcome to Bootcamp",
+    "section": "Course Outline:",
+    "text": "Course Outline:\nInstallation\nWhat kind of data are we using?\nReading in Data\n\nBaseR and Tidyverse\n\nuse this page to teach tidyverse https://tidyverse.tidyverse.org/index.html\n\nthere’s a from readr option using the “import dataset” option from the environment pane\n\nWrangling Data\n\ndplyr, for data manipulation\ntidyr, for data tidying\ncleaning, the difference between them all, and when they should all take place in the process\n\nVisualization of Data\n\nthe glory of ggplot\n\n\nlibrary(tidyverse)\niris %>%\n    ggplot()+\n    geom_point(aes(Sepal.Length, Sepal.Width, color = Species))+\n    labs(\n        title = \"Title here\",\n        x = \"Sepal Length\", \n        y = \"Sepal Width\"\n        )"
+  },
+  {
+    "objectID": "posts/Welcome/index.html#ideas",
+    "href": "posts/Welcome/index.html#ideas",
+    "title": "Welcome to Bootcamp",
+    "section": "Ideas",
+    "text": "Ideas\n\nHave a notes to instructors page or part of the repo\nhave a page just for the interface of RStudio\n\nhot keys\nshortcuts\nsuch and such\n\nhave a page for R/Python equivalents\nhave a page for other generally useful things\n\nsetting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows\n\nhow can I use the wiki tab on the github page? What is the proper usage of it?\n\n\n\nimport pandas as pd\n\ndat = pd.read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Olympics.csv\")\n\n\n\nFirst column commentary, code chunks, images, graphs, and charts.\nFirst column commentary, code chunks, images, graphs, and charts.\nFirst column commentary, code chunks, images, graphs, and charts.\nFirst column commentary, code chunks, images, graphs, and charts.\n\nSecond column commentary, code chunks, images, graphs, and charts.\nSecond column commentary, code chunks, images, graphs, and charts.\nSecond column commentary, code chunks, images, graphs, and charts.\nSecond column commentary, code chunks, images, graphs, and charts."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Curriculim",
