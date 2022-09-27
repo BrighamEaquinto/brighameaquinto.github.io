@@ -1,9 +1,30 @@
 ---
 title: "Reading Data"
-author: "Brigham Eaquinto"
-date: "Week 2"
-categories: [R]
 ---
+
+
+How to read in data so that we can use it: 
+
+#### Reading in data that is located on your computer
+
+```{r}
+#| eval: false
+library(tidyverse)
+
+data1 <- read_csv("C:/Users/Bethany/Downloads/US_Population_200_Years.csv")
+```
+
+
+
+#### Getting data from a URL
+
+```{r}
+#| eval: false
+library(tidyverse)
+
+data1 <- read_csv("https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv")
+
+```
 
 
 This will teach about how to get a dataset into RStudio so that we can use it. 

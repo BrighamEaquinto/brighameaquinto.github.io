@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -97,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -114,12 +177,20 @@ ul.task-list li input[type="checkbox"] {
           <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Curriculim</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Curriculim</h1>
+    <div class="quarto-title column-page-right">
+      <div class="quarto-title-block"><div><h1 class="title d-none d-lg-block">Curriculim</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
                       </div>
   </div>
     
@@ -133,147 +204,49 @@ ul.task-list li input[type="checkbox"] {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./posts/Reading Data/index.html" class="sidebar-item-text sidebar-link">Reading Data</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./posts/Wrangling Data/index.html" class="sidebar-item-text sidebar-link">Wrangling Data</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./posts/Visualize Data/index.html" class="sidebar-item-text sidebar-link">Visualize Data</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-right" id="quarto-document-content">
 
 
 
 
-<p>Below you will find the tutorials</p>
-<p>Have fun</p>
 
 
+
+<!-- -->
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="978332400000" data-listing-file-modified-sort="1664252762052" data-listing-reading-time-sort="1.55">
-<div class="thumbnail">
-<p><a href="./posts/Welcome/index.html"> <img src="./posts/Welcome/RStudio-Logo-Flat.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Welcome/index.html">
-<h3 class="no-anchor listing-title">
-Welcome to Bootcamp
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-Welcome to Data Science Society’s R Bootcamp
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Welcome/index.html">
-<div class="listing-date">
-Jan 1, 2001
-</div>
-<div class="listing-author">
-Brigham Eaquinto
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="R" data-listing-date-sort="981010800000" data-listing-file-modified-sort="1664220062307" data-listing-reading-time-sort="0.325">
-<div class="thumbnail">
-<a href="./posts/Reading Data/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/Reading Data/index.html"></a></p>
-</div>
-<div class="body">
-<a href="./posts/Reading Data/index.html">
-<h3 class="no-anchor listing-title">
-Reading Data
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-This will teach about how to get a dataset into RStudio so that we can use it.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Reading Data/index.html">
-<div class="listing-date">
-Feb 1, 2001
-</div>
-<div class="listing-author">
-Brigham Eaquinto
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="R" data-listing-date-sort="981010800000" data-listing-file-modified-sort="1664220090240" data-listing-reading-time-sort="0.325">
-<div class="thumbnail">
-<a href="./posts/Reading Data/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/Reading Data/index.html"></a></p>
-</div>
-<div class="body">
-<a href="./posts/Reading Data/index.html">
-<h3 class="no-anchor listing-title">
-Reading Data
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-This will teach about how to get a dataset into RStudio so that we can use it.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Reading Data/index.html">
-<div class="listing-date">
-Feb 1, 2001
-</div>
-<div class="listing-author">
-Brigham Eaquinto
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="R" data-listing-date-sort="983430000000" data-listing-file-modified-sort="1664056166345" data-listing-reading-time-sort="0.02">
-<div class="thumbnail">
-<a href="./posts/Wrangling Data/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/Wrangling Data/index.html"></a></p>
-</div>
-<div class="body">
-<a href="./posts/Wrangling Data/index.html">
-<h3 class="no-anchor listing-title">
-Wrangling Data
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-“It’s working! IT’S WORKING!!”
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Wrangling Data/index.html">
-<div class="listing-date">
-Mar 1, 2001
-</div>
-<div class="listing-author">
-Brigham Eaquinto
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="986108400000" data-listing-file-modified-sort="1664056162361" data-listing-reading-time-sort="0.01">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="986108400000" data-listing-file-modified-sort="1664056162361" data-listing-reading-time-sort="0.01">
 <div class="thumbnail">
 <a href="./posts/Quarto Tutorial/index.html">
 <div class="thumbnail-image">
@@ -300,6 +273,102 @@ This page
 Apr 1, 2001
 </div>
 </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1664259871180" data-listing-reading-time-sort="0.445">
+<div class="thumbnail">
+<a href="./posts/Reading Data/index.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="./posts/Reading Data/index.html"></a></p>
+</div>
+<div class="body">
+<a href="./posts/Reading Data/index.html">
+<h3 class="no-anchor listing-title">
+Reading Data
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+How to read in data so that we can use it:
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/Reading Data/index.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1664256907259" data-listing-reading-time-sort="0.005">
+<div class="thumbnail">
+<a href="./posts/Visualize Data/index.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="./posts/Visualize Data/index.html"></a></p>
+</div>
+<div class="body">
+<a href="./posts/Visualize Data/index.html">
+<h3 class="no-anchor listing-title">
+Visualize Data
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+#ggplot
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/Visualize Data/index.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1664257437553" data-listing-reading-time-sort="1.55">
+<div class="thumbnail">
+<p><a href="./posts/Welcome/index.html"> <img src="./posts/Welcome/RStudio-Logo-Flat.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/Welcome/index.html">
+<h3 class="no-anchor listing-title">
+Welcome to Bootcamp
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+Welcome to Data Science Society’s R Bootcamp
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/Welcome/index.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1664257216081" data-listing-reading-time-sort="0.02">
+<div class="thumbnail">
+<a href="./posts/Wrangling Data/index.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="./posts/Wrangling Data/index.html"></a></p>
+</div>
+<div class="body">
+<a href="./posts/Wrangling Data/index.html">
+<h3 class="no-anchor listing-title">
+Wrangling Data
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+“It’s working! IT’S WORKING!!”
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/Wrangling Data/index.html"> </a>
 </div>
 </div>
 </div>
@@ -468,6 +537,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
@@ -517,7 +637,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Curriculim"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  contents: posts</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  sort: "date asc"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  type: default</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  categories: false</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  sort-ui: false</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  filter-ui: false</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> full</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="an">title-block-banner:</span><span class="co"> true</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

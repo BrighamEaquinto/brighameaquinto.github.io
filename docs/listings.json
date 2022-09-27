@@ -2,11 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Quarto Tutorial/index.html",
+      "/posts/Reading Data/index.html",
+      "/posts/Visualize Data/index.html",
       "/posts/Welcome/index.html",
-      "/posts/Reading Data/index.html",
-      "/posts/Reading Data/index.html",
-      "/posts/Wrangling Data/index.html",
-      "/posts/Quarto Tutorial/index.html"
+      "/posts/Wrangling Data/index.html"
     ]
   }
 ]

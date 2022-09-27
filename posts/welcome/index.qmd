@@ -1,7 +1,5 @@
 ---
 title: "Welcome to Bootcamp"
-author: "Brigham Eaquinto"
-date: "Week 1"
 ---
 
 Welcome to Data Science Society's R Bootcamp

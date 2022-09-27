@@ -1,8 +1,5 @@
 ---
 title: "Wrangling Data"
-author: "Brigham Eaquinto"
-date: "Week 3"
-categories: [R]
 ---
 
 

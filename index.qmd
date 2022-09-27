@@ -10,8 +10,3 @@ listing:
 page-layout: full
 title-block-banner: true
 ---
-
-
-Below you will find the tutorials 
-
-Have fun

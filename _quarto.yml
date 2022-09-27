@@ -6,12 +6,22 @@ project:
 
 website:
   title: "DSS BootCamp"
-  image: website_thumbnail.png
-  description: "Notes by Brigham Eaquinto. I've learned that data science is information using. More specifically information organizing and applied guessing."
-  repo-actions: [issue]
+  image: website_thumbnail.jpg
+  repo-url: https://github.com/BrighamEaquinto/brighameaquinto.github.io.git
+  repo-actions: [edit, issue]
   navbar:
     background: primary
     pinned: true
+  sidebar:
+    # title: "Tutorials"
+    style: "docked"
+    search: true
+    background: light
+    collapse-level: 2
+    contents: 
+      - posts\Reading Data\index.qmd
+      - posts\Wrangling Data\index.qmd
+      - posts\Visualize Data\index.qmd
   page-footer: 
     left: 
       - icon: github
@@ -21,8 +31,11 @@ website:
     background: secondary
 format:
   html:
-    code-copy: true
+    code-copy: true 
     code-overflow: wrap
+    code-fold: show
+    code-tools: true
+    code-summary: "Show the code"
     smooth-scroll: true
     theme: 
       light: flatly
