@@ -1,5 +1,7 @@
 ---
 title: "Reading Data"
+message: false
+warning: false
 ---
 
 
@@ -8,22 +10,27 @@ How to read in data so that we can use it:
 #### Reading in data that is located on your computer
 
 ```{r}
-#| eval: false
+#| eval: true
+
 library(tidyverse)
 
 data1 <- read_csv("C:/Users/Bethany/Downloads/US_Population_200_Years.csv")
+
+head(data1)
 ```
 
+text here
 
 
 #### Getting data from a URL
 
-```{r}
-#| eval: false
-library(tidyverse)
+```{python}
+#| eval: true
+import pandas as pd
 
-data1 <- read_csv("https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv")
+data1 = pd.read_csv("https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv")
 
+data1.head()
 ```
 
 
