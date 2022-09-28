@@ -1,5 +1,5 @@
 ---
-title: "Curriculim"
+title: "R Bootcamp"
 listing:
   contents: posts
   sort: "date asc"
@@ -10,3 +10,4 @@ listing:
 page-layout: full
 title-block-banner: true
 ---
+

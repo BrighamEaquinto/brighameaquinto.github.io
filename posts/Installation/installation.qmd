@@ -1,0 +1,11 @@
+---
+title: "Installation"
+data: September 2022
+---
+
+Instructions for installation
+
+R is the magic software that lets us do cool things with data.
+RStudio is the interface for how to use R. 
+
+How's this? 

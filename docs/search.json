@@ -23,9 +23,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Curriculim",
+    "title": "R Bootcamp",
     "section": "",
-    "text": "Apr 1, 2001\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Apr 1, 2001\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/Reading Data/index.html",
@@ -47,5 +47,40 @@
     "title": "Wrangling Data",
     "section": "",
     "text": "“It’s working! IT’S WORKING!!”"
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "DSS BootCamp",
+    "section": "",
+    "text": "#| eval: false\nlibrary(tidyverse)"
+  },
+  {
+    "objectID": "posts/Installation/index.html",
+    "href": "posts/Installation/index.html",
+    "title": "Installation Tutorial",
+    "section": "",
+    "text": "R is the magic software that lets us do cool things with data. RStudio is the interface for how to use R."
+  },
+  {
+    "objectID": "posts/Quarto Tutorial/index.html",
+    "href": "posts/Quarto Tutorial/index.html",
+    "title": "Quarto Tutorial",
+    "section": "",
+    "text": "This page"
+  },
+  {
+    "objectID": "posts/Installation/installation.html",
+    "href": "posts/Installation/installation.html",
+    "title": "Installation",
+    "section": "",
+    "text": "R is the magic software that lets us do cool things with data. RStudio is the interface for how to use R.\nHow’s this?"
+  },
+  {
+    "objectID": "posts/notes.html",
+    "href": "posts/notes.html",
+    "title": "Notes",
+    "section": "",
+    "text": "Does this work?"
   }
 ]
