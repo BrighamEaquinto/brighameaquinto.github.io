@@ -34,7 +34,7 @@ format:
     code-copy: true 
     code-overflow: wrap
     code-fold: show
-    code-tools: true
+    code-tools: false
     code-summary: "Show the code"
     smooth-scroll: true
     theme: 

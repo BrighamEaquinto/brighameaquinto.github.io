@@ -3,9 +3,26 @@ title: "Installation"
 data: September 2022
 ---
 
-Instructions for installation
+## First Comparison: R vs RStudio
 
+:::::::::::::: {.columns}
+::: {.column width=\"45%\"}
 R is the magic software that lets us do cool things with data.
+
+Download [R](https://cran.rstudio.com/bin/windows/base/R-4.2.1-win.exe)
+:::
+
+::: {.column width=\"45%\"}
 RStudio is the interface for how to use R. 
 
-How's this? 
+Download [RStudio](https://download1.rstudio.org/desktop/windows/RStudio-2022.07.2-576.exe)
+:::
+::::::::::::::
+
+## Second Comparison: BaseR vs the Tidyverse
+
+Run this code in the console
+
+``` python
+install.packages("tidyverse")
+```

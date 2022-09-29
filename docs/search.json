@@ -74,7 +74,7 @@
     "href": "posts/Installation/installation.html",
     "title": "Installation",
     "section": "",
-    "text": "R is the magic software that lets us do cool things with data. RStudio is the interface for how to use R.\nHow’s this?"
+    "text": "R is the magic software that lets us do cool things with data.\nDownload R\n\nRStudio is the interface for how to use R.\nDownload RStudio"
   },
   {
     "objectID": "posts/notes.html",
@@ -82,5 +82,19 @@
     "title": "Notes",
     "section": "",
     "text": "Does this work?"
+  },
+  {
+    "objectID": "posts/Quarto Tutorial/quarto.html",
+    "href": "posts/Quarto Tutorial/quarto.html",
+    "title": "Quarto Tutorial",
+    "section": "",
+    "text": "This page"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#second-comparison-baser-vs-the-tidyverse",
+    "href": "posts/Installation/installation.html#second-comparison-baser-vs-the-tidyverse",
+    "title": "Installation",
+    "section": "Second Comparison: BaseR vs the Tidyverse",
+    "text": "Second Comparison: BaseR vs the Tidyverse\nRun this code in the console\ninstall.packages(\"tidyverse\")"
   }
 ]
