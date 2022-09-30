@@ -3,6 +3,14 @@ title: "Installation"
 data: September 2022
 ---
 
+
+<p align="left" width="10" height="10"> ![](Rlogo.jpg) </p>
+
+<p align="right" width="10" height="10"> ![](RStudio.jpg) </p>
+<!-- ![](RStudio.jpg){:.centered} -->
+
+
+
 # First Comparison: R vs RStudio
 
 :::::::::::::: {.columns}

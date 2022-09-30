@@ -74,7 +74,7 @@
     "href": "posts/Installation/installation.html",
     "title": "Installation",
     "section": "",
-    "text": "R is the magic software that lets us do cool things with data.\nDownload R\n\nRStudio is the interface for how to use R.\nDownload RStudio"
+    "text": "{:.centered}"
   },
   {
     "objectID": "posts/notes.html",
