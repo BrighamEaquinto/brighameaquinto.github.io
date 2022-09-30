@@ -3,7 +3,7 @@ title: "Installation"
 data: September 2022
 ---
 
-## First Comparison: R vs RStudio
+# First Comparison: R vs RStudio
 
 :::::::::::::: {.columns}
 ::: {.column width=\"45%\"}
@@ -11,7 +11,6 @@ R is the magic software that lets us do cool things with data.
 
 Download [R](https://cran.rstudio.com/bin/windows/base/R-4.2.1-win.exe)
 :::
-
 ::: {.column width=\"45%\"}
 RStudio is the interface for how to use R. 
 
@@ -19,10 +18,168 @@ Download [RStudio](https://download1.rstudio.org/desktop/windows/RStudio-2022.07
 :::
 ::::::::::::::
 
-## Second Comparison: BaseR vs the Tidyverse
+# Second Comparison: Base R vs the Tidyverse
 
-Run this code in the console
 
-``` python
+
+
+:::::::::::::: {.columns}
+::: {.column width=\"45%\"}
+Base R is native to R; no additional installations are required. If you use this, I will turn in my grave. Please don't make your life more difficult, use the Tidyverse.
+:::
+::: {.column width=\"45%\"}
+Run this code in the console to download the tidyverse
+
+``` r
 install.packages("tidyverse")
 ```
+
+In order to be able to use this package, put this code at the top of your R Script or RMD file 
+
+``` r 
+library(tidyverse)
+```
+:::
+::::::::::::::
+
+<br>
+
+<h2 align="center"> Selecting Columns </h2>
+
+:::::::::::::: {.columns}
+::: {.column width=\"45%\"}
+###### Base R
+
+`df$column_name`
+
+`df[[]]`
+:::
+
+::: {.column width=\"45%\"}
+###### Tidyverse
+
+`df %>% select()`
+:::
+::::::::::::::
+
+
+<h2 align="center">Making New Columns</h2>
+
+:::::::::::::: {.columns}
+::: {.column width=\"45%\"}
+<h6 align="center"; style="color:#808080"> Base R </h6>
+
+<h6 align="center"> `df$profit <- df$revenue - df$cost` </h6>
+
+:::
+::: {.column width=\"45%\"}
+<h6 align="center"; style="color:#808080">Tidyverse</h6>
+
+<h6 align="center"> `df %>% mutate(profit = revenue - cost)` </h6>
+
+<h6 align="center"> or </h6>
+
+<h6 align="center"> `mutate(df, profit = revenue - cost)` </h6>
+
+:::
+::::::::::::::
+
+<h2 align="center"> Filtering Data </h2>
+
+:::::::::::::: {.columns}
+::: {.column width=\"45%\"}
+Base R 
+
+df[df$temperature > 45]
+:::
+::: {.column width=\"45%\"}
+Tidyverse
+
+`df %>% filter(temperature > 45)`
+
+or 
+
+`filter(df, temperature > 45)`
+:::
+::::::::::::::
+
+
+## Grouping & Summarising Data
+
+:::::::::::::: {.columns}
+::: {.column width=\"45%\"}
+Base R 
+
+I'm not sure how to do this yet...
+
+:::
+::: {.column width=\"45%\"}
+Tidyverse 
+
+df %>% group_by(city) %>% summarise(Avg_House_Price = mean(house_price))
+
+:::
+::::::::::::::
+
+
+## Sorting Data
+
+:::::::::::::: {.columns}
+::: {.column width=\"45%\"}
+Base R
+
+`mtcars[order(mpg, -cyl),]`
+:::
+::: {.column width=\"45%\"}
+Tidyverse
+
+mtcars %>% arrange(mpg, desc(cyl))
+
+or 
+
+arrange(mtcars, mpg, desc(cyl))
+:::
+::::::::::::::
+
+
+
+<br>
+Check out [this page](https://dplyr.tidyverse.org/articles/base.html) for more comparisons. 
+
+Filtering Data in Base R: 
+
+- https://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/
+- https://cran.r-project.org/web/packages/crunch/vignettes/filters.html
+
+
+
+
+<!-- ## Third Comparison: R Script vs. RMD
+
+ 
+
+
+:::::::::::::: {.columns}
+::: {.column width=\"45%\"}
+An R script is used for analysis that is not for 
+:::
+
+::: {.column width=\"45%\"}
+RMDs (also QMDs) are used for reporting. If you have data and have analysis to show, this is the tool to use. It allows code results like graphs, summaries, tables to be in the report along with your own commentary about it.  
+:::
+:::::::::::::: -->
+
+
+
+<!-- :::: {style="display: grid; grid-column-gap: 10px; "}
+::: {}
+```{r}
+head(iris)
+```
+:::
+::: {}
+```{r}
+plot(iris)
+```
+:::
+:::: -->

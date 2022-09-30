@@ -64,20 +64,48 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-Curriculim .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-Curriculim'] = new List('listing-Curriculim', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-Other .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-Other'] = new List('listing-Other', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -179,16 +207,87 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-default" id="listing-Curriculim">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="986108400000" data-listing-file-modified-sort="1664056162361" data-listing-reading-time-sort="0.01">
-<div class="thumbnail">
-<a href="./posts/Quarto Tutorial/quarto.html">
-<div class="thumbnail-image">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1664559150067" data-listing-reading-time-sort="1.565">
+<div class="body">
+<a href="./posts/Installation/installation.html">
+<h3 class="no-anchor listing-title">
+Installation
+</h3>
+<div class="listing-subtitle">
 
 </div>
-</a><p><a href="./posts/Quarto Tutorial/quarto.html"></a></p>
+<div class="listing-description">
+R is the magic software that lets us do cool things with data.
 </div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/Installation/installation.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1664338134267" data-listing-reading-time-sort="0.465">
+<div class="body">
+<a href="./posts/Reading Data/index.html">
+<h3 class="no-anchor listing-title">
+Reading Data
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+How to read in data so that we can use it:
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/Reading Data/index.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1664256907259" data-listing-reading-time-sort="0.005">
+<div class="body">
+<a href="./posts/Visualize Data/index.html">
+<h3 class="no-anchor listing-title">
+Visualize Data
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+#ggplot
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/Visualize Data/index.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1664257216081" data-listing-reading-time-sort="0.02">
+<div class="body">
+<a href="./posts/Wrangling Data/index.html">
+<h3 class="no-anchor listing-title">
+Wrangling Data
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+“It’s working! IT’S WORKING!!”
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/Wrangling Data/index.html"> </a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div><div class="quarto-listing quarto-listing-container-default" id="listing-Other">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="986108400000" data-listing-file-modified-sort="1664056162361" data-listing-reading-time-sort="0.01">
 <div class="body">
 <a href="./posts/Quarto Tutorial/quarto.html">
 <h3 class="no-anchor listing-title">
@@ -208,127 +307,6 @@ This page
 Apr 1, 2001
 </div>
 </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1664480630245" data-listing-reading-time-sort="0.825">
-<div class="thumbnail">
-<a href="./posts/Installation/installation.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/Installation/installation.html"></a></p>
-</div>
-<div class="body">
-<a href="./posts/Installation/installation.html">
-<h3 class="no-anchor listing-title">
-Installation
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-R is the magic software that lets us do cool things with data.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Installation/installation.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1664338134267" data-listing-reading-time-sort="0.465">
-<div class="thumbnail">
-<a href="./posts/Reading Data/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/Reading Data/index.html"></a></p>
-</div>
-<div class="body">
-<a href="./posts/Reading Data/index.html">
-<h3 class="no-anchor listing-title">
-Reading Data
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-How to read in data so that we can use it:
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Reading Data/index.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1664256907259" data-listing-reading-time-sort="0.005">
-<div class="thumbnail">
-<a href="./posts/Visualize Data/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/Visualize Data/index.html"></a></p>
-</div>
-<div class="body">
-<a href="./posts/Visualize Data/index.html">
-<h3 class="no-anchor listing-title">
-Visualize Data
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-#ggplot
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Visualize Data/index.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1664257437553" data-listing-reading-time-sort="1.55">
-<div class="thumbnail">
-<p><a href="./posts/Welcome/index.html"> <img src="./posts/Welcome/RStudio-Logo-Flat.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Welcome/index.html">
-<h3 class="no-anchor listing-title">
-Welcome to Bootcamp
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-Welcome to Data Science Society’s R Bootcamp
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Welcome/index.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1664257216081" data-listing-reading-time-sort="0.02">
-<div class="thumbnail">
-<a href="./posts/Wrangling Data/index.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/Wrangling Data/index.html"></a></p>
-</div>
-<div class="body">
-<a href="./posts/Wrangling Data/index.html">
-<h3 class="no-anchor listing-title">
-Wrangling Data
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-“It’s working! IT’S WORKING!!”
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Wrangling Data/index.html"> </a>
 </div>
 </div>
 </div>

@@ -9,5 +9,15 @@
       "/posts/Welcome/index.html",
       "/posts/Wrangling Data/index.html"
     ]
+  },
+  {
+    "listing": "/main.html",
+    "items": [
+      "/posts/Installation/installation.html",
+      "/posts/Reading Data/index.html",
+      "/posts/Visualize Data/index.html",
+      "/posts/Wrangling Data/index.html",
+      "/posts/Quarto Tutorial/quarto.html"
+    ]
   }
 ]

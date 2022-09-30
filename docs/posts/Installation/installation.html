@@ -206,8 +206,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<section id="first-comparison-r-vs-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="first-comparison-r-vs-rstudio">First Comparison: R vs RStudio</h2>
+<section id="first-comparison-r-vs-rstudio" class="level1">
+<h1>First Comparison: R vs RStudio</h1>
 <div class="columns">
 <div class="column" style="width:&quot;45%&quot;;">
 <p>R is the magic software that lets us do cool things with data.</p>
@@ -218,12 +218,159 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </section>
-<section id="second-comparison-baser-vs-the-tidyverse" class="level2">
-<h2 class="anchored" data-anchor-id="second-comparison-baser-vs-the-tidyverse">Second Comparison: BaseR vs the Tidyverse</h2>
-<p>Run this code in the console</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>install.packages(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="second-comparison-base-r-vs-the-tidyverse" class="level1">
+<h1>Second Comparison: Base R vs the Tidyverse</h1>
+<div class="columns">
+<div class="column" style="width:&quot;45%&quot;;">
+<p>Base R is native to R; no additional installations are required. If you use this, I will turn in my grave. Please don’t make your life more difficult, use the Tidyverse.</p>
+</div><div class="column" style="width:&quot;45%&quot;;">
+<p>Run this code in the console to download the tidyverse</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In order to be able to use this package, put this code at the top of your R Script or RMD file</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p><br></p>
+<h2 align="center" class="anchored" data-anchor-id="second-comparison-base-r-vs-the-tidyverse">
+Selecting Columns
+</h2>
+<div class="columns">
+<div class="column" style="width:&quot;45%&quot;;">
+<section id="base-r" class="level6">
+<h6 class="anchored" data-anchor-id="base-r">Base R</h6>
+<p><code>df$column_name</code></p>
+<p><code>df[[]]</code></p>
+</section>
+</div><div class="column" style="width:&quot;45%&quot;;">
+<section id="tidyverse" class="level6">
+<h6 class="anchored" data-anchor-id="tidyverse">Tidyverse</h6>
+<p><code>df %&gt;% select()</code></p>
+</section>
+</div>
+</div>
+<h2 align="center" class="anchored">
+Making New Columns
+</h2>
+<div class="columns">
+<div class="column" style="width:&quot;45%&quot;;">
+<h6 align="center" ;="" style="color:#808080" class="anchored"> Base R </h6>
+<h6 align="center" class="anchored">
+<code>df$profit &lt;- df$revenue - df$cost</code>
+</h6>
+</div><div class="column" style="width:&quot;45%&quot;;">
+<h6 align="center" ;="" style="color:#808080" class="anchored">Tidyverse</h6>
+<h6 align="center" class="anchored">
+<code>df %&gt;% mutate(profit = revenue - cost)</code>
+</h6>
+<h6 align="center" class="anchored">
+or
+</h6>
+<h6 align="center" class="anchored">
+<code>mutate(df, profit = revenue - cost)</code>
+</h6>
+</div>
+</div>
+<h2 align="center" class="anchored">
+Filtering Data
+</h2>
+<div class="columns">
+<div class="column" style="width:&quot;45%&quot;;">
+<p>Base R</p>
+<p>df[df$temperature &gt; 45]</p>
+</div><div class="column" style="width:&quot;45%&quot;;">
+<p>Tidyverse</p>
+<p><code>df %&gt;% filter(temperature &gt; 45)</code></p>
+<p>or</p>
+<p><code>filter(df, temperature &gt; 45)</code></p>
+</div>
+</div>
+<section id="grouping-summarising-data" class="level2">
+<h2 class="anchored" data-anchor-id="grouping-summarising-data">Grouping &amp; Summarising Data</h2>
+<div class="columns">
+<div class="column" style="width:&quot;45%&quot;;">
+<p>Base R</p>
+<p>I’m not sure how to do this yet…</p>
+</div><div class="column" style="width:&quot;45%&quot;;">
+<p>Tidyverse</p>
+<p>df %&gt;% group_by(city) %&gt;% summarise(Avg_House_Price = mean(house_price))</p>
+</div>
+</div>
+</section>
+<section id="sorting-data" class="level2">
+<h2 class="anchored" data-anchor-id="sorting-data">Sorting Data</h2>
+<div class="columns">
+<div class="column" style="width:&quot;45%&quot;;">
+<p>Base R</p>
+<p><code>mtcars[order(mpg, -cyl),]</code></p>
+</div><div class="column" style="width:&quot;45%&quot;;">
+<p>Tidyverse</p>
+<p>mtcars %&gt;% arrange(mpg, desc(cyl))</p>
+<p>or</p>
+<p>arrange(mtcars, mpg, desc(cyl))</p>
+</div>
+</div>
+<p><br> Check out <a href="https://dplyr.tidyverse.org/articles/base.html">this page</a> for more comparisons.</p>
+<p>Filtering Data in Base R:</p>
+<ul>
+<li>https://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/</li>
+<li>https://cran.r-project.org/web/packages/crunch/vignettes/filters.html</li>
+</ul>
+
+<!-- ## Third Comparison: R Script vs. RMD
+
+ 
 
 
+:::::::::::::: {.columns}
+::: {.column width=\"45%\"}
+An R script is used for analysis that is not for 
+:::
+
+::: {.column width=\"45%\"}
+RMDs (also QMDs) are used for reporting. If you have data and have analysis to show, this is the tool to use. It allows code results like graphs, summaries, tables to be in the report along with your own commentary about it.  
+:::
+:::::::::::::: -->
+<!-- :::: {style="display: grid; grid-column-gap: 10px; "}
+::: {}
+
+::: {.cell}
+
+```{.r .cell-code}
+head(iris)
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa
+```
+:::
+:::
+
+:::
+::: {}
+
+::: {.cell}
+
+```{.r .cell-code}
+plot(iris)
+```
+
+::: {.cell-output-display}
+![](installation_files/figure-html/unnamed-chunk-2-1.png){width=672}
+:::
+:::
+
+:::
+:::: -->
+
+
+</section>
 </section>
 
 </main> <!-- /main -->

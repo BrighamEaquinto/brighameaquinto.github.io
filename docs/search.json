@@ -53,7 +53,7 @@
     "href": "notes.html",
     "title": "DSS BootCamp",
     "section": "",
-    "text": "#| eval: false\nlibrary(tidyverse)"
+    "text": "#| eval: false\nlibrary(tidyverse)\nCan’t enter or color headers using Markdown, must use CSS instead: <h6 align=\"center\"; style=\"color:#808080\"> Base R </h6>"
   },
   {
     "objectID": "posts/Installation/index.html",
@@ -95,6 +95,62 @@
     "href": "posts/Installation/installation.html#second-comparison-baser-vs-the-tidyverse",
     "title": "Installation",
     "section": "Second Comparison: BaseR vs the Tidyverse",
-    "text": "Second Comparison: BaseR vs the Tidyverse\nRun this code in the console\ninstall.packages(\"tidyverse\")"
+    "text": "Second Comparison: BaseR vs the Tidyverse\n\n\nBase R is native to R; no additional installations are required. If you use this, I will turn in my grave. Please don’t make your life more difficult, use the Tidyverse.\n\nRun this code in the console\ninstall.packages(\"tidyverse\")\n\n\nHere is more on this if you’d like to look into it: https://dplyr.tidyverse.org/articles/base.html"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#row-1-col-1",
+    "href": "posts/Installation/installation.html#row-1-col-1",
+    "title": "Installation",
+    "section": "Row 1 Col 1",
+    "text": "Row 1 Col 1\nsome content"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#row-1-col-2",
+    "href": "posts/Installation/installation.html#row-1-col-2",
+    "title": "Installation",
+    "section": "Row 1 Col 2",
+    "text": "Row 1 Col 2\nsome content"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#row-2-col-1",
+    "href": "posts/Installation/installation.html#row-2-col-1",
+    "title": "Installation",
+    "section": "Row 2 Col 1",
+    "text": "Row 2 Col 1\nsome content"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#row-2-col-2",
+    "href": "posts/Installation/installation.html#row-2-col-2",
+    "title": "Installation",
+    "section": "Row 2 Col 2",
+    "text": "Row 2 Col 2\nsome content"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#second-comparison-base-r-vs-the-tidyverse",
+    "href": "posts/Installation/installation.html#second-comparison-base-r-vs-the-tidyverse",
+    "title": "Installation",
+    "section": "Second Comparison: Base R vs the Tidyverse",
+    "text": "Second Comparison: Base R vs the Tidyverse\n\n\nBase R is native to R; no additional installations are required. If you use this, I will turn in my grave. Please don’t make your life more difficult, use the Tidyverse.\n\nRun this code in the console to download the tidyverse\ninstall.packages(\"tidyverse\")\nIn order to be able to use this package, put this code at the top of your R Script or RMD file\nlibrary(tidyverse)\n\n\nBelow are examples of Base R to Tidyverse comparisons\n\nSelecting Columns\n\n\n\n\nBase R\ndf$column_name\ndf[[]]\n\n\n\nTidyverse\ndf %>% select()\n\n\n\n\nMaking New Columns\n\n\n\n Base R \n\ndf$profit <- df$revenue - df$cost\n\n\nTidyverse\n\ndf %>% mutate(profit = revenue - cost)\n\n\nor\n\n\nmutate(df, profit = revenue - cost)\n\n\n\n\nFiltering Data\n\n\n\nBase R\ndf[df$temperature > 45]\n\nTidyverse\ndf %>% filter(temperature > 45)\nor\nfilter(df, temperature > 45)"
+  },
+  {
+    "objectID": "main.html",
+    "href": "main.html",
+    "title": "R Bootcamp",
+    "section": "",
+    "text": "Quarto Tutorial\n\n\n\n\n\n\n\n\n\n\n\n\nApr 1, 2001\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#grouping-summarising-data",
+    "href": "posts/Installation/installation.html#grouping-summarising-data",
+    "title": "Installation",
+    "section": "Grouping & Summarising Data",
+    "text": "Grouping & Summarising Data\n\n\nBase R\nI’m not sure how to do this yet…\n\nTidyverse\ndf %>% group_by(city) %>% summarise(Avg_House_Price = mean(house_price))"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#sorting-data",
+    "href": "posts/Installation/installation.html#sorting-data",
+    "title": "Installation",
+    "section": "Sorting Data",
+    "text": "Sorting Data\n\n\nBase R\nmtcars[order(mpg, -cyl),]\n\nTidyverse\nmtcars %>% arrange(mpg, desc(cyl))\nor\narrange(mtcars, mpg, desc(cyl))\n\n\n Check out this page for more comparisons.\nFiltering Data in Base R:\n\nhttps://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/\nhttps://cran.r-project.org/web/packages/crunch/vignettes/filters.html"
   }
 ]

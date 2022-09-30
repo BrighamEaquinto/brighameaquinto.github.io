@@ -1,0 +1,22 @@
+---
+title: "R Bootcamp"
+listing:
+  - id: Curriculim
+    contents:
+      - "posts/Installation/installation.qmd"
+      - "posts/Reading Data/index.qmd"
+      - "posts/Wrangling Data/index.qmd"
+      - "posts/Visualize Data/index.qmd"
+    categories: false
+    sort-ui: false
+    filter-ui: false
+  - id: Other
+    contents: 
+      - "posts/Quarto Tutorial/quarto.qmd"
+    categories: false
+    sort-ui: false
+    filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
