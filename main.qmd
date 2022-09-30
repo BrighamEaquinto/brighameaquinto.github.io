@@ -4,9 +4,9 @@ listing:
   - id: Curriculim
     contents:
       - "posts/Installation/installation.qmd"
-      - "posts/Reading Data/index.qmd"
-      - "posts/Wrangling Data/index.qmd"
-      - "posts/Visualize Data/index.qmd"
+      - "posts/Reading Data/reading_data.qmd"
+      - "posts/Wrangling Data/wrangling_data.qmd"
+      - "posts/Visualize Data/visualizing_data.qmd"
     categories: false
     sort-ui: false
     filter-ui: false

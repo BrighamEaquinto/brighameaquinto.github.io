@@ -1,0 +1,14 @@
+{
+  "hash": "53812afd6533e87aa0b011eab5cddb07",
+  "result": {
+    "markdown": "---\ntitle: \"Reading Data\"\nmessage: false\nwarning: false\n---\n\n\n\nHow to read in data so that we can use it: \n\n#### Reading in data that is located on your computer\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n\ndata1 <- read_csv(\"C:/Users/Bethany/Downloads/US_Population_200_Years.csv\")\n\nhead(data1)\n```\n:::\n\n\ntext here\n\n\n#### Getting data from a URL\n\n\n::: {.cell}\n\n```{.python .cell-code}\nimport pandas as pd\n\ndata1 = pd.read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\")\n\ndata1.head()\n```\n:::\n\n\n\nThis will teach about how to get a dataset into RStudio so that we can use it. \n\nThere are different types of data, we won't get into the nitty-gritty parts of it, but there is structured, semi-structured, and ustructured data. We will be playing around with structured data (think excel files). Examples of the other types of data are pictures, video, and audio files. \n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

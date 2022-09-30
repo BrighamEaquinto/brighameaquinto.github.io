@@ -71,9 +71,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -178,20 +178,14 @@ ul.task-list li input[type="checkbox"] {
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./posts/Reading Data/index.html" class="sidebar-item-text sidebar-link">Reading Data</a>
-  </div>
-</li>
+  posts\Reading Data\index.qmd
+  </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./posts/Wrangling Data/index.html" class="sidebar-item-text sidebar-link">Wrangling Data</a>
-  </div>
-</li>
+  posts\Wrangling Data\index.qmd
+  </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./posts/Visualize Data/index.html" class="sidebar-item-text sidebar-link">Visualize Data</a>
-  </div>
-</li>
+  posts\Visualize Data\index.qmd
+  </li>
     </ul>
     </div>
 </nav>
@@ -210,6 +204,13 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-listing quarto-listing-container-default" id="listing-Curriculim">
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1664559150067" data-listing-reading-time-sort="1.565">
+<div class="thumbnail">
+<a href="./posts/Installation/installation.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="./posts/Installation/installation.html"></a></p>
+</div>
 <div class="body">
 <a href="./posts/Installation/installation.html">
 <h3 class="no-anchor listing-title">
@@ -227,9 +228,16 @@ R is the magic software that lets us do cool things with data.
 <a href="./posts/Installation/installation.html"> </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1664338134267" data-listing-reading-time-sort="0.465">
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1664561373129" data-listing-reading-time-sort="0.465">
+<div class="thumbnail">
+<a href="./posts/Reading Data/reading_data.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="./posts/Reading Data/reading_data.html"></a></p>
+</div>
 <div class="body">
-<a href="./posts/Reading Data/index.html">
+<a href="./posts/Reading Data/reading_data.html">
 <h3 class="no-anchor listing-title">
 Reading Data
 </h3>
@@ -242,12 +250,15 @@ How to read in data so that we can use it:
 </a>
 </div>
 <div class="metadata">
-<a href="./posts/Reading Data/index.html"> </a>
+<a href="./posts/Reading Data/reading_data.html"> </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1664256907259" data-listing-reading-time-sort="0.005">
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1664561465273" data-listing-reading-time-sort="0.005">
+<div class="thumbnail">
+<p><a href="./posts/Visualize Data/visualizing_data.html"> <img src="./posts/Visualize Data/dplyr.jpg" class="thumnail-image"> </a></p>
+</div>
 <div class="body">
-<a href="./posts/Visualize Data/index.html">
+<a href="./posts/Visualize Data/visualizing_data.html">
 <h3 class="no-anchor listing-title">
 Visualize Data
 </h3>
@@ -260,12 +271,19 @@ Visualize Data
 </a>
 </div>
 <div class="metadata">
-<a href="./posts/Visualize Data/index.html"> </a>
+<a href="./posts/Visualize Data/visualizing_data.html"> </a>
 </div>
 </div>
 <div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1664257216081" data-listing-reading-time-sort="0.02">
+<div class="thumbnail">
+<a href="./posts/Wrangling Data/wrangling_data.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="./posts/Wrangling Data/wrangling_data.html"></a></p>
+</div>
 <div class="body">
-<a href="./posts/Wrangling Data/index.html">
+<a href="./posts/Wrangling Data/wrangling_data.html">
 <h3 class="no-anchor listing-title">
 Wrangling Data
 </h3>
@@ -278,7 +296,7 @@ Wrangling Data
 </a>
 </div>
 <div class="metadata">
-<a href="./posts/Wrangling Data/index.html"> </a>
+<a href="./posts/Wrangling Data/wrangling_data.html"> </a>
 </div>
 </div>
 </div>

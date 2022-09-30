@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DSS BootCamp - Welcome to Bootcamp</title>
+<title>DSS BootCamp - Reading Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -147,7 +147,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Welcome to Bootcamp</h1>
+      <h1 class="quarto-secondary-nav-title">Reading Data</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -158,7 +158,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block">Welcome to Bootcamp</h1>
+      <h1 class="title d-none d-lg-block">Reading Data</h1>
                       </div>
   </div>
     
@@ -200,85 +200,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<p>Welcome to Data Science Society’s R Bootcamp</p>
-<!-- ![](RStudio-Logo-Flat.jpg) -->
-<section id="course-outline" class="level2">
-<h2 class="anchored" data-anchor-id="course-outline">Course Outline:</h2>
-<p><strong>Installation</strong></p>
-<p>What kind of data are we using?</p>
-<p><strong>Reading in Data</strong></p>
-<ul>
-<li>BaseR and Tidyverse
-<ul>
-<li>use this page to teach tidyverse https://tidyverse.tidyverse.org/index.html</li>
-</ul></li>
-<li>there’s a from readr option using the “import dataset” option from the environment pane</li>
-</ul>
-<p><strong>Wrangling Data</strong></p>
-<ul>
-<li>dplyr, for data manipulation</li>
-<li>tidyr, for data tidying</li>
-<li>cleaning, the difference between them all, and when they should all take place in the process</li>
-</ul>
-<p><strong>Visualization of Data</strong></p>
-<ul>
-<li>the glory of ggplot</li>
-</ul>
+<p>How to read in data so that we can use it:</p>
+<section id="reading-in-data-that-is-located-on-your-computer" class="level4">
+<h4 class="anchored" data-anchor-id="reading-in-data-that-is-located-on-your-computer">Reading in data that is located on your computer</h4>
 <div class="cell">
 <details open="">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>iris <span class="sc">%&gt;%</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>()<span class="sc">+</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(Sepal.Length, Sepal.Width, <span class="at">color =</span> Species))<span class="sc">+</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="st">"Title here"</span>,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="st">"Sepal Length"</span>, </span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="st">"Sepal Width"</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data1 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/Bethany/Downloads/US_Population_200_Years.csv"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+<p>text here</p>
 </section>
-<section id="ideas" class="level2">
-<h2 class="anchored" data-anchor-id="ideas">Ideas</h2>
-<ul>
-<li>Have a notes to instructors page or part of the repo</li>
-<li>have a page just for the interface of RStudio
-<ul>
-<li>hot keys</li>
-<li>shortcuts</li>
-<li>such and such</li>
-</ul></li>
-<li>have a page for R/Python equivalents</li>
-<li>have a page for other generally useful things
-<ul>
-<li>setting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows</li>
-</ul></li>
-<li>how can I use the wiki tab on the github page? What is the proper usage of it?</li>
-</ul>
-<p><br><br><br><br></p>
+<section id="getting-data-from-a-url" class="level4">
+<h4 class="anchored" data-anchor-id="getting-data-from-a-url">Getting data from a URL</h4>
 <div class="cell">
 <details open="">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>dat <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Olympics.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>data1 <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>data1.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div class="columns">
-<div class="column" style="width:&quot;50%&quot;;">
-<p>First column commentary, code chunks, images, graphs, and charts.</p>
-<p>First column commentary, code chunks, images, graphs, and charts.</p>
-<p>First column commentary, code chunks, images, graphs, and charts.</p>
-<p>First column commentary, code chunks, images, graphs, and charts.</p>
-</div><div class="column" style="width:&quot;50%&quot;;">
-<p>Second column commentary, code chunks, images, graphs, and charts.</p>
-<p>Second column commentary, code chunks, images, graphs, and charts.</p>
-<p>Second column commentary, code chunks, images, graphs, and charts.</p>
-<p>Second column commentary, code chunks, images, graphs, and charts.</p>
-</div>
-</div>
-<!-- add this later: https://github.com/dracula/gh-pages -->
+<p>This will teach about how to get a dataset into RStudio so that we can use it.</p>
+<p>There are different types of data, we won’t get into the nitty-gritty parts of it, but there is structured, semi-structured, and ustructured data. We will be playing around with structured data (think excel files). Examples of the other types of data are pictures, video, and audio files.</p>
 
 
 </section>

@@ -152,5 +152,26 @@
     "title": "Installation",
     "section": "Sorting Data",
     "text": "Sorting Data\n\n\nBase R\nmtcars[order(mpg, -cyl),]\n\nTidyverse\nmtcars %>% arrange(mpg, desc(cyl))\nor\narrange(mtcars, mpg, desc(cyl))\n\n\n Check out this page for more comparisons.\nFiltering Data in Base R:\n\nhttps://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/\nhttps://cran.r-project.org/web/packages/crunch/vignettes/filters.html"
+  },
+  {
+    "objectID": "posts/Visualize Data/visualizing_data.html",
+    "href": "posts/Visualize Data/visualizing_data.html",
+    "title": "Visualize Data",
+    "section": "",
+    "text": "#ggplot"
+  },
+  {
+    "objectID": "posts/Reading Data/reading_data.html",
+    "href": "posts/Reading Data/reading_data.html",
+    "title": "Reading Data",
+    "section": "",
+    "text": "Reading in data that is located on your computer\n\n\nShow the code\nlibrary(tidyverse)\n\ndata1 <- read_csv(\"C:/Users/Bethany/Downloads/US_Population_200_Years.csv\")\n\nhead(data1)\n\n\ntext here\n\n\nGetting data from a URL\n\n\nShow the code\nimport pandas as pd\n\ndata1 = pd.read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\")\n\ndata1.head()\n\n\nThis will teach about how to get a dataset into RStudio so that we can use it.\nThere are different types of data, we won’t get into the nitty-gritty parts of it, but there is structured, semi-structured, and ustructured data. We will be playing around with structured data (think excel files). Examples of the other types of data are pictures, video, and audio files."
+  },
+  {
+    "objectID": "posts/Wrangling Data/wrangling_data.html",
+    "href": "posts/Wrangling Data/wrangling_data.html",
+    "title": "Wrangling Data",
+    "section": "",
+    "text": "“It’s working! IT’S WORKING!!”"
   }
 ]

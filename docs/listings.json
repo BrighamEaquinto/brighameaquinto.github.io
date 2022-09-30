@@ -14,9 +14,9 @@
     "listing": "/main.html",
     "items": [
       "/posts/Installation/installation.html",
-      "/posts/Reading Data/index.html",
-      "/posts/Visualize Data/index.html",
-      "/posts/Wrangling Data/index.html",
+      "/posts/Reading Data/reading_data.html",
+      "/posts/Visualize Data/visualizing_data.html",
+      "/posts/Wrangling Data/wrangling_data.html",
       "/posts/Quarto Tutorial/quarto.html"
     ]
   }

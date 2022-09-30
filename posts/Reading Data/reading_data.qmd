@@ -10,7 +10,7 @@ How to read in data so that we can use it:
 #### Reading in data that is located on your computer
 
 ```{r}
-#| eval: true
+#| eval: false
 
 library(tidyverse)
 
@@ -25,7 +25,7 @@ text here
 #### Getting data from a URL
 
 ```{python}
-#| eval: true
+#| eval: false
 import pandas as pd
 
 data1 = pd.read_csv("https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv")
