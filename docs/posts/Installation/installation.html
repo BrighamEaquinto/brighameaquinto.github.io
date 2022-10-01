@@ -128,7 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed fullcontent">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -199,7 +199,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
 </nav>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#first-comparison-r-vs-rstudio" id="toc-first-comparison-r-vs-rstudio" class="nav-link active" data-scroll-target="#first-comparison-r-vs-rstudio">First Comparison: R vs RStudio</a>
+  <ul class="collapse">
+  <li><a href="#download-instructions" id="toc-download-instructions" class="nav-link" data-scroll-target="#download-instructions">Download Instructions</a></li>
+  </ul></li>
+  <li><a href="#second-comparison-r-script-vs-r-markdown-rmd" id="toc-second-comparison-r-script-vs-r-markdown-rmd" class="nav-link" data-scroll-target="#second-comparison-r-script-vs-r-markdown-rmd">Second Comparison: R Script vs R Markdown (RMD)</a></li>
+  <li><a href="#third-comparison-base-r-vs-the-tidyverse" id="toc-third-comparison-base-r-vs-the-tidyverse" class="nav-link" data-scroll-target="#third-comparison-base-r-vs-the-tidyverse">Third Comparison: Base R vs the Tidyverse</a>
+  <ul class="collapse">
+  <li><a href="#selecting-columns" id="toc-selecting-columns" class="nav-link" data-scroll-target="#selecting-columns">Selecting Columns</a></li>
+  <li><a href="#making-new-columns" id="toc-making-new-columns" class="nav-link" data-scroll-target="#making-new-columns">Making New Columns</a></li>
+  <li><a href="#filtering-data" id="toc-filtering-data" class="nav-link" data-scroll-target="#filtering-data">Filtering Data</a></li>
+  <li><a href="#grouping-summarising-data" id="toc-grouping-summarising-data" class="nav-link" data-scroll-target="#grouping-summarising-data">Grouping &amp; Summarising Data</a></li>
+  <li><a href="#sorting-data" id="toc-sorting-data" class="nav-link" data-scroll-target="#sorting-data">Sorting Data</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/edit/main/posts/Installation/installation.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -222,7 +242,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>RStudio is the interface for how to use R.</p>
 </div>
 </div>
-<hr>
+<section id="download-instructions" class="level2">
+<h2 class="anchored" data-anchor-id="download-instructions">Download Instructions</h2>
 <p>Google “download R” or go to <a href="https://cran.r-project.org/bin/windows/base/">this link</a> to download it. The page should look like this.</p>
 <p><img src="rstudio_download.jpg" class="img-fluid"></p>
 <!-- Download [R](https://cran.rstudio.com/bin/windows/base/R-4.2.1-win.exe) -->
@@ -231,8 +252,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- Download [RStudio](https://download1.rstudio.org/desktop/windows/RStudio-2022.07.2-576.exe) -->
 <hr>
 </section>
-<section id="second-comparison-base-r-vs-the-tidyverse" class="level1">
-<h1>Second Comparison: Base R vs the Tidyverse</h1>
+</section>
+<section id="second-comparison-r-script-vs-r-markdown-rmd" class="level1">
+<h1>Second Comparison: R Script vs R Markdown (RMD)</h1>
+<div class="columns">
+<div class="column" style="width:&quot;45%&quot;;">
+<p>R scripts are more for crunching numbers when you do not intend on sharing the results.</p>
+<p>You can do exploratory data analysis (EDA) to become more familiar with your data like make summaries of the data, make graphs, and clean up a dataset.</p>
+</div><div class="column" style="width:&quot;45%&quot;;">
+<p>RMDs are for communicating your analysis. This allows you read in data, manipulate it, make graphs, and comment on the results.</p>
+<p>Here is an example from an <a href="https://byuistats.github.io/Statistics-Notebook/Analyses/StudentHousing.html">analysis on student housing</a> )</p>
+<p>(Later we’ll talk about the new replacement to RMD’s called <a href="https://quarto.org/">QMD’s</a>).</p>
+</div>
+</div>
+</section>
+<section id="third-comparison-base-r-vs-the-tidyverse" class="level1">
+<h1>Third Comparison: Base R vs the Tidyverse</h1>
 <div class="columns">
 <div class="column" style="width:&quot;45%&quot;;">
 <p>Base R is the native tools that R has to deal with data. The syntax is outdated and better tools are available to use.</p>
@@ -242,23 +277,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div><div class="column" style="width:&quot;45%&quot;;">
 <p>The Tidyverse allows chainable actions like this:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>state_gdp <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        population <span class="sc">&gt;</span> <span class="dv">5000000</span> <span class="sc">&amp;</span> </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        state <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Washington"</span>, <span class="st">"Oregon"</span>, <span class="st">"California"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(state, gdp, debt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>new_dataset <span class="ot">&lt;-</span> dataset <span class="sc">%&gt;%</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Run this code in the console to download the tidyverse</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>In order to be able to use this package, put this code at the top of your R Script or RMD file</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<p><br></p>
-<h3 align="center" class="anchored">
-Selecting Columns
-</h3>
+</div>
+<p><br><br></p>
+<!-- <h3 align="center"> Selecting Columns </h3> -->
+<section id="selecting-columns" class="level2">
+<h2 class="anchored" data-anchor-id="selecting-columns">Selecting Columns</h2>
 <div class="columns">
 <div class="column" style="width:&quot;45%&quot;;">
 <section id="base-r" class="level6">
@@ -269,139 +309,96 @@ Selecting Columns
 </div><div class="column" style="width:&quot;45%&quot;;">
 <section id="tidyverse" class="level6">
 <h6 class="anchored" data-anchor-id="tidyverse">Tidyverse</h6>
-<p><code>df %&gt;% select()</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">select</span>(column1, column2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>or</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(df, column1, column2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </div>
 </div>
-<h3 align="center" class="anchored">
-Making New Columns
-</h3>
+</section>
+<section id="making-new-columns" class="level2">
+<h2 class="anchored" data-anchor-id="making-new-columns">Making New Columns</h2>
 <div class="columns">
 <div class="column" style="width:&quot;45%&quot;;">
-<h6 align="center" ;="" style="color:#808080" class="anchored"> Base R </h6>
-<h6 align="center" class="anchored">
-<code>df$profit &lt;- df$revenue - df$cost</code>
-</h6>
+<section id="base-r-1" class="level6">
+<h6 class="anchored" data-anchor-id="base-r-1">Base R</h6>
+<p><code>df$profit &lt;- df$revenue - df$cost</code></p>
+</section>
 </div><div class="column" style="width:&quot;45%&quot;;">
-<h6 align="center" ;="" style="color:#808080" class="anchored">Tidyverse</h6>
-<h6 align="center" class="anchored">
-<code>df %&gt;% mutate(profit = revenue - cost)</code>
-</h6>
-<h6 align="center" class="anchored">
-or
-</h6>
-<h6 align="center" class="anchored">
-<code>mutate(df, profit = revenue - cost)</code>
-</h6>
+<section id="tidyverse-1" class="level6">
+<h6 class="anchored" data-anchor-id="tidyverse-1">Tidyverse</h6>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">profit =</span> revenue <span class="sc">-</span> cost)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 </div>
 </div>
-<h3 align="center" class="anchored">
-Filtering Data
-</h3>
+<!-- <h3 align="center"> Filtering Data </h3> -->
+</section>
+<section id="filtering-data" class="level2">
+<h2 class="anchored" data-anchor-id="filtering-data">Filtering Data</h2>
 <div class="columns">
 <div class="column" style="width:&quot;45%&quot;;">
-<p>Base R</p>
+<section id="base-r-2" class="level6">
+<h6 class="anchored" data-anchor-id="base-r-2">Base R</h6>
 <p><code>df[df$temperature &gt; 45]</code></p>
+</section>
 </div><div class="column" style="width:&quot;45%&quot;;">
-<p>Tidyverse</p>
-<p><code>df %&gt;% filter(temperature &gt; 45)</code></p>
-<p>or</p>
-<p><code>filter(df, temperature &gt; 45)</code></p>
+<section id="tidyverse-2" class="level6">
+<h6 class="anchored" data-anchor-id="tidyverse-2">Tidyverse</h6>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(temperature <span class="sc">&gt;</span> <span class="dv">45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 </div>
 </div>
+</section>
 <section id="grouping-summarising-data" class="level2">
 <h2 class="anchored" data-anchor-id="grouping-summarising-data">Grouping &amp; Summarising Data</h2>
 <div class="columns">
 <div class="column" style="width:&quot;45%&quot;;">
-<p>Base R</p>
-<p>I’m not sure how to do this yet…</p>
+<section id="base-r-3" class="level6">
+<h6 class="anchored" data-anchor-id="base-r-3">Base R</h6>
+<p>I’m not sure how to do this… and that’s okay</p>
+</section>
 </div><div class="column" style="width:&quot;45%&quot;;">
-<p>Tidyverse</p>
-<p><code>df %&gt;% group_by(city) %&gt;% summarise(Avg_House_Price = mean(house_price))</code></p>
+<section id="tidyverse-3" class="level6">
+<h6 class="anchored" data-anchor-id="tidyverse-3">Tidyverse</h6>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(city) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">Avg_House_Price =</span> <span class="fu">mean</span>(house_price))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 </div>
 </div>
-<section id="sorting-data" class="level3">
-<h3 class="anchored" data-anchor-id="sorting-data">Sorting Data</h3>
+</section>
+<section id="sorting-data" class="level2">
+<h2 class="anchored" data-anchor-id="sorting-data">Sorting Data</h2>
 <div class="columns">
 <div class="column" style="width:&quot;45%&quot;;">
-<p>Base R</p>
+<section id="base-r-4" class="level6">
+<h6 class="anchored" data-anchor-id="base-r-4">Base R</h6>
 <p><code>mtcars[order(mpg, -cyl),]</code></p>
+</section>
 </div><div class="column" style="width:&quot;45%&quot;;">
-<p>Tidyverse</p>
-<p><code>mtcars %&gt;% arrange(mpg, desc(cyl))</code></p>
-<p>or</p>
-<p><code>arrange(mtcars, mpg, desc(cyl))</code></p>
+<section id="tidyverse-4" class="level6">
+<h6 class="anchored" data-anchor-id="tidyverse-4">Tidyverse</h6>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(mpg, <span class="fu">desc</span>(cyl))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 </div>
 </div>
-<p><br> Check out <a href="https://dplyr.tidyverse.org/articles/base.html">this page</a> for more comparisons.</p>
+<p><br><br></p>
+<p>Check out <a href="https://dplyr.tidyverse.org/articles/base.html">this page</a> for more comparisons.</p>
 <p>Filtering Data in Base R:</p>
 <ul>
 <li>https://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/</li>
 <li>https://cran.r-project.org/web/packages/crunch/vignettes/filters.html</li>
 </ul>
 
-<!-- ## Third Comparison: R Script vs. RMD
 
- 
-
-
-:::::::::::::: {.columns}
-::: {.column width=\"45%\"}
-An R script is used for analysis that is not for 
-:::
-
-::: {.column width=\"45%\"}
-RMDs (also QMDs) are used for reporting. If you have data and have analysis to show, this is the tool to use. It allows code results like graphs, summaries, tables to be in the report along with your own commentary about it.  
-:::
-:::::::::::::: -->
-<!-- :::: {style="display: grid; grid-column-gap: 10px; "}
-::: {}
-
-::: {.cell}
-
-```{.r .cell-code}
-head(iris)
-```
-
-::: {.cell-output .cell-output-stdout}
-```
-  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-1          5.1         3.5          1.4         0.2  setosa
-2          4.9         3.0          1.4         0.2  setosa
-3          4.7         3.2          1.3         0.2  setosa
-4          4.6         3.1          1.5         0.2  setosa
-5          5.0         3.6          1.4         0.2  setosa
-6          5.4         3.9          1.7         0.4  setosa
-```
-:::
-:::
-
-:::
-::: {}
-
-::: {.cell}
-
-```{.r .cell-code}
-plot(iris)
-```
-
-::: {.cell-output-display}
-![](installation_files/figure-html/unnamed-chunk-5-1.png){width=672}
-:::
-:::
-
-:::
-:::: -->
-
-
-</section>
 </section>
 </section>
 

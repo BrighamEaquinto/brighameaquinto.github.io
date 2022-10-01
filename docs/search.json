@@ -144,14 +144,14 @@
     "href": "posts/Installation/installation.html#grouping-summarising-data",
     "title": "Installation",
     "section": "Grouping & Summarising Data",
-    "text": "Grouping & Summarising Data\n\n\nBase R\nI’m not sure how to do this yet…\n\nTidyverse\ndf %>% group_by(city) %>% summarise(Avg_House_Price = mean(house_price))\n\n\n\nSorting Data\n\n\nBase R\nmtcars[order(mpg, -cyl),]\n\nTidyverse\nmtcars %>% arrange(mpg, desc(cyl))\nor\narrange(mtcars, mpg, desc(cyl))\n\n\n Check out this page for more comparisons.\nFiltering Data in Base R:\n\nhttps://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/\nhttps://cran.r-project.org/web/packages/crunch/vignettes/filters.html"
+    "text": "Grouping & Summarising Data\n\n\n\nBase R\nI’m not sure how to do this… and that’s okay\n\n\n\nTidyverse\n\ndf %>% \n    group_by(city) %>% \n    summarise(Avg_House_Price = mean(house_price))"
   },
   {
     "objectID": "posts/Installation/installation.html#sorting-data",
     "href": "posts/Installation/installation.html#sorting-data",
     "title": "Installation",
     "section": "Sorting Data",
-    "text": "Sorting Data\n\n\nBase R\nmtcars[order(mpg, -cyl),]\n\nTidyverse\nmtcars %>% arrange(mpg, desc(cyl))\nor\narrange(mtcars, mpg, desc(cyl))\n\n\n Check out this page for more comparisons.\nFiltering Data in Base R:\n\nhttps://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/\nhttps://cran.r-project.org/web/packages/crunch/vignettes/filters.html"
+    "text": "Sorting Data\n\n\n\nBase R\nmtcars[order(mpg, -cyl),]\n\n\n\nTidyverse\n\nmtcars %>% arrange(mpg, desc(cyl))\n\n\n\n\n\nCheck out this page for more comparisons.\nFiltering Data in Base R:\n\nhttps://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/\nhttps://cran.r-project.org/web/packages/crunch/vignettes/filters.html"
   },
   {
     "objectID": "posts/Visualize Data/visualizing_data.html",
@@ -207,6 +207,34 @@
     "href": "notes.html#ideas",
     "title": "DSS BootCamp",
     "section": "Ideas",
-    "text": "Ideas\n\nHave a notes to instructors page or part of the repo\nhave a page just for the interface of RStudio\n\nhot keys\nshortcuts\nsuch and such\n\nhave a page for R/Python equivalents\nhave a page for other generally useful things\n\nsetting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows\n\nhow can I use the wiki tab on the github page? What is the proper usage of it?"
+    "text": "Ideas\n\nHave a notes to instructors page or part of the repo\nhave a page just for the interface of RStudio\n\nhot keys\nshortcuts\nsuch and such\n\nhave a page for R/Python equivalents\nhave a page for other generally useful things\n\nsetting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows\n\nhow can I use the wiki tab on the github page? What is the proper usage of it?\n\nOthers: - commenting code - assignment operator vs equal sign - pipe operator %>% - filtering operators (==, %in%, |, &, !=) - c(vector) and list conversation"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#download-instructions",
+    "href": "posts/Installation/installation.html#download-instructions",
+    "title": "Installation",
+    "section": "Download Instructions",
+    "text": "Download Instructions\nGoogle “download R” or go to this link to download it. The page should look like this.\n\n\nGoogle “download RStudio” or go to this link to download it. The page should look like this."
+  },
+  {
+    "objectID": "posts/Installation/installation.html#selecting-columns",
+    "href": "posts/Installation/installation.html#selecting-columns",
+    "title": "Installation",
+    "section": "Selecting Columns",
+    "text": "Selecting Columns\n\n\n\nBase R\ndf$column_name\ndf[[]]\n\n\n\nTidyverse\n\ndf %>% select(column1, column2)"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#filtering-data",
+    "href": "posts/Installation/installation.html#filtering-data",
+    "title": "Installation",
+    "section": "Filtering Data",
+    "text": "Filtering Data\n\n\n\nBase R\ndf[df$temperature > 45]\n\n\n\nTidyverse\n\ndf %>% filter(temperature > 45)"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#making-new-columns",
+    "href": "posts/Installation/installation.html#making-new-columns",
+    "title": "Installation",
+    "section": "Making New Columns",
+    "text": "Making New Columns\n\n\n\nBase R\ndf$profit <- df$revenue - df$cost\n\n\n\nTidyverse\n\ndf %>% mutate(profit = revenue - cost)"
   }
 ]

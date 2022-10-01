@@ -24,3 +24,11 @@ Can't enter or color headers using Markdown, must use CSS instead:
 - have a page for other generally useful things
     - setting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows
 - how can I use the wiki tab on the github page? What is the proper usage of it?
+
+
+Others: 
+- commenting code 
+- assignment operator vs equal sign
+- pipe operator %>%
+- filtering operators (==, %in%, |, &, !=)
+- c(vector) and list conversation

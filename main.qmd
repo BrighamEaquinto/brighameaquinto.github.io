@@ -1,6 +1,6 @@
 ---
 title: "R Bootcamp"
-listing:
+listing: 
   - id: Curriculim
     contents:
       - "posts/Welcome/welcome.qmd"
