@@ -5,24 +5,28 @@ project:
     port: 314
 
 website:
-  title: "DSS BootCamp"
+  title: "DSS R BootCamp"
   image: website_thumbnail.jpg
   repo-url: https://github.com/BrighamEaquinto/brighameaquinto.github.io.git
   repo-actions: [edit, issue]
   page-navigation: true
+
   navbar:
     background: primary
     pinned: true
-  sidebar:
-    # title: "Tutorials"
-    style: "docked"
-    search: true
-    background: light
-    collapse-level: 2
-    contents: 
+    left: 
       - posts\Reading Data\reading_data.qmd
       - posts\Wrangling Data\wrangling_data.qmd
       - posts\Visualize Data\visualizing_data.qmd
+
+  # sidebar:
+  #   # title: "Tutorials"
+  #   style: "docked"
+  #   search: true
+  #   background: light
+  #   collapse-level: 2
+
+
   page-footer: 
     left: 
       - icon: github
@@ -30,6 +34,8 @@ website:
       - icon: linkedin
         href: https://www.linkedin.com/in/brighameaquinto/
     background: secondary
+
+
 format:
   html:
     code-copy: true 
@@ -42,7 +48,4 @@ format:
       light: flatly
       dark: darkly
     css: styles.css
-
-
-
 
