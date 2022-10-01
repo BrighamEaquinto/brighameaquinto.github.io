@@ -3,6 +3,7 @@ title: "R Bootcamp"
 listing:
   - id: Curriculim
     contents:
+      - "posts/Welcome/welcome.qmd"
       - "posts/Installation/installation.qmd"
       - "posts/Reading Data/reading_data.qmd"
       - "posts/Wrangling Data/wrangling_data.qmd"
@@ -19,4 +20,3 @@ listing:
 page-layout: full
 title-block-banner: true
 ---
-

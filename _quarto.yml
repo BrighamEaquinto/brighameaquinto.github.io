@@ -9,6 +9,7 @@ website:
   image: website_thumbnail.jpg
   repo-url: https://github.com/BrighamEaquinto/brighameaquinto.github.io.git
   repo-actions: [edit, issue]
+  page-navigation: true
   navbar:
     background: primary
     pinned: true
@@ -19,9 +20,9 @@ website:
     background: light
     collapse-level: 2
     contents: 
-      - posts\Reading Data\index.qmd
-      - posts\Wrangling Data\index.qmd
-      - posts\Visualize Data\index.qmd
+      - posts\Reading Data\reading_data.qmd
+      - posts\Wrangling Data\wrangling_data.qmd
+      - posts\Visualize Data\visualizing_data.qmd
   page-footer: 
     left: 
       - icon: github
@@ -33,9 +34,9 @@ format:
   html:
     code-copy: true 
     code-overflow: wrap
-    code-fold: show
+    code-fold: false
     code-tools: false
-    code-summary: "Show the code"
+    # code-summary: "Show the code"
     smooth-scroll: true
     theme: 
       light: flatly

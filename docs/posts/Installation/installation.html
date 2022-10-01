@@ -211,30 +211,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>First Comparison: R vs RStudio</h1>
 <div class="columns">
 <div class="column" style="width:&quot;45%&quot;;">
-<p>R is the magic software that lets us do cool things with data.</p>
-<p>Download <a href="https://cran.rstudio.com/bin/windows/base/R-4.2.1-win.exe">R</a></p>
+<p>R is the magical software that lets us do cool things with data.</p>
 </div><div class="column" style="width:&quot;45%&quot;;">
 <p>RStudio is the interface for how to use R.</p>
-<p>Download <a href="https://download1.rstudio.org/desktop/windows/RStudio-2022.07.2-576.exe">RStudio</a></p>
 </div>
 </div>
+<hr>
+<p>Google “download R” or go to <a href="https://cran.r-project.org/bin/windows/base/">this link</a> to download it. The page should look like this.</p>
+<p><img src="rstudio_download.jpg" class="img-fluid"></p>
+<!-- Download [R](https://cran.rstudio.com/bin/windows/base/R-4.2.1-win.exe) -->
+<p>Google “download RStudio” or go to <a href="https://www.rstudio.com/products/rstudio/download/#download">this link</a> to download it. The page should look like this.</p>
+<p><img src="r_download.jpg" class="img-fluid"></p>
+<!-- Download [RStudio](https://download1.rstudio.org/desktop/windows/RStudio-2022.07.2-576.exe) -->
+<hr>
 </section>
 <section id="second-comparison-base-r-vs-the-tidyverse" class="level1">
 <h1>Second Comparison: Base R vs the Tidyverse</h1>
 <div class="columns">
 <div class="column" style="width:&quot;45%&quot;;">
-<p>Base R is native to R; no additional installations are required. If you use this, I will turn in my grave. Please don’t make your life more difficult, use the Tidyverse.</p>
+<p>Base R is the native tools that R has to deal with data. The syntax is outdated and better tools are available to use.</p>
+<p>The syntax to work in Base R is very similar to native python syntax. The biggest downside is that <em>it’s not possible to chain operations together</em> like selecting columns and filtering data. You would to constantly assign and reassign variables which results in very messy and unreadable code.</p>
+<p>If you use this, I will turn in my grave. Please don’t make your life more difficult, use the Tidyverse.</p>
+<p>Base R is native to R; no additional installations are required.</p>
 </div><div class="column" style="width:&quot;45%&quot;;">
+<p>The Tidyverse allows chainable actions like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>state_gdp <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        population <span class="sc">&gt;</span> <span class="dv">5000000</span> <span class="sc">&amp;</span> </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        state <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Washington"</span>, <span class="st">"Oregon"</span>, <span class="st">"California"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(state, gdp, debt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Run this code in the console to download the tidyverse</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>In order to be able to use this package, put this code at the top of your R Script or RMD file</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <p><br></p>
-<h2 align="center" class="anchored" data-anchor-id="second-comparison-base-r-vs-the-tidyverse">
+<h3 align="center" class="anchored">
 Selecting Columns
-</h2>
+</h3>
 <div class="columns">
 <div class="column" style="width:&quot;45%&quot;;">
 <section id="base-r" class="level6">
@@ -246,12 +264,19 @@ Selecting Columns
 <section id="tidyverse" class="level6">
 <h6 class="anchored" data-anchor-id="tidyverse">Tidyverse</h6>
 <p><code>df %&gt;% select()</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">select</span>(column1, column2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>or</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(df, column1, column2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 </div>
 </div>
-<h2 align="center" class="anchored">
+<h3 align="center" class="anchored">
 Making New Columns
-</h2>
+</h3>
 <div class="columns">
 <div class="column" style="width:&quot;45%&quot;;">
 <h6 align="center" ;="" style="color:#808080" class="anchored"> Base R </h6>
@@ -271,13 +296,13 @@ or
 </h6>
 </div>
 </div>
-<h2 align="center" class="anchored">
+<h3 align="center" class="anchored">
 Filtering Data
-</h2>
+</h3>
 <div class="columns">
 <div class="column" style="width:&quot;45%&quot;;">
 <p>Base R</p>
-<p>df[df$temperature &gt; 45]</p>
+<p><code>df[df$temperature &gt; 45]</code></p>
 </div><div class="column" style="width:&quot;45%&quot;;">
 <p>Tidyverse</p>
 <p><code>df %&gt;% filter(temperature &gt; 45)</code></p>
@@ -293,21 +318,20 @@ Filtering Data
 <p>I’m not sure how to do this yet…</p>
 </div><div class="column" style="width:&quot;45%&quot;;">
 <p>Tidyverse</p>
-<p>df %&gt;% group_by(city) %&gt;% summarise(Avg_House_Price = mean(house_price))</p>
+<p><code>df %&gt;% group_by(city) %&gt;% summarise(Avg_House_Price = mean(house_price))</code></p>
 </div>
 </div>
-</section>
-<section id="sorting-data" class="level2">
-<h2 class="anchored" data-anchor-id="sorting-data">Sorting Data</h2>
+<section id="sorting-data" class="level3">
+<h3 class="anchored" data-anchor-id="sorting-data">Sorting Data</h3>
 <div class="columns">
 <div class="column" style="width:&quot;45%&quot;;">
 <p>Base R</p>
 <p><code>mtcars[order(mpg, -cyl),]</code></p>
 </div><div class="column" style="width:&quot;45%&quot;;">
 <p>Tidyverse</p>
-<p>mtcars %&gt;% arrange(mpg, desc(cyl))</p>
+<p><code>mtcars %&gt;% arrange(mpg, desc(cyl))</code></p>
 <p>or</p>
-<p>arrange(mtcars, mpg, desc(cyl))</p>
+<p><code>arrange(mtcars, mpg, desc(cyl))</code></p>
 </div>
 </div>
 <p><br> Check out <a href="https://dplyr.tidyverse.org/articles/base.html">this page</a> for more comparisons.</p>
@@ -363,7 +387,7 @@ plot(iris)
 ```
 
 ::: {.cell-output-display}
-![](installation_files/figure-html/unnamed-chunk-2-1.png){width=672}
+![](installation_files/figure-html/unnamed-chunk-5-1.png){width=672}
 :::
 :::
 
@@ -371,6 +395,7 @@ plot(iris)
 :::: -->
 
 
+</section>
 </section>
 </section>
 
