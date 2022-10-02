@@ -32,3 +32,6 @@ Others:
 - pipe operator %>%
 - filtering operators (==, %in%, |, &, !=)
 - c(vector) and list conversation
+
+
+Use this for advance select statements: https://dplyr.tidyverse.org/reference/select.html

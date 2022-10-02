@@ -2,39 +2,95 @@
 title: "Reading Data"
 message: false
 warning: false
+toc: true
 ---
 
 
-How to read in data so that we can use it: 
+The [readr package](https://readr.tidyverse.org/) is the first package that we will learn about. This allows us to read in rectangular data like cvs files. 
 
-#### Reading in data that is located on your computer
+This is the typical way it goes when you have data located on your computer.
 
 ```{r}
 #| eval: false
 
 library(tidyverse)
 
-data1 <- read_csv("C:/Users/Bethany/Downloads/US_Population_200_Years.csv")
+dataset <- read_csv(file_path)
+
+head(dataset)
+```
+
+## Copy File Path Option 
+
+Copy the file path from your computer and paste it in the function. One downside to this is you have to manually replace each backslash `\` with a forwardslash `/`
+
+Here is an example: 
+
+```{r}
+#| eval: true
+#| code-fold: false
+
+library(tidyverse)
+
+bob <- read_csv("C:/Users/Bethany/Downloads/US_Population_200_Years.csv")
+
+head(bob)
+```
+
+## "Import Dataset" Button Option
+
+Another option is to use the "Import Dataset" button in the environment pane of RStudio. 
+
+![](data_import_button.jpg)
+
+![](data_import_pop_up.jpg)
+
+The data will now be in your environment.
+
+## Getting data from a URL
+
+Often you get your data from online somewhere like [GitHub](github.com) or [Kaggle](kaggle.com). While there is the option to download the file, then read it from your computer locally, like we just did above, there's also the option to read in data from a URL. 
+
+A benefit is that less memory is used on your computer. Another is that you can send your analysis with the data being read in from a URL, and others will be able to run the script without any data issues. 
+
+Below is an example.  
+```{r}
+#| eval: false
+#| output: axis
+library(tidyverse)
+
+data1 <- read_csv("https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv")
 
 head(data1)
 ```
 
-text here
+## Other Data File Formats
+
+What if the dataset you have is not a csv? What if it's an excel file or the often unused tsc? 
+
+Other options include: 
+
+- `read_excel()` to read excel files like xls or xlsx
+- `read_tsv()` to read tsv files (tab separated files)
+- `read_rds()` to read RDS files (a data export option from SQLServer)
 
 
-#### Getting data from a URL
+## Exceptions to the Norm
 
-```{python}
+For most cases this is the way to read in data. There are some examples of variations. 
+
+Sometimes the column headers are not the top row of the data. In this scenario, use the option `skip = 1` if there is one extra row above the headers.
+
+Sometimes there are not column name at all and we'll have to give them to the dataset. How can we do this?
+
+
+<br>
+
+## Writing Files
+
+With readr, we can write data files. 
+
+```{r}
 #| eval: false
-import pandas as pd
-
-data1 = pd.read_csv("https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv")
-
-data1.head()
+write_csv(dataset_to_save, "file_name.csv")
 ```
-
-
-This will teach about how to get a dataset into RStudio so that we can use it. 
-
-There are different types of data, we won't get into the nitty-gritty parts of it, but there is structured, semi-structured, and ustructured data. We will be playing around with structured data (think excel files). Examples of the other types of data are pictures, video, and audio files. 
-

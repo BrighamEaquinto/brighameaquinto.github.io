@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DSS BootCamp - Reading Data</title>
+<title>DSS R BootCamp - Reading Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -128,7 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -136,14 +136,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">DSS BootCamp</span>
+    <span class="navbar-title">DSS R BootCamp</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="../../posts/Reading Data/reading_data.html" aria-current="page">Reading Data</a>
   </li>  
@@ -181,36 +181,101 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#copy-file-path-option" id="toc-copy-file-path-option" class="nav-link active" data-scroll-target="#copy-file-path-option">Copy File Path Option</a></li>
+  <li><a href="#import-dataset-button-option" id="toc-import-dataset-button-option" class="nav-link" data-scroll-target="#import-dataset-button-option">“Import Dataset” Button Option</a></li>
+  <li><a href="#getting-data-from-a-url" id="toc-getting-data-from-a-url" class="nav-link" data-scroll-target="#getting-data-from-a-url">Getting data from a URL</a></li>
+  <li><a href="#other-data-file-formats" id="toc-other-data-file-formats" class="nav-link" data-scroll-target="#other-data-file-formats">Other Data File Formats</a></li>
+  <li><a href="#exceptions-to-the-norm" id="toc-exceptions-to-the-norm" class="nav-link" data-scroll-target="#exceptions-to-the-norm">Exceptions to the Norm</a></li>
+  <li><a href="#writing-files" id="toc-writing-files" class="nav-link" data-scroll-target="#writing-files">Writing Files</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/edit/main/posts/Reading Data/reading_data.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
-<p>How to read in data so that we can use it:</p>
-<section id="reading-in-data-that-is-located-on-your-computer" class="level4">
-<h4 class="anchored" data-anchor-id="reading-in-data-that-is-located-on-your-computer">Reading in data that is located on your computer</h4>
+<p>The <a href="https://readr.tidyverse.org/">readr package</a> is the first package that we will learn about. This allows us to read in rectangular data like cvs files.</p>
+<p>This is the typical way it goes when you have data located on your computer.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data1 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/Bethany/Downloads/US_Population_200_Years.csv"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>dataset <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(file_path)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>text here</p>
-</section>
-<section id="getting-data-from-a-url" class="level4">
-<h4 class="anchored" data-anchor-id="getting-data-from-a-url">Getting data from a URL</h4>
+<section id="copy-file-path-option" class="level2">
+<h2 class="anchored" data-anchor-id="copy-file-path-option">Copy File Path Option</h2>
+<p>Copy the file path from your computer and paste it in the function. One downside to this is you have to manually replace each backslash <code>\</code> with a forwardslash <code>/</code></p>
+<p>Here is an example:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>data1 <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>bob <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/Bethany/Downloads/US_Population_200_Years.csv"</span>)</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>data1.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(bob)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 7
+   Rank City             Population  Year PopDate    Longitude Latitude
+  &lt;dbl&gt; &lt;chr&gt;                 &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;
+1     1 New York, NY          33131  1790 06/01/1790     -73.9     40.7
+2     2 Philadelphia, PA      44096  1790 06/01/1790     -75.1     40.0
+3     3 Boston, MA            18320  1790 06/01/1790     -71.1     42.3
+4     4 Charleston, SC        16359  1790 06/01/1790     -80.0     32.8
+5     5 Baltimore, MD         13503  1790 06/01/1790     -76.6     39.3
+6     7 Salem, MA              7921  1790 06/01/1790     -70.9     42.5</code></pre>
 </div>
-<p>This will teach about how to get a dataset into RStudio so that we can use it.</p>
-<p>There are different types of data, we won’t get into the nitty-gritty parts of it, but there is structured, semi-structured, and ustructured data. We will be playing around with structured data (think excel files). Examples of the other types of data are pictures, video, and audio files.</p>
+</div>
+</section>
+<section id="import-dataset-button-option" class="level2">
+<h2 class="anchored" data-anchor-id="import-dataset-button-option">“Import Dataset” Button Option</h2>
+<p>Another option is to use the “Import Dataset” button in the environment pane of RStudio.</p>
+<p><img src="data_import_button.jpg" class="img-fluid"></p>
+<p><img src="data_import_pop_up.jpg" class="img-fluid"></p>
+<p>The data will now be in your environment.</p>
+</section>
+<section id="getting-data-from-a-url" class="level2">
+<h2 class="anchored" data-anchor-id="getting-data-from-a-url">Getting data from a URL</h2>
+<p>Often you get your data from online somewhere like <a href="github.com">GitHub</a> or <a href="kaggle.com">Kaggle</a>. While there is the option to download the file, then read it from your computer locally, like we just did above, there’s also the option to read in data from a URL.</p>
+<p>A benefit is that less memory is used on your computer. Another is that you can send your analysis with the data being read in from a URL, and others will be able to run the script without any data issues.</p>
+<p>Below is an example.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>data1 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv"</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="other-data-file-formats" class="level2">
+<h2 class="anchored" data-anchor-id="other-data-file-formats">Other Data File Formats</h2>
+<p>What if the dataset you have is not a csv? What if it’s an excel file or the often unused tsc?</p>
+<p>Other options include:</p>
+<ul>
+<li><code>read_excel()</code> to read excel files like xls or xlsx</li>
+<li><code>read_tsv()</code> to read tsv files (tab separated files)</li>
+<li><code>read_rds()</code> to read RDS files (a data export option from SQLServer)</li>
+</ul>
+</section>
+<section id="exceptions-to-the-norm" class="level2">
+<h2 class="anchored" data-anchor-id="exceptions-to-the-norm">Exceptions to the Norm</h2>
+<p>For most cases this is the way to read in data. There are some examples of variations.</p>
+<p>Sometimes the column headers are not the top row of the data. In this scenario, use the option <code>skip = 1</code> if there is one extra row above the headers.</p>
+<p>Sometimes there are not column name at all and we’ll have to give them to the dataset. How can we do this?</p>
+<p><br></p>
+</section>
+<section id="writing-files" class="level2">
+<h2 class="anchored" data-anchor-id="writing-files">Writing Files</h2>
+<p>With readr, we can write data files.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(dataset_to_save, <span class="st">"file_name.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>

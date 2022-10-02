@@ -59,7 +59,12 @@ What is data? Is it singular or plural?
 
 What other types of data are there? Take this for example ____
 
-We will be working with tabular data. Other data includes pictures, videos, and audio. 
+We will be working with tabular data. Other data includes pictures, videos, and audio.
+
+
+
+There are different types of data, we won't get into the nitty-gritty parts of it, but there is structured, semi-structured, and ustructured data. We will be playing around with structured data (think excel files). Examples of the other types of data are pictures, video, and audio files. 
+
 
 <br><br>
 

@@ -14,6 +14,7 @@
     "listing": "/main.html",
     "items": [
       "/posts/Installation/installation.html",
+      "/posts/Quarto Tutorial/quarto.html",
       "/posts/Reading Data/reading_data.html",
       "/posts/Visualize Data/visualizing_data.html",
       "/posts/Welcome/welcome.html",
