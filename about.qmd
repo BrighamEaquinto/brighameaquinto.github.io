@@ -1,8 +1,8 @@
----
-title: "About"
-image: professionalpic-blogedit.jpg
+ ---
+title: "Brigham Eaquinto"
+image: professionalpic.jpg
 about:
-  template: jolla
+  template: solana
   links:
     - icon: linkedin
       text: LinkedIn
@@ -13,6 +13,31 @@ about:
 
 ---
 
-About this blog
+- How to use GitHub
+- Modules for NLP
+  - regex
+  - list comprehension
+- Modules for Neural Networks
+  - classification
+  - regression
+  - picture/video data
+  - audio data 
+- Modules for Database Design and Warehousing 
+- Modules for spatial ana
+- Make professional videos for these! 
+  - Like [this video](https://www.youtube.com/watch?v=qFJeN9V1ZsI&t=4271s) 
+  - Examples like [these](https://keras.io/examples/)
+  - GitHub walkthroughs like [these]()
+- How to set up R in VSCode 
+- GQL Tutorial 
 
-Does this pass through?
+<br>
+
+Make tutorials like Greg Hamel's work: 
+
+- [Intro to R](https://www.kaggle.com/code/hamelg/intro-to-r-index]) notebook with [videos](https://www.youtube.com/playlist?list=PLiC1doDIe9rDjk9tSOIUZJU4s5NpEyYtE)
+- [Python for Data Analysis](https://www.kaggle.com/code/hamelg/python-for-data-analysis-index/notebook) notebook with [videos](https://www.youtube.com/playlist?list=PLiC1doDIe9rCYWmH9wIEYEXXaJ4KAi3jc)
+
+<br>
+
+Read more often - humanities 
