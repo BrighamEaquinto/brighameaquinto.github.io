@@ -163,7 +163,7 @@ df %>% filter(temperature > 45)
 :::::::::::::: {.columns}
 ::: {.column width=\"45%\"}
 ###### Base R 
-I'm not sure how to do this... and that's okay
+I'm not sure how to do this in BaseR... and that's okay
 
 :::
 ::: {.column width=\"45%\"}
