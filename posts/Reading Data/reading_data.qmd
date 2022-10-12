@@ -5,6 +5,7 @@ warning: false
 toc: true
 ---
 
+## Method 1: Copy File Path Option
 
 The [readr package](https://readr.tidyverse.org/) is the first package that we will learn about. This allows us to read in rectangular data like cvs files. 
 
@@ -19,10 +20,9 @@ dataset <- read_csv(file_path)
 
 head(dataset)
 ```
+ 
 
-## Copy File Path Option 
-
-Copy the file path from your computer and paste it in the function. One downside to this is you have to manually replace each backslash `\` with a forwardslash `/`
+Copy the file path from your computer and paste it in the function. One downside to this is you have to manually replace each backslash `\` with a forwardslash `/` 
 
 Here is an example: 
 
@@ -37,7 +37,7 @@ bob <- read_csv("C:/Users/Bethany/Downloads/US_Population_200_Years.csv")
 head(bob)
 ```
 
-## "Import Dataset" Button Option
+## Method 2: "Import Dataset" Button Option
 
 Another option is to use the "Import Dataset" button in the environment pane of RStudio. 
 
@@ -47,7 +47,7 @@ Another option is to use the "Import Dataset" button in the environment pane of 
 
 The data will now be in your environment.
 
-## Getting data from a URL
+## Method 3: Getting data from a URL
 
 Often you get your data from online somewhere like [GitHub](github.com) or [Kaggle](kaggle.com). While there is the option to download the file, then read it from your computer locally, like we just did above, there's also the option to read in data from a URL. 
 

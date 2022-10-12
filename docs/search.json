@@ -165,7 +165,7 @@
     "href": "posts/Reading Data/reading_data.html",
     "title": "Reading Data",
     "section": "",
-    "text": "The readr package is the first package that we will learn about. This allows us to read in rectangular data like cvs files.\nThis is the typical way it goes when you have data located on your computer."
+    "text": "The readr package is the first package that we will learn about. This allows us to read in rectangular data like cvs files.\nThis is the typical way it goes when you have data located on your computer.\n\nlibrary(tidyverse)\n\ndataset <- read_csv(file_path)\n\nhead(dataset)\n\nCopy the file path from your computer and paste it in the function. One downside to this is you have to manually replace each backslash \\ with a forwardslash /\nHere is an example:\n\nlibrary(tidyverse)\n\nbob <- read_csv(\"C:/Users/Bethany/Downloads/US_Population_200_Years.csv\")\n\nhead(bob)\n\n# A tibble: 6 × 7\n   Rank City             Population  Year PopDate    Longitude Latitude\n  <dbl> <chr>                 <dbl> <dbl> <chr>          <dbl>    <dbl>\n1     1 New York, NY          33131  1790 06/01/1790     -73.9     40.7\n2     2 Philadelphia, PA      44096  1790 06/01/1790     -75.1     40.0\n3     3 Boston, MA            18320  1790 06/01/1790     -71.1     42.3\n4     4 Charleston, SC        16359  1790 06/01/1790     -80.0     32.8\n5     5 Baltimore, MD         13503  1790 06/01/1790     -76.6     39.3\n6     7 Salem, MA              7921  1790 06/01/1790     -70.9     42.5"
   },
   {
     "objectID": "posts/Wrangling Data/wrangling_data.html",
@@ -285,5 +285,40 @@
     "title": "Brigham Eaquinto",
     "section": "",
     "text": "Make tutorials like Greg Hamel’s work:\n\nIntro to R notebook with videos\nPython for Data Analysis notebook with videos\n\n\nRead more often - humanities"
+  },
+  {
+    "objectID": "posts/welcome/welcome.html",
+    "href": "posts/welcome/welcome.html",
+    "title": "Welcome to Bootcamp",
+    "section": "",
+    "text": "Welcome to Data Science Society’s R Bootcamp"
+  },
+  {
+    "objectID": "posts/welcome/welcome.html#course-outline",
+    "href": "posts/welcome/welcome.html#course-outline",
+    "title": "Welcome to Bootcamp",
+    "section": "Course Outline:",
+    "text": "Course Outline:\nThe purpose of R Bootcamp is to be able to read, wrangle, and visualize data using R in RStudio. By the end of the course you will be able to contribute to a society project next semester.\n\nReading Data: readr package\n\nnavigating file systems\ncopy file paths\nRStudio’s “Import Dataset” button, “From Text (readr)” option\n\n\n\nWrangling Data: dplyr/tidyr packages\nPrimary Focus: select, filter, mutate, groupby/summarise, and arrange.\nSecondary Focus: joining, pivoting, case_when,\nOther: drop_na(), replace_na(),\n\n\nVisualizing Data: ggplot2 package\n\nWhat kind of data these plot plot\ncode for each\nhistograms, boxplots, scatterplots, bar charts.\n\nIn Terms of Packages:\n\nreadr\ndplyr/tidyr\nggplot\n\nOthers:\n\nforcats (fct_reorder and working with factors)\nstringr (working with text data)\nlubridate (working with dates)\ntibble (just the tibble() function)\npurr (mappings, boring)"
+  },
+  {
+    "objectID": "posts/welcome/welcome.html#what-kind-of-data-are-we-using",
+    "href": "posts/welcome/welcome.html#what-kind-of-data-are-we-using",
+    "title": "Welcome to Bootcamp",
+    "section": "What kind of data are we using?",
+    "text": "What kind of data are we using?\nWe will mainly be using the _____ and the ____ datasets for practice.\nWhat is data? Is it singular or plural?\nWhat other types of data are there? Take this for example ____\nWe will be working with tabular data. Other data includes pictures, videos, and audio.\nThere are different types of data, we won’t get into the nitty-gritty parts of it, but there is structured, semi-structured, and ustructured data. We will be playing around with structured data (think excel files). Examples of the other types of data are pictures, video, and audio files.\n\nreadr: for data import\ndplyr: for data manipulation\ntidyr: for data tidying\nggplot2: for data visualisation\ntibble: for tibbles, a modern re-imagining of data frames\nstringr: for strings\nforcats: for factors\npurrr: for functional programming\n+\nlubridate: for dates"
+  },
+  {
+    "objectID": "posts/Reading Data/reading_data.html#method-2-import-dataset-button-option",
+    "href": "posts/Reading Data/reading_data.html#method-2-import-dataset-button-option",
+    "title": "Reading Data",
+    "section": "Method 2: “Import Dataset” Button Option",
+    "text": "Method 2: “Import Dataset” Button Option\nAnother option is to use the “Import Dataset” button in the environment pane of RStudio.\n\n\nThe data will now be in your environment."
+  },
+  {
+    "objectID": "posts/Reading Data/reading_data.html#method-3-getting-data-from-a-url",
+    "href": "posts/Reading Data/reading_data.html#method-3-getting-data-from-a-url",
+    "title": "Reading Data",
+    "section": "Method 3: Getting data from a URL",
+    "text": "Method 3: Getting data from a URL\nOften you get your data from online somewhere like GitHub or Kaggle. While there is the option to download the file, then read it from your computer locally, like we just did above, there’s also the option to read in data from a URL.\nA benefit is that less memory is used on your computer. Another is that you can send your analysis with the data being read in from a URL, and others will be able to run the script without any data issues.\nBelow is an example.\n\nlibrary(tidyverse)\n\ndata1 <- read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\")\n\nhead(data1)"
   }
 ]

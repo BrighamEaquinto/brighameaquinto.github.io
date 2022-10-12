@@ -186,9 +186,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#copy-file-path-option" id="toc-copy-file-path-option" class="nav-link active" data-scroll-target="#copy-file-path-option">Copy File Path Option</a></li>
-  <li><a href="#import-dataset-button-option" id="toc-import-dataset-button-option" class="nav-link" data-scroll-target="#import-dataset-button-option">“Import Dataset” Button Option</a></li>
-  <li><a href="#getting-data-from-a-url" id="toc-getting-data-from-a-url" class="nav-link" data-scroll-target="#getting-data-from-a-url">Getting data from a URL</a></li>
+  <li><a href="#method-1-copy-file-path-option" id="toc-method-1-copy-file-path-option" class="nav-link active" data-scroll-target="#method-1-copy-file-path-option">Method 1: Copy File Path Option</a></li>
+  <li><a href="#method-2-import-dataset-button-option" id="toc-method-2-import-dataset-button-option" class="nav-link" data-scroll-target="#method-2-import-dataset-button-option">Method 2: “Import Dataset” Button Option</a></li>
+  <li><a href="#method-3-getting-data-from-a-url" id="toc-method-3-getting-data-from-a-url" class="nav-link" data-scroll-target="#method-3-getting-data-from-a-url">Method 3: Getting data from a URL</a></li>
   <li><a href="#other-data-file-formats" id="toc-other-data-file-formats" class="nav-link" data-scroll-target="#other-data-file-formats">Other Data File Formats</a></li>
   <li><a href="#exceptions-to-the-norm" id="toc-exceptions-to-the-norm" class="nav-link" data-scroll-target="#exceptions-to-the-norm">Exceptions to the Norm</a></li>
   <li><a href="#writing-files" id="toc-writing-files" class="nav-link" data-scroll-target="#writing-files">Writing Files</a></li>
@@ -201,6 +201,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
+<section id="method-1-copy-file-path-option" class="level2">
+<h2 class="anchored" data-anchor-id="method-1-copy-file-path-option">Method 1: Copy File Path Option</h2>
 <p>The <a href="https://readr.tidyverse.org/">readr package</a> is the first package that we will learn about. This allows us to read in rectangular data like cvs files.</p>
 <p>This is the typical way it goes when you have data located on your computer.</p>
 <div class="cell">
@@ -210,8 +212,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="copy-file-path-option" class="level2">
-<h2 class="anchored" data-anchor-id="copy-file-path-option">Copy File Path Option</h2>
 <p>Copy the file path from your computer and paste it in the function. One downside to this is you have to manually replace each backslash <code>\</code> with a forwardslash <code>/</code></p>
 <p>Here is an example:</p>
 <div class="cell">
@@ -233,15 +233,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </section>
-<section id="import-dataset-button-option" class="level2">
-<h2 class="anchored" data-anchor-id="import-dataset-button-option">“Import Dataset” Button Option</h2>
+<section id="method-2-import-dataset-button-option" class="level2">
+<h2 class="anchored" data-anchor-id="method-2-import-dataset-button-option">Method 2: “Import Dataset” Button Option</h2>
 <p>Another option is to use the “Import Dataset” button in the environment pane of RStudio.</p>
 <p><img src="data_import_button.jpg" class="img-fluid"></p>
 <p><img src="data_import_pop_up.jpg" class="img-fluid"></p>
 <p>The data will now be in your environment.</p>
 </section>
-<section id="getting-data-from-a-url" class="level2">
-<h2 class="anchored" data-anchor-id="getting-data-from-a-url">Getting data from a URL</h2>
+<section id="method-3-getting-data-from-a-url" class="level2">
+<h2 class="anchored" data-anchor-id="method-3-getting-data-from-a-url">Method 3: Getting data from a URL</h2>
 <p>Often you get your data from online somewhere like <a href="github.com">GitHub</a> or <a href="kaggle.com">Kaggle</a>. While there is the option to download the file, then read it from your computer locally, like we just did above, there’s also the option to read in data from a URL.</p>
 <p>A benefit is that less memory is used on your computer. Another is that you can send your analysis with the data being read in from a URL, and others will be able to run the script without any data issues.</p>
 <p>Below is an example.</p>
