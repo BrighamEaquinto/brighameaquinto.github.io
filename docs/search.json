@@ -1,138 +1,5 @@
 [
   {
-    "objectID": "posts/Welcome/index.html",
-    "href": "posts/Welcome/index.html",
-    "title": "Welcome to Bootcamp",
-    "section": "",
-    "text": "Welcome to Data Science Society’s R Bootcamp"
-  },
-  {
-    "objectID": "posts/Welcome/index.html#course-outline",
-    "href": "posts/Welcome/index.html#course-outline",
-    "title": "Welcome to Bootcamp",
-    "section": "Course Outline:",
-    "text": "Course Outline:\nInstallation\nWhat kind of data are we using?\nReading in Data\n\nBaseR and Tidyverse\n\nuse this page to teach tidyverse https://tidyverse.tidyverse.org/index.html\n\nthere’s a from readr option using the “import dataset” option from the environment pane\n\nWrangling Data\n\ndplyr, for data manipulation\ntidyr, for data tidying\ncleaning, the difference between them all, and when they should all take place in the process\n\nVisualization of Data\n\nthe glory of ggplot\n\n\n\nShow the code\nlibrary(tidyverse)\niris %>%\n    ggplot()+\n    geom_point(aes(Sepal.Length, Sepal.Width, color = Species))+\n    labs(\n        title = \"Title here\",\n        x = \"Sepal Length\", \n        y = \"Sepal Width\"\n        )"
-  },
-  {
-    "objectID": "posts/Welcome/index.html#ideas",
-    "href": "posts/Welcome/index.html#ideas",
-    "title": "Welcome to Bootcamp",
-    "section": "Ideas",
-    "text": "Ideas\n\nHave a notes to instructors page or part of the repo\nhave a page just for the interface of RStudio\n\nhot keys\nshortcuts\nsuch and such\n\nhave a page for R/Python equivalents\nhave a page for other generally useful things\n\nsetting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows\n\nhow can I use the wiki tab on the github page? What is the proper usage of it?\n\n\n\n\nShow the code\nimport pandas as pd\n\ndat = pd.read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Olympics.csv\")\n\n\n\n\nFirst column commentary, code chunks, images, graphs, and charts.\nFirst column commentary, code chunks, images, graphs, and charts.\nFirst column commentary, code chunks, images, graphs, and charts.\nFirst column commentary, code chunks, images, graphs, and charts.\n\nSecond column commentary, code chunks, images, graphs, and charts.\nSecond column commentary, code chunks, images, graphs, and charts.\nSecond column commentary, code chunks, images, graphs, and charts.\nSecond column commentary, code chunks, images, graphs, and charts."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "R Bootcamp",
-    "section": "",
-    "text": "Apr 1, 2001\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/Reading Data/index.html",
-    "href": "posts/Reading Data/index.html",
-    "title": "Reading Data",
-    "section": "",
-    "text": "Reading in data that is located on your computer\n\n\nShow the code\nlibrary(tidyverse)\n\ndata1 <- read_csv(\"C:/Users/Bethany/Downloads/US_Population_200_Years.csv\")\n\nhead(data1)\n\n\n# A tibble: 6 × 7\n   Rank City             Population  Year PopDate    Longitude Latitude\n  <dbl> <chr>                 <dbl> <dbl> <chr>          <dbl>    <dbl>\n1     1 New York, NY          33131  1790 06/01/1790     -73.9     40.7\n2     2 Philadelphia, PA      44096  1790 06/01/1790     -75.1     40.0\n3     3 Boston, MA            18320  1790 06/01/1790     -71.1     42.3\n4     4 Charleston, SC        16359  1790 06/01/1790     -80.0     32.8\n5     5 Baltimore, MD         13503  1790 06/01/1790     -76.6     39.3\n6     7 Salem, MA              7921  1790 06/01/1790     -70.9     42.5\n\n\ntext here\n\n\nGetting data from a URL\n\n\nShow the code\nimport pandas as pd\n\ndata1 = pd.read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\")\n\ndata1.head()\n\n\nThis will teach about how to get a dataset into RStudio so that we can use it.\nThere are different types of data, we won’t get into the nitty-gritty parts of it, but there is structured, semi-structured, and ustructured data. We will be playing around with structured data (think excel files). Examples of the other types of data are pictures, video, and audio files."
-  },
-  {
-    "objectID": "posts/Visualize Data/index.html",
-    "href": "posts/Visualize Data/index.html",
-    "title": "Visualize Data",
-    "section": "",
-    "text": "#ggplot"
-  },
-  {
-    "objectID": "posts/Wrangling Data/index.html",
-    "href": "posts/Wrangling Data/index.html",
-    "title": "Wrangling Data",
-    "section": "",
-    "text": "“It’s working! IT’S WORKING!!”"
-  },
-  {
-    "objectID": "notes.html",
-    "href": "notes.html",
-    "title": "DSS R BootCamp",
-    "section": "",
-    "text": "Options:\nCan’t enter or color headers using Markdown, must use CSS instead: <h6 align=\"center\"; style=\"color:#808080\"> Base R </h6>"
-  },
-  {
-    "objectID": "posts/Installation/index.html",
-    "href": "posts/Installation/index.html",
-    "title": "Installation Tutorial",
-    "section": "",
-    "text": "R is the magic software that lets us do cool things with data. RStudio is the interface for how to use R."
-  },
-  {
-    "objectID": "posts/Quarto Tutorial/index.html",
-    "href": "posts/Quarto Tutorial/index.html",
-    "title": "Quarto Tutorial",
-    "section": "",
-    "text": "This page"
-  },
-  {
-    "objectID": "posts/Installation/installation.html",
-    "href": "posts/Installation/installation.html",
-    "title": "Installation",
-    "section": "",
-    "text": "{:.centered}"
-  },
-  {
-    "objectID": "posts/notes.html",
-    "href": "posts/notes.html",
-    "title": "Notes",
-    "section": "",
-    "text": "Does this work?"
-  },
-  {
-    "objectID": "posts/Quarto Tutorial/quarto.html",
-    "href": "posts/Quarto Tutorial/quarto.html",
-    "title": "Quarto Tutorial",
-    "section": "",
-    "text": "This page"
-  },
-  {
-    "objectID": "posts/Installation/installation.html#second-comparison-baser-vs-the-tidyverse",
-    "href": "posts/Installation/installation.html#second-comparison-baser-vs-the-tidyverse",
-    "title": "Installation",
-    "section": "Second Comparison: BaseR vs the Tidyverse",
-    "text": "Second Comparison: BaseR vs the Tidyverse\n\n\nBase R is native to R; no additional installations are required. If you use this, I will turn in my grave. Please don’t make your life more difficult, use the Tidyverse.\n\nRun this code in the console\ninstall.packages(\"tidyverse\")\n\n\nHere is more on this if you’d like to look into it: https://dplyr.tidyverse.org/articles/base.html"
-  },
-  {
-    "objectID": "posts/Installation/installation.html#row-1-col-1",
-    "href": "posts/Installation/installation.html#row-1-col-1",
-    "title": "Installation",
-    "section": "Row 1 Col 1",
-    "text": "Row 1 Col 1\nsome content"
-  },
-  {
-    "objectID": "posts/Installation/installation.html#row-1-col-2",
-    "href": "posts/Installation/installation.html#row-1-col-2",
-    "title": "Installation",
-    "section": "Row 1 Col 2",
-    "text": "Row 1 Col 2\nsome content"
-  },
-  {
-    "objectID": "posts/Installation/installation.html#row-2-col-1",
-    "href": "posts/Installation/installation.html#row-2-col-1",
-    "title": "Installation",
-    "section": "Row 2 Col 1",
-    "text": "Row 2 Col 1\nsome content"
-  },
-  {
-    "objectID": "posts/Installation/installation.html#row-2-col-2",
-    "href": "posts/Installation/installation.html#row-2-col-2",
-    "title": "Installation",
-    "section": "Row 2 Col 2",
-    "text": "Row 2 Col 2\nsome content"
-  },
-  {
-    "objectID": "posts/Installation/installation.html#second-comparison-base-r-vs-the-tidyverse",
-    "href": "posts/Installation/installation.html#second-comparison-base-r-vs-the-tidyverse",
-    "title": "Installation",
-    "section": "Second Comparison: Base R vs the Tidyverse",
-    "text": "Second Comparison: Base R vs the Tidyverse\n\n\nBase R is native to R; no additional installations are required. If you use this, I will turn in my grave. Please don’t make your life more difficult, use the Tidyverse.\n\nRun this code in the console to download the tidyverse\ninstall.packages(\"tidyverse\")\nIn order to be able to use this package, put this code at the top of your R Script or RMD file\nlibrary(tidyverse)\n\n\nBelow are examples of Base R to Tidyverse comparisons\n\nSelecting Columns\n\n\n\n\nBase R\ndf$column_name\ndf[[]]\n\n\n\nTidyverse\ndf %>% select()\n\n\n\n\nMaking New Columns\n\n\n\n Base R \n\ndf$profit <- df$revenue - df$cost\n\n\nTidyverse\n\ndf %>% mutate(profit = revenue - cost)\n\n\nor\n\n\nmutate(df, profit = revenue - cost)\n\n\n\n\nFiltering Data\n\n\n\nBase R\ndf[df$temperature > 45]\n\nTidyverse\ndf %>% filter(temperature > 45)\nor\nfilter(df, temperature > 45)"
-  },
-  {
     "objectID": "main.html",
     "href": "main.html",
     "title": "R Bootcamp",
@@ -140,25 +7,18 @@
     "text": "Oct 5, 2001\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2001\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2001\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/Installation/installation.html#grouping-summarising-data",
-    "href": "posts/Installation/installation.html#grouping-summarising-data",
-    "title": "Installation",
-    "section": "Grouping & Summarising Data",
-    "text": "Grouping & Summarising Data\n\n\n\nBase R\nI’m not sure how to do this in BaseR… and that’s okay\n\n\n\nTidyverse\n\ndf %>% \n    group_by(city) %>% \n    summarise(Avg_House_Price = mean(house_price))"
-  },
-  {
-    "objectID": "posts/Installation/installation.html#sorting-data",
-    "href": "posts/Installation/installation.html#sorting-data",
-    "title": "Installation",
-    "section": "Sorting Data",
-    "text": "Sorting Data\n\n\n\nBase R\nmtcars[order(mpg, -cyl),]\n\n\n\nTidyverse\n\nmtcars %>% arrange(mpg, desc(cyl))\n\n\n\n\n\nCheck out this page for more comparisons.\nFiltering Data in Base R:\n\nhttps://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/\nhttps://cran.r-project.org/web/packages/crunch/vignettes/filters.html"
-  },
-  {
-    "objectID": "posts/Visualize Data/visualizing_data.html",
-    "href": "posts/Visualize Data/visualizing_data.html",
-    "title": "Visualize Data",
+    "objectID": "posts/weeks/Oct_5th.html",
+    "href": "posts/weeks/Oct_5th.html",
+    "title": "Week 2",
     "section": "",
-    "text": "#ggplot"
+    "text": "this"
+  },
+  {
+    "objectID": "posts/weeks/Oct_5th.html#that",
+    "href": "posts/weeks/Oct_5th.html#that",
+    "title": "Week 2",
+    "section": "That",
+    "text": "That\nthat"
   },
   {
     "objectID": "posts/Reading Data/reading_data.html",
@@ -166,146 +26,6 @@
     "title": "Reading Data",
     "section": "",
     "text": "The readr package is the first package that we will learn about. This allows us to read in rectangular data like cvs files.\nThis is the typical way it goes when you have data located on your computer.\n\nlibrary(tidyverse)\n\ndataset <- read_csv(file_path)\n\nhead(dataset)\n\nCopy the file path from your computer and paste it in the function. One downside to this is you have to manually replace each backslash \\ with a forwardslash /\nHere is an example:\n\nlibrary(tidyverse)\n\nbob <- read_csv(\"C:/Users/Bethany/Downloads/US_Population_200_Years.csv\")\n\nhead(bob)\n\n# A tibble: 6 × 7\n   Rank City             Population  Year PopDate    Longitude Latitude\n  <dbl> <chr>                 <dbl> <dbl> <chr>          <dbl>    <dbl>\n1     1 New York, NY          33131  1790 06/01/1790     -73.9     40.7\n2     2 Philadelphia, PA      44096  1790 06/01/1790     -75.1     40.0\n3     3 Boston, MA            18320  1790 06/01/1790     -71.1     42.3\n4     4 Charleston, SC        16359  1790 06/01/1790     -80.0     32.8\n5     5 Baltimore, MD         13503  1790 06/01/1790     -76.6     39.3\n6     7 Salem, MA              7921  1790 06/01/1790     -70.9     42.5"
-  },
-  {
-    "objectID": "posts/Wrangling Data/wrangling_data.html",
-    "href": "posts/Wrangling Data/wrangling_data.html",
-    "title": "Wrangling Data",
-    "section": "",
-    "text": "Base R is the native tools that R has to deal with data. The syntax is outdated and better tools are available to use.\nThe syntax to work in Base R is very similar to native python syntax. The biggest downside is that it’s not possible to chain operations together like selecting columns and filtering data. You would to constantly assign and reassign variables which results in very messy and unreadable code.\nIf you use this, I will turn in my grave. Please don’t make your life more difficult, use the Tidyverse.\nBase R is native to R; no additional installations are required.\n\n\n\n\nThe Tidyverse allows chainable actions like this:\n\nnew_dataset <- dataset %>% \n    select() %>%\n    filter() %>% \n    mutate() %>% \n    group_by() %>% \n    summarise() %>%\n    arrange()\n\nRun this code in the console to download the tidyverse\n\ninstall.packages(\"tidyverse\")\n\nIn order to be able to use this package, put this code at the top of your R Script or RMD file\n\nlibrary(tidyverse)\n\n\n\n\n\n\n\n\n\n\n\ndf$column_name\ndf[[]]\n\n\n\n\n\ndf %>% select(column1, column2)\n\n\n\n\n\n\n\n\n\n\n\ndf$profit <- df$revenue - df$cost\n\n\n\n\n\ndf %>% mutate(profit = revenue - cost)\n\n\n\n\n\n\n\n\n\n\n\n\ndf[df$temperature > 45]\n\n\n\n\n\ndf %>% filter(temperature > 45)\n\n\n\n\n\n\n\n\n\n\n\nI’m not sure how to do this in BaseR… and that’s okay\n\n\n\n\n\ndf %>% \n    group_by(city) %>% \n    summarise(Avg_House_Price = mean(house_price))\n\n\n\n\n\n\n\n\n\n\n\nmtcars[order(mpg, -cyl),]\n\n\n\n\n\nmtcars %>% arrange(mpg, desc(cyl))\n\n\n\n\n\nCheck out this page for more comparisons.\nFiltering Data in Base R:\n\nhttps://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/\nhttps://cran.r-project.org/web/packages/crunch/vignettes/filters.html"
-  },
-  {
-    "objectID": "posts/Welcome/welcome.html",
-    "href": "posts/Welcome/welcome.html",
-    "title": "Welcome to Bootcamp",
-    "section": "",
-    "text": "Welcome to Data Science Society’s R Bootcamp"
-  },
-  {
-    "objectID": "posts/Welcome/welcome.html#course-outline",
-    "href": "posts/Welcome/welcome.html#course-outline",
-    "title": "Welcome to Bootcamp",
-    "section": "Course Outline:",
-    "text": "Course Outline:\nThe purpose of R Bootcamp is to be able to read, wrangle, and visualize data using R in RStudio. By the end of the course you will be able to contribute to a society project next semester.\n\nReading Data: readr package\n\nnavigating file systems\ncopy file paths\nRStudio’s “Import Dataset” button, “From Text (readr)” option\n\n\n\nWrangling Data: dplyr/tidyr packages\nPrimary Focus: select, filter, mutate, groupby/summarise, and arrange.\nSecondary Focus: joining, pivoting, case_when,\nOther: drop_na(), replace_na(),\n\n\nVisualizing Data: ggplot2 package\n\nWhat kind of data these plot plot\ncode for each\nhistograms, boxplots, scatterplots, bar charts.\n\nIn Terms of Packages:\n\nreadr\ndplyr/tidyr\nggplot\n\nOthers:\n\nforcats (fct_reorder and working with factors)\nstringr (working with text data)\nlubridate (working with dates)\ntibble (just the tibble() function)\npurr (mappings, boring)"
-  },
-  {
-    "objectID": "posts/Welcome/welcome.html#ideas",
-    "href": "posts/Welcome/welcome.html#ideas",
-    "title": "Welcome to Bootcamp",
-    "section": "Ideas",
-    "text": "Ideas\n\nHave a notes to instructors page or part of the repo\nhave a page just for the interface of RStudio\n\nhot keys\nshortcuts\nsuch and such\n\nhave a page for R/Python equivalents\nhave a page for other generally useful things\n\nsetting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows\n\nhow can I use the wiki tab on the github page? What is the proper usage of it?\n\n\n\nimport pandas as pd\n\ndat = pd.read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Olympics.csv\")\n\nThe purpose of R Bootcamp is to be able to read, wrangle, and visualize data using R in RStudio. By the end of the course you will be able to contribute to a society project next semester.\n\nReading data:\n\nreadr\n\nnavigating file systems\ncopy file paths\nRStudio’s “Import Dataset” button, “From Text (readr)” option\n\n\n\n\nWrangling Data\n\ndplyr/tidyr\nThe “wrangling verbs”\nPrimary Focus: select, filter, mutate, groupby/summarise, and arrange.\nSecondary Focus: joining, pivoting, case_when,\nOther: drop_na(), replace_na(),\n\n\n\nVisualizing Data\n\nggplot2\n\nWhat kind of data these plot plot\ncode for each\nhistograms, boxplots, scatterplots, bar charts."
-  },
-  {
-    "objectID": "posts/Welcome/welcome.html#what-kind-of-data-are-we-using",
-    "href": "posts/Welcome/welcome.html#what-kind-of-data-are-we-using",
-    "title": "Welcome to Bootcamp",
-    "section": "What kind of data are we using?",
-    "text": "What kind of data are we using?\nWe will mainly be using the _____ and the ____ datasets for practice.\nWhat is data? Is it singular or plural?\nWhat other types of data are there? Take this for example ____\nWe will be working with tabular data. Other data includes pictures, videos, and audio.\nThere are different types of data, we won’t get into the nitty-gritty parts of it, but there is structured, semi-structured, and ustructured data. We will be playing around with structured data (think excel files). Examples of the other types of data are pictures, video, and audio files.\n\nreadr: for data import\ndplyr: for data manipulation\ntidyr: for data tidying\nggplot2: for data visualisation\ntibble: for tibbles, a modern re-imagining of data frames\nstringr: for strings\nforcats: for factors\npurrr: for functional programming\n+\nlubridate: for dates"
-  },
-  {
-    "objectID": "notes.html#ideas",
-    "href": "notes.html#ideas",
-    "title": "DSS R BootCamp",
-    "section": "Ideas",
-    "text": "Ideas\n\nHave a notes to instructors page or part of the repo\nhave a page just for the interface of RStudio\n\nhot keys\nshortcuts\nsuch and such\n\nhave a page for R/Python equivalents\nhave a page for other generally useful things\n\nsetting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows\n\nhow can I use the wiki tab on the github page? What is the proper usage of it?\n\nOthers: - commenting code - assignment operator vs equal sign - pipe operator %>% - filtering operators (==, %in%, |, &, !=) - c(vector) and list conversation\nUse this for advance select statements: https://dplyr.tidyverse.org/reference/select.html"
-  },
-  {
-    "objectID": "posts/Installation/installation.html#download-instructions",
-    "href": "posts/Installation/installation.html#download-instructions",
-    "title": "Installation",
-    "section": "Download Instructions",
-    "text": "Download Instructions\nGoogle “download R” or go to this link to download it. The page should look like this.\n\n\nGoogle “download RStudio” or go to this link to download it. The page should look like this."
-  },
-  {
-    "objectID": "posts/Installation/installation.html#selecting-columns",
-    "href": "posts/Installation/installation.html#selecting-columns",
-    "title": "Installation",
-    "section": "Selecting Columns",
-    "text": "Selecting Columns\n\n\n\nBase R\ndf$column_name\ndf[[]]\n\n\n\nTidyverse\n\ndf %>% select(column1, column2)"
-  },
-  {
-    "objectID": "posts/Installation/installation.html#filtering-data",
-    "href": "posts/Installation/installation.html#filtering-data",
-    "title": "Installation",
-    "section": "Filtering Data",
-    "text": "Filtering Data\n\n\n\nBase R\ndf[df$temperature > 45]\n\n\n\nTidyverse\n\ndf %>% filter(temperature > 45)"
-  },
-  {
-    "objectID": "posts/Installation/installation.html#making-new-columns",
-    "href": "posts/Installation/installation.html#making-new-columns",
-    "title": "Installation",
-    "section": "Making New Columns",
-    "text": "Making New Columns\n\n\n\nBase R\ndf$profit <- df$revenue - df$cost\n\n\n\nTidyverse\n\ndf %>% mutate(profit = revenue - cost)"
-  },
-  {
-    "objectID": "posts/Reading Data/reading_data.html#writing-files",
-    "href": "posts/Reading Data/reading_data.html#writing-files",
-    "title": "Reading Data",
-    "section": "Writing Files",
-    "text": "Writing Files\nWith readr, we can write data files.\n\nwrite_csv(dataset_to_save, \"file_name.csv\")"
-  },
-  {
-    "objectID": "posts/Reading Data/reading_data.html#exceptions-to-the-norm",
-    "href": "posts/Reading Data/reading_data.html#exceptions-to-the-norm",
-    "title": "Reading Data",
-    "section": "Exceptions to the Norm",
-    "text": "Exceptions to the Norm\nFor most cases this is the way to read in data. There are some examples of variations.\nSometimes the column headers are not the top row of the data. In this scenario, use the option skip = 1 if there is one extra row above the headers.\nSometimes there are not column name at all and we’ll have to give them to the dataset. How can we do this?"
-  },
-  {
-    "objectID": "posts/Reading Data/reading_data.html#copy-file-path-option",
-    "href": "posts/Reading Data/reading_data.html#copy-file-path-option",
-    "title": "Reading Data",
-    "section": "Copy File Path Option",
-    "text": "Copy File Path Option\nCopy the file path from your computer and paste it in the function. One downside to this is you have to manually replace each backslash \\ with a forwardslash /\nHere is an example:\n\nlibrary(tidyverse)\n\nbob <- read_csv(\"C:/Users/Bethany/Downloads/US_Population_200_Years.csv\")\n\nhead(bob)\n\n# A tibble: 6 × 7\n   Rank City             Population  Year PopDate    Longitude Latitude\n  <dbl> <chr>                 <dbl> <dbl> <chr>          <dbl>    <dbl>\n1     1 New York, NY          33131  1790 06/01/1790     -73.9     40.7\n2     2 Philadelphia, PA      44096  1790 06/01/1790     -75.1     40.0\n3     3 Boston, MA            18320  1790 06/01/1790     -71.1     42.3\n4     4 Charleston, SC        16359  1790 06/01/1790     -80.0     32.8\n5     5 Baltimore, MD         13503  1790 06/01/1790     -76.6     39.3\n6     7 Salem, MA              7921  1790 06/01/1790     -70.9     42.5"
-  },
-  {
-    "objectID": "posts/Reading Data/reading_data.html#import-dataset-button-option",
-    "href": "posts/Reading Data/reading_data.html#import-dataset-button-option",
-    "title": "Reading Data",
-    "section": "“Import Dataset” Button Option",
-    "text": "“Import Dataset” Button Option\nAnother option is to use the “Import Dataset” button in the environment pane of RStudio.\n\n\nThe data will now be in your environment."
-  },
-  {
-    "objectID": "posts/Reading Data/reading_data.html#getting-data-from-a-url",
-    "href": "posts/Reading Data/reading_data.html#getting-data-from-a-url",
-    "title": "Reading Data",
-    "section": "Getting data from a URL",
-    "text": "Getting data from a URL\nOften you get your data from online somewhere like GitHub or Kaggle. While there is the option to download the file, then read it from your computer locally, like we just did above, there’s also the option to read in data from a URL.\nA benefit is that less memory is used on your computer. Another is that you can send your analysis with the data being read in from a URL, and others will be able to run the script without any data issues.\nBelow is an example.\n\nlibrary(tidyverse)\n\ndata1 <- read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\")\n\nhead(data1)"
-  },
-  {
-    "objectID": "posts/Reading Data/reading_data.html#other-data-file-formats",
-    "href": "posts/Reading Data/reading_data.html#other-data-file-formats",
-    "title": "Reading Data",
-    "section": "Other Data File Formats",
-    "text": "Other Data File Formats\nWhat if the dataset you have is not a csv? What if it’s an excel file or the often unused tsc?\nOther options include:\n\nread_excel() to read excel files like xls or xlsx\nread_tsv() to read tsv files (tab separated files)\nread_rds() to read RDS files (a data export option from SQLServer)"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Brigham Eaquinto",
-    "section": "",
-    "text": "Make tutorials like Greg Hamel’s work:\n\nIntro to R notebook with videos\nPython for Data Analysis notebook with videos\n\n\nRead more often - humanities"
-  },
-  {
-    "objectID": "posts/welcome/welcome.html",
-    "href": "posts/welcome/welcome.html",
-    "title": "Welcome to Bootcamp",
-    "section": "",
-    "text": "Welcome to Data Science Society’s R Bootcamp"
-  },
-  {
-    "objectID": "posts/welcome/welcome.html#course-outline",
-    "href": "posts/welcome/welcome.html#course-outline",
-    "title": "Welcome to Bootcamp",
-    "section": "Course Outline:",
-    "text": "Course Outline:\nThe purpose of R Bootcamp is to be able to read, wrangle, and visualize data using R in RStudio. By the end of the course you will be able to contribute to a society project next semester.\n\nReading Data: readr package\n\nnavigating file systems\ncopy file paths\nRStudio’s “Import Dataset” button, “From Text (readr)” option\n\n\n\nWrangling Data: dplyr/tidyr packages\nPrimary Focus: select, filter, mutate, groupby/summarise, and arrange.\nSecondary Focus: joining, pivoting, case_when,\nOther: drop_na(), replace_na(),\n\n\nVisualizing Data: ggplot2 package\n\nWhat kind of data these plot plot\ncode for each\nhistograms, boxplots, scatterplots, bar charts.\n\nIn Terms of Packages:\n\nreadr\ndplyr/tidyr\nggplot\n\nOthers:\n\nforcats (fct_reorder and working with factors)\nstringr (working with text data)\nlubridate (working with dates)\ntibble (just the tibble() function)\npurr (mappings, boring)"
-  },
-  {
-    "objectID": "posts/welcome/welcome.html#what-kind-of-data-are-we-using",
-    "href": "posts/welcome/welcome.html#what-kind-of-data-are-we-using",
-    "title": "Welcome to Bootcamp",
-    "section": "What kind of data are we using?",
-    "text": "What kind of data are we using?\nWe will mainly be using the _____ and the ____ datasets for practice.\nWhat is data? Is it singular or plural?\nWhat other types of data are there? Take this for example ____\nWe will be working with tabular data. Other data includes pictures, videos, and audio.\nThere are different types of data, we won’t get into the nitty-gritty parts of it, but there is structured, semi-structured, and ustructured data. We will be playing around with structured data (think excel files). Examples of the other types of data are pictures, video, and audio files.\n\nreadr: for data import\ndplyr: for data manipulation\ntidyr: for data tidying\nggplot2: for data visualisation\ntibble: for tibbles, a modern re-imagining of data frames\nstringr: for strings\nforcats: for factors\npurrr: for functional programming\n+\nlubridate: for dates"
   },
   {
     "objectID": "posts/Reading Data/reading_data.html#method-2-import-dataset-button-option",
@@ -322,39 +42,67 @@
     "text": "Method 3: Getting data from a URL\nOften you get your data from online somewhere like GitHub or Kaggle. While there is the option to download the file, then read it from your computer locally, like we just did above, there’s also the option to read in data from a URL.\nA benefit is that less memory is used on your computer. Another is that you can send your analysis with the data being read in from a URL, and others will be able to run the script without any data issues.\nBelow is an example.\n\nlibrary(tidyverse)\n\ndata1 <- read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\")\n\nhead(data1)"
   },
   {
-    "objectID": "posts/Oct_12th/Oct_12th.html",
-    "href": "posts/Oct_12th/Oct_12th.html",
-    "title": "R Bootcamp",
+    "objectID": "posts/Reading Data/reading_data.html#other-data-file-formats",
+    "href": "posts/Reading Data/reading_data.html#other-data-file-formats",
+    "title": "Reading Data",
+    "section": "Other Data File Formats",
+    "text": "Other Data File Formats\nWhat if the dataset you have is not a csv? What if it’s an excel file or the often unused tsc?\nOther options include:\n\nread_excel() to read excel files like xls or xlsx\nread_tsv() to read tsv files (tab separated files)\nread_rds() to read RDS files (a data export option from SQLServer)"
+  },
+  {
+    "objectID": "posts/Reading Data/reading_data.html#exceptions-to-the-norm",
+    "href": "posts/Reading Data/reading_data.html#exceptions-to-the-norm",
+    "title": "Reading Data",
+    "section": "Exceptions to the Norm",
+    "text": "Exceptions to the Norm\nFor most cases this is the way to read in data. There are some examples of variations.\nSometimes the column headers are not the top row of the data. In this scenario, use the option skip = 1 if there is one extra row above the headers.\nSometimes there are not column name at all and we’ll have to give them to the dataset. How can we do this?"
+  },
+  {
+    "objectID": "posts/Reading Data/reading_data.html#writing-files",
+    "href": "posts/Reading Data/reading_data.html#writing-files",
+    "title": "Reading Data",
+    "section": "Writing Files",
+    "text": "Writing Files\nWith readr, we can write data files.\n\nwrite_csv(dataset_to_save, \"file_name.csv\")"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Brigham Eaquinto",
     "section": "",
-    "text": "Read in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\nFrom this dataset:\n\nselect the Apartment, Gender, and Price columns\nfilter the Gender column to female apartments and remove NAs !is.na(Price)\nfind the average price of apartments\n\n\nhousing_data <- read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\")\nhead(housing_data)\n\n# Starter Code\nhousing_data %>% \n    select() %>% \n    filter( , !is.na(Price)) %>% \n    summarise(mean())"
+    "text": "Make tutorials like Greg Hamel’s work:\n\nIntro to R notebook with videos\nPython for Data Analysis notebook with videos\n\n\nRead more often - humanities"
   },
   {
-    "objectID": "posts/Oct_12th/Oct_12th.html#second-practice",
-    "href": "posts/Oct_12th/Oct_12th.html#second-practice",
-    "title": "R Bootcamp",
-    "section": "Second Practice",
-    "text": "Second Practice\nThe iris dataset is built into R.\n\nCreate a new column to tell if the Sepal.Length is bigger than or equal to 5\nSort the data by Petal.Length\n\n\nhead(iris)\n\n# Starter Code\niris %>%\n    mutate() %>% \n    arrange()"
-  },
-  {
-    "objectID": "posts/Oct_12th/Oct_12th.html#third-practice",
-    "href": "posts/Oct_12th/Oct_12th.html#third-practice",
-    "title": "R Bootcamp",
-    "section": "Third Practice",
-    "text": "Third Practice"
-  },
-  {
-    "objectID": "posts/Oct_5th/Oct_5th.html",
-    "href": "posts/Oct_5th/Oct_5th.html",
-    "title": "Week 2",
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "DSS R BootCamp",
     "section": "",
-    "text": "this"
+    "text": "Options:\nCan’t enter or color headers using Markdown, must use CSS instead: <h6 align=\"center\"; style=\"color:#808080\"> Base R </h6>"
   },
   {
-    "objectID": "posts/Oct_5th/Oct_5th.html#that",
-    "href": "posts/Oct_5th/Oct_5th.html#that",
-    "title": "Week 2",
-    "section": "That",
-    "text": "That\nthat"
+    "objectID": "notes.html#ideas",
+    "href": "notes.html#ideas",
+    "title": "DSS R BootCamp",
+    "section": "Ideas",
+    "text": "Ideas\n\nHave a notes to instructors page or part of the repo\nhave a page just for the interface of RStudio\n\nhot keys\nshortcuts\nsuch and such\n\nhave a page for R/Python equivalents\nhave a page for other generally useful things\n\nsetting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows\n\nhow can I use the wiki tab on the github page? What is the proper usage of it?\n\nOthers: - commenting code - assignment operator vs equal sign - pipe operator %>% - filtering operators (==, %in%, |, &, !=) - c(vector) and list conversation\nUse this for advance select statements: https://dplyr.tidyverse.org/reference/select.html"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#download-instructions",
+    "href": "posts/Installation/installation.html#download-instructions",
+    "title": "Installation",
+    "section": "Download Instructions",
+    "text": "Download Instructions\nGoogle “download R” or go to this link to download it. The page should look like this.\n\n\nGoogle “download RStudio” or go to this link to download it. The page should look like this."
+  },
+  {
+    "objectID": "posts/Quarto Tutorial/quarto.html",
+    "href": "posts/Quarto Tutorial/quarto.html",
+    "title": "Quarto Tutorial",
+    "section": "",
+    "text": "This page"
+  },
+  {
+    "objectID": "posts/Visualize Data/visualizing_data.html",
+    "href": "posts/Visualize Data/visualizing_data.html",
+    "title": "Visualize Data",
+    "section": "",
+    "text": "#ggplot"
   },
   {
     "objectID": "posts/weeks/Oct_12th.html",
@@ -380,36 +128,50 @@
   {
     "objectID": "posts/weeks/Oct_19th.html",
     "href": "posts/weeks/Oct_19th.html",
-    "title": "Oct 19th",
+    "title": "Week 4",
     "section": "",
     "text": "Try this"
   },
   {
     "objectID": "posts/weeks/Oct_19th.html#exercise-2",
     "href": "posts/weeks/Oct_19th.html#exercise-2",
-    "title": "Oct 19th",
+    "title": "Week 4",
     "section": "Exercise 2",
     "text": "Exercise 2\nthis"
   },
   {
     "objectID": "posts/weeks/Oct_19th.html#exercise-3",
     "href": "posts/weeks/Oct_19th.html#exercise-3",
-    "title": "Oct 19th",
+    "title": "Week 4",
     "section": "Exercise 3",
     "text": "Exercise 3\nthen this"
   },
   {
-    "objectID": "posts/weeks/Oct_5th.html",
-    "href": "posts/weeks/Oct_5th.html",
-    "title": "Week 2",
+    "objectID": "posts/Welcome/welcome.html",
+    "href": "posts/Welcome/welcome.html",
+    "title": "Welcome to Bootcamp",
     "section": "",
-    "text": "this"
+    "text": "Welcome to Data Science Society’s R Bootcamp"
   },
   {
-    "objectID": "posts/weeks/Oct_5th.html#that",
-    "href": "posts/weeks/Oct_5th.html#that",
-    "title": "Week 2",
-    "section": "That",
-    "text": "That\nthat"
+    "objectID": "posts/Welcome/welcome.html#course-outline",
+    "href": "posts/Welcome/welcome.html#course-outline",
+    "title": "Welcome to Bootcamp",
+    "section": "Course Outline:",
+    "text": "Course Outline:\nThe purpose of R Bootcamp is to be able to read, wrangle, and visualize data using R in RStudio. By the end of the course you will be able to contribute to a society project next semester.\n\nReading Data: readr package\n\nnavigating file systems\ncopy file paths\nRStudio’s “Import Dataset” button, “From Text (readr)” option\n\n\n\nWrangling Data: dplyr/tidyr packages\nPrimary Focus: select, filter, mutate, groupby/summarise, and arrange.\nSecondary Focus: joining, pivoting, case_when,\nOther: drop_na(), replace_na(),\n\n\nVisualizing Data: ggplot2 package\n\nWhat kind of data these plot plot\ncode for each\nhistograms, boxplots, scatterplots, bar charts.\n\nIn Terms of Packages:\n\nreadr\ndplyr/tidyr\nggplot\n\nOthers:\n\nforcats (fct_reorder and working with factors)\nstringr (working with text data)\nlubridate (working with dates)\ntibble (just the tibble() function)\npurr (mappings, boring)"
+  },
+  {
+    "objectID": "posts/Welcome/welcome.html#what-kind-of-data-are-we-using",
+    "href": "posts/Welcome/welcome.html#what-kind-of-data-are-we-using",
+    "title": "Welcome to Bootcamp",
+    "section": "What kind of data are we using?",
+    "text": "What kind of data are we using?\nWe will mainly be using the _____ and the ____ datasets for practice.\nWhat is data? Is it singular or plural?\nWhat other types of data are there? Take this for example ____\nWe will be working with tabular data. Other data includes pictures, videos, and audio.\nThere are different types of data, we won’t get into the nitty-gritty parts of it, but there is structured, semi-structured, and ustructured data. We will be playing around with structured data (think excel files). Examples of the other types of data are pictures, video, and audio files.\n\nreadr: for data import\ndplyr: for data manipulation\ntidyr: for data tidying\nggplot2: for data visualisation\ntibble: for tibbles, a modern re-imagining of data frames\nstringr: for strings\nforcats: for factors\npurrr: for functional programming\n+\nlubridate: for dates"
+  },
+  {
+    "objectID": "posts/Wrangling Data/wrangling_data.html",
+    "href": "posts/Wrangling Data/wrangling_data.html",
+    "title": "Wrangling Data",
+    "section": "",
+    "text": "Base R is the native tools that R has to deal with data. The syntax is outdated and better tools are available to use.\nThe syntax to work in Base R is very similar to native python syntax. The biggest downside is that it’s not possible to chain operations together like selecting columns and filtering data. You would to constantly assign and reassign variables which results in very messy and unreadable code.\nIf you use this, I will turn in my grave. Please don’t make your life more difficult, use the Tidyverse.\nBase R is native to R; no additional installations are required.\n\n\n\n\nThe Tidyverse allows chainable actions like this:\n\nnew_dataset <- dataset %>% \n    select() %>%\n    filter() %>% \n    mutate() %>% \n    group_by() %>% \n    summarise() %>%\n    arrange()\n\nRun this code in the console to download the tidyverse\n\ninstall.packages(\"tidyverse\")\n\nIn order to be able to use this package, put this code at the top of your R Script or RMD file\n\nlibrary(tidyverse)\n\n\n\n\n\n\n\n\n\n\n\ndf$column_name\ndf[[]]\n\n\n\n\n\ndf %>% select(column1, column2)\n\n\n\n\n\n\n\n\n\n\n\ndf$profit <- df$revenue - df$cost\n\n\n\n\n\ndf %>% mutate(profit = revenue - cost)\n\n\n\n\n\n\n\n\n\n\n\n\ndf[df$temperature > 45]\n\n\n\n\n\ndf %>% filter(temperature > 45)\n\n\n\n\n\n\n\n\n\n\n\nI’m not sure how to do this in BaseR… and that’s okay\n\n\n\n\n\ndf %>% \n    group_by(city) %>% \n    summarise(Avg_House_Price = mean(house_price))\n\n\n\n\n\n\n\n\n\n\n\nmtcars[order(mpg, -cyl),]\n\n\n\n\n\nmtcars %>% arrange(mpg, desc(cyl))\n\n\n\n\n\nCheck out this page for more comparisons.\nFiltering Data in Base R:\n\nhttps://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/\nhttps://cran.r-project.org/web/packages/crunch/vignettes/filters.html"
   }
 ]

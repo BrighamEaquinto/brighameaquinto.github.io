@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: docs 
   preview:
     port: 314
 
@@ -19,7 +19,7 @@ format:
 
 website:
   title: "DSS R BootCamp"
-  image: website_thumbnail.jpg
+  image: website_thumbnail.png
   repo-url: https://github.com/BrighamEaquinto/brighameaquinto.github.io.git
   repo-actions: [edit, issue]
   page-navigation: true
@@ -42,6 +42,13 @@ website:
         href: posts\Wrangling Data\wrangling_data.qmd
       - text: "Visualizing Data"
         href: posts\Visualize Data\visualizing_data.qmd
+      - text: "---"
+      - text: "Weeks"
+        menu: 
+        - text: "Week 2 (Oct 5th)"
+          href: posts/weeks/Oct_5th.qmd
+        - posts/weeks/Oct_12th.qmd
+        - posts/weeks/Oct_19th.qmd
 
   # sidebar:
   #   # title: "Tutorials"
