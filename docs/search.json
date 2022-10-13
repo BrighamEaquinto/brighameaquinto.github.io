@@ -137,14 +137,14 @@
     "href": "main.html",
     "title": "R Bootcamp",
     "section": "",
-    "text": "Apr 1, 2001\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Installation\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Tutorial\n\n\n\n\n\n\n\n\n\n\n\n\nApr 1, 2001\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR Bootcamp\n\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2001\n\n\n\n\n\n\n  \n\n\n\n\nReading Data\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nVisualize Data\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nWelcome to Bootcamp\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nWrangling Data\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/Installation/installation.html#grouping-summarising-data",
     "href": "posts/Installation/installation.html#grouping-summarising-data",
     "title": "Installation",
     "section": "Grouping & Summarising Data",
-    "text": "Grouping & Summarising Data\n\n\n\nBase R\nI’m not sure how to do this… and that’s okay\n\n\n\nTidyverse\n\ndf %>% \n    group_by(city) %>% \n    summarise(Avg_House_Price = mean(house_price))"
+    "text": "Grouping & Summarising Data\n\n\n\nBase R\nI’m not sure how to do this in BaseR… and that’s okay\n\n\n\nTidyverse\n\ndf %>% \n    group_by(city) %>% \n    summarise(Avg_House_Price = mean(house_price))"
   },
   {
     "objectID": "posts/Installation/installation.html#sorting-data",
@@ -172,7 +172,7 @@
     "href": "posts/Wrangling Data/wrangling_data.html",
     "title": "Wrangling Data",
     "section": "",
-    "text": "“It’s working! IT’S WORKING!!”"
+    "text": "Base R is the native tools that R has to deal with data. The syntax is outdated and better tools are available to use.\nThe syntax to work in Base R is very similar to native python syntax. The biggest downside is that it’s not possible to chain operations together like selecting columns and filtering data. You would to constantly assign and reassign variables which results in very messy and unreadable code.\nIf you use this, I will turn in my grave. Please don’t make your life more difficult, use the Tidyverse.\nBase R is native to R; no additional installations are required.\n\n\n\n\nThe Tidyverse allows chainable actions like this:\n\nnew_dataset <- dataset %>% \n    select() %>%\n    filter() %>% \n    mutate() %>% \n    group_by() %>% \n    summarise() %>%\n    arrange()\n\nRun this code in the console to download the tidyverse\n\ninstall.packages(\"tidyverse\")\n\nIn order to be able to use this package, put this code at the top of your R Script or RMD file\n\nlibrary(tidyverse)\n\n\n\n\n\n\n\n\n\n\n\ndf$column_name\ndf[[]]\n\n\n\n\n\ndf %>% select(column1, column2)\n\n\n\n\n\n\n\n\n\n\n\ndf$profit <- df$revenue - df$cost\n\n\n\n\n\ndf %>% mutate(profit = revenue - cost)\n\n\n\n\n\n\n\n\n\n\n\n\ndf[df$temperature > 45]\n\n\n\n\n\ndf %>% filter(temperature > 45)\n\n\n\n\n\n\n\n\n\n\n\nI’m not sure how to do this in BaseR… and that’s okay\n\n\n\n\n\ndf %>% \n    group_by(city) %>% \n    summarise(Avg_House_Price = mean(house_price))\n\n\n\n\n\n\n\n\n\n\n\nmtcars[order(mpg, -cyl),]\n\n\n\n\n\nmtcars %>% arrange(mpg, desc(cyl))\n\n\n\n\n\nCheck out this page for more comparisons.\nFiltering Data in Base R:\n\nhttps://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/\nhttps://cran.r-project.org/web/packages/crunch/vignettes/filters.html"
   },
   {
     "objectID": "posts/Welcome/welcome.html",
@@ -320,5 +320,12 @@
     "title": "Reading Data",
     "section": "Method 3: Getting data from a URL",
     "text": "Method 3: Getting data from a URL\nOften you get your data from online somewhere like GitHub or Kaggle. While there is the option to download the file, then read it from your computer locally, like we just did above, there’s also the option to read in data from a URL.\nA benefit is that less memory is used on your computer. Another is that you can send your analysis with the data being read in from a URL, and others will be able to run the script without any data issues.\nBelow is an example.\n\nlibrary(tidyverse)\n\ndata1 <- read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\")\n\nhead(data1)"
+  },
+  {
+    "objectID": "posts/Oct_12th/Oct_12th.html",
+    "href": "posts/Oct_12th/Oct_12th.html",
+    "title": "R Bootcamp",
+    "section": "",
+    "text": "Read in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\n\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.3.6     ✔ purrr   0.3.4\n✔ tibble  3.1.7     ✔ dplyr   1.0.9\n✔ tidyr   1.2.0     ✔ stringr 1.4.0\n✔ readr   2.1.2     ✔ forcats 0.5.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nhousing_data <- read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\")\n\nRows: 122 Columns: 17\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (6): Apartment, Gender, Address, Phone, Website, Description\ndbl (11): Price, PrivateRoomPrice, Capacity, ParkingStalls, Deposit, Utility...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nGo to this page ->"
   }
 ]

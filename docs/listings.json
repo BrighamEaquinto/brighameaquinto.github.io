@@ -15,9 +15,10 @@
     "items": [
       "/posts/Installation/installation.html",
       "/posts/Quarto Tutorial/quarto.html",
+      "/posts/Oct_12th/Oct_12th.html",
       "/posts/Reading Data/reading_data.html",
       "/posts/Visualize Data/visualizing_data.html",
-      "/posts/welcome/welcome.html",
+      "/posts/Welcome/welcome.html",
       "/posts/Wrangling Data/wrangling_data.html"
     ]
   }
