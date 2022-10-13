@@ -64,20 +64,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-Weeks .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-Weeks'] = new List('listing-Weeks', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -100,18 +100,19 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-md navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">DSS R BootCamp</span>
-    </a>
-  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./main.html" aria-current="page">DSS Bootcamp</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./posts/Installation/installation.html">Install R &amp; RStudio</a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="./posts/Reading Data/reading_data.html">Reading Data</a>
   </li>  
@@ -119,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./posts/Wrangling Data/wrangling_data.html">Wrangling Data</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts/Visualize Data/visualizing_data.html">Visualize Data</a>
+    <a class="nav-link" href="./posts/Visualize Data/visualizing_data.html">Visualizing Data</a>
   </li>  
 </ul>
               <div class="quarto-toggle-container">
@@ -158,77 +159,39 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Fixing things… hopefully</p>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-default" id="listing-Weeks">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1665543192153" data-listing-reading-time-sort="0.895">
-<div class="thumbnail">
-<p><a href="./posts/Installation/installation.html"> <img src="./posts/Installation/Rlogo.jpg" class="thumnail-image"> </a></p>
-</div>
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1002261600000" data-listing-file-modified-sort="1665643512072" data-listing-reading-time-sort="0.01">
 <div class="body">
-<a href="./posts/Installation/installation.html">
+<a href="./posts/weeks/Oct_5th.html">
 <h3 class="no-anchor listing-title">
-Installation
+Week 2
 </h3>
 <div class="listing-subtitle">
 
 </div>
 <div class="listing-description">
-
-<img src="Rlogo.jpg" class="img-fluid">
-
+this
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="./posts/Installation/installation.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="986108400000" data-listing-file-modified-sort="1664056162361" data-listing-reading-time-sort="0.01">
-<div class="thumbnail">
-<a href="./posts/Quarto Tutorial/quarto.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/Quarto Tutorial/quarto.html"></a></p>
-</div>
-<div class="body">
-<a href="./posts/Quarto Tutorial/quarto.html">
-<h3 class="no-anchor listing-title">
-Quarto Tutorial
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-This page
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Quarto Tutorial/quarto.html">
+<a href="./posts/weeks/Oct_5th.html">
 <div class="listing-date">
-Apr 1, 2001
+Oct 5, 2001
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1002866400000" data-listing-file-modified-sort="1665619536426" data-listing-reading-time-sort="0.55">
-<div class="thumbnail">
-<a href="./posts/Oct_12th/Oct_12th.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/Oct_12th/Oct_12th.html"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1002866400000" data-listing-file-modified-sort="1665643252524" data-listing-reading-time-sort="0.55">
 <div class="body">
-<a href="./posts/Oct_12th/Oct_12th.html">
+<a href="./posts/weeks/Oct_12th.html">
 <h3 class="no-anchor listing-title">
-R Bootcamp
+Week 3
 </h3>
 <div class="listing-subtitle">
 
@@ -239,99 +202,33 @@ Read in this dataset from this URL: https://raw.githubusercontent.com/saundersg/
 </a>
 </div>
 <div class="metadata">
-<a href="./posts/Oct_12th/Oct_12th.html">
+<a href="./posts/weeks/Oct_12th.html">
 <div class="listing-date">
 Oct 12, 2001
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1665537997262" data-listing-reading-time-sort="1.765">
-<div class="thumbnail">
-<p><a href="./posts/Reading Data/reading_data.html"> <img src="./posts/Reading Data/data_import_button.jpg" class="thumnail-image"> </a></p>
-</div>
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1003471200000" data-listing-file-modified-sort="1665643604460" data-listing-reading-time-sort="0.035">
 <div class="body">
-<a href="./posts/Reading Data/reading_data.html">
+<a href="./posts/weeks/Oct_19th.html">
 <h3 class="no-anchor listing-title">
-Reading Data
+Week 4
 </h3>
 <div class="listing-subtitle">
 
 </div>
 <div class="listing-description">
-The readr package is the first package that we will learn about. This allows us to read in rectangular data like cvs files.
+Try this
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="./posts/Reading Data/reading_data.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1664561465273" data-listing-reading-time-sort="0.005">
-<div class="thumbnail">
-<p><a href="./posts/Visualize Data/visualizing_data.html"> <img src="./posts/Visualize Data/dplyr.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Visualize Data/visualizing_data.html">
-<h3 class="no-anchor listing-title">
-Visualize Data
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-#ggplot
+<a href="./posts/weeks/Oct_19th.html">
+<div class="listing-date">
+Oct 19, 2001
 </div>
 </a>
-</div>
-<div class="metadata">
-<a href="./posts/Visualize Data/visualizing_data.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1664666172949" data-listing-reading-time-sort="1.395">
-<div class="thumbnail">
-<p><a href="./posts/Welcome/welcome.html"> <img src="./posts/Welcome/RStudio-Logo-Flat.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Welcome/welcome.html">
-<h3 class="no-anchor listing-title">
-Welcome to Bootcamp
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-Welcome to Data Science Society’s R Bootcamp
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Welcome/welcome.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1665619561389" data-listing-reading-time-sort="1.76">
-<div class="thumbnail">
-<a href="./posts/Wrangling Data/wrangling_data.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/Wrangling Data/wrangling_data.html"></a></p>
-</div>
-<div class="body">
-<a href="./posts/Wrangling Data/wrangling_data.html">
-<h3 class="no-anchor listing-title">
-Wrangling Data
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-Base R is the native tools that R has to deal with data. The syntax is outdated and better tools are available to use.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Wrangling Data/wrangling_data.html"> </a>
 </div>
 </div>
 </div>

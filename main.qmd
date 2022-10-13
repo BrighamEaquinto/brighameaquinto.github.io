@@ -2,17 +2,28 @@
 title: "R Bootcamp"
 toc: true
 listing: 
-  contents: posts
-  # - "posts/Welcome/welcome.qmd"
-  # - "posts/Installation/installation.qmd"
-  # - "posts/Reading Data/reading_data.qmd"
-  # - "posts/Wrangling Data/wrangling_data.qmd"
-  # - "posts/Visualize Data/visualizing_data.qmd"
+  - id: Weeks
+    contents: "posts/weeks/*.qmd"
+  # - id: Week 2
+  #   contents: "posts/Oct_12th/Oct_12th.qmd"
+  # - id: Week 3
+  #   contents: "posts/Oct_19th/Oct_19th.qmd"
+  # - id: Welcome
+  #   contents: "posts/Welcome/welcome.qmd"
+  # - id: Installations
+  #   contents: "posts/Installation/installation.qmd"
+  # - id: Reading Data
+  #   contents: "posts/Reading Data/reading_data.qmd"
+  # - id: Wrangling Data 
+  #   contents: "posts/Wrangling Data/wrangling_data.qmd"
+  # - id: Visualizing Data
+  #   contents: "posts/Visualize Data/visualizing_data.qmd"
+# sort:
+#     - "date asc"
+  # fields: [image, title, reading-time]
 categories: false
 sort-ui: false
 filter-ui: false
 page-layout: full
 title-block-banner: true
 ---
-
-Fixing things... hopefully

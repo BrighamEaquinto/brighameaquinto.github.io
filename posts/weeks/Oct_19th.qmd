@@ -1,0 +1,19 @@
+---
+title: "Week 4"
+date: October 19
+toc: true
+---
+
+## Exercise 1 
+
+Try this
+
+
+## Exercise 2
+
+this
+
+
+## Exercise 3
+
+then this

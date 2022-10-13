@@ -2,6 +2,7 @@
 title: "Installation"
 data: September 2022
 toc: true
+image: Rlogo.jpg
 ---
 
 <p align="left" width="10" height="10"> ![](Rlogo.jpg) </p>

@@ -1,5 +1,5 @@
 ---
-title: "R Bootcamp"
+title: "Week 3"
 date: October 12
 toc: true
 ---

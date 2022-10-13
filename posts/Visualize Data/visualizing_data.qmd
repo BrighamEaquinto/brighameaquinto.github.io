@@ -6,4 +6,4 @@ title: "Visualize Data"
 #ggplot
 
 
-![](dplyr.jpg)
+<!-- ![](dplyr.jpg) -->

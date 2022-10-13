@@ -137,7 +137,7 @@
     "href": "main.html",
     "title": "R Bootcamp",
     "section": "",
-    "text": "Installation\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Tutorial\n\n\n\n\n\n\n\n\n\n\n\n\nApr 1, 2001\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR Bootcamp\n\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2001\n\n\n\n\n\n\n  \n\n\n\n\nReading Data\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nVisualize Data\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nWelcome to Bootcamp\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nWrangling Data\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Oct 5, 2001\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2001\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2001\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/Installation/installation.html#grouping-summarising-data",
@@ -341,5 +341,75 @@
     "title": "R Bootcamp",
     "section": "Third Practice",
     "text": "Third Practice"
+  },
+  {
+    "objectID": "posts/Oct_5th/Oct_5th.html",
+    "href": "posts/Oct_5th/Oct_5th.html",
+    "title": "Week 2",
+    "section": "",
+    "text": "this"
+  },
+  {
+    "objectID": "posts/Oct_5th/Oct_5th.html#that",
+    "href": "posts/Oct_5th/Oct_5th.html#that",
+    "title": "Week 2",
+    "section": "That",
+    "text": "That\nthat"
+  },
+  {
+    "objectID": "posts/weeks/Oct_12th.html",
+    "href": "posts/weeks/Oct_12th.html",
+    "title": "Week 3",
+    "section": "",
+    "text": "Read in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\nFrom this dataset:\n\nselect the Apartment, Gender, and Price columns\nfilter the Gender column to female apartments and remove NAs !is.na(Price)\nfind the average price of apartments\n\n\nhousing_data <- read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\")\nhead(housing_data)\n\n# Starter Code\nhousing_data %>% \n    select() %>% \n    filter( , !is.na(Price)) %>% \n    summarise(mean())"
+  },
+  {
+    "objectID": "posts/weeks/Oct_12th.html#second-practice",
+    "href": "posts/weeks/Oct_12th.html#second-practice",
+    "title": "Week 3",
+    "section": "Second Practice",
+    "text": "Second Practice\nThe iris dataset is built into R.\n\nCreate a new column to tell if the Sepal.Length is bigger than or equal to 5\nSort the data by Petal.Length\n\n\nhead(iris)\n\n# Starter Code\niris %>%\n    mutate() %>% \n    arrange()"
+  },
+  {
+    "objectID": "posts/weeks/Oct_12th.html#third-practice",
+    "href": "posts/weeks/Oct_12th.html#third-practice",
+    "title": "Week 3",
+    "section": "Third Practice",
+    "text": "Third Practice"
+  },
+  {
+    "objectID": "posts/weeks/Oct_19th.html",
+    "href": "posts/weeks/Oct_19th.html",
+    "title": "Oct 19th",
+    "section": "",
+    "text": "Try this"
+  },
+  {
+    "objectID": "posts/weeks/Oct_19th.html#exercise-2",
+    "href": "posts/weeks/Oct_19th.html#exercise-2",
+    "title": "Oct 19th",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nthis"
+  },
+  {
+    "objectID": "posts/weeks/Oct_19th.html#exercise-3",
+    "href": "posts/weeks/Oct_19th.html#exercise-3",
+    "title": "Oct 19th",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nthen this"
+  },
+  {
+    "objectID": "posts/weeks/Oct_5th.html",
+    "href": "posts/weeks/Oct_5th.html",
+    "title": "Week 2",
+    "section": "",
+    "text": "this"
+  },
+  {
+    "objectID": "posts/weeks/Oct_5th.html#that",
+    "href": "posts/weeks/Oct_5th.html#that",
+    "title": "Week 2",
+    "section": "That",
+    "text": "That\nthat"
   }
 ]
