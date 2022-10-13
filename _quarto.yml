@@ -43,9 +43,8 @@ format:
     code-fold: false
     code-tools: false
     # code-summary: "Show the code"
-    smooth-scroll: true
+    # smooth-scroll: true
     theme: 
       light: flatly
       dark: darkly
     css: styles.css
-
