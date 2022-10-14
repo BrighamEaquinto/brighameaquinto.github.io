@@ -47,8 +47,10 @@ website:
         menu: 
         - text: "Week 2 (Oct 5th)"
           href: posts/weeks/Oct_5th.qmd
-        - posts/weeks/Oct_12th.qmd
-        - posts/weeks/Oct_19th.qmd
+        - text: "Week 3 (Oct 12th)"
+          href: posts/weeks/Oct_12th.qmd
+        - text: "Week 4 (Oct 12th)"
+          href: posts/weeks/Oct_19th.qmd
 
   # sidebar:
   #   # title: "Tutorials"
