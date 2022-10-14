@@ -173,5 +173,26 @@
     "title": "Wrangling Data",
     "section": "",
     "text": "Base R is the native tools that R has to deal with data. The syntax is outdated and better tools are available to use.\nThe syntax to work in Base R is very similar to native python syntax. The biggest downside is that it’s not possible to chain operations together like selecting columns and filtering data. You would to constantly assign and reassign variables which results in very messy and unreadable code.\nIf you use this, I will turn in my grave. Please don’t make your life more difficult, use the Tidyverse.\nBase R is native to R; no additional installations are required.\n\n\n\n\nThe Tidyverse allows chainable actions like this:\n\nnew_dataset <- dataset %>% \n    select() %>%\n    filter() %>% \n    mutate() %>% \n    group_by() %>% \n    summarise() %>%\n    arrange()\n\nRun this code in the console to download the tidyverse\n\ninstall.packages(\"tidyverse\")\n\nIn order to be able to use this package, put this code at the top of your R Script or RMD file\n\nlibrary(tidyverse)\n\n\n\n\n\n\n\n\n\n\n\ndf$column_name\ndf[[]]\n\n\n\n\n\ndf %>% select(column1, column2)\n\n\n\n\n\n\n\n\n\n\n\ndf$profit <- df$revenue - df$cost\n\n\n\n\n\ndf %>% mutate(profit = revenue - cost)\n\n\n\n\n\n\n\n\n\n\n\n\ndf[df$temperature > 45]\n\n\n\n\n\ndf %>% filter(temperature > 45)\n\n\n\n\n\n\n\n\n\n\n\nI’m not sure how to do this in BaseR… and that’s okay\n\n\n\n\n\ndf %>% \n    group_by(city) %>% \n    summarise(Avg_House_Price = mean(house_price))\n\n\n\n\n\n\n\n\n\n\n\nmtcars[order(mpg, -cyl),]\n\n\n\n\n\nmtcars %>% arrange(mpg, desc(cyl))\n\n\n\n\n\nCheck out this page for more comparisons.\nFiltering Data in Base R:\n\nhttps://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/\nhttps://cran.r-project.org/web/packages/crunch/vignettes/filters.html"
+  },
+  {
+    "objectID": "posts/welcome/welcome.html",
+    "href": "posts/welcome/welcome.html",
+    "title": "Welcome to Bootcamp",
+    "section": "",
+    "text": "Welcome to Data Science Society’s R Bootcamp"
+  },
+  {
+    "objectID": "posts/welcome/welcome.html#course-outline",
+    "href": "posts/welcome/welcome.html#course-outline",
+    "title": "Welcome to Bootcamp",
+    "section": "Course Outline:",
+    "text": "Course Outline:\nThe purpose of R Bootcamp is to be able to read, wrangle, and visualize data using R in RStudio. By the end of the course you will be able to contribute to a society project next semester.\n\nReading Data: readr package\n\nnavigating file systems\ncopy file paths\nRStudio’s “Import Dataset” button, “From Text (readr)” option\n\n\n\nWrangling Data: dplyr/tidyr packages\nPrimary Focus: select, filter, mutate, groupby/summarise, and arrange.\nSecondary Focus: joining, pivoting, case_when,\nOther: drop_na(), replace_na(),\n\n\nVisualizing Data: ggplot2 package\n\nWhat kind of data these plot plot\ncode for each\nhistograms, boxplots, scatterplots, bar charts.\n\nIn Terms of Packages:\n\nreadr\ndplyr/tidyr\nggplot\n\nOthers:\n\nforcats (fct_reorder and working with factors)\nstringr (working with text data)\nlubridate (working with dates)\ntibble (just the tibble() function)\npurr (mappings, boring)"
+  },
+  {
+    "objectID": "posts/welcome/welcome.html#what-kind-of-data-are-we-using",
+    "href": "posts/welcome/welcome.html#what-kind-of-data-are-we-using",
+    "title": "Welcome to Bootcamp",
+    "section": "What kind of data are we using?",
+    "text": "What kind of data are we using?\nWe will mainly be using the _____ and the ____ datasets for practice.\nWhat is data? Is it singular or plural?\nWhat other types of data are there? Take this for example ____\nWe will be working with tabular data. Other data includes pictures, videos, and audio.\nThere are different types of data, we won’t get into the nitty-gritty parts of it, but there is structured, semi-structured, and ustructured data. We will be playing around with structured data (think excel files). Examples of the other types of data are pictures, video, and audio files.\n\nreadr: for data import\ndplyr: for data manipulation\ntidyr: for data tidying\nggplot2: for data visualisation\ntibble: for tibbles, a modern re-imagining of data frames\nstringr: for strings\nforcats: for factors\npurrr: for functional programming\n+\nlubridate: for dates"
   }
 ]
