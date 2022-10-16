@@ -4,7 +4,7 @@
     "href": "main.html",
     "title": "R Bootcamp",
     "section": "",
-    "text": "Week 2\n\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2001\n\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2001\n\n\n\n\n\n\n\n\nWeek 4\n\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2001\n\n\n\n\n\n\nNo matching items"
+    "text": "Week 2\n\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2001\n\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2001\n\n\n\n\n\n\n\n\nWeek 4\n\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2001\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/weeks/Oct_5th.html",
@@ -130,7 +130,7 @@
     "href": "posts/weeks/Oct_19th.html",
     "title": "Week 4",
     "section": "",
-    "text": "Try this"
+    "text": "Before we do any exercises, make sure to run this code:\nThis is our dataset for this practice:"
   },
   {
     "objectID": "posts/weeks/Oct_19th.html#exercise-2",
@@ -194,5 +194,61 @@
     "title": "Welcome to Bootcamp",
     "section": "What kind of data are we using?",
     "text": "What kind of data are we using?\nWe will mainly be using the _____ and the ____ datasets for practice.\nWhat is data? Is it singular or plural?\nWhat other types of data are there? Take this for example ____\nWe will be working with tabular data. Other data includes pictures, videos, and audio.\nThere are different types of data, we won’t get into the nitty-gritty parts of it, but there is structured, semi-structured, and ustructured data. We will be playing around with structured data (think excel files). Examples of the other types of data are pictures, video, and audio files.\n\nreadr: for data import\ndplyr: for data manipulation\ntidyr: for data tidying\nggplot2: for data visualisation\ntibble: for tibbles, a modern re-imagining of data frames\nstringr: for strings\nforcats: for factors\npurrr: for functional programming\n+\nlubridate: for dates"
+  },
+  {
+    "objectID": "posts/weeks/lesson4.html",
+    "href": "posts/weeks/lesson4.html",
+    "title": "DSS R BootCamp",
+    "section": "",
+    "text": "dat <- read_csv(“https://covid.ourworldindata.org/data/owid-covid-data.csv”) object_size(dat) view(dat)\ndat <- read_csv(“datasets/insurance.csv”)"
+  },
+  {
+    "objectID": "posts/weeks/Oct_19th.html#lets-learn-about-group_by-summarise",
+    "href": "posts/weeks/Oct_19th.html#lets-learn-about-group_by-summarise",
+    "title": "Week 4",
+    "section": "Let’s learn about group_by() %>% summarise()",
+    "text": "Let’s learn about group_by() %>% summarise()\nWhat if we want to learn:\n\nthe average BMI by gender\nthe total sum of charges by region in the US\nmin & max of children by  age\n\nAll of these are examples uses for group_by() and summarise() statements."
+  },
+  {
+    "objectID": "posts/weeks/Oct_19th.html#exercise-1",
+    "href": "posts/weeks/Oct_19th.html#exercise-1",
+    "title": "Week 4",
+    "section": "Exercise 1",
+    "text": "Exercise 1\n\ndat <- read_csv(\"C:/Users/Bethany/Downloads/myblog/datasets/insurance.csv\")\n\n# n_distinct(dat$region)\n# count(dat$region)\n# table(dat$region) \n\n\ndat %>% \n    group_by(region) %>% \n    summarise(\n        Count = n(), \n        Mean = mean(bmi), \n        Sum = sum(charges) %>% round()\n        )\n\n# A tibble: 4 × 4\n  region    Count  Mean     Sum\n  <chr>     <int> <dbl>   <dbl>\n1 northeast   324  29.2 4343669\n2 northwest   325  29.2 4035712\n3 southeast   364  33.4 5363690\n4 southwest   325  30.6 4012755\n\n\n\ndat %>% \n    group_by(region, smoker) %>% \n    summarise(\n        Count = n(), \n        Mean = mean(bmi), \n        Sum = sum(charges) %>% round()\n        ) \n\n`summarise()` has grouped output by 'region'. You can override using the\n`.groups` argument.\n\n\n# A tibble: 8 × 5\n# Groups:   region [4]\n  region    smoker Count  Mean     Sum\n  <chr>     <chr>  <int> <dbl>   <dbl>\n1 northeast no       257  29.3 2355542\n2 northeast yes       67  28.6 1988127\n3 northwest no       267  29.2 2284576\n4 northwest yes       58  29.1 1751136\n5 southeast no       273  33.4 2192795\n6 southeast yes       91  33.1 3170895\n7 southwest no       267  30.5 2141149\n8 southwest yes       58  31.0 1871606"
+  },
+  {
+    "objectID": "posts/weeks/Oct_19th.html#exercise-1-average-bmi-by-gender",
+    "href": "posts/weeks/Oct_19th.html#exercise-1-average-bmi-by-gender",
+    "title": "Week 4",
+    "section": "Exercise 1: Average BMI by Gender",
+    "text": "Exercise 1: Average BMI by Gender\n\ndat %>% \n    group_by(sex) %>%\n    summarise(Average_Age = mean(age))\n\n# A tibble: 2 × 2\n  sex    Average_Age\n  <chr>        <dbl>\n1 female        39.5\n2 male          38.9"
+  },
+  {
+    "objectID": "posts/weeks/Oct_19th.html#exercise-2-average-bmi-by-age",
+    "href": "posts/weeks/Oct_19th.html#exercise-2-average-bmi-by-age",
+    "title": "Week 4",
+    "section": "Exercise 2: Average BMI by Age",
+    "text": "Exercise 2: Average BMI by Age\n\ndat %>% \n    group_by(age) %>% \n    summarise(mean(bmi)) %>% \n    head() \n\n# A tibble: 6 × 2\n    age `mean(bmi)`\n  <dbl>       <dbl>\n1    18        31.3\n2    19        28.6\n3    20        30.6\n4    21        28.2\n5    22        31.1\n6    23        31.5"
+  },
+  {
+    "objectID": "posts/weeks/Oct_19th.html#exercise-3-sum-of-charges-by-region",
+    "href": "posts/weeks/Oct_19th.html#exercise-3-sum-of-charges-by-region",
+    "title": "Week 4",
+    "section": "Exercise 3: Sum of Charges by Region",
+    "text": "Exercise 3: Sum of Charges by Region\nUse the code below to get you started. Find the sum of the charges by region.\nStarter Code:\n\ndat %>% \n    group_by() %>% \n    summarise()\n\nThis is the correct output\n\n\n# A tibble: 4 × 2\n  region    Total_Charges\n  <chr>             <dbl>\n1 northeast      4343669.\n2 northwest      4035712.\n3 southeast      5363690.\n4 southwest      4012755.\n\n\nAttempt the code above then use this dropdown for help\n\n\nAnswer\ndat %>% \n    group_by(region) %>% \n    summarise(Total_Charges = sum(charges))"
+  },
+  {
+    "objectID": "posts/weeks/Oct_19th.html#exercise-4-min-max-of-children-by-age",
+    "href": "posts/weeks/Oct_19th.html#exercise-4-min-max-of-children-by-age",
+    "title": "Week 4",
+    "section": "Exercise 4: Min & Max of Children by Age",
+    "text": "Exercise 4: Min & Max of Children by Age\n\ndat %>% \n    group_by(age) %>%\n    summarise(\n        Min = min(children),\n        Max = max(children)\n        ) %>% \n    head()\n\n# A tibble: 6 × 3\n    age   Min   Max\n  <dbl> <dbl> <dbl>\n1    18     0     4\n2    19     0     5\n3    20     0     5\n4    21     0     4\n5    22     0     3\n6    23     0     3"
+  },
+  {
+    "objectID": "posts/weeks/Oct_19th.html#exercise-5-average-charges-by-sex-and-by-smoker",
+    "href": "posts/weeks/Oct_19th.html#exercise-5-average-charges-by-sex-and-by-smoker",
+    "title": "Week 4",
+    "section": "Exercise 5: Average Charges by Sex and by Smoker",
+    "text": "Exercise 5: Average Charges by Sex and by Smoker\n\ndat %>% \n    group_by(sex, smoker) %>% \n    summarise(\n        Average_Charges = mean(charges), \n        Total_Charges = sum(charges))\n\n`summarise()` has grouped output by 'sex'. You can override using the `.groups`\nargument.\n\n\n# A tibble: 4 × 4\n# Groups:   sex [2]\n  sex    smoker Average_Charges Total_Charges\n  <chr>  <chr>            <dbl>         <dbl>\n1 female no               8762.      4792977.\n2 female yes             30679.      3528085.\n3 male   no               8087.      4181085.\n4 male   yes             33042.      5253679."
   }
 ]

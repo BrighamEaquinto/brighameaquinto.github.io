@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DSS R BootCamp - R Bootcamp</title>
+<title>DSS R BootCamp – lesson4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,42 +59,12 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-Weeks .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-Weeks'] = new List('listing-Weeks', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -108,34 +76,34 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./main.html" aria-current="page">DSS Bootcamp</a>
+    <a class="nav-link" href="../../main.html">DSS Bootcamp</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts/Installation/installation.html">Install R &amp; RStudio</a>
+    <a class="nav-link" href="../../posts/Installation/installation.html">Install R &amp; RStudio</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts/Reading Data/reading_data.html">Reading Data</a>
+    <a class="nav-link" href="../../posts/Reading Data/reading_data.html">Reading Data</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts/Wrangling Data/wrangling_data.html">Wrangling Data</a>
+    <a class="nav-link" href="../../posts/Wrangling Data/wrangling_data.html">Wrangling Data</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts/Visualize Data/visualizing_data.html">Visualizing Data</a>
+    <a class="nav-link" href="../../posts/Visualize Data/visualizing_data.html">Visualizing Data</a>
   </li>  
   <li><hr class="dropdown-divider"></li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-weeks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Weeks</a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-weeks">    
         <li>
-    <a class="dropdown-item" href="./posts/weeks/Oct_5th.html">
+    <a class="dropdown-item" href="../../posts/weeks/Oct_5th.html">
  <span class="dropdown-text">Week 2 (Oct 5th)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./posts/weeks/Oct_12th.html">
+    <a class="dropdown-item" href="../../posts/weeks/Oct_12th.html">
  <span class="dropdown-text">Week 3 (Oct 12th)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./posts/weeks/Oct_19th.html">
+    <a class="dropdown-item" href="../../posts/weeks/Oct_19th.html">
  <span class="dropdown-text">Week 4 (Oct 12th)</span></a>
   </li>  
     </ul>
@@ -150,128 +118,22 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">R Bootcamp</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
+<p>library(tidyverse)</p>
+<p>dat &lt;- read_csv(“https://covid.ourworldindata.org/data/owid-covid-data.csv”) object_size(dat) view(dat)</p>
+<p>dat &lt;- read_csv(“datasets/insurance.csv”)</p>
 
-<p>We’ll let’s see!</p>
 
 
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-Weeks">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1002261600000" data-listing-file-modified-sort="1665643512072" data-listing-reading-time-sort="0.01">
-<div class="body">
-<a href="./posts/weeks/Oct_5th.html">
-<h3 class="no-anchor listing-title">
-Week 2
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-this
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/weeks/Oct_5th.html">
-<div class="listing-date">
-Oct 5, 2001
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1002866400000" data-listing-file-modified-sort="1665643252524" data-listing-reading-time-sort="0.55">
-<div class="body">
-<a href="./posts/weeks/Oct_12th.html">
-<h3 class="no-anchor listing-title">
-Week 3
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-Read in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/weeks/Oct_12th.html">
-<div class="listing-date">
-Oct 12, 2001
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1003471200000" data-listing-file-modified-sort="1665866882649" data-listing-reading-time-sort="2.18">
-<div class="body">
-<a href="./posts/weeks/Oct_19th.html">
-<h3 class="no-anchor listing-title">
-Week 4
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-Before we do any exercises, make sure to run this code:
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/weeks/Oct_19th.html">
-<div class="listing-date">
-Oct 19, 2001
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1665861036670" data-listing-reading-time-sort="0.025">
-<div class="body">
-<a href="./posts/weeks/lesson4.html">
-<h3 class="no-anchor listing-title">
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-library(tidyverse)
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/weeks/lesson4.html"> </a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

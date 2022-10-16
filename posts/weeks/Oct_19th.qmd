@@ -1,19 +1,131 @@
 ---
-title: "Week 4"
+title: "Week 4: Grouping and Summarising"
 date: October 19
 toc: true
+toc-depth: 5
+toc-title: "Outline"
 ---
 
-## Exercise 1 
+Before we do any exercises, make sure to run this code: 
 
-Try this
+```{r}
+#| message: false
+#| warning: false
+#| code-overflow: wrap
+
+library(tidyverse)
+dat <- read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv")
+```
+
+This is our dataset for this practice: 
+
+```{r}
+#| code-fold: true
+#| include: false
+
+# head(dat) %>% knitr::kable()
+```
+
+| age|sex    |    bmi| children|smoker |region    |   charges|
+|---:|:------|------:|--------:|:------|:---------|---------:|
+|  19|female | 27.900|        0|yes    |southwest | 16884.924|
+|  18|male   | 33.770|        1|no     |southeast |  1725.552|
+|  28|male   | 33.000|        3|no     |southeast |  4449.462|
+|  33|male   | 22.705|        0|no     |northwest | 21984.471|
+|  32|male   | 28.880|        0|no     |northwest |  3866.855|
+
+<br>
+
+## Let's learn about `group_by() %>% summarise()` 
 
 
-## Exercise 2
+What if we want to learn: 
 
-this
+- the average BMI ***by*** gender 
+- the total sum of charges ***by*** region in the US 
+- min & max of children ***by *** age
+
+All of these are examples uses for `group_by()` and `summarise()` statements. 
+
+<br>
+
+# Examples 
+
+## Exercise 1: Average BMI by Gender
+
+```{r}
+dat %>% 
+    group_by(sex) %>%
+    summarise(Average_Age = mean(age))
+```
+
+## Exercise 2: Average BMI by Age
+
+```{r}
+dat %>% 
+    group_by(age) %>% 
+    summarise(mean(bmi)) %>% 
+    head() 
+```
 
 
-## Exercise 3
+# Your Turn
 
-then this
+## Exercise 3: Sum of Charges by Region
+
+Use the code below to get you started. Find the sum of the charges by region. 
+
+**Starter Code:**
+
+```{r}
+#| eval: false
+dat %>% 
+    group_by() %>% 
+    summarise()
+```
+
+This is the correct output
+```{r}
+#| echo: false
+dat %>% 
+    group_by(region) %>% 
+    summarise(Total_Charges = sum(charges))
+```
+
+Attempt the code above then use this dropdown for help
+
+```{r}
+#| code-fold: true
+#| code-summary: "Answer"
+#| eval: false
+dat %>% 
+    group_by(region) %>% 
+    summarise(Total_Charges = sum(charges))
+```
+
+
+## Exercise 4: Min & Max of Children by Age
+
+```{r}
+dat %>% 
+    group_by(age) %>%
+    summarise(
+        Min = min(children),
+        Max = max(children)
+        ) %>% 
+    head()
+
+```
+
+
+## Exercise 5: Average Charges by Sex and by Smoker
+
+```{r}
+dat %>% 
+    group_by(sex, smoker) %>% 
+    summarise(
+        Average_Charges = mean(charges), 
+        Total_Charges = sum(charges))
+```
+
+
