@@ -35,3 +35,20 @@ Others:
 
 
 Use this for advance select statements: https://dplyr.tidyverse.org/reference/select.html
+
+
+
+
+n_distinct(dat$region)
+count(dat$region)
+table(dat$region)
+
+dat <- read_csv("https://covid.ourworldindata.org/data/owid-covid-data.csv")
+# object_size(dat)
+view(dat)
+
+dat <- read_csv("datasets/insurance.csv")
+
+n_distinct(dat$region)
+count(dat$region)
+table(dat$region) 

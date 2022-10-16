@@ -6,6 +6,7 @@ toc-depth: 5
 toc-title: "Outline"
 ---
 
+
 Before we do any exercises, make sure to run this code: 
 
 ```{r}
