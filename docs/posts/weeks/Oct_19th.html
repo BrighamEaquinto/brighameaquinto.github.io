@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.219">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -140,23 +140,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../main.html">DSS Bootcamp</a>
+    <a class="nav-link" href="../../main.html">
+ <span class="menu-text">DSS Bootcamp</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts/Installation/installation.html">Install R &amp; RStudio</a>
+    <a class="nav-link" href="../../posts/Installation/installation.html">
+ <span class="menu-text">Install R &amp; RStudio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts/Reading Data/reading_data.html">Reading Data</a>
+    <a class="nav-link" href="../../posts/Reading Data/reading_data.html">
+ <span class="menu-text">Reading Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts/Wrangling Data/wrangling_data.html">Wrangling Data</a>
+    <a class="nav-link" href="../../posts/Wrangling Data/wrangling_data.html">
+ <span class="menu-text">Wrangling Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts/Visualize Data/visualizing_data.html">Visualizing Data</a>
+    <a class="nav-link" href="../../posts/Visualize Data/visualizing_data.html">
+ <span class="menu-text">Visualizing Data</span></a>
   </li>  
   <li><hr class="dropdown-divider"></li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-weeks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Weeks</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-weeks" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Weeks</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-weeks">    
         <li>
     <a class="dropdown-item" href="../../posts/weeks/Oct_5th.html">
@@ -185,7 +192,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Week 4</h1>
+      <h1 class="title">Week 4: Grouping and Summarising</h1>
                       </div>
   </div>
     
@@ -199,6 +206,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <p class="date">October 19, 2001</p>
       </div>
     </div>
+    
       
     </div>
     
@@ -383,14 +391,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="exercise-4-min-max-of-children-by-age" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-4-min-max-of-children-by-age">Exercise 4: Min &amp; Max of Children by Age</h2>
+<p>Use the code below to get you started. Find the minimum and maximum amount of children by age.</p>
+<p><strong>Starter Code:</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(age) <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(___) <span class="sc">%&gt;%</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Min =</span> <span class="fu">min</span>(children),</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">Max =</span> <span class="fu">max</span>(children)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Min =</span> <span class="fu">___</span>(),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">Max =</span> <span class="fu">___</span>()</span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        ) <span class="sc">%&gt;%</span> </span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 3
     age   Min   Max
@@ -403,15 +415,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 6    23     0     3</code></pre>
 </div>
 </div>
+<div class="cell">
+<details>
+<summary>Answer</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(age) <span class="sc">%&gt;%</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Min =</span> <span class="fu">min</span>(children),</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">Max =</span> <span class="fu">max</span>(children)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>        ) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="exercise-5-average-charges-by-sex-and-by-smoker" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-5-average-charges-by-sex-and-by-smoker">Exercise 5: Average Charges by Sex and by Smoker</h2>
+<p>Here no starter code is given. If you need to, look back at previous code chunks for guidence.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(sex, smoker) <span class="sc">%&gt;%</span> </span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Average_Charges =</span> <span class="fu">mean</span>(charges), </span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">Total_Charges =</span> <span class="fu">sum</span>(charges))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`summarise()` has grouped output by 'sex'. You can override using the `.groups`
 argument.</code></pre>
@@ -427,6 +447,93 @@ argument.</code></pre>
 4 male   yes             33042.      5253679.</code></pre>
 </div>
 </div>
+<div class="cell">
+<details>
+<summary>Answer</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(sex, smoker) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Average_Charges =</span> <span class="fu">mean</span>(charges), </span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">Total_Charges =</span> <span class="fu">sum</span>(charges)) <span class="sc">%&gt;%</span> knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">sex</th>
+<th style="text-align: left;">smoker</th>
+<th style="text-align: right;">Average_Charges</th>
+<th style="text-align: right;">Total_Charges</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">female</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: right;">8762.297</td>
+<td style="text-align: right;">4792977</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">female</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: right;">30678.996</td>
+<td style="text-align: right;">3528085</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">male</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: right;">8087.205</td>
+<td style="text-align: right;">4181085</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">male</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: right;">33042.006</td>
+<td style="text-align: right;">5253679</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">sex</th>
+<th style="text-align: left;">smoker</th>
+<th style="text-align: right;">Average_Charges</th>
+<th style="text-align: right;">Total_Charges</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">female</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: right;">8762.297</td>
+<td style="text-align: right;">4792977</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">female</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: right;">30678.996</td>
+<td style="text-align: right;">3528085</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">male</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: right;">8087.205</td>
+<td style="text-align: right;">4181085</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">male</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: right;">33042.006</td>
+<td style="text-align: right;">5253679</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<blockquote class="blockquote">
+<p>Does this do anything?</p>
+</blockquote>
 
 
 </section>
@@ -565,7 +672,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   // Switch to dark mode if need be
   if (hasAlternateSentinel()) {
     toggleColorMode(true);
-  } 
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -587,7 +696,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -623,24 +749,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

@@ -107,7 +107,24 @@ dat %>%
 
 ## Exercise 4: Min & Max of Children by Age
 
+Use the code below to get you started. Find the minimum and maximum amount of children by age. 
+
+**Starter Code:**
+
 ```{r}
+#| eval: false
+dat %>% 
+    group_by(___) %>%
+    summarise(
+        Min = ___(),
+        Max = ___()
+        ) %>% 
+    head()
+
+```
+
+```{r}
+#| echo: false
 dat %>% 
     group_by(age) %>%
     summarise(
@@ -118,10 +135,26 @@ dat %>%
 
 ```
 
+```{r}
+#| code-fold: true
+#| code-summary: "Answer"
+#| eval: false
+dat %>% 
+    group_by(age) %>%
+    summarise(
+        Min = min(children),
+        Max = max(children)
+        ) %>% 
+    head()
+
+```
 
 ## Exercise 5: Average Charges by Sex and by Smoker
 
+Here no starter code is given. If you need to, look back at previous code chunks for guidence. 
 ```{r}
+#| echo: false
+
 dat %>% 
     group_by(sex, smoker) %>% 
     summarise(
@@ -129,4 +162,31 @@ dat %>%
         Total_Charges = sum(charges))
 ```
 
+```{r}
+#| code-fold: true
+#| code-summary: "Answer"
+#| eval: false
 
+dat %>% 
+    group_by(sex, smoker) %>% 
+    summarise(
+        Average_Charges = mean(charges), 
+        Total_Charges = sum(charges)) %>% knitr::kable()
+```
+
+|sex    |smoker | Average_Charges| Total_Charges|
+|:------|:------|---------------:|-------------:|
+|female |no     |        8762.297|       4792977|
+|female |yes    |       30678.996|       3528085|
+|male   |no     |        8087.205|       4181085|
+|male   |yes    |       33042.006|       5253679|
+
+> |sex    |smoker | Average_Charges| Total_Charges|
+> |:------|:------|---------------:|-------------:|
+> |female |no     |        8762.297|       4792977|
+> |female |yes    |       30678.996|       3528085|
+> |male   |no     |        8087.205|       4181085|
+> |male   |yes    |       33042.006|       5253679|
+
+
+> Does this do anything?
