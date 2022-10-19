@@ -219,17 +219,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Outline</h2>
    
   <ul>
-  <li><a href="#lets-learn-about-group_by-summarise" id="toc-lets-learn-about-group_by-summarise" class="nav-link active" data-scroll-target="#lets-learn-about-group_by-summarise">Let’s learn about <code>group_by() %&gt;% summarise()</code></a></li>
+  <li><a href="#lets-learn-about-group_by-summarise" id="toc-lets-learn-about-group_by-summarise" class="nav-link active" data-scroll-target="#lets-learn-about-group_by-summarise">Let’s learn about <code>group_by()</code> &amp; <code>summarise()</code></a></li>
   <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a>
   <ul>
-  <li><a href="#exercise-1-average-bmi-by-gender" id="toc-exercise-1-average-bmi-by-gender" class="nav-link" data-scroll-target="#exercise-1-average-bmi-by-gender">Exercise 1: Average BMI by Gender</a></li>
-  <li><a href="#exercise-2-average-bmi-by-age" id="toc-exercise-2-average-bmi-by-age" class="nav-link" data-scroll-target="#exercise-2-average-bmi-by-age">Exercise 2: Average BMI by Age</a></li>
+  <li><a href="#examples-1-average-bmi-by-gender" id="toc-examples-1-average-bmi-by-gender" class="nav-link" data-scroll-target="#examples-1-average-bmi-by-gender">Examples 1: Average BMI by Gender</a></li>
+  <li><a href="#examples-2-average-bmi-by-age" id="toc-examples-2-average-bmi-by-age" class="nav-link" data-scroll-target="#examples-2-average-bmi-by-age">Examples 2: Average BMI by Age</a></li>
   </ul></li>
-  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn">Your Turn</a>
+  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises">Practice Exercises</a>
   <ul>
-  <li><a href="#exercise-3-sum-of-charges-by-region" id="toc-exercise-3-sum-of-charges-by-region" class="nav-link" data-scroll-target="#exercise-3-sum-of-charges-by-region">Exercise 3: Sum of Charges by Region</a></li>
-  <li><a href="#exercise-4-min-max-of-children-by-age" id="toc-exercise-4-min-max-of-children-by-age" class="nav-link" data-scroll-target="#exercise-4-min-max-of-children-by-age">Exercise 4: Min &amp; Max of Children by Age</a></li>
-  <li><a href="#exercise-5-average-charges-by-sex-and-by-smoker" id="toc-exercise-5-average-charges-by-sex-and-by-smoker" class="nav-link" data-scroll-target="#exercise-5-average-charges-by-sex-and-by-smoker">Exercise 5: Average Charges by Sex and by Smoker</a></li>
+  <li><a href="#exercise-1-sum-of-charges-by-region" id="toc-exercise-1-sum-of-charges-by-region" class="nav-link" data-scroll-target="#exercise-1-sum-of-charges-by-region">Exercise 1: Sum of Charges by Region</a></li>
+  <li><a href="#exercise-2-min-max-of-children-by-age" id="toc-exercise-2-min-max-of-children-by-age" class="nav-link" data-scroll-target="#exercise-2-min-max-of-children-by-age">Exercise 2: Min &amp; Max of Children by Age</a></li>
+  <li><a href="#exercise-3-average-charges-by-sex-and-by-smoker" id="toc-exercise-3-average-charges-by-sex-and-by-smoker" class="nav-link" data-scroll-target="#exercise-3-average-charges-by-sex-and-by-smoker">Exercise 3: Average Charges by Sex and by Smoker</a></li>
+  <li><a href="#exercise-4-storm-dataset---wind-and-air-pressure" id="toc-exercise-4-storm-dataset---wind-and-air-pressure" class="nav-link" data-scroll-target="#exercise-4-storm-dataset---wind-and-air-pressure">Exercise 4: Storm Dataset - Wind and Air Pressure</a></li>
+  <li><a href="#exercise-5-summarizing-by-month" id="toc-exercise-5-summarizing-by-month" class="nav-link" data-scroll-target="#exercise-5-summarizing-by-month">Exercise 5: Summarizing by Month</a></li>
+  <li><a href="#exercise-6-airquality-dataset---summarising-by-month" id="toc-exercise-6-airquality-dataset---summarising-by-month" class="nav-link" data-scroll-target="#exercise-6-airquality-dataset---summarising-by-month">Exercise 6: Airquality Dataset - Summarising by Month</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/edit/main/posts/weeks/Oct_19th.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -246,6 +249,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This is our dataset for this practice:</p>
+<blockquote class="blockquote">
 <table class="table">
 <thead>
 <tr class="header">
@@ -306,9 +310,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
+</blockquote>
 <p><br></p>
 <section id="lets-learn-about-group_by-summarise" class="level2">
-<h2 class="anchored" data-anchor-id="lets-learn-about-group_by-summarise">Let’s learn about <code>group_by() %&gt;% summarise()</code></h2>
+<h2 class="anchored" data-anchor-id="lets-learn-about-group_by-summarise">Let’s learn about <code>group_by()</code> &amp; <code>summarise()</code></h2>
 <p>What if we want to learn:</p>
 <ul>
 <li>the average BMI <strong><em>by</em></strong> gender</li>
@@ -320,179 +325,206 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="examples" class="level1">
 <h1>Examples</h1>
-<section id="exercise-1-average-bmi-by-gender" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1-average-bmi-by-gender">Exercise 1: Average BMI by Gender</h2>
+<section id="examples-1-average-bmi-by-gender" class="level2">
+<h2 class="anchored" data-anchor-id="examples-1-average-bmi-by-gender">Examples 1: Average BMI by Gender</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(sex) <span class="sc">%&gt;%</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">Average_Age =</span> <span class="fu">mean</span>(age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 2
-  sex    Average_Age
-  &lt;chr&gt;        &lt;dbl&gt;
-1 female        39.5
-2 male          38.9</code></pre>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">Average_Age =</span> <span class="fu">mean</span>(age)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</section>
-<section id="exercise-2-average-bmi-by-age" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-2-average-bmi-by-age">Exercise 2: Average BMI by Age</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(age) <span class="sc">%&gt;%</span> </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="fu">mean</span>(bmi)) <span class="sc">%&gt;%</span> </span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">head</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 2
-    age `mean(bmi)`
-  &lt;dbl&gt;       &lt;dbl&gt;
-1    18        31.3
-2    19        28.6
-3    20        30.6
-4    21        28.2
-5    22        31.1
-6    23        31.5</code></pre>
-</div>
-</div>
-</section>
-</section>
-<section id="your-turn" class="level1">
-<h1>Your Turn</h1>
-<section id="exercise-3-sum-of-charges-by-region" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3-sum-of-charges-by-region">Exercise 3: Sum of Charges by Region</h2>
-<p>Use the code below to get you started. Find the sum of the charges by region.</p>
-<p><strong>Starter Code:</strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>This is the correct output</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 4 × 2
-  region    Total_Charges
-  &lt;chr&gt;             &lt;dbl&gt;
-1 northeast      4343669.
-2 northwest      4035712.
-3 southeast      5363690.
-4 southwest      4012755.</code></pre>
-</div>
-</div>
-<p>Attempt the code above then use this dropdown for help</p>
-<div class="cell">
-<details>
-<summary>Answer</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(region) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">Total_Charges =</span> <span class="fu">sum</span>(charges))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-</section>
-<section id="exercise-4-min-max-of-children-by-age" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-4-min-max-of-children-by-age">Exercise 4: Min &amp; Max of Children by Age</h2>
-<p>Use the code below to get you started. Find the minimum and maximum amount of children by age.</p>
-<p><strong>Starter Code:</strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(___) <span class="sc">%&gt;%</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Min =</span> <span class="fu">___</span>(),</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">Max =</span> <span class="fu">___</span>()</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        ) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 3
-    age   Min   Max
-  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1    18     0     4
-2    19     0     5
-3    20     0     5
-4    21     0     4
-5    22     0     3
-6    23     0     3</code></pre>
-</div>
-</div>
-<div class="cell">
-<details>
-<summary>Answer</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(age) <span class="sc">%&gt;%</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Min =</span> <span class="fu">min</span>(children),</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">Max =</span> <span class="fu">max</span>(children)</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>        ) <span class="sc">%&gt;%</span> </span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-</section>
-<section id="exercise-5-average-charges-by-sex-and-by-smoker" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-5-average-charges-by-sex-and-by-smoker">Exercise 5: Average Charges by Sex and by Smoker</h2>
-<p>Here no starter code is given. If you need to, look back at previous code chunks for guidence.</p>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'sex'. You can override using the `.groups`
-argument.</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 4 × 4
-# Groups:   sex [2]
-  sex    smoker Average_Charges Total_Charges
-  &lt;chr&gt;  &lt;chr&gt;            &lt;dbl&gt;         &lt;dbl&gt;
-1 female no               8762.      4792977.
-2 female yes             30679.      3528085.
-3 male   no               8087.      4181085.
-4 male   yes             33042.      5253679.</code></pre>
-</div>
-</div>
-<div class="cell">
-<details>
-<summary>Answer</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(sex, smoker) <span class="sc">%&gt;%</span> </span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Average_Charges =</span> <span class="fu">mean</span>(charges), </span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">Total_Charges =</span> <span class="fu">sum</span>(charges)) <span class="sc">%&gt;%</span> knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
+<blockquote class="blockquote">
 <table class="table">
 <thead>
 <tr class="header">
 <th style="text-align: left;">sex</th>
-<th style="text-align: left;">smoker</th>
-<th style="text-align: right;">Average_Charges</th>
-<th style="text-align: right;">Total_Charges</th>
+<th style="text-align: right;">Average_Age</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">female</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: right;">8762.297</td>
-<td style="text-align: right;">4792977</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">female</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: right;">30678.996</td>
-<td style="text-align: right;">3528085</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">male</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: right;">8087.205</td>
-<td style="text-align: right;">4181085</td>
+<td style="text-align: right;">39.50302</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">male</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: right;">33042.006</td>
-<td style="text-align: right;">5253679</td>
+<td style="text-align: right;">38.91716</td>
 </tr>
 </tbody>
 </table>
+</blockquote>
+</section>
+<section id="examples-2-average-bmi-by-age" class="level2">
+<h2 class="anchored" data-anchor-id="examples-2-average-bmi-by-age">Examples 2: Average BMI by Age</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(age) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="fu">mean</span>(bmi)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">head</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<blockquote class="blockquote">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">age</th>
+<th style="text-align: right;">mean(bmi)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">31.32616</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">28.59691</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">30.63276</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">28.18571</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">31.08768</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">31.45446</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</section>
+</section>
+<section id="practice-exercises" class="level1">
+<h1>Practice Exercises</h1>
+<section id="exercise-1-sum-of-charges-by-region" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1-sum-of-charges-by-region">Exercise 1: Sum of Charges by Region</h2>
+<p>Use the code below to get you started. Find the sum of the charges by region.</p>
+<p><strong>Starter Code:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(______) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">_____________ =</span> <span class="fu">___</span>(_______))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Attempt the code above then use this dropdown for help</p>
+<div class="cell">
+<details>
+<summary>Answer</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(region) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">Total_Charges =</span> <span class="fu">sum</span>(charges))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>This is the correct output:</p>
+<blockquote class="blockquote">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">region</th>
+<th style="text-align: right;">Total_Charges</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">northeast</td>
+<td style="text-align: right;">4343669</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">northwest</td>
+<td style="text-align: right;">4035712</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">southeast</td>
+<td style="text-align: right;">5363690</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">southwest</td>
+<td style="text-align: right;">4012755</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</section>
+<section id="exercise-2-min-max-of-children-by-age" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2-min-max-of-children-by-age">Exercise 2: Min &amp; Max of Children by Age</h2>
+<p>Use the code below to get you started. Find the minimum and maximum amount of children by age.</p>
+<p><strong>Starter Code:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(___) <span class="sc">%&gt;%</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Min =</span> <span class="fu">___</span>(________),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">Max =</span> <span class="fu">___</span>(________)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        ) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<details>
+<summary>Answer</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(age) <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Min =</span> <span class="fu">min</span>(children),</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">Max =</span> <span class="fu">max</span>(children)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        ) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">head</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>This is the correct output:</p>
+<blockquote class="blockquote">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">age</th>
+<th style="text-align: right;">Min</th>
+<th style="text-align: right;">Max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</section>
+<section id="exercise-3-average-charges-by-sex-and-by-smoker" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3-average-charges-by-sex-and-by-smoker">Exercise 3: Average Charges by Sex and by Smoker</h2>
+<p>Here no starter code is given. If you need to, look back at previous code chunks for guidence.</p>
+<p>Try as best as possible to mimic the results below.</p>
+<p>Only use the dropdown answer when you’ve tried as much as possible.</p>
+<div class="cell">
+<details>
+<summary>Answer</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">%&gt;%</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(sex, smoker) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Average_Charges =</span> <span class="fu">mean</span>(charges), </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">Total_Charges =</span> <span class="fu">sum</span>(charges)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>This is the correct output:</p>
 <blockquote class="blockquote">
 <table class="table">
 <thead>
@@ -531,8 +563,241 @@ argument.</code></pre>
 </tbody>
 </table>
 </blockquote>
+</section>
+<section id="exercise-4-storm-dataset---wind-and-air-pressure" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-4-storm-dataset---wind-and-air-pressure">Exercise 4: Storm Dataset - Wind and Air Pressure</h2>
+<p>This dataset is bult into R so you already have it. It is called <code>storms</code>. This is a new dataset so you may want to either <code>view()</code> it or use the <code>head()</code> method on it.</p>
+<p>Find the average and standard deviation of the wind speed and air pressure.</p>
+<div class="cell">
+<details>
+<summary>Answer</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>storms <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(category) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mean</span>(wind),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">sd</span>(wind), </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mean</span>(pressure), </span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">sd</span>(pressure)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        ) <span class="sc">%&gt;%</span> knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>This is the correct output:</p>
 <blockquote class="blockquote">
-<p>Does this do anything?</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">category</th>
+<th style="text-align: right;">mean(wind)</th>
+<th style="text-align: right;">sd(wind)</th>
+<th style="text-align: right;">mean(pressure)</th>
+<th style="text-align: right;">sd(pressure)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">-1</td>
+<td style="text-align: right;">27.49482</td>
+<td style="text-align: right;">3.702448</td>
+<td style="text-align: right;">1007.5390</td>
+<td style="text-align: right;">3.900209</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">45.66392</td>
+<td style="text-align: right;">8.231625</td>
+<td style="text-align: right;">999.2910</td>
+<td style="text-align: right;">6.837831</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">70.95140</td>
+<td style="text-align: right;">5.454009</td>
+<td style="text-align: right;">981.1887</td>
+<td style="text-align: right;">9.125784</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">89.41923</td>
+<td style="text-align: right;">3.873391</td>
+<td style="text-align: right;">966.9359</td>
+<td style="text-align: right;">9.018024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">104.48157</td>
+<td style="text-align: right;">4.246545</td>
+<td style="text-align: right;">953.9124</td>
+<td style="text-align: right;">9.168259</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">122.10462</td>
+<td style="text-align: right;">6.383000</td>
+<td style="text-align: right;">939.3942</td>
+<td style="text-align: right;">9.788015</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: right;">145.58140</td>
+<td style="text-align: right;">5.862072</td>
+<td style="text-align: right;">917.4070</td>
+<td style="text-align: right;">12.732892</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</section>
+<section id="exercise-5-summarizing-by-month" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-5-summarizing-by-month">Exercise 5: Summarizing by Month</h2>
+<p>Find the mean, median, and standard deviation of wind speed by month.</p>
+<p>Only use the dropdown answer when you’ve tried as much as possible.</p>
+<div class="cell">
+<details>
+<summary>Answer</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>storms <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Mean_Wind =</span> <span class="fu">mean</span>(wind), </span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">Median =</span> <span class="fu">median</span>(wind), </span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">St_Dev =</span> <span class="fu">sd</span>(wind)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>        ) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>This is the correct output:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">month</th>
+<th style="text-align: right;">Mean_Wind</th>
+<th style="text-align: right;">Median</th>
+<th style="text-align: right;">St_Dev</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">50.33333</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">12.312969</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">44.61538</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">5.937711</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">36.27778</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">9.011887</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">37.55348</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">12.676257</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">41.74973</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">18.711162</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">51.75471</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">25.584917</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">57.54597</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">28.192273</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">56.49272</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">25.795906</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">53.30986</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">22.702523</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">47.88000</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">14.608659</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exercise-6-airquality-dataset---summarising-by-month" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-6-airquality-dataset---summarising-by-month">Exercise 6: Airquality Dataset - Summarising by Month</h2>
+<p>This example is very similar to the previous example. This is a new datset and hopefully doing the same thing with another dataset will solidify the concept.</p>
+<p>This dataset is bult into R so you already have it. It is called <code>airquality</code>. This is a new dataset so you may want to either <code>view()</code> it or use the <code>head()</code> method on it.</p>
+<div class="cell">
+<details>
+<summary>Answer</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>airquality <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(Month) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Mean_Wind =</span> <span class="fu">mean</span>(Wind), </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">Median =</span> <span class="fu">median</span>(Wind), </span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">St_Dev =</span> <span class="fu">sd</span>(Wind)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>        ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>This is the correct output:</p>
+<blockquote class="blockquote">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Month</th>
+<th style="text-align: right;">Mean_Wind</th>
+<th style="text-align: right;">Median</th>
+<th style="text-align: right;">St_Dev</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">11.622581</td>
+<td style="text-align: right;">11.5</td>
+<td style="text-align: right;">3.531450</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">10.266667</td>
+<td style="text-align: right;">9.7</td>
+<td style="text-align: right;">3.769234</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">8.941935</td>
+<td style="text-align: right;">8.6</td>
+<td style="text-align: right;">3.035981</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">8.793548</td>
+<td style="text-align: right;">8.6</td>
+<td style="text-align: right;">3.225930</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10.180000</td>
+<td style="text-align: right;">10.3</td>
+<td style="text-align: right;">3.461254</td>
+</tr>
+</tbody>
+</table>
 </blockquote>
 
 

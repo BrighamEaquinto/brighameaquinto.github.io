@@ -27,17 +27,17 @@ This is our dataset for this practice:
 # head(dat) %>% knitr::kable()
 ```
 
-| age|sex    |    bmi| children|smoker |region    |   charges|
-|---:|:------|------:|--------:|:------|:---------|---------:|
-|  19|female | 27.900|        0|yes    |southwest | 16884.924|
-|  18|male   | 33.770|        1|no     |southeast |  1725.552|
-|  28|male   | 33.000|        3|no     |southeast |  4449.462|
-|  33|male   | 22.705|        0|no     |northwest | 21984.471|
-|  32|male   | 28.880|        0|no     |northwest |  3866.855|
+> | age|sex    |    bmi| children|smoker |region    |   charges|
+> |---:|:------|------:|--------:|:------|:---------|---------:|
+> |  19|female | 27.900|        0|yes    |southwest | 16884.924|
+> |  18|male   | 33.770|        1|no     |southeast |  1725.552|
+> |  28|male   | 33.000|        3|no     |southeast |  4449.462|
+> |  33|male   | 22.705|        0|no     |northwest | 21984.471|
+> |  32|male   | 28.880|        0|no     |northwest |  3866.855|
 
 <br>
 
-## Let's learn about `group_by() %>% summarise()` 
+## Let's learn about `group_by()` & `summarise()` 
 
 
 What if we want to learn: 
@@ -52,27 +52,45 @@ All of these are examples uses for `group_by()` and `summarise()` statements.
 
 # Examples 
 
-## Exercise 1: Average BMI by Gender
+## Examples 1: Average BMI by Gender
 
 ```{r}
+#| eval: false
+
 dat %>% 
     group_by(sex) %>%
-    summarise(Average_Age = mean(age))
+    summarise(Average_Age = mean(age)) 
 ```
 
-## Exercise 2: Average BMI by Age
+> |sex    | Average_Age|
+> |:------|-----------:|
+> |female |    39.50302|
+> |male   |    38.91716|
+
+## Examples 2: Average BMI by Age
 
 ```{r}
+#| eval: false 
+
 dat %>% 
     group_by(age) %>% 
     summarise(mean(bmi)) %>% 
     head() 
 ```
 
+> | age| mean(bmi)|
+> |---:|---------:|
+> |  18|  31.32616|
+> |  19|  28.59691|
+> |  20|  30.63276|
+> |  21|  28.18571|
+> |  22|  31.08768|
+> |  23|  31.45446|
 
-# Your Turn
 
-## Exercise 3: Sum of Charges by Region
+# Practice Exercises
+
+## Exercise 1: Sum of Charges by Region
 
 Use the code below to get you started. Find the sum of the charges by region. 
 
@@ -81,17 +99,20 @@ Use the code below to get you started. Find the sum of the charges by region.
 ```{r}
 #| eval: false
 dat %>% 
-    group_by() %>% 
-    summarise()
+    group_by(______) %>% 
+    summarise(_____________ = ___(_______))
 ```
 
-This is the correct output
+
 ```{r}
 #| echo: false
+#| include: false
 dat %>% 
     group_by(region) %>% 
-    summarise(Total_Charges = sum(charges))
+    summarise(Total_Charges = sum(charges)) %>% 
+    knitr::kable()
 ```
+
 
 Attempt the code above then use this dropdown for help
 
@@ -104,8 +125,17 @@ dat %>%
     summarise(Total_Charges = sum(charges))
 ```
 
+This is the correct output: 
 
-## Exercise 4: Min & Max of Children by Age
+> |region    | Total_Charges|
+> |:---------|-------------:|
+> |northeast |       4343669|
+> |northwest |       4035712|
+> |southeast |       5363690|
+> |southwest |       4012755|
+
+
+## Exercise 2: Min & Max of Children by Age
 
 Use the code below to get you started. Find the minimum and maximum amount of children by age. 
 
@@ -116,8 +146,8 @@ Use the code below to get you started. Find the minimum and maximum amount of ch
 dat %>% 
     group_by(___) %>%
     summarise(
-        Min = ___(),
-        Max = ___()
+        Min = ___(________),
+        Max = ___(________)
         ) %>% 
     head()
 
@@ -125,13 +155,15 @@ dat %>%
 
 ```{r}
 #| echo: false
+#| include: false
 dat %>% 
     group_by(age) %>%
     summarise(
         Min = min(children),
         Max = max(children)
         ) %>% 
-    head()
+    head() %>% 
+    knitr::kable()
 
 ```
 
@@ -139,28 +171,35 @@ dat %>%
 #| code-fold: true
 #| code-summary: "Answer"
 #| eval: false
+
 dat %>% 
     group_by(age) %>%
     summarise(
         Min = min(children),
         Max = max(children)
         ) %>% 
-    head()
+    head() 
 
 ```
 
-## Exercise 5: Average Charges by Sex and by Smoker
+This is the correct output: 
+
+> | age| Min| Max|
+> |---:|---:|---:|
+> |  18|   0|   4|
+> |  19|   0|   5|
+> |  20|   0|   5|
+> |  21|   0|   4|
+
+
+
+## Exercise 3: Average Charges by Sex and by Smoker
 
 Here no starter code is given. If you need to, look back at previous code chunks for guidence. 
-```{r}
-#| echo: false
 
-dat %>% 
-    group_by(sex, smoker) %>% 
-    summarise(
-        Average_Charges = mean(charges), 
-        Total_Charges = sum(charges))
-```
+Try as best as possible to mimic the results below. 
+
+Only use the dropdown answer when you've tried as much as possible.
 
 ```{r}
 #| code-fold: true
@@ -171,15 +210,10 @@ dat %>%
     group_by(sex, smoker) %>% 
     summarise(
         Average_Charges = mean(charges), 
-        Total_Charges = sum(charges)) %>% knitr::kable()
+        Total_Charges = sum(charges)) 
 ```
 
-|sex    |smoker | Average_Charges| Total_Charges|
-|:------|:------|---------------:|-------------:|
-|female |no     |        8762.297|       4792977|
-|female |yes    |       30678.996|       3528085|
-|male   |no     |        8087.205|       4181085|
-|male   |yes    |       33042.006|       5253679|
+This is the correct output: 
 
 > |sex    |smoker | Average_Charges| Total_Charges|
 > |:------|:------|---------------:|-------------:|
@@ -189,4 +223,109 @@ dat %>%
 > |male   |yes    |       33042.006|       5253679|
 
 
-> Does this do anything?
+## Exercise 4: Storm Dataset - Wind and Air Pressure
+
+This dataset is bult into R so you already have it. It is called `storms`. This is a new dataset so you may want to either `view()` it or use the `head()` method on it.
+
+Find the average and standard deviation of the wind speed and air pressure.
+
+ 
+```{r}
+#| code-fold: true
+#| code-summary: "Answer"
+#| eval: false
+
+storms %>% 
+    group_by(category) %>% 
+    summarise(
+        mean(wind),
+        sd(wind), 
+        mean(pressure), 
+        sd(pressure)
+        ) %>% knitr::kable()
+
+```
+
+
+This is the correct output: 
+
+> |category | mean(wind)| sd(wind)| mean(pressure)| sd(pressure)|
+> |:--------|----------:|--------:|--------------:|------------:|
+> |-1       |   27.49482| 3.702448|      1007.5390|     3.900209|
+> |0        |   45.66392| 8.231625|       999.2910|     6.837831|
+> |1        |   70.95140| 5.454009|       981.1887|     9.125784|
+> |2        |   89.41923| 3.873391|       966.9359|     9.018024|
+> |3        |  104.48157| 4.246545|       953.9124|     9.168259|
+> |4        |  122.10462| 6.383000|       939.3942|     9.788015|
+> |5        |  145.58140| 5.862072|       917.4070|    12.732892|
+
+
+
+## Exercise 5: Summarizing by Month
+
+Find the mean, median, and standard deviation of wind speed by month. 
+
+Only use the dropdown answer when you've tried as much as possible.
+
+```{r}
+#| code-fold: true
+#| code-summary: "Answer"
+#| eval: false
+
+storms %>% 
+    group_by(month) %>% 
+    summarise(
+        Mean_Wind = mean(wind), 
+        Median = median(wind), 
+        St_Dev = sd(wind)
+        ) %>% 
+        knitr::kable()
+```
+
+This is the correct output: 
+
+| month| Mean_Wind| Median|    St_Dev|
+|-----:|---------:|------:|---------:|
+|     1|  50.33333|     50| 12.312969|
+|     4|  44.61538|     45|  5.937711|
+|     5|  36.27778|     35|  9.011887|
+|     6|  37.55348|     35| 12.676257|
+|     7|  41.74973|     40| 18.711162|
+|     8|  51.75471|     45| 25.584917|
+|     9|  57.54597|     50| 28.192273|
+|    10|  56.49272|     50| 25.795906|
+|    11|  53.30986|     50| 22.702523|
+|    12|  47.88000|     45| 14.608659|
+
+
+
+## Exercise 6: Airquality Dataset - Summarising by Month
+
+This example is very similar to the previous example. This is a new datset and hopefully doing the same thing with another dataset will solidify the concept. 
+
+This dataset is bult into R so you already have it. It is called `airquality`. This is a new dataset so you may want to either `view()` it or use the `head()` method on it.
+
+
+```{r}
+#| code-fold: true
+#| code-summary: "Answer"
+#| eval: false
+
+airquality %>% 
+    group_by(Month) %>% 
+    summarise(
+        Mean_Wind = mean(Wind), 
+        Median = median(Wind), 
+        St_Dev = sd(Wind)
+        ) 
+```
+
+This is the correct output: 
+
+> | Month| Mean_Wind| Median|   St_Dev|
+> |-----:|---------:|------:|--------:|
+> |     5| 11.622581|   11.5| 3.531450|
+> |     6| 10.266667|    9.7| 3.769234|
+> |     7|  8.941935|    8.6| 3.035981|
+> |     8|  8.793548|    8.6| 3.225930|
+> |     9| 10.180000|   10.3| 3.461254|
