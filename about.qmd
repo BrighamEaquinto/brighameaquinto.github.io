@@ -1,0 +1,16 @@
+---
+title: "Directory for Bootcamp"
+about:
+  template: jolla
+  image: website_thumbnail.png
+  links:
+    - text: Week 1 
+      href: "posts/Installation/installation.qmd"
+    - text: Week 2 
+      href: "posts/weeks/Oct_5th.qmd"
+    - text: Week 3 
+      href: "posts/weeks/Oct_12th.qmd"
+    - text: Week 4 
+      href: "posts/weeks/Oct_19th.qmd"
+---
+

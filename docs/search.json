@@ -65,9 +65,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "Brigham Eaquinto",
+    "title": "Test About Page",
     "section": "",
-    "text": "Make tutorials like Greg Hamel’s work:\n\nIntro to R notebook with videos\nPython for Data Analysis notebook with videos\n\n\nRead more often - humanities"
+    "text": "Finley Malloc is the Chief Data Scientist at Wengo Analytics. When not innovating on data platforms, Finley enjoys spending time unicycling and playing with her pet iguana."
   },
   {
     "objectID": "notes.html",
@@ -327,5 +327,19 @@
     "title": "Week 4: Grouping and Summarising",
     "section": "Exercise 6: Airquality Dataset - Summarising by Month",
     "text": "Exercise 6: Airquality Dataset - Summarising by Month\nThis example is very similar to the previous example. This is a new datset and hopefully doing the same thing with another dataset will solidify the concept.\nThis dataset is bult into R so you already have it. It is called airquality. This is a new dataset so you may want to either view() it or use the head() method on it.\n\n\nAnswer\nairquality %>% \n    group_by(Month) %>% \n    summarise(\n        Mean_Wind = mean(Wind), \n        Median = median(Wind), \n        St_Dev = sd(Wind)\n        ) \n\n\nThis is the correct output:\n\n\n\n\nMonth\nMean_Wind\nMedian\nSt_Dev\n\n\n\n\n5\n11.622581\n11.5\n3.531450\n\n\n6\n10.266667\n9.7\n3.769234\n\n\n7\n8.941935\n8.6\n3.035981\n\n\n8\n8.793548\n8.6\n3.225930\n\n\n9\n10.180000\n10.3\n3.461254"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Test About Page",
+    "section": "Education",
+    "text": "Education\nUniversity of California, San Diego | San Diego, CA PhD in Mathematics | Sept 2011 - June 2015\nMacalester College | St. Paul MA B.A in Economics | Sept 2007 - June 2011"
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "Test About Page",
+    "section": "Experience",
+    "text": "Experience\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Spet 2012 - April 2018"
   }
 ]
