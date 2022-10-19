@@ -42,7 +42,6 @@ website:
         href: posts\Wrangling Data\wrangling_data.qmd
       - text: "Visualizing Data"
         href: posts\Visualize Data\visualizing_data.qmd
-      - text: "---"
       - text: "Weeks"
         menu: 
         - text: "Week 2 (Oct 5th)"
