@@ -2,8 +2,6 @@
 title: "Week 4: Grouping and Summarising"
 date: October 19
 toc: true
-toc-depth: 5
-toc-title: "Outline"
 ---
 
 
@@ -227,7 +225,7 @@ This is the correct output:
 
 This dataset is bult into R so you already have it. It is called `storms`. This is a new dataset so you may want to either `view()` it or use the `head()` method on it.
 
-Find the average and standard deviation of the wind speed and air pressure.
+Find the average and standard deviation of the wind speed and air pressure by storm category.
 
  
 ```{r}
@@ -278,24 +276,23 @@ storms %>%
         Mean_Wind = mean(wind), 
         Median = median(wind), 
         St_Dev = sd(wind)
-        ) %>% 
-        knitr::kable()
+        ) 
 ```
 
 This is the correct output: 
 
-| month| Mean_Wind| Median|    St_Dev|
-|-----:|---------:|------:|---------:|
-|     1|  50.33333|     50| 12.312969|
-|     4|  44.61538|     45|  5.937711|
-|     5|  36.27778|     35|  9.011887|
-|     6|  37.55348|     35| 12.676257|
-|     7|  41.74973|     40| 18.711162|
-|     8|  51.75471|     45| 25.584917|
-|     9|  57.54597|     50| 28.192273|
-|    10|  56.49272|     50| 25.795906|
-|    11|  53.30986|     50| 22.702523|
-|    12|  47.88000|     45| 14.608659|
+> | month| Mean_Wind| Median|    St_Dev|
+> |-----:|---------:|------:|---------:|
+> |     1|  50.33333|     50| 12.312969|
+> |     4|  44.61538|     45|  5.937711|
+> |     5|  36.27778|     35|  9.011887|
+> |     6|  37.55348|     35| 12.676257|
+> |     7|  41.74973|     40| 18.711162|
+> |     8|  51.75471|     45| 25.584917|
+> |     9|  57.54597|     50| 28.192273|
+> |    10|  56.49272|     50| 25.795906|
+> |    11|  53.30986|     50| 22.702523|
+> |    12|  47.88000|     45| 14.608659|
 
 
 

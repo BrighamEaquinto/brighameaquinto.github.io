@@ -215,17 +215,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Outline</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
   <li><a href="#lets-learn-about-group_by-summarise" id="toc-lets-learn-about-group_by-summarise" class="nav-link active" data-scroll-target="#lets-learn-about-group_by-summarise">Let’s learn about <code>group_by()</code> &amp; <code>summarise()</code></a></li>
   <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a>
-  <ul>
+  <ul class="collapse">
   <li><a href="#examples-1-average-bmi-by-gender" id="toc-examples-1-average-bmi-by-gender" class="nav-link" data-scroll-target="#examples-1-average-bmi-by-gender">Examples 1: Average BMI by Gender</a></li>
   <li><a href="#examples-2-average-bmi-by-age" id="toc-examples-2-average-bmi-by-age" class="nav-link" data-scroll-target="#examples-2-average-bmi-by-age">Examples 2: Average BMI by Age</a></li>
   </ul></li>
   <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises">Practice Exercises</a>
-  <ul>
+  <ul class="collapse">
   <li><a href="#exercise-1-sum-of-charges-by-region" id="toc-exercise-1-sum-of-charges-by-region" class="nav-link" data-scroll-target="#exercise-1-sum-of-charges-by-region">Exercise 1: Sum of Charges by Region</a></li>
   <li><a href="#exercise-2-min-max-of-children-by-age" id="toc-exercise-2-min-max-of-children-by-age" class="nav-link" data-scroll-target="#exercise-2-min-max-of-children-by-age">Exercise 2: Min &amp; Max of Children by Age</a></li>
   <li><a href="#exercise-3-average-charges-by-sex-and-by-smoker" id="toc-exercise-3-average-charges-by-sex-and-by-smoker" class="nav-link" data-scroll-target="#exercise-3-average-charges-by-sex-and-by-smoker">Exercise 3: Average Charges by Sex and by Smoker</a></li>
@@ -566,7 +566,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="exercise-4-storm-dataset---wind-and-air-pressure" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-4-storm-dataset---wind-and-air-pressure">Exercise 4: Storm Dataset - Wind and Air Pressure</h2>
 <p>This dataset is bult into R so you already have it. It is called <code>storms</code>. This is a new dataset so you may want to either <code>view()</code> it or use the <code>head()</code> method on it.</p>
-<p>Find the average and standard deviation of the wind speed and air pressure.</p>
+<p>Find the average and standard deviation of the wind speed and air pressure by storm category.</p>
 <div class="cell">
 <details>
 <summary>Answer</summary>
@@ -659,11 +659,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">Mean_Wind =</span> <span class="fu">mean</span>(wind), </span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">Median =</span> <span class="fu">median</span>(wind), </span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">St_Dev =</span> <span class="fu">sd</span>(wind)</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>        ) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>        ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>This is the correct output:</p>
+<blockquote class="blockquote">
 <table class="table">
 <thead>
 <tr class="header">
@@ -736,6 +736,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
+</blockquote>
 </section>
 <section id="exercise-6-airquality-dataset---summarising-by-month" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-6-airquality-dataset---summarising-by-month">Exercise 6: Airquality Dataset - Summarising by Month</h2>
