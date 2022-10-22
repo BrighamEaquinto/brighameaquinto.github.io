@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2022-10-26">
 
-<title>DSS R BootCamp - Welcome to Bootcamp</title>
+<title>DSS R BootCamp - Week 5: Visualizing Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -126,8 +127,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Welcome to Bootcamp</h1>
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Week 5: Visualizing Data</h1>
                       </div>
   </div>
     
@@ -135,6 +136,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 26, 2022</p>
+      </div>
+    </div>
     
       
     </div>
@@ -143,76 +150,48 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#histogram" id="toc-histogram" class="nav-link active" data-scroll-target="#histogram">Histogram</a></li>
+  <li><a href="#boxplot" id="toc-boxplot" class="nav-link" data-scroll-target="#boxplot">Boxplot</a></li>
+  <li><a href="#scatterplot" id="toc-scatterplot" class="nav-link" data-scroll-target="#scatterplot">Scatterplot</a></li>
+  <li><a href="#bar-plot" id="toc-bar-plot" class="nav-link" data-scroll-target="#bar-plot">Bar Plot</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/edit/main/posts/weeks/Oct_26th.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
-<p>Welcome to Data Science Society’s R Bootcamp</p>
-<!-- ![](RStudio-Logo-Flat.jpg) -->
-<section id="course-outline" class="level2">
-<h2 class="anchored" data-anchor-id="course-outline">Course Outline:</h2>
-<p>The purpose of R Bootcamp is to be able to <strong>read</strong>, <strong>wrangle</strong>, and <strong>visualize</strong> data using R in RStudio. By the end of the course you will be able to contribute to a society project next semester.</p>
-<section id="reading-data-readr-package" class="level3">
-<h3 class="anchored" data-anchor-id="reading-data-readr-package">Reading Data: readr package</h3>
+<p>The four main plots we will go over today:</p>
 <ul>
-<li>navigating file systems</li>
-<li>copy file paths</li>
-<li>RStudio’s “Import Dataset” button, “From Text (readr)” option</li>
+<li>histogram</li>
+<li>boxplot</li>
+<li>scatterplot</li>
+<li>bar plot</li>
 </ul>
-</section>
-<section id="wrangling-data-dplyrtidyr-packages" class="level3">
-<h3 class="anchored" data-anchor-id="wrangling-data-dplyrtidyr-packages">Wrangling Data: dplyr/tidyr packages</h3>
-<p><strong>Primary Focus</strong>: select, filter, mutate, groupby/summarise, and arrange.</p>
-<p><strong>Secondary Focus</strong>: joining, pivoting, case_when,</p>
-<p><strong>Other</strong>: drop_na(), replace_na(),</p>
-</section>
-<section id="visualizing-data-ggplot2-package" class="level3">
-<h3 class="anchored" data-anchor-id="visualizing-data-ggplot2-package">Visualizing Data: ggplot2 package</h3>
+<p>What kinds of data do we have?</p>
 <ul>
-<li>What kind of data these plot plot</li>
-<li>code for each<br>
-histograms, boxplots, scatterplots, bar charts.</li>
+<li>numerical</li>
+<li>categorical</li>
+<li>ordinal</li>
 </ul>
-<p>In Terms of Packages:</p>
-<ul>
-<li>readr</li>
-<li>dplyr/tidyr</li>
-<li>ggplot</li>
-</ul>
-<p>Others:</p>
-<ul>
-<li>forcats (fct_reorder and working with factors)</li>
-<li>stringr (working with text data)</li>
-<li>lubridate (working with dates)</li>
-<li>tibble (just the tibble() function)</li>
-<li>purr (mappings, boring)</li>
-</ul>
+<section id="histogram" class="level2">
+<h2 class="anchored" data-anchor-id="histogram">Histogram</h2>
 </section>
+<section id="boxplot" class="level2">
+<h2 class="anchored" data-anchor-id="boxplot">Boxplot</h2>
 </section>
-<section id="what-kind-of-data-are-we-using" class="level2">
-<h2 class="anchored" data-anchor-id="what-kind-of-data-are-we-using">What kind of data are we using?</h2>
-<p>We will mainly be using the _____ and the ____ datasets for practice.</p>
-<p>What is data? Is it singular or plural?</p>
-<p>What other types of data are there? Take this for example ____</p>
-<p>We will be working with tabular data. Other data includes pictures, videos, and audio.</p>
-<p>There are different types of data, we won’t get into the nitty-gritty parts of it, but there is structured, semi-structured, and ustructured data. We will be playing around with structured data (think excel files). Examples of the other types of data are pictures, video, and audio files.</p>
-<p><br><br></p>
-<p><strong>readr</strong>: for data import</p>
-<p><strong>dplyr</strong>: for data manipulation</p>
-<p><strong>tidyr</strong>: for data tidying</p>
-<p><strong>ggplot2</strong>: for data visualisation</p>
-<p><strong>tibble</strong>: for tibbles, a modern re-imagining of data frames</p>
-<p><strong>stringr</strong>: for strings</p>
-<p><strong>forcats</strong>: for factors</p>
-<p><strong>purrr</strong>: for functional programming</p>
-<p>+</p>
-<p><strong>lubridate</strong>: for dates</p>
-<!-- ![some text](factors.pdf "some text"){height="200" width="300"} -->
-<!-- <iframe src="factors.pdf" height="800" width="800"></iframe> -->
-<!-- add this later: https://github.com/dracula/gh-pages -->
+<section id="scatterplot" class="level2">
+<h2 class="anchored" data-anchor-id="scatterplot">Scatterplot</h2>
+</section>
+<section id="bar-plot" class="level2">
+<h2 class="anchored" data-anchor-id="bar-plot">Bar Plot</h2>
 
 
 </section>

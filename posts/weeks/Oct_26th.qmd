@@ -1,0 +1,31 @@
+---
+title: "Week 5: Visualizing Data"
+date: 10/26/2022
+toc: true
+---
+
+The four main plots we will go over today:
+
+- histogram
+- boxplot
+- scatterplot
+- bar plot
+
+What kinds of data do we have? 
+
+- numerical
+- categorical 
+- ordinal
+
+
+
+## Histogram
+
+
+## Boxplot
+
+
+## Scatterplot
+
+
+## Bar Plot

@@ -4,7 +4,7 @@
     "href": "main.html",
     "title": "R Bootcamp",
     "section": "",
-    "text": "Week 2\n\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2001\n\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2001\n\n\n\n\n\n\n\n\nWeek 4: Grouping and Summarising\n\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2001\n\n\n\n\n\n\nNo matching items"
+    "text": "We’ll let’s see!\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2001\n\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2001\n\n\n\n\n\n\n\n\nWeek 4: Grouping and Summarising\n\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2001\n\n\n\n\n\n\n\n\nWeek 5: Visualizing Data\n\n\n\n\n\n\n\n\n\n\n\n\nOct 26, 2022\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/weeks/Oct_5th.html",
@@ -341,5 +341,40 @@
     "title": "Test About Page",
     "section": "Experience",
     "text": "Experience\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Spet 2012 - April 2018"
+  },
+  {
+    "objectID": "posts/weeks/Oct_26th.html",
+    "href": "posts/weeks/Oct_26th.html",
+    "title": "Week 5: Visualizing Data",
+    "section": "",
+    "text": "The four main plots we will go over today:\nWhat kinds of data do we have?"
+  },
+  {
+    "objectID": "posts/weeks/Oct_26th.html#histogram",
+    "href": "posts/weeks/Oct_26th.html#histogram",
+    "title": "Week 5: Visualizing Data",
+    "section": "Histogram",
+    "text": "Histogram"
+  },
+  {
+    "objectID": "posts/weeks/Oct_26th.html#boxplot",
+    "href": "posts/weeks/Oct_26th.html#boxplot",
+    "title": "Week 5: Visualizing Data",
+    "section": "Boxplot",
+    "text": "Boxplot"
+  },
+  {
+    "objectID": "posts/weeks/Oct_26th.html#scatterplot",
+    "href": "posts/weeks/Oct_26th.html#scatterplot",
+    "title": "Week 5: Visualizing Data",
+    "section": "Scatterplot",
+    "text": "Scatterplot"
+  },
+  {
+    "objectID": "posts/weeks/Oct_26th.html#bar-plot",
+    "href": "posts/weeks/Oct_26th.html#bar-plot",
+    "title": "Week 5: Visualizing Data",
+    "section": "Bar Plot",
+    "text": "Bar Plot"
   }
 ]
