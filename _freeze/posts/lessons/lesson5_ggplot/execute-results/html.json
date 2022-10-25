@@ -1,0 +1,16 @@
+{
+  "hash": "d4f61f2967378d8c3ec5237030995afb",
+  "result": {
+    "markdown": "---\ntitle: \"Lesson 5: Visualizing Data\"\ndate: 10/26/2022\ntoc: true\nfig-align: center\nfig-width: 8\nfig-height: 3.5\ncode-fold: true\n---\n\n\n![](pictures/ggplot2.jpg){fig-align=\"center\"}\n\n\n\n\n\n\nThe four main plots we will go over today:\n\n- histogram\n- boxplot\n- scatterplot\n- bar plot\n\nWhat kinds of data do we have? \n\n- numerical\n- categorical \n- ordinal\n\n\n\n## Histogram: Counting the Number of Numeric Occurances\n\n###### X: Numeric, Y: N/A\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code  code-fold=\"true\"}\nggplot(dat, aes(x=bmi))+ \n   geom_histogram(bins = 50)+\n    labs(\n        title=\"Y-Axis Auto Counts the Occurances of Each Number\",\n        x=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))\n```\n\n::: {.cell-output-display}\n![](lesson5_ggplot_files/figure-html/unnamed-chunk-2-1.png){width=768}\n:::\n:::\n\n\n\n## Bar Plot: Counting the Number of Categorical Occurances\n\n#### X: Categorical, Y: N/A\n\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(dat, aes(x=region))+\n    geom_bar()+\n    labs(\n        title=\"Y-Axis Auto Counts the Occurances of Each Category\", x=\"Categorical Column: 'region'\")+\n    theme(axis.title = element_text(face=\"bold\"))\n```\n\n::: {.cell-output-display}\n![](lesson5_ggplot_files/figure-html/unnamed-chunk-3-1.png){width=768}\n:::\n:::\n\n\n\n## Boxplot\n\n#### X: Categorical, Y: Numeric\n\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(dat, aes(x=region, y=bmi))+\n    geom_boxplot()+\n    labs(x=\"Categorical Column: 'region'\", y=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))\n```\n\n::: {.cell-output-display}\n![](lesson5_ggplot_files/figure-html/unnamed-chunk-4-1.png){width=768}\n:::\n:::\n\n\n\n## Scatterplot\n\n#### X: Numeric, Y: Numeric\n\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(dat, aes(x=age, y=bmi))+\n    geom_point()+\n    labs(x=\"Numeric Column: 'Age'\", y=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))\n```\n\n::: {.cell-output-display}\n![](lesson5_ggplot_files/figure-html/unnamed-chunk-5-1.png){width=768}\n:::\n:::\n\n\n\n\n\n\n\n# Practice Exercises\n\nUse this code to get the data\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\ndat <- read_csv(\"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv\")\n```\n:::\n",
+    "supporting": [
+      "lesson5_ggplot_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

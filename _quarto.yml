@@ -20,7 +20,7 @@ format:
 
 website:
   title: "DSS R BootCamp"
-  image: website_thumbnail.png
+  favicon: website_thumbnail.png
   repo-url: https://github.com/BrighamEaquinto/brighameaquinto.github.io.git
   repo-actions: [edit, issue]
   page-navigation: true
@@ -45,12 +45,18 @@ website:
         href: posts\Visualize Data\visualizing_data.qmd
       - text: "Weeks"
         menu: 
-        - text: "Week 2 (Oct 5th)"
-          href: posts/weeks/Oct_5th.qmd
-        - text: "Week 3 (Oct 12th)"
-          href: posts/weeks/Oct_12th.qmd
-        - text: "Week 4 (Oct 12th)"
-          href: posts/weeks/Oct_19th.qmd
+        - text: "Lesson 1: Installation to Data Science" 
+          href: "posts/Installation/installation.qmd"
+        - text: "Lesson 2: Reading Data" 
+          href: "posts/weeks/Oct_12th.qmd"
+        - text: "Lesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange"
+          href: "posts/lessons/lesson4_dplyr.qmd"
+        - text: "Lesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)"
+          href: "posts/lessons/lesson4_dplyr.qmd"
+        - text: "Lesson 5: Graphing 1/2"
+          href: "posts/lessons/lesson5_ggplot.qmd"
+        - text: "Lesson 6: Graphing 2/2"
+          href: "posts/lessons/lesson6_ggplot.qmd"
 
   # sidebar:
   #   # title: "Tutorials"

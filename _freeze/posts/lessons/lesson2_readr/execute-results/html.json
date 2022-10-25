@@ -1,0 +1,14 @@
+{
+  "hash": "bd0170979ac2f916f412dc3bee93ddd0",
+  "result": {
+    "markdown": "---\ntitle: \"Lesson 2: Reading Data\"\ndate: Week 2\ntoc: true\nimage: \"pictures/readr.jpg\"\n---\n\n\n\n## First Practice\n\nRead in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv \n\n\nFrom this dataset: \n\n1. select the Apartment, Gender, and Price columns\n\n2. filter the Gender column to female apartments and remove NAs `!is.na(Price)`\n\n3. find the average price of apartments\n\n\n::: {.cell}\n\n```{.r .cell-code}\nhousing_data <- read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\")\nhead(housing_data)\n\n# Starter Code\nhousing_data %>% \n    select() %>% \n    filter( , !is.na(Price)) %>% \n    summarise(mean())\n```\n:::\n\n\n\n\n## Second Practice\n\nThe `iris` dataset is built into R. \n\n\n1. Create a new column to tell if the Sepal.Length is bigger than or equal to 5\n\n2. Sort the data by Petal.Length\n\n\n::: {.cell}\n\n```{.r .cell-code}\nhead(iris)\n\n# Starter Code\niris %>%\n    mutate() %>% \n    arrange()\n```\n:::\n\n\n\n## Third Practice \n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

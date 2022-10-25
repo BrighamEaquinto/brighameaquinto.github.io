@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2001-02-01">
 
-<title>DSS R BootCamp - Wrangling Data</title>
+<title>DSS R BootCamp - Lesson 2: Reading Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -151,7 +152,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="menu-text">Reading Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../posts/Wrangling Data/wrangling_data.html" aria-current="page">
+    <a class="nav-link" href="../../posts/Wrangling Data/wrangling_data.html">
  <span class="menu-text">Wrangling Data</span></a>
   </li>  
   <li class="nav-item">
@@ -201,8 +202,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Wrangling Data</h1>
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Lesson 2: Reading Data</h1>
                       </div>
   </div>
     
@@ -210,6 +211,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 1, 2001</p>
+      </div>
+    </div>
     
       
     </div>
@@ -218,150 +225,63 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#first-practice" id="toc-first-practice" class="nav-link active" data-scroll-target="#first-practice">First Practice</a></li>
+  <li><a href="#second-practice" id="toc-second-practice" class="nav-link" data-scroll-target="#second-practice">Second Practice</a></li>
+  <li><a href="#third-practice" id="toc-third-practice" class="nav-link" data-scroll-target="#third-practice">Third Practice</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/edit/main/posts/lessons/lesson2_readr.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
-<section id="third-comparison-base-r-vs-the-tidyverse" class="level1">
-<h1>Third Comparison: Base R vs the Tidyverse</h1>
-<div class="columns">
-<div class="column" style="width:45%;">
-<p>Base R is the native tools that R has to deal with data. The syntax is outdated and better tools are available to use.</p>
-<p>The syntax to work in Base R is very similar to native python syntax. The biggest downside is that <em>it’s not possible to chain operations together</em> like selecting columns and filtering data. You would to constantly assign and reassign variables which results in very messy and unreadable code.</p>
-<p>If you use this, I will turn in my grave. Please don’t make your life more difficult, use the Tidyverse.</p>
-<p>Base R is native to R; no additional installations are required.</p>
-<div class="column" style="width:10%;">
-
-</div>
-</div><div class="column" style="width:45%;">
-<p>The Tidyverse allows chainable actions like this:</p>
+<section id="first-practice" class="level2">
+<h2 class="anchored" data-anchor-id="first-practice">First Practice</h2>
+<p>Read in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv</p>
+<p>From this dataset:</p>
+<ol type="1">
+<li><p>select the Apartment, Gender, and Price columns</p></li>
+<li><p>filter the Gender column to female apartments and remove NAs <code>!is.na(Price)</code></p></li>
+<li><p>find the average price of apartments</p></li>
+</ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>new_dataset <span class="ot">&lt;-</span> dataset <span class="sc">%&gt;%</span> </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>housing_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(housing_data)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Starter Code</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>housing_data <span class="sc">%&gt;%</span> </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>( , <span class="sc">!</span><span class="fu">is.na</span>(Price)) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="fu">mean</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Run this code in the console to download the tidyverse</p>
+</section>
+<section id="second-practice" class="level2">
+<h2 class="anchored" data-anchor-id="second-practice">Second Practice</h2>
+<p>The <code>iris</code> dataset is built into R.</p>
+<ol type="1">
+<li><p>Create a new column to tell if the Sepal.Length is bigger than or equal to 5</p></li>
+<li><p>Sort the data by Petal.Length</p></li>
+</ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>In order to be able to use this package, put this code at the top of your R Script or RMD file</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-<p><br><br></p>
-<!-- <h3 align="center"> Selecting Columns </h3> -->
-<section id="selecting-columns" class="level2">
-<h2 class="anchored" data-anchor-id="selecting-columns">Selecting Columns</h2>
-<div class="columns">
-<div class="column" style="width:&quot;45%&quot;;">
-<section id="base-r" class="level6">
-<h6 class="anchored" data-anchor-id="base-r">Base R</h6>
-<p><code>df$column_name</code></p>
-<p><code>df[[]]</code></p>
-</section>
-</div><div class="column" style="width:&quot;45%&quot;;">
-<section id="tidyverse" class="level6">
-<h6 class="anchored" data-anchor-id="tidyverse">Tidyverse</h6>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">select</span>(column1, column2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iris)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Starter Code</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>iris <span class="sc">%&gt;%</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-</div>
-</div>
-</section>
-<section id="making-new-columns" class="level2">
-<h2 class="anchored" data-anchor-id="making-new-columns">Making New Columns</h2>
-<div class="columns">
-<div class="column" style="width:&quot;45%&quot;;">
-<section id="base-r-1" class="level6">
-<h6 class="anchored" data-anchor-id="base-r-1">Base R</h6>
-<p><code>df$profit &lt;- df$revenue - df$cost</code></p>
-</section>
-</div><div class="column" style="width:&quot;45%&quot;;">
-<section id="tidyverse-1" class="level6">
-<h6 class="anchored" data-anchor-id="tidyverse-1">Tidyverse</h6>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">profit =</span> revenue <span class="sc">-</span> cost)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</div>
-</div>
-<!-- <h3 align="center"> Filtering Data </h3> -->
-</section>
-<section id="filtering-data" class="level2">
-<h2 class="anchored" data-anchor-id="filtering-data">Filtering Data</h2>
-<div class="columns">
-<div class="column" style="width:&quot;45%&quot;;">
-<section id="base-r-2" class="level6">
-<h6 class="anchored" data-anchor-id="base-r-2">Base R</h6>
-<p><code>df[df$temperature &gt; 45]</code></p>
-</section>
-</div><div class="column" style="width:&quot;45%&quot;;">
-<section id="tidyverse-2" class="level6">
-<h6 class="anchored" data-anchor-id="tidyverse-2">Tidyverse</h6>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(temperature <span class="sc">&gt;</span> <span class="dv">45</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</div>
-</div>
-</section>
-<section id="grouping-summarising-data" class="level2">
-<h2 class="anchored" data-anchor-id="grouping-summarising-data">Grouping &amp; Summarising Data</h2>
-<div class="columns">
-<div class="column" style="width:&quot;45%&quot;;">
-<section id="base-r-3" class="level6">
-<h6 class="anchored" data-anchor-id="base-r-3">Base R</h6>
-<p>I’m not sure how to do this in BaseR… and that’s okay</p>
-</section>
-</div><div class="column" style="width:&quot;45%&quot;;">
-<section id="tidyverse-3" class="level6">
-<h6 class="anchored" data-anchor-id="tidyverse-3">Tidyverse</h6>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(city) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">Avg_House_Price =</span> <span class="fu">mean</span>(house_price))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</div>
-</div>
-</section>
-<section id="sorting-data" class="level2">
-<h2 class="anchored" data-anchor-id="sorting-data">Sorting Data</h2>
-<div class="columns">
-<div class="column" style="width:&quot;45%&quot;;">
-<section id="base-r-4" class="level6">
-<h6 class="anchored" data-anchor-id="base-r-4">Base R</h6>
-<p><code>mtcars[order(mpg, -cyl),]</code></p>
-</section>
-</div><div class="column" style="width:&quot;45%&quot;;">
-<section id="tidyverse-4" class="level6">
-<h6 class="anchored" data-anchor-id="tidyverse-4">Tidyverse</h6>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(mpg, <span class="fu">desc</span>(cyl))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</div>
-</div>
-<p><br><br></p>
-<p>Check out <a href="https://dplyr.tidyverse.org/articles/base.html">this page</a> for more comparisons.</p>
-<p>Filtering Data in Base R:</p>
-<ul>
-<li>https://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/</li>
-<li>https://cran.r-project.org/web/packages/crunch/vignettes/filters.html</li>
-</ul>
+<section id="third-practice" class="level2">
+<h2 class="anchored" data-anchor-id="third-practice">Third Practice</h2>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

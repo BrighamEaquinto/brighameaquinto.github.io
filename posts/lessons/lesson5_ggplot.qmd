@@ -1,6 +1,5 @@
 ---
-title: "Week 5: Visualizing Data"
-date: 10/26/2022
+title: "Lesson 5: Graphing 1/2"
 toc: true
 fig-align: center
 fig-width: 8

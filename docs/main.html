@@ -29,6 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./website_thumbnail.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -71,9 +72,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-subtitle','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -133,16 +134,28 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-weeks">    
         <li>
-    <a class="dropdown-item" href="./posts/weeks/Oct_5th.html">
- <span class="dropdown-text">Week 2 (Oct 5th)</span></a>
+    <a class="dropdown-item" href="./posts/Installation/installation.html">
+ <span class="dropdown-text">Lesson 1: Installation to Data Science</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./posts/weeks/Oct_12th.html">
- <span class="dropdown-text">Week 3 (Oct 12th)</span></a>
+    <a class="dropdown-item" href="./posts/weeks/Oct_12th.qmd">
+ <span class="dropdown-text">Lesson 2: Reading Data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./posts/weeks/Oct_19th.html">
- <span class="dropdown-text">Week 4 (Oct 12th)</span></a>
+    <a class="dropdown-item" href="./posts/lessons/lesson4_dplyr.html">
+ <span class="dropdown-text">Lesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./posts/lessons/lesson4_dplyr.html">
+ <span class="dropdown-text">Lesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./posts/lessons/lesson5_ggplot.html">
+ <span class="dropdown-text">Lesson 5: Graphing 1/2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./posts/lessons/lesson6_ggplot.html">
+ <span class="dropdown-text">Lesson 6: Graphing 2/2</span></a>
   </li>  
     </ul>
   </li>
@@ -184,123 +197,126 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>We’ll let’s see!</p>
 
 
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-Weeks">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1002261600000" data-listing-file-modified-sort="1666466848737" data-listing-reading-time-sort="0.01">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1666568341397" data-listing-reading-time-sort="0.005">
 <div class="thumbnail">
-<a href="./posts/weeks/Oct_5th.html">
+<p><a href="./posts/lessons/lesson1_intro.html"> <img src="https://github.com/rstudio/cheatsheets/raw/main/pngs/tidyr.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/lessons/lesson1_intro.html">
+<h3 class="no-anchor listing-title">
+Lesson 1: Introduction to Data Science &amp; Installation
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/lessons/lesson1_intro.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1666567729869" data-listing-reading-time-sort="0.55">
+<div class="thumbnail">
+<p><a href="./posts/lessons/lesson2_readr.html"> <img src="./posts/lessons/pictures/readr.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/lessons/lesson2_readr.html">
+<h3 class="no-anchor listing-title">
+Lesson 2: Reading Data
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/lessons/lesson2_readr.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1666568620466" data-listing-reading-time-sort="0.005">
+<div class="thumbnail">
+<p><a href="./posts/lessons/lesson3_dplyr.html"> <img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/SVG/dplyr.svg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/lessons/lesson3_dplyr.html">
+<h3 class="no-anchor listing-title">
+Lesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange)
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/lessons/lesson3_dplyr.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1666567727842" data-listing-reading-time-sort="8.115">
+<div class="thumbnail">
+<a href="./posts/lessons/lesson4_dplyr.html">
 <div class="thumbnail-image">
 
 </div>
-</a><p><a href="./posts/weeks/Oct_5th.html"></a></p>
+</a><p><a href="./posts/lessons/lesson4_dplyr.html"></a></p>
 </div>
 <div class="body">
-<a href="./posts/weeks/Oct_5th.html">
+<a href="./posts/lessons/lesson4_dplyr.html">
 <h3 class="no-anchor listing-title">
-Week 2
+Lesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)
 </h3>
 <div class="listing-subtitle">
 
 </div>
-<div class="listing-description">
-this
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/lessons/lesson4_dplyr.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1666567725845" data-listing-reading-time-sort="0.955">
+<div class="thumbnail">
+<p><a href="./posts/lessons/lesson5_ggplot.html"> <img src="./posts/lessons/pictures/ggplot2.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/lessons/lesson5_ggplot.html">
+<h3 class="no-anchor listing-title">
+Lesson 5: Graphing 1/2
+</h3>
+<div class="listing-subtitle">
+
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="./posts/weeks/Oct_5th.html">
-<div class="listing-date">
-Oct 5, 2001
-</div>
-</a>
+<a href="./posts/lessons/lesson5_ggplot.html"> </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1002866400000" data-listing-file-modified-sort="1666466848737" data-listing-reading-time-sort="0.55">
+<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1666567723271" data-listing-reading-time-sort="0.005">
 <div class="thumbnail">
-<a href="./posts/weeks/Oct_12th.html">
+<a href="./posts/lessons/lesson6_ggplot.html">
 <div class="thumbnail-image">
 
 </div>
-</a><p><a href="./posts/weeks/Oct_12th.html"></a></p>
+</a><p><a href="./posts/lessons/lesson6_ggplot.html"></a></p>
 </div>
 <div class="body">
-<a href="./posts/weeks/Oct_12th.html">
+<a href="./posts/lessons/lesson6_ggplot.html">
 <h3 class="no-anchor listing-title">
-Week 3
+Lesson 6: Graphing 2/2
 </h3>
 <div class="listing-subtitle">
 
 </div>
-<div class="listing-description">
-Read in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv
-</div>
 </a>
 </div>
 <div class="metadata">
-<a href="./posts/weeks/Oct_12th.html">
-<div class="listing-date">
-Oct 12, 2001
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1003471200000" data-listing-file-modified-sort="1666466848737" data-listing-reading-time-sort="8.115">
-<div class="thumbnail">
-<a href="./posts/weeks/Oct_19th.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./posts/weeks/Oct_19th.html"></a></p>
-</div>
-<div class="body">
-<a href="./posts/weeks/Oct_19th.html">
-<h3 class="no-anchor listing-title">
-Week 4: Grouping and Summarising
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-Before we do any exercises, make sure to run this code:
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/weeks/Oct_19th.html">
-<div class="listing-date">
-Oct 19, 2001
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1666764000000" data-listing-file-modified-sort="1666490101571" data-listing-reading-time-sort="0.955">
-<div class="thumbnail">
-<p><a href="./posts/weeks/Oct_26th.html"> <img src="./posts/weeks/pictures/ggplot2.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/weeks/Oct_26th.html">
-<h3 class="no-anchor listing-title">
-Week 5: Visualizing Data
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-The four main plots we will go over today:
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/weeks/Oct_26th.html">
-<div class="listing-date">
-Oct 26, 2022
-</div>
-</a>
+<a href="./posts/lessons/lesson6_ggplot.html"> </a>
 </div>
 </div>
 </div>

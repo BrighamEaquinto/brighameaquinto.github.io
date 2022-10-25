@@ -3,7 +3,8 @@ title: "R Bootcamp"
 toc: true
 listing: 
   - id: Weeks
-    contents: "posts/weeks/*.qmd"
+    fields: [image, title, subtitle, categories]
+    contents: "posts/lessons/*.qmd"
   # - id: Week 2
   #   contents: "posts/Oct_12th/Oct_12th.qmd"
   # - id: Week 3
@@ -27,5 +28,3 @@ filter-ui: false
 page-layout: full
 title-block-banner: true
 ---
-
-We'll let's see!

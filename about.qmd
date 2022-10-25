@@ -4,13 +4,17 @@ about:
   template: jolla
   image: website_thumbnail.png
   links:
-    - text: Week 1 
+    - text: "Lesson 1: Introduction to Data Science" 
       href: "posts/Installation/installation.qmd"
-    - text: Week 2 
-      href: "posts/weeks/Oct_5th.qmd"
-    - text: Week 3 
+    - text: "Lesson 2: Reading Data" 
       href: "posts/weeks/Oct_12th.qmd"
-    - text: Week 4 
-      href: "posts/weeks/Oct_19th.qmd"
+    - text: "Lesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange)"
+      href: "posts/lessons/lesson4_dplyr.qmd"
+    - text: "Lesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)"
+      href: "posts/lessons/lesson4_dplyr.qmd"
+    - text: "Lesson 5: Graphing 1/2"
+      href: "posts/lessons/lesson5_ggplot.qmd"
+    - text: "Lesson 6: Graphing 2/2"
+      href: "posts/lessons/lesson6_ggplot.qmd"
 ---
 
