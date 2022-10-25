@@ -4,7 +4,7 @@
     "href": "main.html",
     "title": "R Bootcamp",
     "section": "",
-    "text": "Week 2\n\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2001\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2001\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4: Grouping and Summarising\n\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2001\n\n\n\n\n\n\n  \n\n\n\n\nWeek 5: Visualizing Data\n\n\n\n\n\n\n\n\n\n\n\n\nOct 26, 2022\n\n\n\n\n\n\nNo matching items"
+    "text": "Lesson 1: Introduction to Data Science & Installation\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 2: Reading Data\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange)\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 5: Graphing 1/2\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 6: Graphing 2/2\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nUse tabs to organize content\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/weeks/Oct_5th.html",
@@ -492,36 +492,92 @@
   {
     "objectID": "posts/lessons/lesson5_ggplot.html",
     "href": "posts/lessons/lesson5_ggplot.html",
-    "title": "Lesson 5: Visualizing Data",
+    "title": "Lesson 5: Graphing 1/2",
     "section": "",
     "text": "The four main plots we will go over today:\nWhat kinds of data do we have?"
   },
   {
     "objectID": "posts/lessons/lesson5_ggplot.html#histogram-counting-the-number-of-numeric-occurances",
     "href": "posts/lessons/lesson5_ggplot.html#histogram-counting-the-number-of-numeric-occurances",
-    "title": "Lesson 5: Visualizing Data",
+    "title": "Lesson 5: Graphing 1/2",
     "section": "Histogram: Counting the Number of Numeric Occurances",
     "text": "Histogram: Counting the Number of Numeric Occurances\n\nX: Numeric, Y: N/A\n\n\nCode\nggplot(dat, aes(x=bmi))+ \n   geom_histogram(bins = 50)+\n    labs(\n        title=\"Y-Axis Auto Counts the Occurances of Each Number\",\n        x=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
   },
   {
     "objectID": "posts/lessons/lesson5_ggplot.html#bar-plot-counting-the-number-of-categorical-occurances",
     "href": "posts/lessons/lesson5_ggplot.html#bar-plot-counting-the-number-of-categorical-occurances",
-    "title": "Lesson 5: Visualizing Data",
+    "title": "Lesson 5: Graphing 1/2",
     "section": "Bar Plot: Counting the Number of Categorical Occurances",
-    "text": "Bar Plot: Counting the Number of Categorical Occurances\n\nX: Categorical, Y: N/A\n\n\nCode\nggplot(dat, aes(x=region))+\n    geom_bar()+\n    labs(\n        title=\"Y-Axis Auto Counts the Occurances of Each Category\", x=\"Categorical Column: 'region'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
+    "text": "Bar Plot: Counting the Number of Categorical Occurances\n\nX: Categorical, Y: N/A\n\nggplot(dat, aes(x=region))+\n    geom_bar()+\n    labs(\n        title=\"Y-Axis Auto Counts the Occurances of Each Category\", \n        x=\"Categorical Column: 'region'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
   },
   {
     "objectID": "posts/lessons/lesson5_ggplot.html#boxplot",
     "href": "posts/lessons/lesson5_ggplot.html#boxplot",
-    "title": "Lesson 5: Visualizing Data",
+    "title": "Lesson 5: Graphing 1/2",
     "section": "Boxplot",
-    "text": "Boxplot\n\nX: Categorical, Y: Numeric\n\n\nCode\nggplot(dat, aes(x=region, y=bmi))+\n    geom_boxplot()+\n    labs(x=\"Categorical Column: 'region'\", y=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
+    "text": "Boxplot\n\nX: Categorical, Y: Numeric\n\nggplot(dat, aes(x=region, y=bmi))+\n    geom_boxplot()+\n    labs(x=\"Categorical Column: 'region'\", y=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
   },
   {
     "objectID": "posts/lessons/lesson5_ggplot.html#scatterplot",
     "href": "posts/lessons/lesson5_ggplot.html#scatterplot",
-    "title": "Lesson 5: Visualizing Data",
+    "title": "Lesson 5: Graphing 1/2",
     "section": "Scatterplot",
-    "text": "Scatterplot\n\nX: Numeric, Y: Numeric\n\n\nCode\nggplot(dat, aes(x=age, y=bmi))+\n    geom_point()+\n    labs(x=\"Numeric Column: 'Age'\", y=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
+    "text": "Scatterplot\n\nX: Numeric, Y: Numeric\n\nggplot(dat, aes(x=age, y=bmi))+\n    geom_point()+\n    labs(x=\"Numeric Column: 'Age'\", y=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
+  },
+  {
+    "objectID": "posts/dax/dax.html",
+    "href": "posts/dax/dax.html",
+    "title": "DAX Reference",
+    "section": "",
+    "text": "CALENDAR(StartDate, EndDate)\n\nDescription: Returns a table with one column of all dates between StartDate and EndDate.\nParameters:\n\nStartDate: The start date in datetime format\nEndDate: The end date in datetime format\n\n\n\n\nExample 1\nDim_DeliveryDate = \nCALENDAR(\n    MIN(Fact_Sales[Delivery Date Key]), \n    MAX(Fact_Sales[Delivery Date Key])\n    )\n\n\n\n\nExample 2\n# Code for another example here\n\n\n\n\nMAX()\nSee CALENDAR() function reference, example 1.\n\n\nMIN()\nSee CALENDAR() function reference, example 1.\n\n\nSUBSTITUTE(text, oldtext, newtext)\n\nDescription: This is similar to regex and Power Query Editor’s “Replace Values”\nParameters:\n\ntext: The text to manipulate. Can be a column.\noldtext: The piece of text to replace.\nnewtext: The text we want to insert. This can just be two quotation marks to do a blank.\n\n\n\n\nExample 1\nRetail Price Clean = \nSUBSTITUTE(\n    Dim_StockItem[Recommended Retail Price], \n    \"? \", \n    \"\"\n    )"
+  },
+  {
+    "objectID": "posts/lessons/delete.html",
+    "href": "posts/lessons/delete.html",
+    "title": "Use tabs to organize content",
+    "section": "",
+    "text": "See here\n\n\nyeah\n\n\n\n\nPlotData\n\n\n\nggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species))+\n    geom_point()\n\n\n\n\n\n\n\nknitr::kable(iris)\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa\n\n\n4.6\n3.4\n1.4\n0.3\nsetosa\n\n\n5.0\n3.4\n1.5\n0.2\nsetosa\n\n\n4.4\n2.9\n1.4\n0.2\nsetosa\n\n\n4.9\n3.1\n1.5\n0.1\nsetosa\n\n\n5.4\n3.7\n1.5\n0.2\nsetosa\n\n\n4.8\n3.4\n1.6\n0.2\nsetosa\n\n\n4.8\n3.0\n1.4\n0.1\nsetosa\n\n\n4.3\n3.0\n1.1\n0.1\nsetosa\n\n\n5.8\n4.0\n1.2\n0.2\nsetosa\n\n\n5.7\n4.4\n1.5\n0.4\nsetosa\n\n\n5.4\n3.9\n1.3\n0.4\nsetosa\n\n\n5.1\n3.5\n1.4\n0.3\nsetosa\n\n\n5.7\n3.8\n1.7\n0.3\nsetosa\n\n\n5.1\n3.8\n1.5\n0.3\nsetosa\n\n\n5.4\n3.4\n1.7\n0.2\nsetosa\n\n\n5.1\n3.7\n1.5\n0.4\nsetosa\n\n\n4.6\n3.6\n1.0\n0.2\nsetosa\n\n\n5.1\n3.3\n1.7\n0.5\nsetosa\n\n\n4.8\n3.4\n1.9\n0.2\nsetosa\n\n\n5.0\n3.0\n1.6\n0.2\nsetosa\n\n\n5.0\n3.4\n1.6\n0.4\nsetosa\n\n\n5.2\n3.5\n1.5\n0.2\nsetosa\n\n\n5.2\n3.4\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.6\n0.2\nsetosa\n\n\n4.8\n3.1\n1.6\n0.2\nsetosa\n\n\n5.4\n3.4\n1.5\n0.4\nsetosa\n\n\n5.2\n4.1\n1.5\n0.1\nsetosa\n\n\n5.5\n4.2\n1.4\n0.2\nsetosa\n\n\n4.9\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.2\n1.2\n0.2\nsetosa\n\n\n5.5\n3.5\n1.3\n0.2\nsetosa\n\n\n4.9\n3.6\n1.4\n0.1\nsetosa\n\n\n4.4\n3.0\n1.3\n0.2\nsetosa\n\n\n5.1\n3.4\n1.5\n0.2\nsetosa\n\n\n5.0\n3.5\n1.3\n0.3\nsetosa\n\n\n4.5\n2.3\n1.3\n0.3\nsetosa\n\n\n4.4\n3.2\n1.3\n0.2\nsetosa\n\n\n5.0\n3.5\n1.6\n0.6\nsetosa\n\n\n5.1\n3.8\n1.9\n0.4\nsetosa\n\n\n4.8\n3.0\n1.4\n0.3\nsetosa\n\n\n5.1\n3.8\n1.6\n0.2\nsetosa\n\n\n4.6\n3.2\n1.4\n0.2\nsetosa\n\n\n5.3\n3.7\n1.5\n0.2\nsetosa\n\n\n5.0\n3.3\n1.4\n0.2\nsetosa\n\n\n7.0\n3.2\n4.7\n1.4\nversicolor\n\n\n6.4\n3.2\n4.5\n1.5\nversicolor\n\n\n6.9\n3.1\n4.9\n1.5\nversicolor\n\n\n5.5\n2.3\n4.0\n1.3\nversicolor\n\n\n6.5\n2.8\n4.6\n1.5\nversicolor\n\n\n5.7\n2.8\n4.5\n1.3\nversicolor\n\n\n6.3\n3.3\n4.7\n1.6\nversicolor\n\n\n4.9\n2.4\n3.3\n1.0\nversicolor\n\n\n6.6\n2.9\n4.6\n1.3\nversicolor\n\n\n5.2\n2.7\n3.9\n1.4\nversicolor\n\n\n5.0\n2.0\n3.5\n1.0\nversicolor\n\n\n5.9\n3.0\n4.2\n1.5\nversicolor\n\n\n6.0\n2.2\n4.0\n1.0\nversicolor\n\n\n6.1\n2.9\n4.7\n1.4\nversicolor\n\n\n5.6\n2.9\n3.6\n1.3\nversicolor\n\n\n6.7\n3.1\n4.4\n1.4\nversicolor\n\n\n5.6\n3.0\n4.5\n1.5\nversicolor\n\n\n5.8\n2.7\n4.1\n1.0\nversicolor\n\n\n6.2\n2.2\n4.5\n1.5\nversicolor\n\n\n5.6\n2.5\n3.9\n1.1\nversicolor\n\n\n5.9\n3.2\n4.8\n1.8\nversicolor\n\n\n6.1\n2.8\n4.0\n1.3\nversicolor\n\n\n6.3\n2.5\n4.9\n1.5\nversicolor\n\n\n6.1\n2.8\n4.7\n1.2\nversicolor\n\n\n6.4\n2.9\n4.3\n1.3\nversicolor\n\n\n6.6\n3.0\n4.4\n1.4\nversicolor\n\n\n6.8\n2.8\n4.8\n1.4\nversicolor\n\n\n6.7\n3.0\n5.0\n1.7\nversicolor\n\n\n6.0\n2.9\n4.5\n1.5\nversicolor\n\n\n5.7\n2.6\n3.5\n1.0\nversicolor\n\n\n5.5\n2.4\n3.8\n1.1\nversicolor\n\n\n5.5\n2.4\n3.7\n1.0\nversicolor\n\n\n5.8\n2.7\n3.9\n1.2\nversicolor\n\n\n6.0\n2.7\n5.1\n1.6\nversicolor\n\n\n5.4\n3.0\n4.5\n1.5\nversicolor\n\n\n6.0\n3.4\n4.5\n1.6\nversicolor\n\n\n6.7\n3.1\n4.7\n1.5\nversicolor\n\n\n6.3\n2.3\n4.4\n1.3\nversicolor\n\n\n5.6\n3.0\n4.1\n1.3\nversicolor\n\n\n5.5\n2.5\n4.0\n1.3\nversicolor\n\n\n5.5\n2.6\n4.4\n1.2\nversicolor\n\n\n6.1\n3.0\n4.6\n1.4\nversicolor\n\n\n5.8\n2.6\n4.0\n1.2\nversicolor\n\n\n5.0\n2.3\n3.3\n1.0\nversicolor\n\n\n5.6\n2.7\n4.2\n1.3\nversicolor\n\n\n5.7\n3.0\n4.2\n1.2\nversicolor\n\n\n5.7\n2.9\n4.2\n1.3\nversicolor\n\n\n6.2\n2.9\n4.3\n1.3\nversicolor\n\n\n5.1\n2.5\n3.0\n1.1\nversicolor\n\n\n5.7\n2.8\n4.1\n1.3\nversicolor\n\n\n6.3\n3.3\n6.0\n2.5\nvirginica\n\n\n5.8\n2.7\n5.1\n1.9\nvirginica\n\n\n7.1\n3.0\n5.9\n2.1\nvirginica\n\n\n6.3\n2.9\n5.6\n1.8\nvirginica\n\n\n6.5\n3.0\n5.8\n2.2\nvirginica\n\n\n7.6\n3.0\n6.6\n2.1\nvirginica\n\n\n4.9\n2.5\n4.5\n1.7\nvirginica\n\n\n7.3\n2.9\n6.3\n1.8\nvirginica\n\n\n6.7\n2.5\n5.8\n1.8\nvirginica\n\n\n7.2\n3.6\n6.1\n2.5\nvirginica\n\n\n6.5\n3.2\n5.1\n2.0\nvirginica\n\n\n6.4\n2.7\n5.3\n1.9\nvirginica\n\n\n6.8\n3.0\n5.5\n2.1\nvirginica\n\n\n5.7\n2.5\n5.0\n2.0\nvirginica\n\n\n5.8\n2.8\n5.1\n2.4\nvirginica\n\n\n6.4\n3.2\n5.3\n2.3\nvirginica\n\n\n6.5\n3.0\n5.5\n1.8\nvirginica\n\n\n7.7\n3.8\n6.7\n2.2\nvirginica\n\n\n7.7\n2.6\n6.9\n2.3\nvirginica\n\n\n6.0\n2.2\n5.0\n1.5\nvirginica\n\n\n6.9\n3.2\n5.7\n2.3\nvirginica\n\n\n5.6\n2.8\n4.9\n2.0\nvirginica\n\n\n7.7\n2.8\n6.7\n2.0\nvirginica\n\n\n6.3\n2.7\n4.9\n1.8\nvirginica\n\n\n6.7\n3.3\n5.7\n2.1\nvirginica\n\n\n7.2\n3.2\n6.0\n1.8\nvirginica\n\n\n6.2\n2.8\n4.8\n1.8\nvirginica\n\n\n6.1\n3.0\n4.9\n1.8\nvirginica\n\n\n6.4\n2.8\n5.6\n2.1\nvirginica\n\n\n7.2\n3.0\n5.8\n1.6\nvirginica\n\n\n7.4\n2.8\n6.1\n1.9\nvirginica\n\n\n7.9\n3.8\n6.4\n2.0\nvirginica\n\n\n6.4\n2.8\n5.6\n2.2\nvirginica\n\n\n6.3\n2.8\n5.1\n1.5\nvirginica\n\n\n6.1\n2.6\n5.6\n1.4\nvirginica\n\n\n7.7\n3.0\n6.1\n2.3\nvirginica\n\n\n6.3\n3.4\n5.6\n2.4\nvirginica\n\n\n6.4\n3.1\n5.5\n1.8\nvirginica\n\n\n6.0\n3.0\n4.8\n1.8\nvirginica\n\n\n6.9\n3.1\n5.4\n2.1\nvirginica\n\n\n6.7\n3.1\n5.6\n2.4\nvirginica\n\n\n6.9\n3.1\n5.1\n2.3\nvirginica\n\n\n5.8\n2.7\n5.1\n1.9\nvirginica\n\n\n6.8\n3.2\n5.9\n2.3\nvirginica\n\n\n6.7\n3.3\n5.7\n2.5\nvirginica\n\n\n6.7\n3.0\n5.2\n2.3\nvirginica\n\n\n6.3\n2.5\n5.0\n1.9\nvirginica\n\n\n6.5\n3.0\n5.2\n2.0\nvirginica\n\n\n6.2\n3.4\n5.4\n2.3\nvirginica\n\n\n5.9\n3.0\n5.1\n1.8\nvirginica\n\n\n\n\n\n\n\n\n\n\n\nyeah"
+  },
+  {
+    "objectID": "posts/lessons/delete.html#another",
+    "href": "posts/lessons/delete.html#another",
+    "title": "Untitled",
+    "section": "Another",
+    "text": "Another\nhey"
+  },
+  {
+    "objectID": "posts/lessons/delete.html#more-here",
+    "href": "posts/lessons/delete.html#more-here",
+    "title": "Untitled",
+    "section": "More Here",
+    "text": "More Here\nhey there"
+  },
+  {
+    "objectID": "posts/lessons/delete.html#results",
+    "href": "posts/lessons/delete.html#results",
+    "title": "Use tabs to organize content",
+    "section": "Results",
+    "text": "Results\n\nPlots\nWe show a scatter plot in this section.\n\npar(mar = c(4, 4, .5, .1))\nplot(mpg ~ hp, data = mtcars, pch = 19)\n\n\n\n\n\n\nTables\nWe show the data in this tab.\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1"
+  },
+  {
+    "objectID": "posts/lessons/delete.html#what-about-this",
+    "href": "posts/lessons/delete.html#what-about-this",
+    "title": "Use tabs to organize content",
+    "section": "What about this?",
+    "text": "What about this?\nyeah"
+  },
+  {
+    "objectID": "posts/lessons/delete.html#what-about-that",
+    "href": "posts/lessons/delete.html#what-about-that",
+    "title": "Use tabs to organize content",
+    "section": "What about that?",
+    "text": "What about that?\n\nPlotData\n\n\n\nggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species))+\n    geom_point()\n\n\n\n\n\n\n\nknitr::kable(iris)\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa\n\n\n4.6\n3.4\n1.4\n0.3\nsetosa\n\n\n5.0\n3.4\n1.5\n0.2\nsetosa\n\n\n4.4\n2.9\n1.4\n0.2\nsetosa\n\n\n4.9\n3.1\n1.5\n0.1\nsetosa\n\n\n5.4\n3.7\n1.5\n0.2\nsetosa\n\n\n4.8\n3.4\n1.6\n0.2\nsetosa\n\n\n4.8\n3.0\n1.4\n0.1\nsetosa\n\n\n4.3\n3.0\n1.1\n0.1\nsetosa\n\n\n5.8\n4.0\n1.2\n0.2\nsetosa\n\n\n5.7\n4.4\n1.5\n0.4\nsetosa\n\n\n5.4\n3.9\n1.3\n0.4\nsetosa\n\n\n5.1\n3.5\n1.4\n0.3\nsetosa\n\n\n5.7\n3.8\n1.7\n0.3\nsetosa\n\n\n5.1\n3.8\n1.5\n0.3\nsetosa\n\n\n5.4\n3.4\n1.7\n0.2\nsetosa\n\n\n5.1\n3.7\n1.5\n0.4\nsetosa\n\n\n4.6\n3.6\n1.0\n0.2\nsetosa\n\n\n5.1\n3.3\n1.7\n0.5\nsetosa\n\n\n4.8\n3.4\n1.9\n0.2\nsetosa\n\n\n5.0\n3.0\n1.6\n0.2\nsetosa\n\n\n5.0\n3.4\n1.6\n0.4\nsetosa\n\n\n5.2\n3.5\n1.5\n0.2\nsetosa\n\n\n5.2\n3.4\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.6\n0.2\nsetosa\n\n\n4.8\n3.1\n1.6\n0.2\nsetosa\n\n\n5.4\n3.4\n1.5\n0.4\nsetosa\n\n\n5.2\n4.1\n1.5\n0.1\nsetosa\n\n\n5.5\n4.2\n1.4\n0.2\nsetosa\n\n\n4.9\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.2\n1.2\n0.2\nsetosa\n\n\n5.5\n3.5\n1.3\n0.2\nsetosa\n\n\n4.9\n3.6\n1.4\n0.1\nsetosa\n\n\n4.4\n3.0\n1.3\n0.2\nsetosa\n\n\n5.1\n3.4\n1.5\n0.2\nsetosa\n\n\n5.0\n3.5\n1.3\n0.3\nsetosa\n\n\n4.5\n2.3\n1.3\n0.3\nsetosa\n\n\n4.4\n3.2\n1.3\n0.2\nsetosa\n\n\n5.0\n3.5\n1.6\n0.6\nsetosa\n\n\n5.1\n3.8\n1.9\n0.4\nsetosa\n\n\n4.8\n3.0\n1.4\n0.3\nsetosa\n\n\n5.1\n3.8\n1.6\n0.2\nsetosa\n\n\n4.6\n3.2\n1.4\n0.2\nsetosa\n\n\n5.3\n3.7\n1.5\n0.2\nsetosa\n\n\n5.0\n3.3\n1.4\n0.2\nsetosa\n\n\n7.0\n3.2\n4.7\n1.4\nversicolor\n\n\n6.4\n3.2\n4.5\n1.5\nversicolor\n\n\n6.9\n3.1\n4.9\n1.5\nversicolor\n\n\n5.5\n2.3\n4.0\n1.3\nversicolor\n\n\n6.5\n2.8\n4.6\n1.5\nversicolor\n\n\n5.7\n2.8\n4.5\n1.3\nversicolor\n\n\n6.3\n3.3\n4.7\n1.6\nversicolor\n\n\n4.9\n2.4\n3.3\n1.0\nversicolor\n\n\n6.6\n2.9\n4.6\n1.3\nversicolor\n\n\n5.2\n2.7\n3.9\n1.4\nversicolor\n\n\n5.0\n2.0\n3.5\n1.0\nversicolor\n\n\n5.9\n3.0\n4.2\n1.5\nversicolor\n\n\n6.0\n2.2\n4.0\n1.0\nversicolor\n\n\n6.1\n2.9\n4.7\n1.4\nversicolor\n\n\n5.6\n2.9\n3.6\n1.3\nversicolor\n\n\n6.7\n3.1\n4.4\n1.4\nversicolor\n\n\n5.6\n3.0\n4.5\n1.5\nversicolor\n\n\n5.8\n2.7\n4.1\n1.0\nversicolor\n\n\n6.2\n2.2\n4.5\n1.5\nversicolor\n\n\n5.6\n2.5\n3.9\n1.1\nversicolor\n\n\n5.9\n3.2\n4.8\n1.8\nversicolor\n\n\n6.1\n2.8\n4.0\n1.3\nversicolor\n\n\n6.3\n2.5\n4.9\n1.5\nversicolor\n\n\n6.1\n2.8\n4.7\n1.2\nversicolor\n\n\n6.4\n2.9\n4.3\n1.3\nversicolor\n\n\n6.6\n3.0\n4.4\n1.4\nversicolor\n\n\n6.8\n2.8\n4.8\n1.4\nversicolor\n\n\n6.7\n3.0\n5.0\n1.7\nversicolor\n\n\n6.0\n2.9\n4.5\n1.5\nversicolor\n\n\n5.7\n2.6\n3.5\n1.0\nversicolor\n\n\n5.5\n2.4\n3.8\n1.1\nversicolor\n\n\n5.5\n2.4\n3.7\n1.0\nversicolor\n\n\n5.8\n2.7\n3.9\n1.2\nversicolor\n\n\n6.0\n2.7\n5.1\n1.6\nversicolor\n\n\n5.4\n3.0\n4.5\n1.5\nversicolor\n\n\n6.0\n3.4\n4.5\n1.6\nversicolor\n\n\n6.7\n3.1\n4.7\n1.5\nversicolor\n\n\n6.3\n2.3\n4.4\n1.3\nversicolor\n\n\n5.6\n3.0\n4.1\n1.3\nversicolor\n\n\n5.5\n2.5\n4.0\n1.3\nversicolor\n\n\n5.5\n2.6\n4.4\n1.2\nversicolor\n\n\n6.1\n3.0\n4.6\n1.4\nversicolor\n\n\n5.8\n2.6\n4.0\n1.2\nversicolor\n\n\n5.0\n2.3\n3.3\n1.0\nversicolor\n\n\n5.6\n2.7\n4.2\n1.3\nversicolor\n\n\n5.7\n3.0\n4.2\n1.2\nversicolor\n\n\n5.7\n2.9\n4.2\n1.3\nversicolor\n\n\n6.2\n2.9\n4.3\n1.3\nversicolor\n\n\n5.1\n2.5\n3.0\n1.1\nversicolor\n\n\n5.7\n2.8\n4.1\n1.3\nversicolor\n\n\n6.3\n3.3\n6.0\n2.5\nvirginica\n\n\n5.8\n2.7\n5.1\n1.9\nvirginica\n\n\n7.1\n3.0\n5.9\n2.1\nvirginica\n\n\n6.3\n2.9\n5.6\n1.8\nvirginica\n\n\n6.5\n3.0\n5.8\n2.2\nvirginica\n\n\n7.6\n3.0\n6.6\n2.1\nvirginica\n\n\n4.9\n2.5\n4.5\n1.7\nvirginica\n\n\n7.3\n2.9\n6.3\n1.8\nvirginica\n\n\n6.7\n2.5\n5.8\n1.8\nvirginica\n\n\n7.2\n3.6\n6.1\n2.5\nvirginica\n\n\n6.5\n3.2\n5.1\n2.0\nvirginica\n\n\n6.4\n2.7\n5.3\n1.9\nvirginica\n\n\n6.8\n3.0\n5.5\n2.1\nvirginica\n\n\n5.7\n2.5\n5.0\n2.0\nvirginica\n\n\n5.8\n2.8\n5.1\n2.4\nvirginica\n\n\n6.4\n3.2\n5.3\n2.3\nvirginica\n\n\n6.5\n3.0\n5.5\n1.8\nvirginica\n\n\n7.7\n3.8\n6.7\n2.2\nvirginica\n\n\n7.7\n2.6\n6.9\n2.3\nvirginica\n\n\n6.0\n2.2\n5.0\n1.5\nvirginica\n\n\n6.9\n3.2\n5.7\n2.3\nvirginica\n\n\n5.6\n2.8\n4.9\n2.0\nvirginica\n\n\n7.7\n2.8\n6.7\n2.0\nvirginica\n\n\n6.3\n2.7\n4.9\n1.8\nvirginica\n\n\n6.7\n3.3\n5.7\n2.1\nvirginica\n\n\n7.2\n3.2\n6.0\n1.8\nvirginica\n\n\n6.2\n2.8\n4.8\n1.8\nvirginica\n\n\n6.1\n3.0\n4.9\n1.8\nvirginica\n\n\n6.4\n2.8\n5.6\n2.1\nvirginica\n\n\n7.2\n3.0\n5.8\n1.6\nvirginica\n\n\n7.4\n2.8\n6.1\n1.9\nvirginica\n\n\n7.9\n3.8\n6.4\n2.0\nvirginica\n\n\n6.4\n2.8\n5.6\n2.2\nvirginica\n\n\n6.3\n2.8\n5.1\n1.5\nvirginica\n\n\n6.1\n2.6\n5.6\n1.4\nvirginica\n\n\n7.7\n3.0\n6.1\n2.3\nvirginica\n\n\n6.3\n3.4\n5.6\n2.4\nvirginica\n\n\n6.4\n3.1\n5.5\n1.8\nvirginica\n\n\n6.0\n3.0\n4.8\n1.8\nvirginica\n\n\n6.9\n3.1\n5.4\n2.1\nvirginica\n\n\n6.7\n3.1\n5.6\n2.4\nvirginica\n\n\n6.9\n3.1\n5.1\n2.3\nvirginica\n\n\n5.8\n2.7\n5.1\n1.9\nvirginica\n\n\n6.8\n3.2\n5.9\n2.3\nvirginica\n\n\n6.7\n3.3\n5.7\n2.5\nvirginica\n\n\n6.7\n3.0\n5.2\n2.3\nvirginica\n\n\n6.3\n2.5\n5.0\n1.9\nvirginica\n\n\n6.5\n3.0\n5.2\n2.0\nvirginica\n\n\n6.2\n3.4\n5.4\n2.3\nvirginica\n\n\n5.9\n3.0\n5.1\n1.8\nvirginica"
+  },
+  {
+    "objectID": "posts/lessons/delete.html#this",
+    "href": "posts/lessons/delete.html#this",
+    "title": "Use tabs to organize content",
+    "section": "This",
+    "text": "This\nyeah"
   }
 ]

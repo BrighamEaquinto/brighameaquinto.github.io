@@ -4,7 +4,13 @@ toc: true
 fig-align: center
 fig-width: 8
 fig-height: 3.5
-code-fold: true
+code-copy: true
+code-overflow: wrap
+code-line-numbers: true
+code-fold: false
+code-tools: true
+eval: false
+# toc: true
 ---
 
 ![](pictures/ggplot2.jpg){fig-align="center"}
@@ -56,7 +62,8 @@ ggplot(dat, aes(x=bmi))+
 ggplot(dat, aes(x=region))+
     geom_bar()+
     labs(
-        title="Y-Axis Auto Counts the Occurances of Each Category", x="Categorical Column: 'region'")+
+        title="Y-Axis Auto Counts the Occurances of Each Category", 
+        x="Categorical Column: 'region'")+
     theme(axis.title = element_text(face="bold"))
 ```
 
@@ -87,8 +94,6 @@ ggplot(dat, aes(x=age, y=bmi))+
 
 
 
-
-
 # Practice Exercises
 
 Use this code to get the data
@@ -99,4 +104,8 @@ library(tidyverse)
 dat <- read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv")
 ```
 
+
+```{r}
+head(dat)
+```
 
