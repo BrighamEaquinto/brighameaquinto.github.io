@@ -4,7 +4,7 @@
     "href": "main.html",
     "title": "R Bootcamp",
     "section": "",
-    "text": "Lesson 1: Introduction to Data Science & Installation\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 2: Reading Data\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange)\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 5: Graphing 1/2\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 6: Graphing 2/2\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nUse tabs to organize content\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Lesson 1: Introduction to Data Science & Installation\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 2: Reading Data\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange)\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 5: Graphing 1/2\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 6: Graphing 2/2\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/weeks/Oct_5th.html",
@@ -501,28 +501,28 @@
     "href": "posts/lessons/lesson5_ggplot.html#histogram-counting-the-number-of-numeric-occurances",
     "title": "Lesson 5: Graphing 1/2",
     "section": "Histogram: Counting the Number of Numeric Occurances",
-    "text": "Histogram: Counting the Number of Numeric Occurances\n\nX: Numeric, Y: N/A\n\n\nCode\nggplot(dat, aes(x=bmi))+ \n   geom_histogram(bins = 50)+\n    labs(\n        title=\"Y-Axis Auto Counts the Occurances of Each Number\",\n        x=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
+    "text": "Histogram: Counting the Number of Numeric Occurances\n\nX: Numeric, Y: N/A\n\n\nCode\nggplot(dat, aes(x=bmi))+ \n   geom_histogram(bins = 50)+\n    labs(\n        title=\"Y-Axis Auto Counts the\\n Occurances of Each Number\",\n        x=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
   },
   {
     "objectID": "posts/lessons/lesson5_ggplot.html#bar-plot-counting-the-number-of-categorical-occurances",
     "href": "posts/lessons/lesson5_ggplot.html#bar-plot-counting-the-number-of-categorical-occurances",
     "title": "Lesson 5: Graphing 1/2",
     "section": "Bar Plot: Counting the Number of Categorical Occurances",
-    "text": "Bar Plot: Counting the Number of Categorical Occurances\n\nX: Categorical, Y: N/A\n\nggplot(dat, aes(x=region))+\n    geom_bar()+\n    labs(\n        title=\"Y-Axis Auto Counts the Occurances of Each Category\", \n        x=\"Categorical Column: 'region'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
+    "text": "Bar Plot: Counting the Number of Categorical Occurances\n\nMethod 1: geom_bar()Method 2: geom_col()\n\n\n\nX: Categorical, Y: Auto Counts Categories\n\n\nCode\nggplot(dat, aes(x=region))+\n    geom_bar()+\n    labs(\n        title=\"\", \n        x=\"Categorical Column: 'region'\", \n        y=\"Auto Counts the Occurances\\n of Each Category\")+\n    theme(axis.title = element_text(face=\"bold\"))\n\n\n\n\n\n\n\n\n\nX: Categorical, Y: Numeric\n\n\nCode\nplot_data <- dat %>% \n    group_by(region) %>% \n    summarise(count = n()) \n\nggplot(plot_data, aes(x=region, y=count))+\n    geom_col()+\n    labs(\n        title=\"\", \n        x=\"Categorical Column: 'region'\", \n        y=\"Numeric Column: 'count'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
   },
   {
     "objectID": "posts/lessons/lesson5_ggplot.html#boxplot",
     "href": "posts/lessons/lesson5_ggplot.html#boxplot",
     "title": "Lesson 5: Graphing 1/2",
     "section": "Boxplot",
-    "text": "Boxplot\n\nX: Categorical, Y: Numeric\n\nggplot(dat, aes(x=region, y=bmi))+\n    geom_boxplot()+\n    labs(x=\"Categorical Column: 'region'\", y=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
+    "text": "Boxplot\n\nX: Categorical, Y: Numeric\n\n\nCode\nggplot(dat, aes(x=region, y=bmi))+\n    geom_boxplot()+\n    labs(x=\"Categorical Column: 'region'\", y=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
   },
   {
     "objectID": "posts/lessons/lesson5_ggplot.html#scatterplot",
     "href": "posts/lessons/lesson5_ggplot.html#scatterplot",
     "title": "Lesson 5: Graphing 1/2",
     "section": "Scatterplot",
-    "text": "Scatterplot\n\nX: Numeric, Y: Numeric\n\nggplot(dat, aes(x=age, y=bmi))+\n    geom_point()+\n    labs(x=\"Numeric Column: 'Age'\", y=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
+    "text": "Scatterplot\n\nX: Numeric, Y: Numeric\n\n\nCode\nggplot(dat, aes(x=age, y=bmi))+\n    geom_point()+\n    labs(x=\"Numeric Column: 'Age'\", y=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
   },
   {
     "objectID": "posts/dax/dax.html",

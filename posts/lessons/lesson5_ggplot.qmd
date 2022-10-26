@@ -7,9 +7,9 @@ fig-height: 3.5
 code-copy: true
 code-overflow: wrap
 code-line-numbers: true
-code-fold: false
+code-fold: true
 code-tools: true
-eval: false
+eval: true
 # toc: true
 ---
 
@@ -17,7 +17,10 @@ eval: false
 
 
 ```{r}
-#| include: false
+#| code-fold: true
+#| code-summary: "Data Used for Examples"
+#| message: false
+#| warning: false
 library(tidyverse)
 dat <- read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv")
 ```
@@ -41,14 +44,12 @@ What kinds of data do we have?
 
 ###### X: Numeric, Y: N/A
 
-
-
 ```{r}
 #| code-fold: true
 ggplot(dat, aes(x=bmi))+ 
    geom_histogram(bins = 50)+
     labs(
-        title="Y-Axis Auto Counts the Occurances of Each Number",
+        title="Y-Axis Auto Counts the\n Occurances of Each Number",
         x="Numeric Column: 'bmi'")+
     theme(axis.title = element_text(face="bold"))
 ```
@@ -56,17 +57,41 @@ ggplot(dat, aes(x=bmi))+
 
 ## Bar Plot: Counting the Number of Categorical Occurances
 
-#### X: Categorical, Y: N/A
+::: {.panel-tabset}
+
+## Method 1: geom_bar()  
+
+#### X: Categorical, Y: Auto Counts Categories
 
 ```{r}
 ggplot(dat, aes(x=region))+
     geom_bar()+
     labs(
-        title="Y-Axis Auto Counts the Occurances of Each Category", 
-        x="Categorical Column: 'region'")+
+        title="", 
+        x="Categorical Column: 'region'", 
+        y="Auto Counts the Occurances\n of Each Category")+
     theme(axis.title = element_text(face="bold"))
 ```
 
+## Method 2: geom_col()
+
+#### X: Categorical, Y: Numeric
+
+```{r}
+plot_data <- dat %>% 
+    group_by(region) %>% 
+    summarise(count = n()) 
+
+ggplot(plot_data, aes(x=region, y=count))+
+    geom_col()+
+    labs(
+        title="", 
+        x="Categorical Column: 'region'", 
+        y="Numeric Column: 'count'")+
+    theme(axis.title = element_text(face="bold"))
+```
+
+:::
 
 ## Boxplot
 
@@ -101,11 +126,39 @@ Use this code to get the data
 ```{r}
 #| eval: false
 library(tidyverse)
-dat <- read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv")
+
+bob <- read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/StudentsPerformance.csv")%>%
+mutate(parent_education=`parental level of education`) %>% 
+select(!`parental level of education`)
 ```
 
 
+## Practice 1: 
+
+
+Graph the types of parental education using the `parent_education` column
 ```{r}
-head(dat)
+ggplot(bob, aes(parent_education))+
+    geom_bar()
 ```
 
+Graph the types of lunch categories using the `lunch` column
+```{r}
+ggplot(data = bob, mapping = aes(x = lunch))+
+    geom_bar()
+```
+
+
+X: Numeric
+Y: Numeric
+Graph the reading score on the x-axis and the writing score on the y-axis
+```{r}
+ggplot(data = bob, mapping = aes(x = `reading score`, y = `writing score`))+
+    geom_point()
+```
+
+
+
+
+
+Next week we'll get into colors
