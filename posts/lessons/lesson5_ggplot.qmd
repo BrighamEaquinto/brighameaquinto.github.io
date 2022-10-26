@@ -10,6 +10,8 @@ code-line-numbers: true
 code-fold: true
 code-tools: true
 eval: true
+message: false
+warning: false
 # toc: true
 ---
 
@@ -21,7 +23,9 @@ eval: true
 #| code-summary: "Data Used for Examples"
 #| message: false
 #| warning: false
+
 library(tidyverse)
+
 dat <- read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv")
 ```
 
@@ -95,6 +99,8 @@ ggplot(plot_data, aes(x=region, y=count))+
 
 ## Boxplot
 
+geom_boxplot() is often used with geom_jitter() to make powerful visualizations.
+
 #### X: Categorical, Y: Numeric
 
 ```{r}
@@ -118,47 +124,223 @@ ggplot(dat, aes(x=age, y=bmi))+
 
 
 
-
 # Practice Exercises
 
-Use this code to get the data
+Use the copy button in the top left corner of the code box below to get the data needed for the practice exercies. The code below may look weird depending on the size of your screen, but regardless use the copy button then paste it into your r script.  
 
 ```{r}
-#| eval: false
+#| code-fold: show
 library(tidyverse)
 
-bob <- read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/StudentsPerformance.csv")%>%
-mutate(parent_education=`parental level of education`) %>% 
-select(!`parental level of education`)
+bob <- read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/StudentsPerformance.csv") %>%
+    mutate(parent_education=`parental level of education`) %>% 
+    select(!`parental level of education`)
+```
+
+This is our dataset for this practice: 
+
+```{r}
+#| code-fold: true
+#| include: false
+# knitr::kable(head(bob))  
+```
+
+> |gender |race/ethnicity |lunch        |test preparation course | math score| reading score| writing score|parent_education   |
+> |:------|:--------------|:------------|:-----------------------|----------:|-------------:|-------------:|:------------------|
+> |female |group B        |standard     |none                    |         72|            72|            74|bachelor's degree  |
+> |female |group C        |standard     |completed               |         69|            90|            88|some college       |
+> |female |group B        |standard     |none                    |         90|            95|            93|master's degree    |
+> |male   |group A        |free/reduced |none                    |         47|            57|            44|associate's degree |
+
+
+## Exercise 1: Visualizing a Distribution using a Histogram
+
+**Prompt**: Show the distribution of math scores
+
+**Instructions**: 
+
+- use the dataset from above called `bob`
+- use the \``math score`\` column and make sure it is wrapped in tick marks. This is necessary when column names contain spaces.
+- use `geom_histogram()` on line 2 
+
+**Starter Code:**
+```{r}
+#| eval: false
+#| code-fold: false
+ggplot(data = ___, aes(x = `____ _____`))+ 
+    geom____________
 ```
 
 
-## Practice 1: 
-
-
-Graph the types of parental education using the `parent_education` column
 ```{r}
-ggplot(bob, aes(parent_education))+
+#| echo: false
+ggplot(data = bob, aes(x = `math score`))+ 
+    geom_histogram()
+```
+
+**Answer**:
+
+```{r}
+#| code-fold: true
+#| code-summary: "Code Solution"
+#| eval: false
+ggplot(data = bob, aes(x = `math score`))+ 
+    geom_histogram()
+```
+
+
+## Exercise 2: Visualizing Counts of School Degrees
+
+
+**Prompt**: Make a bar chart visualizing the count of school degrees 
+
+**Instructions**: 
+
+- use the dataset from above called `bob`
+- use `parent_education` column as the x axis
+- use `geom_bar()` in line 2
+
+**Starter Code:**
+```{r}
+#| eval: false
+#| code-fold: false
+ggplot(data = ___, aes(x = ________________))+ 
+    geom____________
+```
+
+
+```{r}
+#| echo: false
+ggplot(data = bob, aes(x = parent_education))+
     geom_bar()
 ```
 
-Graph the types of lunch categories using the `lunch` column
+**Answer**:
+
 ```{r}
-ggplot(data = bob, mapping = aes(x = lunch))+
+#| code-fold: true
+#| code-summary: "Code Solution"
+#| eval: false
+ggplot(data = bob, aes(x = parent_education))+
     geom_bar()
 ```
 
 
-X: Numeric
-Y: Numeric
-Graph the reading score on the x-axis and the writing score on the y-axis
+## Exercise 3: 
+
+
+**Prompt**: Make a scatter plot visualizing the correlation of reading scores and writing scores 
+
+**Instructions**: 
+
+- use the dataset from above called `bob`
+- use the \``reading score`\` column as the x axis 
+- use the \``writing score`\` column as the y axis
+- use the `gender` column as the color
+- use `geom_point()` in line 2
+
+**Starter Code:**
 ```{r}
-ggplot(data = bob, mapping = aes(x = `reading score`, y = `writing score`))+
+#| eval: false
+#| code-fold: false
+ggplot(data = ___, aes(x = `_______ _____`, y = _______________, color = ______))+
+    geom________
+```
+
+
+```{r}
+#| echo: false
+ggplot(data = bob, aes(x = `reading score`, y = `writing score`, color = gender))+
+    geom_point()
+```
+
+**Answer**:
+
+```{r}
+#| code-fold: true
+#| code-summary: "Code Solution"
+#| eval: false
+ggplot(data = bob, aes(x = `reading score`, y = `writing score`, color = gender))+
     geom_point()
 ```
 
 
+## Exercise 4: Visualizing Distribution using Boxplots
+
+**Prompt**: Make a scatter plot visualizing the correlation of reading scores and writing scores 
+
+**Instructions**: 
+
+- use the dataset from above called `bob`
+- use the `lunch` column as the x axis 
+- use the \``math score`\` column as the y axis
+- use `geom_histogram()` in line 2
 
 
 
-Next week we'll get into colors
+**Starter Code:**
+```{r}
+#| eval: false
+#| code-fold: false
+ggplot(___, aes(_____, ____________))+ 
+    geom__________
+```
+Notice in the starter code we didn't specify data, x, and y. ggplot doesn't require explicitly specifying the arguments for data, x-axis, and y-axis. Those are implied by their position in the code below. This way of writing code require less typing and is very common. 
+
+```{r}
+#| echo: false
+ggplot(bob, aes(lunch, `math score`))+ 
+    geom_boxplot()
+```
+
+**Answer**:
+
+```{r}
+#| code-fold: true
+#| code-summary: "Code Solution"
+#| eval: false
+ggplot(bob, aes(lunch, `math score`))+ 
+    geom_boxplot()
+```
+
+
+<br>
+
+For the remainder of the exercises, no starter code is provided. Look back at previous exercises for help if needed. 
+
+## Exercise 5:
+
+
+**Prompt**: Make a bar chart visualizing the types of lunches 
+
+**Instructions**: 
+
+- Remake the plot below 
+
+
+```{r}
+#| echo: false
+ggplot(data = bob, aes(x = lunch))+
+    geom_bar()
+```
+
+**Answer**:
+
+```{r}
+#| code-fold: true
+#| code-summary: "Code Solution"
+#| eval: false
+ggplot(data = bob, aes(x = lunch, fill = gender))+
+    geom_bar()
+```
+
+
+
+## Exercise 6: 
+
+
+
+
+
+
+Next week we'll get into colors, gg_text()/gg_label(), labs(), themes(), legend?, facet_wrap(), 

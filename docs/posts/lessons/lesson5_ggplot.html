@@ -228,7 +228,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#bar-plot-counting-the-number-of-categorical-occurances" id="toc-bar-plot-counting-the-number-of-categorical-occurances" class="nav-link" data-scroll-target="#bar-plot-counting-the-number-of-categorical-occurances">Bar Plot: Counting the Number of Categorical Occurances</a></li>
   <li><a href="#boxplot" id="toc-boxplot" class="nav-link" data-scroll-target="#boxplot">Boxplot</a></li>
   <li><a href="#scatterplot" id="toc-scatterplot" class="nav-link" data-scroll-target="#scatterplot">Scatterplot</a></li>
-  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises">Practice Exercises</a></li>
+  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises">Practice Exercises</a>
+  <ul class="collapse">
+  <li><a href="#exercise-1-visualizing-a-distribution-using-a-histogram" id="toc-exercise-1-visualizing-a-distribution-using-a-histogram" class="nav-link" data-scroll-target="#exercise-1-visualizing-a-distribution-using-a-histogram">Exercise 1: Visualizing a Distribution using a Histogram</a></li>
+  <li><a href="#exercise-2-visualizing-counts-of-school-degrees" id="toc-exercise-2-visualizing-counts-of-school-degrees" class="nav-link" data-scroll-target="#exercise-2-visualizing-counts-of-school-degrees">Exercise 2: Visualizing Counts of School Degrees</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3:</a></li>
+  <li><a href="#exercise-4-visualizing-distriution-using-boxplots" id="toc-exercise-4-visualizing-distriution-using-boxplots" class="nav-link" data-scroll-target="#exercise-4-visualizing-distriution-using-boxplots">Exercise 4: Visualizing Distriution using Boxplots</a></li>
+  <li><a href="#exercise-5" id="toc-exercise-5" class="nav-link" data-scroll-target="#exercise-5">Exercise 5:</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><br><br></a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/edit/main/posts/lessons/lesson5_ggplot.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -247,7 +255,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <details>
 <summary>Data Used for Examples</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>The four main plots we will go over today:</p>
@@ -337,6 +346,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="boxplot" class="level2">
 <h2 class="anchored" data-anchor-id="boxplot">Boxplot</h2>
+<p>geom_boxplot() is often used with geom_jitter() to make powerful visualizations.</p>
 <section id="x-categorical-y-numeric-1" class="level4">
 <h4 class="anchored" data-anchor-id="x-categorical-y-numeric-1">X: Categorical, Y: Numeric</h4>
 <div class="cell">
@@ -373,35 +383,248 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="practice-exercises" class="level1">
 <h1>Practice Exercises</h1>
-<p>Use this code to get the data</p>
+<p>Use the copy button in the top left corner of the code box below to get the data needed for the practice exercies. The code below may look weird depending on the size of your screen, but regardless use the copy button then paste it into your r script.</p>
 <div class="cell">
-<details>
+<details open="">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb7-2"><a href="#cb7-2"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a>bob <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/StudentsPerformance.csv"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>    <span class="fu">mutate</span>(<span class="at">parent_education=</span><span class="st">`</span><span class="at">parental level of education</span><span class="st">`</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-5"><a href="#cb7-5"></a>    <span class="fu">select</span>(<span class="sc">!</span><span class="st">`</span><span class="at">parental level of education</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+</div>
+<p>This is our dataset for this practice:</p>
+<blockquote class="blockquote">
+<table class="table">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 20%">
+<col style="width: 9%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">gender</th>
+<th style="text-align: left;">race/ethnicity</th>
+<th style="text-align: left;">lunch</th>
+<th style="text-align: left;">test preparation course</th>
+<th style="text-align: right;">math score</th>
+<th style="text-align: right;">reading score</th>
+<th style="text-align: right;">writing score</th>
+<th style="text-align: left;">parent_education</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">female</td>
+<td style="text-align: left;">group B</td>
+<td style="text-align: left;">standard</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: left;">bachelor’s degree</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">female</td>
+<td style="text-align: left;">group C</td>
+<td style="text-align: left;">standard</td>
+<td style="text-align: left;">completed</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: left;">some college</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">female</td>
+<td style="text-align: left;">group B</td>
+<td style="text-align: left;">standard</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: left;">master’s degree</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">male</td>
+<td style="text-align: left;">group A</td>
+<td style="text-align: left;">free/reduced</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: left;">associate’s degree</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<section id="exercise-1-visualizing-a-distribution-using-a-histogram" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1-visualizing-a-distribution-using-a-histogram">Exercise 1: Visualizing a Distribution using a Histogram</h2>
+<p><strong>Prompt</strong>: Show the distribution of math scores</p>
+<p><strong>Instructions</strong>:</p>
+<ul>
+<li>use the dataset from above called <code>bob</code></li>
+<li>use the `<code>math score</code>` column and make sure it is wrapped in tick marks. This is necessary when column names contain spaces.</li>
+<li>use <code>geom_histogram()</code> on line 2</li>
+</ul>
+<p><strong>Starter Code:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> ___, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">____ _____</span><span class="st">`</span>))<span class="sc">+</span> </span>
+<span id="cb8-2"><a href="#cb8-2"></a>    geom____________</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="lesson5_ggplot_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+<p><strong>Answer</strong>:</p>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bob, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">math score</span><span class="st">`</span>))<span class="sc">+</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a>    <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="exercise-2-visualizing-counts-of-school-degrees" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2-visualizing-counts-of-school-degrees">Exercise 2: Visualizing Counts of School Degrees</h2>
+<p><strong>Prompt</strong>: Make a bar chart visualizing the count of school degrees</p>
+<p><strong>Instructions</strong>:</p>
+<ul>
+<li>use the dataset from above called <code>bob</code></li>
+<li>use <code>parent_education</code> column as the x axis</li>
+<li>use <code>geom_bar()</code> in line 2</li>
+</ul>
+<p><strong>Starter Code:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> ___, <span class="fu">aes</span>(<span class="at">x =</span> ________________))<span class="sc">+</span> </span>
+<span id="cb10-2"><a href="#cb10-2"></a>    geom____________</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="lesson5_ggplot_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+<p><strong>Answer</strong>:</p>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bob, <span class="fu">aes</span>(<span class="at">x =</span> parent_education))<span class="sc">+</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>    <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="exercise-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3">Exercise 3:</h2>
+<p><strong>Prompt</strong>: Make a scatter plot visualizing the correlation of reading scores and writing scores</p>
+<p><strong>Instructions</strong>:</p>
+<ul>
+<li>use the dataset from above called <code>bob</code></li>
+<li>use the `<code>reading score</code>` column as the x axis</li>
+<li>use the `<code>writing score</code>` column as the y axis</li>
+<li>use the <code>gender</code> column as the color</li>
+<li>use <code>geom_point()</code> in line 2</li>
+</ul>
+<p><strong>Starter Code:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> ___, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">_______ _____</span><span class="st">`</span>, <span class="at">y =</span> _______________, <span class="at">color =</span> ______))<span class="sc">+</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>    geom________</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="lesson5_ggplot_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+<p><strong>Answer</strong>:</p>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bob, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">reading score</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">writing score</span><span class="st">`</span>, <span class="at">color =</span> gender))<span class="sc">+</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>    <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="exercise-4-visualizing-distriution-using-boxplots" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-4-visualizing-distriution-using-boxplots">Exercise 4: Visualizing Distriution using Boxplots</h2>
+<p><strong>Prompt</strong>: Make a scatter plot visualizing the correlation of reading scores and writing scores</p>
+<p><strong>Instructions</strong>:</p>
+<ul>
+<li>use the dataset from above called <code>bob</code></li>
+<li>use the <code>lunch</code> column as the x axis</li>
+<li>use the `<code>math score</code>` column as the y axis</li>
+<li>use <code>geom_histogram()</code> in line 2</li>
+</ul>
+<p><strong>Starter Code:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">ggplot</span>(___, <span class="fu">aes</span>(_____, ____________))<span class="sc">+</span> </span>
+<span id="cb14-2"><a href="#cb14-2"></a>    geom__________</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Notice in the starter code we didn’t specify data, x, and y. ggplot doesn’t require explicitly specifying the arguments for data, x-axis, and y-axis. Those are implied by their position in the code below. This way of writing code require less typing and is very common.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="lesson5_ggplot_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+<p><strong>Answer</strong>:</p>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">ggplot</span>(bob, <span class="fu">aes</span>(lunch, <span class="st">`</span><span class="at">math score</span><span class="st">`</span>))<span class="sc">+</span> </span>
+<span id="cb15-2"><a href="#cb15-2"></a>    <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><br></p>
+<p>For the remainder of the exercises, no starter code is provided. Look back at previous exercises for help if needed.</p>
+</section>
+<section id="exercise-5" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-5">Exercise 5:</h2>
+<p><strong>Prompt</strong>: Make a bar chart visualizing the types of lunches</p>
+<p><strong>Instructions</strong>:</p>
+<ul>
+<li>Remake the plot below</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="lesson5_ggplot_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+<p><strong>Answer</strong>:</p>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bob, <span class="fu">aes</span>(<span class="at">x =</span> lunch, <span class="at">fill =</span> gender))<span class="sc">+</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>    <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"><br><br></h2>
+<p>Graph the types of lunch categories using the <code>lunch</code> column</p>
+<div class="cell">
+
 </div>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">head</span>(dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">ggplot</span>()<span class="sc">+</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>    <span class="fu">geom_point</span>(<span class="at">data =</span> bob, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">reading score</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">writing score</span><span class="st">`</span>, <span class="at">color =</span> <span class="st">"red"</span>))<span class="sc">+</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a>    <span class="fu">geom_point</span>(<span class="at">data =</span> bob, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">math score</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">writing score</span><span class="st">`</span>, <span class="at">color =</span> <span class="st">"blue"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 7
-    age sex      bmi children smoker region    charges
-  &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;       &lt;dbl&gt;
-1    19 female  27.9        0 yes    southwest  16885.
-2    18 male    33.8        1 no     southeast   1726.
-3    28 male    33          3 no     southeast   4449.
-4    33 male    22.7        0 no     northwest  21984.
-5    32 male    28.9        0 no     northwest   3867.
-6    31 female  25.7        0 no     southeast   3757.</code></pre>
+<div class="cell-output-display">
+<p><img src="lesson5_ggplot_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid" width="768"></p>
 </div>
 </div>
+<p>Next week we’ll get into colors, gg_text()/gg_label(), labs(), themes(), legend?, facet_wrap(),</p>
 
 
 <!-- -->
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -704,143 +927,365 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb10" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1"></a><span class="co">---</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="an">title:</span><span class="co"> "Lesson 5: Graphing 1/2"</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="an">toc:</span><span class="co"> true</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a><span class="an">fig-align:</span><span class="co"> center</span></span>
-<span id="cb10-5"><a href="#cb10-5"></a><span class="an">fig-width:</span><span class="co"> 8</span></span>
-<span id="cb10-6"><a href="#cb10-6"></a><span class="an">fig-height:</span><span class="co"> 3.5</span></span>
-<span id="cb10-7"><a href="#cb10-7"></a><span class="an">code-copy:</span><span class="co"> true</span></span>
-<span id="cb10-8"><a href="#cb10-8"></a><span class="an">code-overflow:</span><span class="co"> wrap</span></span>
-<span id="cb10-9"><a href="#cb10-9"></a><span class="an">code-line-numbers:</span><span class="co"> true</span></span>
-<span id="cb10-10"><a href="#cb10-10"></a><span class="an">code-fold:</span><span class="co"> true</span></span>
-<span id="cb10-11"><a href="#cb10-11"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
-<span id="cb10-12"><a href="#cb10-12"></a><span class="an">eval:</span><span class="co"> true</span></span>
-<span id="cb10-13"><a href="#cb10-13"></a><span class="co"># toc: true</span></span>
-<span id="cb10-14"><a href="#cb10-14"></a><span class="co">---</span></span>
-<span id="cb10-15"><a href="#cb10-15"></a></span>
-<span id="cb10-16"><a href="#cb10-16"></a><span class="al">![](pictures/ggplot2.jpg)</span>{fig-align="center"}</span>
-<span id="cb10-17"><a href="#cb10-17"></a></span>
-<span id="cb10-18"><a href="#cb10-18"></a></span>
-<span id="cb10-21"><a href="#cb10-21"></a><span class="in">```{r}</span></span>
-<span id="cb10-22"><a href="#cb10-22"></a><span class="co">#| code-fold: true</span></span>
-<span id="cb10-23"><a href="#cb10-23"></a><span class="co">#| code-summary: "Data Used for Examples"</span></span>
-<span id="cb10-24"><a href="#cb10-24"></a><span class="co">#| message: false</span></span>
-<span id="cb10-25"><a href="#cb10-25"></a><span class="co">#| warning: false</span></span>
-<span id="cb10-26"><a href="#cb10-26"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb10-27"><a href="#cb10-27"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv"</span>)</span>
-<span id="cb10-28"><a href="#cb10-28"></a><span class="in">```</span></span>
-<span id="cb10-29"><a href="#cb10-29"></a></span>
-<span id="cb10-30"><a href="#cb10-30"></a>The four main plots we will go over today:</span>
-<span id="cb10-31"><a href="#cb10-31"></a></span>
-<span id="cb10-32"><a href="#cb10-32"></a><span class="ss">- </span>histogram</span>
-<span id="cb10-33"><a href="#cb10-33"></a><span class="ss">- </span>boxplot</span>
-<span id="cb10-34"><a href="#cb10-34"></a><span class="ss">- </span>scatterplot</span>
-<span id="cb10-35"><a href="#cb10-35"></a><span class="ss">- </span>bar plot</span>
-<span id="cb10-36"><a href="#cb10-36"></a></span>
-<span id="cb10-37"><a href="#cb10-37"></a>What kinds of data do we have? </span>
-<span id="cb10-38"><a href="#cb10-38"></a></span>
-<span id="cb10-39"><a href="#cb10-39"></a><span class="ss">- </span>numerical</span>
-<span id="cb10-40"><a href="#cb10-40"></a><span class="ss">- </span>categorical </span>
-<span id="cb10-41"><a href="#cb10-41"></a><span class="ss">- </span>ordinal</span>
-<span id="cb10-42"><a href="#cb10-42"></a></span>
-<span id="cb10-43"><a href="#cb10-43"></a></span>
-<span id="cb10-44"><a href="#cb10-44"></a></span>
-<span id="cb10-45"><a href="#cb10-45"></a><span class="fu">## Histogram: Counting the Number of Numeric Occurances</span></span>
-<span id="cb10-46"><a href="#cb10-46"></a></span>
-<span id="cb10-47"><a href="#cb10-47"></a><span class="fu">###### X: Numeric, Y: N/A</span></span>
-<span id="cb10-48"><a href="#cb10-48"></a></span>
-<span id="cb10-49"><a href="#cb10-49"></a></span>
-<span id="cb10-50"><a href="#cb10-50"></a></span>
-<span id="cb10-53"><a href="#cb10-53"></a><span class="in">```{r}</span></span>
-<span id="cb10-54"><a href="#cb10-54"></a><span class="co">#| code-fold: true</span></span>
-<span id="cb10-55"><a href="#cb10-55"></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x=</span>bmi))<span class="sc">+</span> </span>
-<span id="cb10-56"><a href="#cb10-56"></a>   <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">50</span>)<span class="sc">+</span></span>
-<span id="cb10-57"><a href="#cb10-57"></a>    <span class="fu">labs</span>(</span>
-<span id="cb10-58"><a href="#cb10-58"></a>        <span class="at">title=</span><span class="st">"Y-Axis Auto Counts the</span><span class="sc">\n</span><span class="st"> Occurances of Each Number"</span>,</span>
-<span id="cb10-59"><a href="#cb10-59"></a>        <span class="at">x=</span><span class="st">"Numeric Column: 'bmi'"</span>)<span class="sc">+</span></span>
-<span id="cb10-60"><a href="#cb10-60"></a>    <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">face=</span><span class="st">"bold"</span>))</span>
-<span id="cb10-61"><a href="#cb10-61"></a><span class="in">```</span></span>
-<span id="cb10-62"><a href="#cb10-62"></a></span>
-<span id="cb10-63"><a href="#cb10-63"></a></span>
-<span id="cb10-64"><a href="#cb10-64"></a><span class="fu">## Bar Plot: Counting the Number of Categorical Occurances</span></span>
-<span id="cb10-65"><a href="#cb10-65"></a></span>
-<span id="cb10-66"><a href="#cb10-66"></a>::: {.panel-tabset}</span>
-<span id="cb10-67"><a href="#cb10-67"></a></span>
-<span id="cb10-68"><a href="#cb10-68"></a><span class="fu">## Method 1: geom_bar()  </span></span>
-<span id="cb10-69"><a href="#cb10-69"></a></span>
-<span id="cb10-70"><a href="#cb10-70"></a><span class="fu">#### X: Categorical, Y: Auto Counts Categories</span></span>
-<span id="cb10-71"><a href="#cb10-71"></a></span>
-<span id="cb10-74"><a href="#cb10-74"></a><span class="in">```{r}</span></span>
-<span id="cb10-75"><a href="#cb10-75"></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x=</span>region))<span class="sc">+</span></span>
-<span id="cb10-76"><a href="#cb10-76"></a>    <span class="fu">geom_bar</span>()<span class="sc">+</span></span>
-<span id="cb10-77"><a href="#cb10-77"></a>    <span class="fu">labs</span>(</span>
-<span id="cb10-78"><a href="#cb10-78"></a>        <span class="at">title=</span><span class="st">""</span>, </span>
-<span id="cb10-79"><a href="#cb10-79"></a>        <span class="at">x=</span><span class="st">"Categorical Column: 'region'"</span>, </span>
-<span id="cb10-80"><a href="#cb10-80"></a>        <span class="at">y=</span><span class="st">"Auto Counts the Occurances</span><span class="sc">\n</span><span class="st"> of Each Category"</span>)<span class="sc">+</span></span>
-<span id="cb10-81"><a href="#cb10-81"></a>    <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">face=</span><span class="st">"bold"</span>))</span>
-<span id="cb10-82"><a href="#cb10-82"></a><span class="in">```</span></span>
-<span id="cb10-83"><a href="#cb10-83"></a></span>
-<span id="cb10-84"><a href="#cb10-84"></a><span class="fu">## Method 2: geom_col()</span></span>
-<span id="cb10-85"><a href="#cb10-85"></a></span>
-<span id="cb10-86"><a href="#cb10-86"></a><span class="fu">#### X: Categorical, Y: Numeric</span></span>
-<span id="cb10-87"><a href="#cb10-87"></a></span>
-<span id="cb10-90"><a href="#cb10-90"></a><span class="in">```{r}</span></span>
-<span id="cb10-91"><a href="#cb10-91"></a>plot_data <span class="ot">&lt;-</span> dat <span class="sc">%&gt;%</span> </span>
-<span id="cb10-92"><a href="#cb10-92"></a>    <span class="fu">group_by</span>(region) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-93"><a href="#cb10-93"></a>    <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>()) </span>
-<span id="cb10-94"><a href="#cb10-94"></a></span>
-<span id="cb10-95"><a href="#cb10-95"></a><span class="fu">ggplot</span>(plot_data, <span class="fu">aes</span>(<span class="at">x=</span>region, <span class="at">y=</span>count))<span class="sc">+</span></span>
-<span id="cb10-96"><a href="#cb10-96"></a>    <span class="fu">geom_col</span>()<span class="sc">+</span></span>
-<span id="cb10-97"><a href="#cb10-97"></a>    <span class="fu">labs</span>(</span>
-<span id="cb10-98"><a href="#cb10-98"></a>        <span class="at">title=</span><span class="st">""</span>, </span>
-<span id="cb10-99"><a href="#cb10-99"></a>        <span class="at">x=</span><span class="st">"Categorical Column: 'region'"</span>, </span>
-<span id="cb10-100"><a href="#cb10-100"></a>        <span class="at">y=</span><span class="st">"Numeric Column: 'count'"</span>)<span class="sc">+</span></span>
-<span id="cb10-101"><a href="#cb10-101"></a>    <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">face=</span><span class="st">"bold"</span>))</span>
-<span id="cb10-102"><a href="#cb10-102"></a><span class="in">```</span></span>
-<span id="cb10-103"><a href="#cb10-103"></a></span>
-<span id="cb10-104"><a href="#cb10-104"></a>:::</span>
-<span id="cb10-105"><a href="#cb10-105"></a></span>
-<span id="cb10-106"><a href="#cb10-106"></a><span class="fu">## Boxplot</span></span>
-<span id="cb10-107"><a href="#cb10-107"></a></span>
-<span id="cb10-108"><a href="#cb10-108"></a><span class="fu">#### X: Categorical, Y: Numeric</span></span>
-<span id="cb10-109"><a href="#cb10-109"></a></span>
-<span id="cb10-112"><a href="#cb10-112"></a><span class="in">```{r}</span></span>
-<span id="cb10-113"><a href="#cb10-113"></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x=</span>region, <span class="at">y=</span>bmi))<span class="sc">+</span></span>
-<span id="cb10-114"><a href="#cb10-114"></a>    <span class="fu">geom_boxplot</span>()<span class="sc">+</span></span>
-<span id="cb10-115"><a href="#cb10-115"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Categorical Column: 'region'"</span>, <span class="at">y=</span><span class="st">"Numeric Column: 'bmi'"</span>)<span class="sc">+</span></span>
-<span id="cb10-116"><a href="#cb10-116"></a>    <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">face=</span><span class="st">"bold"</span>))</span>
-<span id="cb10-117"><a href="#cb10-117"></a><span class="in">```</span></span>
-<span id="cb10-118"><a href="#cb10-118"></a></span>
-<span id="cb10-119"><a href="#cb10-119"></a></span>
-<span id="cb10-120"><a href="#cb10-120"></a><span class="fu">## Scatterplot</span></span>
-<span id="cb10-121"><a href="#cb10-121"></a></span>
-<span id="cb10-122"><a href="#cb10-122"></a><span class="fu">#### X: Numeric, Y: Numeric</span></span>
-<span id="cb10-123"><a href="#cb10-123"></a></span>
-<span id="cb10-126"><a href="#cb10-126"></a><span class="in">```{r}</span></span>
-<span id="cb10-127"><a href="#cb10-127"></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>bmi))<span class="sc">+</span></span>
-<span id="cb10-128"><a href="#cb10-128"></a>    <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb10-129"><a href="#cb10-129"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Numeric Column: 'Age'"</span>, <span class="at">y=</span><span class="st">"Numeric Column: 'bmi'"</span>)<span class="sc">+</span></span>
-<span id="cb10-130"><a href="#cb10-130"></a>    <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">face=</span><span class="st">"bold"</span>))</span>
-<span id="cb10-131"><a href="#cb10-131"></a><span class="in">```</span></span>
-<span id="cb10-132"><a href="#cb10-132"></a></span>
-<span id="cb10-133"><a href="#cb10-133"></a></span>
-<span id="cb10-134"><a href="#cb10-134"></a></span>
-<span id="cb10-135"><a href="#cb10-135"></a></span>
-<span id="cb10-136"><a href="#cb10-136"></a><span class="fu"># Practice Exercises</span></span>
-<span id="cb10-137"><a href="#cb10-137"></a></span>
-<span id="cb10-138"><a href="#cb10-138"></a>Use this code to get the data</span>
-<span id="cb10-139"><a href="#cb10-139"></a></span>
-<span id="cb10-142"><a href="#cb10-142"></a><span class="in">```{r}</span></span>
-<span id="cb10-143"><a href="#cb10-143"></a><span class="co">#| eval: false</span></span>
-<span id="cb10-144"><a href="#cb10-144"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb10-145"><a href="#cb10-145"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv"</span>)</span>
-<span id="cb10-146"><a href="#cb10-146"></a><span class="in">```</span></span>
-<span id="cb10-147"><a href="#cb10-147"></a></span>
-<span id="cb10-148"><a href="#cb10-148"></a></span>
-<span id="cb10-151"><a href="#cb10-151"></a><span class="in">```{r}</span></span>
-<span id="cb10-152"><a href="#cb10-152"></a><span class="fu">head</span>(dat)</span>
-<span id="cb10-153"><a href="#cb10-153"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb18" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1"></a><span class="co">---</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="an">title:</span><span class="co"> "Lesson 5: Graphing 1/2"</span></span>
+<span id="cb18-3"><a href="#cb18-3"></a><span class="an">toc:</span><span class="co"> true</span></span>
+<span id="cb18-4"><a href="#cb18-4"></a><span class="an">fig-align:</span><span class="co"> center</span></span>
+<span id="cb18-5"><a href="#cb18-5"></a><span class="an">fig-width:</span><span class="co"> 8</span></span>
+<span id="cb18-6"><a href="#cb18-6"></a><span class="an">fig-height:</span><span class="co"> 3.5</span></span>
+<span id="cb18-7"><a href="#cb18-7"></a><span class="an">code-copy:</span><span class="co"> true</span></span>
+<span id="cb18-8"><a href="#cb18-8"></a><span class="an">code-overflow:</span><span class="co"> wrap</span></span>
+<span id="cb18-9"><a href="#cb18-9"></a><span class="an">code-line-numbers:</span><span class="co"> true</span></span>
+<span id="cb18-10"><a href="#cb18-10"></a><span class="an">code-fold:</span><span class="co"> true</span></span>
+<span id="cb18-11"><a href="#cb18-11"></a><span class="an">code-tools:</span><span class="co"> true</span></span>
+<span id="cb18-12"><a href="#cb18-12"></a><span class="an">eval:</span><span class="co"> true</span></span>
+<span id="cb18-13"><a href="#cb18-13"></a><span class="an">message:</span><span class="co"> false</span></span>
+<span id="cb18-14"><a href="#cb18-14"></a><span class="an">warning:</span><span class="co"> false</span></span>
+<span id="cb18-15"><a href="#cb18-15"></a><span class="co"># toc: true</span></span>
+<span id="cb18-16"><a href="#cb18-16"></a><span class="co">---</span></span>
+<span id="cb18-17"><a href="#cb18-17"></a></span>
+<span id="cb18-18"><a href="#cb18-18"></a><span class="al">![](pictures/ggplot2.jpg)</span>{fig-align="center"}</span>
+<span id="cb18-19"><a href="#cb18-19"></a></span>
+<span id="cb18-20"><a href="#cb18-20"></a></span>
+<span id="cb18-23"><a href="#cb18-23"></a><span class="in">```{r}</span></span>
+<span id="cb18-24"><a href="#cb18-24"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb18-25"><a href="#cb18-25"></a><span class="co">#| code-summary: "Data Used for Examples"</span></span>
+<span id="cb18-26"><a href="#cb18-26"></a><span class="co">#| message: false</span></span>
+<span id="cb18-27"><a href="#cb18-27"></a><span class="co">#| warning: false</span></span>
+<span id="cb18-28"><a href="#cb18-28"></a></span>
+<span id="cb18-29"><a href="#cb18-29"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb18-30"><a href="#cb18-30"></a></span>
+<span id="cb18-31"><a href="#cb18-31"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv"</span>)</span>
+<span id="cb18-32"><a href="#cb18-32"></a><span class="in">```</span></span>
+<span id="cb18-33"><a href="#cb18-33"></a></span>
+<span id="cb18-34"><a href="#cb18-34"></a>The four main plots we will go over today:</span>
+<span id="cb18-35"><a href="#cb18-35"></a></span>
+<span id="cb18-36"><a href="#cb18-36"></a><span class="ss">- </span>histogram</span>
+<span id="cb18-37"><a href="#cb18-37"></a><span class="ss">- </span>boxplot</span>
+<span id="cb18-38"><a href="#cb18-38"></a><span class="ss">- </span>scatterplot</span>
+<span id="cb18-39"><a href="#cb18-39"></a><span class="ss">- </span>bar plot</span>
+<span id="cb18-40"><a href="#cb18-40"></a></span>
+<span id="cb18-41"><a href="#cb18-41"></a>What kinds of data do we have? </span>
+<span id="cb18-42"><a href="#cb18-42"></a></span>
+<span id="cb18-43"><a href="#cb18-43"></a><span class="ss">- </span>numerical</span>
+<span id="cb18-44"><a href="#cb18-44"></a><span class="ss">- </span>categorical </span>
+<span id="cb18-45"><a href="#cb18-45"></a><span class="ss">- </span>ordinal</span>
+<span id="cb18-46"><a href="#cb18-46"></a></span>
+<span id="cb18-47"><a href="#cb18-47"></a></span>
+<span id="cb18-48"><a href="#cb18-48"></a></span>
+<span id="cb18-49"><a href="#cb18-49"></a><span class="fu">## Histogram: Counting the Number of Numeric Occurances</span></span>
+<span id="cb18-50"><a href="#cb18-50"></a></span>
+<span id="cb18-51"><a href="#cb18-51"></a><span class="fu">###### X: Numeric, Y: N/A</span></span>
+<span id="cb18-52"><a href="#cb18-52"></a></span>
+<span id="cb18-55"><a href="#cb18-55"></a><span class="in">```{r}</span></span>
+<span id="cb18-56"><a href="#cb18-56"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb18-57"><a href="#cb18-57"></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x=</span>bmi))<span class="sc">+</span> </span>
+<span id="cb18-58"><a href="#cb18-58"></a>   <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">50</span>)<span class="sc">+</span></span>
+<span id="cb18-59"><a href="#cb18-59"></a>    <span class="fu">labs</span>(</span>
+<span id="cb18-60"><a href="#cb18-60"></a>        <span class="at">title=</span><span class="st">"Y-Axis Auto Counts the</span><span class="sc">\n</span><span class="st"> Occurances of Each Number"</span>,</span>
+<span id="cb18-61"><a href="#cb18-61"></a>        <span class="at">x=</span><span class="st">"Numeric Column: 'bmi'"</span>)<span class="sc">+</span></span>
+<span id="cb18-62"><a href="#cb18-62"></a>    <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">face=</span><span class="st">"bold"</span>))</span>
+<span id="cb18-63"><a href="#cb18-63"></a><span class="in">```</span></span>
+<span id="cb18-64"><a href="#cb18-64"></a></span>
+<span id="cb18-65"><a href="#cb18-65"></a></span>
+<span id="cb18-66"><a href="#cb18-66"></a><span class="fu">## Bar Plot: Counting the Number of Categorical Occurances</span></span>
+<span id="cb18-67"><a href="#cb18-67"></a></span>
+<span id="cb18-68"><a href="#cb18-68"></a>::: {.panel-tabset}</span>
+<span id="cb18-69"><a href="#cb18-69"></a></span>
+<span id="cb18-70"><a href="#cb18-70"></a><span class="fu">## Method 1: geom_bar()  </span></span>
+<span id="cb18-71"><a href="#cb18-71"></a></span>
+<span id="cb18-72"><a href="#cb18-72"></a><span class="fu">#### X: Categorical, Y: Auto Counts Categories</span></span>
+<span id="cb18-73"><a href="#cb18-73"></a></span>
+<span id="cb18-76"><a href="#cb18-76"></a><span class="in">```{r}</span></span>
+<span id="cb18-77"><a href="#cb18-77"></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x=</span>region))<span class="sc">+</span></span>
+<span id="cb18-78"><a href="#cb18-78"></a>    <span class="fu">geom_bar</span>()<span class="sc">+</span></span>
+<span id="cb18-79"><a href="#cb18-79"></a>    <span class="fu">labs</span>(</span>
+<span id="cb18-80"><a href="#cb18-80"></a>        <span class="at">title=</span><span class="st">""</span>, </span>
+<span id="cb18-81"><a href="#cb18-81"></a>        <span class="at">x=</span><span class="st">"Categorical Column: 'region'"</span>, </span>
+<span id="cb18-82"><a href="#cb18-82"></a>        <span class="at">y=</span><span class="st">"Auto Counts the Occurances</span><span class="sc">\n</span><span class="st"> of Each Category"</span>)<span class="sc">+</span></span>
+<span id="cb18-83"><a href="#cb18-83"></a>    <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">face=</span><span class="st">"bold"</span>))</span>
+<span id="cb18-84"><a href="#cb18-84"></a><span class="in">```</span></span>
+<span id="cb18-85"><a href="#cb18-85"></a></span>
+<span id="cb18-86"><a href="#cb18-86"></a><span class="fu">## Method 2: geom_col()</span></span>
+<span id="cb18-87"><a href="#cb18-87"></a></span>
+<span id="cb18-88"><a href="#cb18-88"></a><span class="fu">#### X: Categorical, Y: Numeric</span></span>
+<span id="cb18-89"><a href="#cb18-89"></a></span>
+<span id="cb18-92"><a href="#cb18-92"></a><span class="in">```{r}</span></span>
+<span id="cb18-93"><a href="#cb18-93"></a>plot_data <span class="ot">&lt;-</span> dat <span class="sc">%&gt;%</span> </span>
+<span id="cb18-94"><a href="#cb18-94"></a>    <span class="fu">group_by</span>(region) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-95"><a href="#cb18-95"></a>    <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>()) </span>
+<span id="cb18-96"><a href="#cb18-96"></a></span>
+<span id="cb18-97"><a href="#cb18-97"></a><span class="fu">ggplot</span>(plot_data, <span class="fu">aes</span>(<span class="at">x=</span>region, <span class="at">y=</span>count))<span class="sc">+</span></span>
+<span id="cb18-98"><a href="#cb18-98"></a>    <span class="fu">geom_col</span>()<span class="sc">+</span></span>
+<span id="cb18-99"><a href="#cb18-99"></a>    <span class="fu">labs</span>(</span>
+<span id="cb18-100"><a href="#cb18-100"></a>        <span class="at">title=</span><span class="st">""</span>, </span>
+<span id="cb18-101"><a href="#cb18-101"></a>        <span class="at">x=</span><span class="st">"Categorical Column: 'region'"</span>, </span>
+<span id="cb18-102"><a href="#cb18-102"></a>        <span class="at">y=</span><span class="st">"Numeric Column: 'count'"</span>)<span class="sc">+</span></span>
+<span id="cb18-103"><a href="#cb18-103"></a>    <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">face=</span><span class="st">"bold"</span>))</span>
+<span id="cb18-104"><a href="#cb18-104"></a><span class="in">```</span></span>
+<span id="cb18-105"><a href="#cb18-105"></a></span>
+<span id="cb18-106"><a href="#cb18-106"></a>:::</span>
+<span id="cb18-107"><a href="#cb18-107"></a></span>
+<span id="cb18-108"><a href="#cb18-108"></a><span class="fu">## Boxplot</span></span>
+<span id="cb18-109"><a href="#cb18-109"></a></span>
+<span id="cb18-110"><a href="#cb18-110"></a>geom_boxplot() is often used with geom_jitter() to make powerful visualizations.</span>
+<span id="cb18-111"><a href="#cb18-111"></a></span>
+<span id="cb18-112"><a href="#cb18-112"></a><span class="fu">#### X: Categorical, Y: Numeric</span></span>
+<span id="cb18-113"><a href="#cb18-113"></a></span>
+<span id="cb18-116"><a href="#cb18-116"></a><span class="in">```{r}</span></span>
+<span id="cb18-117"><a href="#cb18-117"></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x=</span>region, <span class="at">y=</span>bmi))<span class="sc">+</span></span>
+<span id="cb18-118"><a href="#cb18-118"></a>    <span class="fu">geom_boxplot</span>()<span class="sc">+</span></span>
+<span id="cb18-119"><a href="#cb18-119"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Categorical Column: 'region'"</span>, <span class="at">y=</span><span class="st">"Numeric Column: 'bmi'"</span>)<span class="sc">+</span></span>
+<span id="cb18-120"><a href="#cb18-120"></a>    <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">face=</span><span class="st">"bold"</span>))</span>
+<span id="cb18-121"><a href="#cb18-121"></a><span class="in">```</span></span>
+<span id="cb18-122"><a href="#cb18-122"></a></span>
+<span id="cb18-123"><a href="#cb18-123"></a></span>
+<span id="cb18-124"><a href="#cb18-124"></a><span class="fu">## Scatterplot</span></span>
+<span id="cb18-125"><a href="#cb18-125"></a></span>
+<span id="cb18-126"><a href="#cb18-126"></a><span class="fu">#### X: Numeric, Y: Numeric</span></span>
+<span id="cb18-127"><a href="#cb18-127"></a></span>
+<span id="cb18-130"><a href="#cb18-130"></a><span class="in">```{r}</span></span>
+<span id="cb18-131"><a href="#cb18-131"></a><span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>bmi))<span class="sc">+</span></span>
+<span id="cb18-132"><a href="#cb18-132"></a>    <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb18-133"><a href="#cb18-133"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Numeric Column: 'Age'"</span>, <span class="at">y=</span><span class="st">"Numeric Column: 'bmi'"</span>)<span class="sc">+</span></span>
+<span id="cb18-134"><a href="#cb18-134"></a>    <span class="fu">theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">face=</span><span class="st">"bold"</span>))</span>
+<span id="cb18-135"><a href="#cb18-135"></a><span class="in">```</span></span>
+<span id="cb18-136"><a href="#cb18-136"></a></span>
+<span id="cb18-137"><a href="#cb18-137"></a></span>
+<span id="cb18-138"><a href="#cb18-138"></a></span>
+<span id="cb18-139"><a href="#cb18-139"></a><span class="fu"># Practice Exercises</span></span>
+<span id="cb18-140"><a href="#cb18-140"></a></span>
+<span id="cb18-141"><a href="#cb18-141"></a>Use the copy button in the top left corner of the code box below to get the data needed for the practice exercies. The code below may look weird depending on the size of your screen, but regardless use the copy button then paste it into your r script.  </span>
+<span id="cb18-142"><a href="#cb18-142"></a></span>
+<span id="cb18-145"><a href="#cb18-145"></a><span class="in">```{r}</span></span>
+<span id="cb18-146"><a href="#cb18-146"></a><span class="co">#| code-fold: show</span></span>
+<span id="cb18-147"><a href="#cb18-147"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb18-148"><a href="#cb18-148"></a></span>
+<span id="cb18-149"><a href="#cb18-149"></a>bob <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/StudentsPerformance.csv"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb18-150"><a href="#cb18-150"></a>    <span class="fu">mutate</span>(<span class="at">parent_education=</span><span class="st">`</span><span class="at">parental level of education</span><span class="st">`</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-151"><a href="#cb18-151"></a>    <span class="fu">select</span>(<span class="sc">!</span><span class="st">`</span><span class="at">parental level of education</span><span class="st">`</span>)</span>
+<span id="cb18-152"><a href="#cb18-152"></a><span class="in">```</span></span>
+<span id="cb18-153"><a href="#cb18-153"></a></span>
+<span id="cb18-154"><a href="#cb18-154"></a>This is our dataset for this practice: </span>
+<span id="cb18-155"><a href="#cb18-155"></a></span>
+<span id="cb18-158"><a href="#cb18-158"></a><span class="in">```{r}</span></span>
+<span id="cb18-159"><a href="#cb18-159"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb18-160"><a href="#cb18-160"></a><span class="co">#| include: false</span></span>
+<span id="cb18-161"><a href="#cb18-161"></a><span class="co"># knitr::kable(head(bob))  </span></span>
+<span id="cb18-162"><a href="#cb18-162"></a><span class="in">```</span></span>
+<span id="cb18-163"><a href="#cb18-163"></a></span>
+<span id="cb18-164"><a href="#cb18-164"></a><span class="at">&gt; |gender |race/ethnicity |lunch        |test preparation course | math score| reading score| writing score|parent_education   |</span></span>
+<span id="cb18-165"><a href="#cb18-165"></a><span class="at">&gt; |:------|:--------------|:------------|:-----------------------|----------:|-------------:|-------------:|:------------------|</span></span>
+<span id="cb18-166"><a href="#cb18-166"></a><span class="at">&gt; |female |group B        |standard     |none                    |         72|            72|            74|bachelor's degree  |</span></span>
+<span id="cb18-167"><a href="#cb18-167"></a><span class="at">&gt; |female |group C        |standard     |completed               |         69|            90|            88|some college       |</span></span>
+<span id="cb18-168"><a href="#cb18-168"></a><span class="at">&gt; |female |group B        |standard     |none                    |         90|            95|            93|master's degree    |</span></span>
+<span id="cb18-169"><a href="#cb18-169"></a><span class="at">&gt; |male   |group A        |free/reduced |none                    |         47|            57|            44|associate's degree |</span></span>
+<span id="cb18-170"><a href="#cb18-170"></a></span>
+<span id="cb18-171"><a href="#cb18-171"></a></span>
+<span id="cb18-172"><a href="#cb18-172"></a><span class="fu">## Exercise 1: Visualizing a Distribution using a Histogram</span></span>
+<span id="cb18-173"><a href="#cb18-173"></a></span>
+<span id="cb18-174"><a href="#cb18-174"></a>**Prompt**: Show the distribution of math scores</span>
+<span id="cb18-175"><a href="#cb18-175"></a></span>
+<span id="cb18-176"><a href="#cb18-176"></a>**Instructions**: </span>
+<span id="cb18-177"><a href="#cb18-177"></a></span>
+<span id="cb18-178"><a href="#cb18-178"></a><span class="ss">- </span>use the dataset from above called <span class="in">`bob`</span></span>
+<span id="cb18-179"><a href="#cb18-179"></a><span class="ss">- </span>use the <span class="sc">\`</span><span class="in">`math score`</span><span class="sc">\`</span> column and make sure it is wrapped in tick marks. This is necessary when column names contain spaces.</span>
+<span id="cb18-180"><a href="#cb18-180"></a><span class="ss">- </span>use <span class="in">`geom_histogram()`</span> on line 2 </span>
+<span id="cb18-181"><a href="#cb18-181"></a></span>
+<span id="cb18-182"><a href="#cb18-182"></a>**Starter Code:**</span>
+<span id="cb18-185"><a href="#cb18-185"></a><span class="in">```{r}</span></span>
+<span id="cb18-186"><a href="#cb18-186"></a><span class="co">#| eval: false</span></span>
+<span id="cb18-187"><a href="#cb18-187"></a><span class="co">#| code-fold: false</span></span>
+<span id="cb18-188"><a href="#cb18-188"></a><span class="fu">ggplot</span>(<span class="at">data =</span> ___, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">____ _____</span><span class="st">`</span>))<span class="sc">+</span> </span>
+<span id="cb18-189"><a href="#cb18-189"></a>    geom____________</span>
+<span id="cb18-190"><a href="#cb18-190"></a><span class="in">```</span></span>
+<span id="cb18-191"><a href="#cb18-191"></a></span>
+<span id="cb18-192"><a href="#cb18-192"></a></span>
+<span id="cb18-195"><a href="#cb18-195"></a><span class="in">```{r}</span></span>
+<span id="cb18-196"><a href="#cb18-196"></a><span class="co">#| echo: false</span></span>
+<span id="cb18-197"><a href="#cb18-197"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bob, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">math score</span><span class="st">`</span>))<span class="sc">+</span> </span>
+<span id="cb18-198"><a href="#cb18-198"></a>    <span class="fu">geom_histogram</span>()</span>
+<span id="cb18-199"><a href="#cb18-199"></a><span class="in">```</span></span>
+<span id="cb18-200"><a href="#cb18-200"></a></span>
+<span id="cb18-201"><a href="#cb18-201"></a>**Answer**:</span>
+<span id="cb18-202"><a href="#cb18-202"></a></span>
+<span id="cb18-205"><a href="#cb18-205"></a><span class="in">```{r}</span></span>
+<span id="cb18-206"><a href="#cb18-206"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb18-207"><a href="#cb18-207"></a><span class="co">#| code-summary: "Code Solution"</span></span>
+<span id="cb18-208"><a href="#cb18-208"></a><span class="co">#| eval: false</span></span>
+<span id="cb18-209"><a href="#cb18-209"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bob, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">math score</span><span class="st">`</span>))<span class="sc">+</span> </span>
+<span id="cb18-210"><a href="#cb18-210"></a>    <span class="fu">geom_histogram</span>()</span>
+<span id="cb18-211"><a href="#cb18-211"></a><span class="in">```</span></span>
+<span id="cb18-212"><a href="#cb18-212"></a></span>
+<span id="cb18-213"><a href="#cb18-213"></a></span>
+<span id="cb18-214"><a href="#cb18-214"></a><span class="fu">## Exercise 2: Visualizing Counts of School Degrees</span></span>
+<span id="cb18-215"><a href="#cb18-215"></a></span>
+<span id="cb18-216"><a href="#cb18-216"></a></span>
+<span id="cb18-217"><a href="#cb18-217"></a>**Prompt**: Make a bar chart visualizing the count of school degrees </span>
+<span id="cb18-218"><a href="#cb18-218"></a></span>
+<span id="cb18-219"><a href="#cb18-219"></a>**Instructions**: </span>
+<span id="cb18-220"><a href="#cb18-220"></a></span>
+<span id="cb18-221"><a href="#cb18-221"></a><span class="ss">- </span>use the dataset from above called <span class="in">`bob`</span></span>
+<span id="cb18-222"><a href="#cb18-222"></a><span class="ss">- </span>use <span class="in">`parent_education`</span> column as the x axis</span>
+<span id="cb18-223"><a href="#cb18-223"></a><span class="ss">- </span>use <span class="in">`geom_bar()`</span> in line 2</span>
+<span id="cb18-224"><a href="#cb18-224"></a></span>
+<span id="cb18-225"><a href="#cb18-225"></a>**Starter Code:**</span>
+<span id="cb18-228"><a href="#cb18-228"></a><span class="in">```{r}</span></span>
+<span id="cb18-229"><a href="#cb18-229"></a><span class="co">#| eval: false</span></span>
+<span id="cb18-230"><a href="#cb18-230"></a><span class="co">#| code-fold: false</span></span>
+<span id="cb18-231"><a href="#cb18-231"></a><span class="fu">ggplot</span>(<span class="at">data =</span> ___, <span class="fu">aes</span>(<span class="at">x =</span> ________________))<span class="sc">+</span> </span>
+<span id="cb18-232"><a href="#cb18-232"></a>    geom____________</span>
+<span id="cb18-233"><a href="#cb18-233"></a><span class="in">```</span></span>
+<span id="cb18-234"><a href="#cb18-234"></a></span>
+<span id="cb18-235"><a href="#cb18-235"></a></span>
+<span id="cb18-238"><a href="#cb18-238"></a><span class="in">```{r}</span></span>
+<span id="cb18-239"><a href="#cb18-239"></a><span class="co">#| echo: false</span></span>
+<span id="cb18-240"><a href="#cb18-240"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bob, <span class="fu">aes</span>(<span class="at">x =</span> parent_education))<span class="sc">+</span></span>
+<span id="cb18-241"><a href="#cb18-241"></a>    <span class="fu">geom_bar</span>()</span>
+<span id="cb18-242"><a href="#cb18-242"></a><span class="in">```</span></span>
+<span id="cb18-243"><a href="#cb18-243"></a></span>
+<span id="cb18-244"><a href="#cb18-244"></a>**Answer**:</span>
+<span id="cb18-245"><a href="#cb18-245"></a></span>
+<span id="cb18-248"><a href="#cb18-248"></a><span class="in">```{r}</span></span>
+<span id="cb18-249"><a href="#cb18-249"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb18-250"><a href="#cb18-250"></a><span class="co">#| code-summary: "Code Solution"</span></span>
+<span id="cb18-251"><a href="#cb18-251"></a><span class="co">#| eval: false</span></span>
+<span id="cb18-252"><a href="#cb18-252"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bob, <span class="fu">aes</span>(<span class="at">x =</span> parent_education))<span class="sc">+</span></span>
+<span id="cb18-253"><a href="#cb18-253"></a>    <span class="fu">geom_bar</span>()</span>
+<span id="cb18-254"><a href="#cb18-254"></a><span class="in">```</span></span>
+<span id="cb18-255"><a href="#cb18-255"></a></span>
+<span id="cb18-256"><a href="#cb18-256"></a></span>
+<span id="cb18-257"><a href="#cb18-257"></a><span class="fu">## Exercise 3: </span></span>
+<span id="cb18-258"><a href="#cb18-258"></a></span>
+<span id="cb18-259"><a href="#cb18-259"></a></span>
+<span id="cb18-260"><a href="#cb18-260"></a>**Prompt**: Make a scatter plot visualizing the correlation of reading scores and writing scores </span>
+<span id="cb18-261"><a href="#cb18-261"></a></span>
+<span id="cb18-262"><a href="#cb18-262"></a>**Instructions**: </span>
+<span id="cb18-263"><a href="#cb18-263"></a></span>
+<span id="cb18-264"><a href="#cb18-264"></a><span class="ss">- </span>use the dataset from above called <span class="in">`bob`</span></span>
+<span id="cb18-265"><a href="#cb18-265"></a><span class="ss">- </span>use the <span class="sc">\`</span><span class="in">`reading score`</span><span class="sc">\`</span> column as the x axis </span>
+<span id="cb18-266"><a href="#cb18-266"></a><span class="ss">- </span>use the <span class="sc">\`</span><span class="in">`writing score`</span><span class="sc">\`</span> column as the y axis</span>
+<span id="cb18-267"><a href="#cb18-267"></a><span class="ss">- </span>use the <span class="in">`gender`</span> column as the color</span>
+<span id="cb18-268"><a href="#cb18-268"></a><span class="ss">- </span>use <span class="in">`geom_point()`</span> in line 2</span>
+<span id="cb18-269"><a href="#cb18-269"></a></span>
+<span id="cb18-270"><a href="#cb18-270"></a>**Starter Code:**</span>
+<span id="cb18-273"><a href="#cb18-273"></a><span class="in">```{r}</span></span>
+<span id="cb18-274"><a href="#cb18-274"></a><span class="co">#| eval: false</span></span>
+<span id="cb18-275"><a href="#cb18-275"></a><span class="co">#| code-fold: false</span></span>
+<span id="cb18-276"><a href="#cb18-276"></a><span class="fu">ggplot</span>(<span class="at">data =</span> ___, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">_______ _____</span><span class="st">`</span>, <span class="at">y =</span> _______________, <span class="at">color =</span> ______))<span class="sc">+</span></span>
+<span id="cb18-277"><a href="#cb18-277"></a>    geom________</span>
+<span id="cb18-278"><a href="#cb18-278"></a><span class="in">```</span></span>
+<span id="cb18-279"><a href="#cb18-279"></a></span>
+<span id="cb18-280"><a href="#cb18-280"></a></span>
+<span id="cb18-283"><a href="#cb18-283"></a><span class="in">```{r}</span></span>
+<span id="cb18-284"><a href="#cb18-284"></a><span class="co">#| echo: false</span></span>
+<span id="cb18-285"><a href="#cb18-285"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bob, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">reading score</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">writing score</span><span class="st">`</span>, <span class="at">color =</span> gender))<span class="sc">+</span></span>
+<span id="cb18-286"><a href="#cb18-286"></a>    <span class="fu">geom_point</span>()</span>
+<span id="cb18-287"><a href="#cb18-287"></a><span class="in">```</span></span>
+<span id="cb18-288"><a href="#cb18-288"></a></span>
+<span id="cb18-289"><a href="#cb18-289"></a>**Answer**:</span>
+<span id="cb18-290"><a href="#cb18-290"></a></span>
+<span id="cb18-293"><a href="#cb18-293"></a><span class="in">```{r}</span></span>
+<span id="cb18-294"><a href="#cb18-294"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb18-295"><a href="#cb18-295"></a><span class="co">#| code-summary: "Code Solution"</span></span>
+<span id="cb18-296"><a href="#cb18-296"></a><span class="co">#| eval: false</span></span>
+<span id="cb18-297"><a href="#cb18-297"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bob, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">reading score</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">writing score</span><span class="st">`</span>, <span class="at">color =</span> gender))<span class="sc">+</span></span>
+<span id="cb18-298"><a href="#cb18-298"></a>    <span class="fu">geom_point</span>()</span>
+<span id="cb18-299"><a href="#cb18-299"></a><span class="in">```</span></span>
+<span id="cb18-300"><a href="#cb18-300"></a></span>
+<span id="cb18-301"><a href="#cb18-301"></a></span>
+<span id="cb18-302"><a href="#cb18-302"></a><span class="fu">## Exercise 4: Visualizing Distriution using Boxplots</span></span>
+<span id="cb18-303"><a href="#cb18-303"></a></span>
+<span id="cb18-304"><a href="#cb18-304"></a>**Prompt**: Make a scatter plot visualizing the correlation of reading scores and writing scores </span>
+<span id="cb18-305"><a href="#cb18-305"></a></span>
+<span id="cb18-306"><a href="#cb18-306"></a>**Instructions**: </span>
+<span id="cb18-307"><a href="#cb18-307"></a></span>
+<span id="cb18-308"><a href="#cb18-308"></a><span class="ss">- </span>use the dataset from above called <span class="in">`bob`</span></span>
+<span id="cb18-309"><a href="#cb18-309"></a><span class="ss">- </span>use the <span class="in">`lunch`</span> column as the x axis </span>
+<span id="cb18-310"><a href="#cb18-310"></a><span class="ss">- </span>use the <span class="sc">\`</span><span class="in">`math score`</span><span class="sc">\`</span> column as the y axis</span>
+<span id="cb18-311"><a href="#cb18-311"></a><span class="ss">- </span>use <span class="in">`geom_histogram()`</span> in line 2</span>
+<span id="cb18-312"><a href="#cb18-312"></a></span>
+<span id="cb18-313"><a href="#cb18-313"></a></span>
+<span id="cb18-314"><a href="#cb18-314"></a></span>
+<span id="cb18-315"><a href="#cb18-315"></a>**Starter Code:**</span>
+<span id="cb18-318"><a href="#cb18-318"></a><span class="in">```{r}</span></span>
+<span id="cb18-319"><a href="#cb18-319"></a><span class="co">#| eval: false</span></span>
+<span id="cb18-320"><a href="#cb18-320"></a><span class="co">#| code-fold: false</span></span>
+<span id="cb18-321"><a href="#cb18-321"></a><span class="fu">ggplot</span>(___, <span class="fu">aes</span>(_____, ____________))<span class="sc">+</span> </span>
+<span id="cb18-322"><a href="#cb18-322"></a>    geom__________</span>
+<span id="cb18-323"><a href="#cb18-323"></a><span class="in">```</span></span>
+<span id="cb18-324"><a href="#cb18-324"></a>Notice in the starter code we didn't specify data, x, and y. ggplot doesn't require explicitly specifying the arguments for data, x-axis, and y-axis. Those are implied by their position in the code below. This way of writing code require less typing and is very common. </span>
+<span id="cb18-325"><a href="#cb18-325"></a></span>
+<span id="cb18-328"><a href="#cb18-328"></a><span class="in">```{r}</span></span>
+<span id="cb18-329"><a href="#cb18-329"></a><span class="co">#| echo: false</span></span>
+<span id="cb18-330"><a href="#cb18-330"></a><span class="fu">ggplot</span>(bob, <span class="fu">aes</span>(lunch, <span class="st">`</span><span class="at">math score</span><span class="st">`</span>))<span class="sc">+</span> </span>
+<span id="cb18-331"><a href="#cb18-331"></a>    <span class="fu">geom_boxplot</span>()</span>
+<span id="cb18-332"><a href="#cb18-332"></a><span class="in">```</span></span>
+<span id="cb18-333"><a href="#cb18-333"></a></span>
+<span id="cb18-334"><a href="#cb18-334"></a>**Answer**:</span>
+<span id="cb18-335"><a href="#cb18-335"></a></span>
+<span id="cb18-338"><a href="#cb18-338"></a><span class="in">```{r}</span></span>
+<span id="cb18-339"><a href="#cb18-339"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb18-340"><a href="#cb18-340"></a><span class="co">#| code-summary: "Code Solution"</span></span>
+<span id="cb18-341"><a href="#cb18-341"></a><span class="co">#| eval: false</span></span>
+<span id="cb18-342"><a href="#cb18-342"></a><span class="fu">ggplot</span>(bob, <span class="fu">aes</span>(lunch, <span class="st">`</span><span class="at">math score</span><span class="st">`</span>))<span class="sc">+</span> </span>
+<span id="cb18-343"><a href="#cb18-343"></a>    <span class="fu">geom_boxplot</span>()</span>
+<span id="cb18-344"><a href="#cb18-344"></a><span class="in">```</span></span>
+<span id="cb18-345"><a href="#cb18-345"></a></span>
+<span id="cb18-346"><a href="#cb18-346"></a></span>
+<span id="cb18-347"><a href="#cb18-347"></a><span class="kw">&lt;br&gt;</span></span>
+<span id="cb18-348"><a href="#cb18-348"></a></span>
+<span id="cb18-349"><a href="#cb18-349"></a>For the remainder of the exercises, no starter code is provided. Look back at previous exercises for help if needed. </span>
+<span id="cb18-350"><a href="#cb18-350"></a></span>
+<span id="cb18-351"><a href="#cb18-351"></a><span class="fu">## Exercise 5:</span></span>
+<span id="cb18-352"><a href="#cb18-352"></a></span>
+<span id="cb18-353"><a href="#cb18-353"></a></span>
+<span id="cb18-354"><a href="#cb18-354"></a>**Prompt**: Make a bar chart visualizing the types of lunches </span>
+<span id="cb18-355"><a href="#cb18-355"></a></span>
+<span id="cb18-356"><a href="#cb18-356"></a>**Instructions**: </span>
+<span id="cb18-357"><a href="#cb18-357"></a></span>
+<span id="cb18-358"><a href="#cb18-358"></a><span class="ss">- </span>Remake the plot below </span>
+<span id="cb18-359"><a href="#cb18-359"></a></span>
+<span id="cb18-360"><a href="#cb18-360"></a></span>
+<span id="cb18-363"><a href="#cb18-363"></a><span class="in">```{r}</span></span>
+<span id="cb18-364"><a href="#cb18-364"></a><span class="co">#| echo: false</span></span>
+<span id="cb18-365"><a href="#cb18-365"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bob, <span class="fu">aes</span>(<span class="at">x =</span> lunch))<span class="sc">+</span></span>
+<span id="cb18-366"><a href="#cb18-366"></a>    <span class="fu">geom_bar</span>()</span>
+<span id="cb18-367"><a href="#cb18-367"></a><span class="in">```</span></span>
+<span id="cb18-368"><a href="#cb18-368"></a></span>
+<span id="cb18-369"><a href="#cb18-369"></a>**Answer**:</span>
+<span id="cb18-370"><a href="#cb18-370"></a></span>
+<span id="cb18-373"><a href="#cb18-373"></a><span class="in">```{r}</span></span>
+<span id="cb18-374"><a href="#cb18-374"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb18-375"><a href="#cb18-375"></a><span class="co">#| code-summary: "Code Solution"</span></span>
+<span id="cb18-376"><a href="#cb18-376"></a><span class="co">#| eval: false</span></span>
+<span id="cb18-377"><a href="#cb18-377"></a><span class="fu">ggplot</span>(<span class="at">data =</span> bob, <span class="fu">aes</span>(<span class="at">x =</span> lunch, <span class="at">fill =</span> gender))<span class="sc">+</span></span>
+<span id="cb18-378"><a href="#cb18-378"></a>    <span class="fu">geom_bar</span>()</span>
+<span id="cb18-379"><a href="#cb18-379"></a><span class="in">```</span></span>
+<span id="cb18-380"><a href="#cb18-380"></a></span>
+<span id="cb18-381"><a href="#cb18-381"></a></span>
+<span id="cb18-382"><a href="#cb18-382"></a></span>
+<span id="cb18-383"><a href="#cb18-383"></a><span class="kw">&lt;br&gt;&lt;br&gt;</span></span>
+<span id="cb18-384"><a href="#cb18-384"></a>----</span>
+<span id="cb18-385"><a href="#cb18-385"></a></span>
+<span id="cb18-386"><a href="#cb18-386"></a></span>
+<span id="cb18-387"><a href="#cb18-387"></a>Graph the types of lunch categories using the <span class="in">`lunch`</span> column</span>
+<span id="cb18-390"><a href="#cb18-390"></a><span class="in">```{r}</span></span>
+<span id="cb18-391"><a href="#cb18-391"></a><span class="in">```</span></span>
+<span id="cb18-392"><a href="#cb18-392"></a></span>
+<span id="cb18-393"><a href="#cb18-393"></a></span>
+<span id="cb18-394"><a href="#cb18-394"></a></span>
+<span id="cb18-395"><a href="#cb18-395"></a></span>
+<span id="cb18-396"><a href="#cb18-396"></a></span>
+<span id="cb18-397"><a href="#cb18-397"></a></span>
+<span id="cb18-398"><a href="#cb18-398"></a></span>
+<span id="cb18-401"><a href="#cb18-401"></a><span class="in">```{r}</span></span>
+<span id="cb18-402"><a href="#cb18-402"></a><span class="fu">ggplot</span>()<span class="sc">+</span></span>
+<span id="cb18-403"><a href="#cb18-403"></a>    <span class="fu">geom_point</span>(<span class="at">data =</span> bob, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">reading score</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">writing score</span><span class="st">`</span>, <span class="at">color =</span> <span class="st">"red"</span>))<span class="sc">+</span></span>
+<span id="cb18-404"><a href="#cb18-404"></a>    <span class="fu">geom_point</span>(<span class="at">data =</span> bob, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">math score</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">writing score</span><span class="st">`</span>, <span class="at">color =</span> <span class="st">"blue"</span>))</span>
+<span id="cb18-405"><a href="#cb18-405"></a><span class="in">```</span></span>
+<span id="cb18-406"><a href="#cb18-406"></a></span>
+<span id="cb18-407"><a href="#cb18-407"></a>Next week we'll get into colors, gg_text()/gg_label(), labs(), themes(), legend?, facet_wrap(), </span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

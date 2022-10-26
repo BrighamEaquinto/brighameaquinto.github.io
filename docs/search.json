@@ -515,7 +515,7 @@
     "href": "posts/lessons/lesson5_ggplot.html#boxplot",
     "title": "Lesson 5: Graphing 1/2",
     "section": "Boxplot",
-    "text": "Boxplot\n\nX: Categorical, Y: Numeric\n\n\nCode\nggplot(dat, aes(x=region, y=bmi))+\n    geom_boxplot()+\n    labs(x=\"Categorical Column: 'region'\", y=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
+    "text": "Boxplot\ngeom_boxplot() is often used with geom_jitter() to make powerful visualizations.\n\nX: Categorical, Y: Numeric\n\n\nCode\nggplot(dat, aes(x=region, y=bmi))+\n    geom_boxplot()+\n    labs(x=\"Categorical Column: 'region'\", y=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
   },
   {
     "objectID": "posts/lessons/lesson5_ggplot.html#scatterplot",
@@ -579,5 +579,75 @@
     "title": "Use tabs to organize content",
     "section": "This",
     "text": "This\nyeah"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-1",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-1",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 1:",
+    "text": "Exercise 1:\nShow the distribution of math scores:\n\nuse the dataset from above called bob\nuse the `math score` column and make sure it is wrapped in tick marks. This is necessary when column names contain spaces.\nuse geom_histogram() on line 2\n\nStarter Code:\n\nggplot(data = ___, aes(x = `____ _____`))+ \n    geom__________()\n\n\n\n\n\n\nAttempt the code above then use dropdown for help\n\n\nAnswer\nggplot(data = bob, aes(x = `math score`))+ \n    geom_histogram()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-2",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-2",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nGraph the types of parental education using the parent_education column\n\n\nCode\nggplot(data = bob, aes(parent_education))+\n    geom_bar()\n\n\n\n\n\nGraph the types of lunch categories using the lunch column\n\n\nCode\nggplot(data = bob, mapping = aes(x = lunch))+\n    geom_bar()\n\n\n\n\n\nX: Numeric Y: Numeric Graph the reading score on the x-axis and the writing score on the y-axis\n\n\nCode\nggplot(data = bob, mapping = aes(x = `reading score`, y = `writing score`))+\n    geom_point()\n\n\n\n\n\n\n\nCode\nggplot()+\n    geom_point(data = bob, mapping = aes(x = `reading score`, y = `writing score`, color = \"red\"))+\n    geom_point(data = bob, mapping = aes(x = `math score`, y = `writing score`, color = \"blue\"))\n\n\n\n\n\nboxplot\n\n\nCode\nggplot(bob, aes(lunch, `math score`))+ \n    geom_boxplot()\n\n\n\n\n\nNext week we’ll get into colors"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-1-visualizing-a-distribution-using-a-histogram",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-1-visualizing-a-distribution-using-a-histogram",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 1: Visualizing a Distribution using a Histogram",
+    "text": "Exercise 1: Visualizing a Distribution using a Histogram\nPrompt: Show the distribution of math scores\nInstructions:\n\nuse the dataset from above called bob\nuse the `math score` column and make sure it is wrapped in tick marks. This is necessary when column names contain spaces.\nuse geom_histogram() on line 2\n\nStarter Code:\n\nggplot(data = ___, aes(x = `____ _____`))+ \n    geom____________\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(data = bob, aes(x = `math score`))+ \n    geom_histogram()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-2-visualizing-counts-of-school-degrees",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-2-visualizing-counts-of-school-degrees",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 2: Visualizing Counts of School Degrees",
+    "text": "Exercise 2: Visualizing Counts of School Degrees\nPrompt: Make a bar chart visualizing the count of school degrees\nInstructions:\n\nuse the dataset from above called bob\nuse parent_education column as the x axis\nuse geom_bar() in line 2\n\nStarter Code:\n\nggplot(data = ___, aes(x = ________________))+ \n    geom____________\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(data = bob, aes(x = parent_education))+\n    geom_bar()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-3",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-3",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 3:",
+    "text": "Exercise 3:\nPrompt: Make a scatter plot visualizing the correlation of reading scores and writing scores\nInstructions:\n\nuse the dataset from above called bob\nuse the `reading score` column as the x axis\nuse the `writing score` column as the y axis\nuse the gender column as the color\nuse geom_point() in line 2\n\nStarter Code:\n\nggplot(data = ___, aes(x = `_______ _____`, y = _______________, color = ______))+\n    geom________\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(data = bob, aes(x = `reading score`, y = `writing score`, color = gender))+\n    geom_point()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-4",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-4",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 4:",
+    "text": "Exercise 4:\n\n\n\nCode\nggplot()+\n    geom_point(data = bob, mapping = aes(x = `reading score`, y = `writing score`, color = \"red\"))+\n    geom_point(data = bob, mapping = aes(x = `math score`, y = `writing score`, color = \"blue\"))\n\n\n\n\n\nboxplot\n\n\nCode\nggplot(bob, aes(lunch, `math score`))+ \n    geom_boxplot()\n\n\n\n\n\nGraph the types of lunch categories using the lunch column\n\n\nCode\nggplot(data = bob, mapping = aes(x = lunch))+\n    geom_bar()\n\n\n\n\n\nNext week we’ll get into colors"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-4-boxplot-visualization",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-4-boxplot-visualization",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 4: Boxplot Visualization",
+    "text": "Exercise 4: Boxplot Visualization\nPrompt: Make a scatter plot visualizing the correlation of reading scores and writing scores\nInstructions:\n\nuse the dataset from above called bob\nuse the lunch column as the x axis\nuse the `math score` column as the y axis\nuse geom_histogram() in line 2\n\nNotice that ggplot doesn’t require explicitly specifying the arguments for data, x-axis, and y-axis. Simply their position in the code is enough.\nStarter Code:\n\nggplot(___, aes(_____, ____________))+ \n    geom__________\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(bob, aes(lunch, `math score`))+ \n    geom_boxplot()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-5",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-5",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 5:",
+    "text": "Exercise 5:\nPrompt: Make a bar chart visualizing the types of lunches\nInstructions:\n\nRemake the plot below\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(data = bob, aes(x = lunch, fill = gender))+\n    geom_bar()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-4-visualizing-distriution-using-boxplots",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-4-visualizing-distriution-using-boxplots",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 4: Visualizing Distriution using Boxplots",
+    "text": "Exercise 4: Visualizing Distriution using Boxplots\nPrompt: Make a scatter plot visualizing the correlation of reading scores and writing scores\nInstructions:\n\nuse the dataset from above called bob\nuse the lunch column as the x axis\nuse the `math score` column as the y axis\nuse geom_histogram() in line 2\n\nStarter Code:\n\nggplot(___, aes(_____, ____________))+ \n    geom__________\n\nNotice in the starter code we didn’t specify data, x, and y. ggplot doesn’t require explicitly specifying the arguments for data, x-axis, and y-axis. Those are implied by their position in the code below. This way of writing code require less typing and is very common.\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(bob, aes(lunch, `math score`))+ \n    geom_boxplot()\n\n\n\nFor the remainder of the exercises, no starter code is provided. Look back at previous exercises for help if needed."
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#section",
+    "href": "posts/lessons/lesson5_ggplot.html#section",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "",
+    "text": "Graph the types of lunch categories using the lunch column\n\n\n\n\n\nCode\nggplot()+\n    geom_point(data = bob, mapping = aes(x = `reading score`, y = `writing score`, color = \"red\"))+\n    geom_point(data = bob, mapping = aes(x = `math score`, y = `writing score`, color = \"blue\"))\n\n\n\n\n\nNext week we’ll get into colors, gg_text()/gg_label(), labs(), themes(), legend?, facet_wrap(),"
   }
 ]
