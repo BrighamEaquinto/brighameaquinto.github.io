@@ -494,7 +494,7 @@
     "href": "posts/lessons/lesson5_ggplot.html",
     "title": "Lesson 5: Graphing 1/2",
     "section": "",
-    "text": "The four main plots we will go over today:\nWhat kinds of data do we have?"
+    "text": "The four main plots we will go over today:\nWhat kinds of data do we have? In general, we have:"
   },
   {
     "objectID": "posts/lessons/lesson5_ggplot.html#histogram-counting-the-number-of-numeric-occurances",
@@ -515,7 +515,7 @@
     "href": "posts/lessons/lesson5_ggplot.html#boxplot",
     "title": "Lesson 5: Graphing 1/2",
     "section": "Boxplot",
-    "text": "Boxplot\ngeom_boxplot() is often used with geom_jitter() to make powerful visualizations.\n\nX: Categorical, Y: Numeric\n\n\nCode\nggplot(dat, aes(x=region, y=bmi))+\n    geom_boxplot()+\n    labs(x=\"Categorical Column: 'region'\", y=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
+    "text": "Boxplot\n\nX: Categorical, Y: Numeric\n\n\nCode\nggplot(dat, aes(x=region, y=bmi))+\n    geom_boxplot()+\n    labs(x=\"Categorical Column: 'region'\", y=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
   },
   {
     "objectID": "posts/lessons/lesson5_ggplot.html#scatterplot",
@@ -649,5 +649,54 @@
     "title": "Lesson 5: Graphing 1/2",
     "section": "",
     "text": "Graph the types of lunch categories using the lunch column\n\n\n\n\n\nCode\nggplot()+\n    geom_point(data = bob, mapping = aes(x = `reading score`, y = `writing score`, color = \"red\"))+\n    geom_point(data = bob, mapping = aes(x = `math score`, y = `writing score`, color = \"blue\"))\n\n\n\n\n\nNext week we’ll get into colors, gg_text()/gg_label(), labs(), themes(), legend?, facet_wrap(),"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-4-visualizing-distribution-using-boxplots",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-4-visualizing-distribution-using-boxplots",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 4: Visualizing Distribution using Boxplots",
+    "text": "Exercise 4: Visualizing Distribution using Boxplots\nPrompt: Make a scatter plot visualizing the correlation of reading scores and writing scores\nInstructions:\n\nuse the dataset from above called bob\nuse the lunch column as the x axis\nuse the `math score` column as the y axis\nuse geom_histogram() in line 2\n\nStarter Code:\n\nggplot(___, aes(_____, ____________))+ \n    geom__________\n\nNotice in the starter code we didn’t specify data, x, and y. ggplot doesn’t require explicitly specifying the arguments for data, x-axis, and y-axis. Those are implied by their position in the code below. This way of writing code require less typing and is very common.\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(bob, aes(lunch, `math score`))+ \n    geom_boxplot()\n\n\n\nFor the remainder of the exercises, no starter code is provided. Look back at previous exercises for help if needed."
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-6",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-6",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 6:",
+    "text": "Exercise 6:\nPrompt: Using the iris dataset (which is built into R and ready to use) make the scatter plot below. Look at the x-axis, y-axis, and legend for the columns to use.\nInstructions:\n\nRemake the plot below\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species))+\n    geom_point()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-3-scatter-plot-to-visualize-test-scores",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-3-scatter-plot-to-visualize-test-scores",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 3: Scatter Plot to Visualize Test Scores",
+    "text": "Exercise 3: Scatter Plot to Visualize Test Scores\nPrompt: Make a scatter plot visualizing the correlation of reading scores and writing scores\nInstructions:\n\nuse the dataset from above called bob\nuse the `reading score` column as the x axis\nuse the `writing score` column as the y axis\nuse the gender column as the color\nuse geom_point() in line 2\n\nStarter Code:\n\nggplot(data = ___, aes(x = `_______ _____`, y = _______________, color = ______))+\n    geom________\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(data = bob, aes(x = `reading score`, y = `writing score`, color = gender))+\n    geom_point()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-5-bar-chart",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-5-bar-chart",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 5: Bar Chart",
+    "text": "Exercise 5: Bar Chart\nPrompt: Make a bar chart visualizing the types of lunches\nInstructions:\n\nRemake the plot below\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(data = bob, aes(x = lunch, fill = gender))+\n    geom_bar()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-6-scatter-plot",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-6-scatter-plot",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 6: Scatter Plot",
+    "text": "Exercise 6: Scatter Plot\nPrompt: Using the iris dataset (which is built into R and ready to use) make the scatter plot below. Look at the x-axis, y-axis, and legend for the columns to use.\nInstructions:\n\nRemake the plot below\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(iris, aes(Petal.Width, Petal.Length, color = Species))+\n    geom_point()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-7-boxplot",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-7-boxplot",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 7: Boxplot",
+    "text": "Exercise 7: Boxplot\nPrompt: Using the iris dataset (which is built into R and ready to use) make the boxplot below. Look at the x-axis, y-axis, and legend for the columns to use.\nInstructions:\n\nRemake the plot below\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(iris, aes(Species, Petal.Width, fill = Species))+ \n    geom_boxplot()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-8",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-8",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 8:",
+    "text": "Exercise 8:\nPrompt: Using the iris dataset (which is built into R and ready to use) make the histogram below. Look at the x-axis, y-axis, and legend for the columns to use.\nInstructions:\n\nRemake the plot below\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(iris, aes(Petal.Length, fill = Species))+\n    geom_histogram()"
   }
 ]

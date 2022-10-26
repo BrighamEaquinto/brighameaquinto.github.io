@@ -20,7 +20,7 @@ warning: false
 
 ```{r}
 #| code-fold: true
-#| code-summary: "Data Used for Examples"
+#| code-summary: "Data Used in examples below"
 #| message: false
 #| warning: false
 
@@ -36,11 +36,10 @@ The four main plots we will go over today:
 - scatterplot
 - bar plot
 
-What kinds of data do we have? 
+What kinds of data do we have? In general, we have:
 
 - numerical
 - categorical 
-- ordinal
 
 
 
@@ -99,8 +98,6 @@ ggplot(plot_data, aes(x=region, y=count))+
 
 ## Boxplot
 
-geom_boxplot() is often used with geom_jitter() to make powerful visualizations.
-
 #### X: Categorical, Y: Numeric
 
 ```{r}
@@ -126,7 +123,7 @@ ggplot(dat, aes(x=age, y=bmi))+
 
 # Practice Exercises
 
-Use the copy button in the top left corner of the code box below to get the data needed for the practice exercies. The code below may look weird depending on the size of your screen, but regardless use the copy button then paste it into your r script.  
+Use the copy button in the top left corner of the code box below to get the data needed for the practice exercies. The code below may look weird depending on the size of your screen, but regardless use the copy button then paste it into your rscript.  
 
 ```{r}
 #| code-fold: show
@@ -226,7 +223,7 @@ ggplot(data = bob, aes(x = parent_education))+
 ```
 
 
-## Exercise 3: 
+## Exercise 3: Scatter Plot to Visualize Test Scores
 
 
 **Prompt**: Make a scatter plot visualizing the correlation of reading scores and writing scores 
@@ -308,7 +305,7 @@ ggplot(bob, aes(lunch, `math score`))+
 
 For the remainder of the exercises, no starter code is provided. Look back at previous exercises for help if needed. 
 
-## Exercise 5:
+## Exercise 5: Bar Chart
 
 
 **Prompt**: Make a bar chart visualizing the types of lunches 
@@ -336,11 +333,92 @@ ggplot(data = bob, aes(x = lunch, fill = gender))+
 
 
 
-## Exercise 6: 
+## Exercise 6: Scatter Plot
+
+
+**Prompt**: Using the `iris` dataset (which is built into R and ready to use) make the scatter plot below. Look at the x-axis, y-axis, and legend for the columns to use.  
+
+**Instructions**: 
+
+- Remake the plot below 
+
+
+```{r}
+#| echo: false
+ggplot(iris, aes(Petal.Width, Petal.Length, color = Species))+
+    geom_point()
+```
+
+**Answer**:
+
+```{r}
+#| code-fold: true
+#| code-summary: "Code Solution"
+#| eval: false
+ggplot(iris, aes(Petal.Width, Petal.Length, color = Species))+
+    geom_point()
+```
+
+
+
+
+## Exercise 7: Boxplot
+
+
+**Prompt**: Using the `iris` dataset (which is built into R and ready to use) make the boxplot below. Look at the x-axis, y-axis, and legend for the columns to use.  
+
+**Instructions**: 
+
+- Remake the plot below 
+
+
+```{r}
+#| echo: false
+ggplot(iris, aes(Species, Petal.Width, fill = Species))+ 
+    geom_boxplot()
+```
+
+**Answer**:
+
+```{r}
+#| code-fold: true
+#| code-summary: "Code Solution"
+#| eval: false
+ggplot(iris, aes(Species, Petal.Width, fill = Species))+ 
+    geom_boxplot()
+```
+
+
+## Exercise 8: 
+
+
+**Prompt**: Using the `iris` dataset (which is built into R and ready to use) make the histogram below. Look at the x-axis, y-axis, and legend for the columns to use.  
+
+**Instructions**: 
+
+- Remake the plot below 
+
+
+```{r}
+#| echo: false
+ggplot(iris, aes(Petal.Length, fill = Species))+
+    geom_histogram()
+```
+
+**Answer**:
+
+```{r}
+#| code-fold: true
+#| code-summary: "Code Solution"
+#| eval: false
+ggplot(iris, aes(Petal.Length, fill = Species))+
+    geom_histogram()
+```
 
 
 
 
 
 
-Next week we'll get into colors, gg_text()/gg_label(), labs(), themes(), legend?, facet_wrap(), 
+<!-- Next week we'll get into colors, gg_text()/gg_label(), labs(), themes(), legend?, facet_wrap(),  -->
+<!-- geom_boxplot() is often used with geom_jitter() to make powerful visualizations. -->
