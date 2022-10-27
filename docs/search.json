@@ -397,5 +397,12 @@
     "title": "Week 5: Visualizing Data",
     "section": "Bar Plot: Counting the Number of Categorical Occurances",
     "text": "Bar Plot: Counting the Number of Categorical Occurances\n\nX: Categorical, Y: N/A\n\n\nCode\nggplot(dat, aes(x=region))+\n    geom_bar()+\n    labs(\n        title=\"Y-Axis Auto Counts the Occurances of Each Category\", x=\"Categorical Column: 'region'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
+  },
+  {
+    "objectID": "posts/dax/dax.html",
+    "href": "posts/dax/dax.html",
+    "title": "DAX Reference",
+    "section": "",
+    "text": "MAX()\nSee CALENDAR() function reference, example 1.\n\n\nMIN()\nSee CALENDAR() function reference, example 1.\n\n\nSUBSTITUTE(text, oldtext, newtext)\n\nDescription: This is similar to regex and Power Query Editor’s “Replace Values”\nParameters:\n\ntext: The text to manipulate. Can be a column.\noldtext: The piece of text to replace.\nnewtext: The text we want to insert. This can just be two quotation marks to do a blank.\n\n\n\nExample 1\nRetail Price Clean = \nSUBSTITUTE(\n    Dim_StockItem[Recommended Retail Price], \n    \"? \", \n    \"\"\n    )"
   }
 ]
