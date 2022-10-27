@@ -4,7 +4,7 @@
     "href": "main.html",
     "title": "R Bootcamp",
     "section": "",
-    "text": "Week 2\n\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2001\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2001\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4: Grouping and Summarising\n\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2001\n\n\n\n\n\n\n  \n\n\n\n\nWeek 5: Visualizing Data\n\n\n\n\n\n\n\n\n\n\n\n\nOct 26, 2022\n\n\n\n\n\n\nNo matching items"
+    "text": "Lesson 1: Introduction to Data Science & Installation\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 2: Reading Data\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange)\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 5: Graphing 1/2\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 6: Graphing 2/2\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/weeks/Oct_5th.html",
@@ -81,7 +81,7 @@
     "href": "notes.html#ideas",
     "title": "DSS R BootCamp",
     "section": "Ideas",
-    "text": "Ideas\n\nHave a notes to instructors page or part of the repo\nhave a page just for the interface of RStudio\n\nhot keys\nshortcuts\nsuch and such\n\nhave a page for R/Python equivalents\nhave a page for other generally useful things\n\nsetting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows\n\nhow can I use the wiki tab on the github page? What is the proper usage of it?\n\nOthers: - commenting code - assignment operator vs equal sign - pipe operator %>% - filtering operators (==, %in%, |, &, !=) - c(vector) and list conversation\nUse this for advance select statements: https://dplyr.tidyverse.org/reference/select.html\nn_distinct(dat\\(region) count(dat\\)region) table(dat$region)\ndat <- read_csv(“https://covid.ourworldindata.org/data/owid-covid-data.csv”) # object_size(dat) view(dat)\ndat <- read_csv(“datasets/insurance.csv”)\nn_distinct(dat\\(region) count(dat\\)region) table(dat$region)"
+    "text": "Ideas\n\nHave a notes to instructors page or part of the repo\nhave a page just for the interface of RStudio\n\nhot keys\nshortcuts\nsuch and such\n\nhave a page for R/Python equivalents\nhave a page for other generally useful things\n\nsetting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows\n\nhow can I use the wiki tab on the github page? What is the proper usage of it?\n\nOthers: - commenting code - assignment operator vs equal sign - pipe operator %>% - filtering operators (==, %in%, |, &, !=) - c(vector) and list conversation\nUse this for advance select statements: https://dplyr.tidyverse.org/reference/select.html\nn_distinct(dat\\(region) count(dat\\)region) table(dat$region)\ndat <- read_csv(“https://covid.ourworldindata.org/data/owid-covid-data.csv”) # object_size(dat) view(dat)\ndat <- read_csv(“datasets/insurance.csv”)\nn_distinct(dat\\(region) count(dat\\)region) table(dat$region)\nR Scipts vs. RMDs The data science process (flow chart of start to finish and where most time is spent)\nLesson 1: Introduction - Installation - the RStudio interface - an introduction to Data Science. Give the full scope of data science. - what about sending the newbies to this page during future weeks? Put a video there? Lesson 2: Readr - reading in data from CSV - reading in data from URL - writing data to CSV Lesson 3: Wrangling Data - need another day on this Lesson 4: Grouping, Summarising, Arranging Lesson 5: Graphing 1/2 Lesson 6: Graphing 2/2\nmean(iris)"
   },
   {
     "objectID": "posts/Installation/installation.html#download-instructions",
@@ -399,10 +399,304 @@
     "text": "Bar Plot: Counting the Number of Categorical Occurances\n\nX: Categorical, Y: N/A\n\n\nCode\nggplot(dat, aes(x=region))+\n    geom_bar()+\n    labs(\n        title=\"Y-Axis Auto Counts the Occurances of Each Category\", x=\"Categorical Column: 'region'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
   },
   {
+    "objectID": "posts/lessons/lesson2_readr.html",
+    "href": "posts/lessons/lesson2_readr.html",
+    "title": "Lesson 2: Reading Data",
+    "section": "",
+    "text": "Read in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\nFrom this dataset:\n\nselect the Apartment, Gender, and Price columns\nfilter the Gender column to female apartments and remove NAs !is.na(Price)\nfind the average price of apartments\n\n\nhousing_data <- read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\")\nhead(housing_data)\n\n# Starter Code\nhousing_data %>% \n    select() %>% \n    filter( , !is.na(Price)) %>% \n    summarise(mean())"
+  },
+  {
+    "objectID": "posts/lessons/lesson2_readr.html#second-practice",
+    "href": "posts/lessons/lesson2_readr.html#second-practice",
+    "title": "Lesson 2: Reading Data",
+    "section": "Second Practice",
+    "text": "Second Practice\nThe iris dataset is built into R.\n\nCreate a new column to tell if the Sepal.Length is bigger than or equal to 5\nSort the data by Petal.Length\n\n\nhead(iris)\n\n# Starter Code\niris %>%\n    mutate() %>% \n    arrange()"
+  },
+  {
+    "objectID": "posts/lessons/lesson2_readr.html#third-practice",
+    "href": "posts/lessons/lesson2_readr.html#third-practice",
+    "title": "Lesson 2: Reading Data",
+    "section": "Third Practice",
+    "text": "Third Practice"
+  },
+  {
+    "objectID": "posts/lessons/lesson4_dplyr.html",
+    "href": "posts/lessons/lesson4_dplyr.html",
+    "title": "Week 4: Grouping and Summarising",
+    "section": "",
+    "text": "Before we do any exercises, make sure to run this code:\nThis is our dataset for this practice:"
+  },
+  {
+    "objectID": "posts/lessons/lesson4_dplyr.html#lets-learn-about-group_by-summarise",
+    "href": "posts/lessons/lesson4_dplyr.html#lets-learn-about-group_by-summarise",
+    "title": "Week 4: Grouping and Summarising",
+    "section": "Let’s learn about group_by() & summarise()",
+    "text": "Let’s learn about group_by() & summarise()\nWhat if we want to learn:\n\nthe average BMI by gender\nthe total sum of charges by region in the US\nmin & max of children by  age\n\nAll of these are examples uses for group_by() and summarise() statements."
+  },
+  {
+    "objectID": "posts/lessons/lesson4_dplyr.html#examples-1-average-bmi-by-gender",
+    "href": "posts/lessons/lesson4_dplyr.html#examples-1-average-bmi-by-gender",
+    "title": "Week 4: Grouping and Summarising",
+    "section": "Examples 1: Average BMI by Gender",
+    "text": "Examples 1: Average BMI by Gender\n\ndat %>% \n    group_by(sex) %>%\n    summarise(Average_Age = mean(age)) \n\n\n\n\n\nsex\nAverage_Age\n\n\n\n\nfemale\n39.50302\n\n\nmale\n38.91716"
+  },
+  {
+    "objectID": "posts/lessons/lesson4_dplyr.html#examples-2-average-bmi-by-age",
+    "href": "posts/lessons/lesson4_dplyr.html#examples-2-average-bmi-by-age",
+    "title": "Week 4: Grouping and Summarising",
+    "section": "Examples 2: Average BMI by Age",
+    "text": "Examples 2: Average BMI by Age\n\ndat %>% \n    group_by(age) %>% \n    summarise(mean(bmi)) %>% \n    head() \n\n\n\n\n\nage\nmean(bmi)\n\n\n\n\n18\n31.32616\n\n\n19\n28.59691\n\n\n20\n30.63276\n\n\n21\n28.18571\n\n\n22\n31.08768\n\n\n23\n31.45446"
+  },
+  {
+    "objectID": "posts/lessons/lesson4_dplyr.html#exercise-1-sum-of-charges-by-region",
+    "href": "posts/lessons/lesson4_dplyr.html#exercise-1-sum-of-charges-by-region",
+    "title": "Week 4: Grouping and Summarising",
+    "section": "Exercise 1: Sum of Charges by Region",
+    "text": "Exercise 1: Sum of Charges by Region\nUse the code below to get you started. Find the sum of the charges by region.\nStarter Code:\n\ndat %>% \n    group_by(______) %>% \n    summarise(_____________ = ___(_______))\n\nAttempt the code above then use this dropdown for help\n\n\nAnswer\ndat %>% \n    group_by(region) %>% \n    summarise(Total_Charges = sum(charges))\n\n\nThis is the correct output:\n\n\n\n\nregion\nTotal_Charges\n\n\n\n\nnortheast\n4343669\n\n\nnorthwest\n4035712\n\n\nsoutheast\n5363690\n\n\nsouthwest\n4012755"
+  },
+  {
+    "objectID": "posts/lessons/lesson4_dplyr.html#exercise-2-min-max-of-children-by-age",
+    "href": "posts/lessons/lesson4_dplyr.html#exercise-2-min-max-of-children-by-age",
+    "title": "Week 4: Grouping and Summarising",
+    "section": "Exercise 2: Min & Max of Children by Age",
+    "text": "Exercise 2: Min & Max of Children by Age\nUse the code below to get you started. Find the minimum and maximum amount of children by age.\nStarter Code:\n\ndat %>% \n    group_by(___) %>%\n    summarise(\n        Min = ___(________),\n        Max = ___(________)\n        ) %>% \n    head()\n\n\n\nAnswer\ndat %>% \n    group_by(age) %>%\n    summarise(\n        Min = min(children),\n        Max = max(children)\n        ) %>% \n    head() \n\n\nThis is the correct output:\n\n\n\n\nage\nMin\nMax\n\n\n\n\n18\n0\n4\n\n\n19\n0\n5\n\n\n20\n0\n5\n\n\n21\n0\n4"
+  },
+  {
+    "objectID": "posts/lessons/lesson4_dplyr.html#exercise-3-average-charges-by-sex-and-by-smoker",
+    "href": "posts/lessons/lesson4_dplyr.html#exercise-3-average-charges-by-sex-and-by-smoker",
+    "title": "Week 4: Grouping and Summarising",
+    "section": "Exercise 3: Average Charges by Sex and by Smoker",
+    "text": "Exercise 3: Average Charges by Sex and by Smoker\nHere no starter code is given. If you need to, look back at previous code chunks for guidence.\nTry as best as possible to mimic the results below.\nOnly use the dropdown answer when you’ve tried as much as possible.\n\n\nAnswer\ndat %>% \n    group_by(sex, smoker) %>% \n    summarise(\n        Average_Charges = mean(charges), \n        Total_Charges = sum(charges)) \n\n\nThis is the correct output:\n\n\n\n\nsex\nsmoker\nAverage_Charges\nTotal_Charges\n\n\n\n\nfemale\nno\n8762.297\n4792977\n\n\nfemale\nyes\n30678.996\n3528085\n\n\nmale\nno\n8087.205\n4181085\n\n\nmale\nyes\n33042.006\n5253679"
+  },
+  {
+    "objectID": "posts/lessons/lesson4_dplyr.html#exercise-4-storm-dataset---wind-and-air-pressure",
+    "href": "posts/lessons/lesson4_dplyr.html#exercise-4-storm-dataset---wind-and-air-pressure",
+    "title": "Week 4: Grouping and Summarising",
+    "section": "Exercise 4: Storm Dataset - Wind and Air Pressure",
+    "text": "Exercise 4: Storm Dataset - Wind and Air Pressure\nThis dataset is bult into R so you already have it. It is called storms. This is a new dataset so you may want to either view() it or use the head() method on it.\nFind the average and standard deviation of the wind speed and air pressure by storm category.\n\n\nAnswer\nstorms %>% \n    group_by(category) %>% \n    summarise(\n        mean(wind),\n        sd(wind), \n        mean(pressure), \n        sd(pressure)\n        ) %>% knitr::kable()\n\n\nThis is the correct output:\n\n\n\n\ncategory\nmean(wind)\nsd(wind)\nmean(pressure)\nsd(pressure)\n\n\n\n\n-1\n27.49482\n3.702448\n1007.5390\n3.900209\n\n\n0\n45.66392\n8.231625\n999.2910\n6.837831\n\n\n1\n70.95140\n5.454009\n981.1887\n9.125784\n\n\n2\n89.41923\n3.873391\n966.9359\n9.018024\n\n\n3\n104.48157\n4.246545\n953.9124\n9.168259\n\n\n4\n122.10462\n6.383000\n939.3942\n9.788015\n\n\n5\n145.58140\n5.862072\n917.4070\n12.732892"
+  },
+  {
+    "objectID": "posts/lessons/lesson4_dplyr.html#exercise-5-summarizing-by-month",
+    "href": "posts/lessons/lesson4_dplyr.html#exercise-5-summarizing-by-month",
+    "title": "Week 4: Grouping and Summarising",
+    "section": "Exercise 5: Summarizing by Month",
+    "text": "Exercise 5: Summarizing by Month\nFind the mean, median, and standard deviation of wind speed by month.\nOnly use the dropdown answer when you’ve tried as much as possible.\n\n\nAnswer\nstorms %>% \n    group_by(month) %>% \n    summarise(\n        Mean_Wind = mean(wind), \n        Median = median(wind), \n        St_Dev = sd(wind)\n        ) \n\n\nThis is the correct output:\n\n\n\n\nmonth\nMean_Wind\nMedian\nSt_Dev\n\n\n\n\n1\n50.33333\n50\n12.312969\n\n\n4\n44.61538\n45\n5.937711\n\n\n5\n36.27778\n35\n9.011887\n\n\n6\n37.55348\n35\n12.676257\n\n\n7\n41.74973\n40\n18.711162\n\n\n8\n51.75471\n45\n25.584917\n\n\n9\n57.54597\n50\n28.192273\n\n\n10\n56.49272\n50\n25.795906\n\n\n11\n53.30986\n50\n22.702523\n\n\n12\n47.88000\n45\n14.608659"
+  },
+  {
+    "objectID": "posts/lessons/lesson4_dplyr.html#exercise-6-airquality-dataset---summarising-by-month",
+    "href": "posts/lessons/lesson4_dplyr.html#exercise-6-airquality-dataset---summarising-by-month",
+    "title": "Week 4: Grouping and Summarising",
+    "section": "Exercise 6: Airquality Dataset - Summarising by Month",
+    "text": "Exercise 6: Airquality Dataset - Summarising by Month\nThis example is very similar to the previous example. This is a new datset and hopefully doing the same thing with another dataset will solidify the concept.\nThis dataset is bult into R so you already have it. It is called airquality. This is a new dataset so you may want to either view() it or use the head() method on it.\n\n\nAnswer\nairquality %>% \n    group_by(Month) %>% \n    summarise(\n        Mean_Wind = mean(Wind), \n        Median = median(Wind), \n        St_Dev = sd(Wind)\n        ) \n\n\nThis is the correct output:\n\n\n\n\nMonth\nMean_Wind\nMedian\nSt_Dev\n\n\n\n\n5\n11.622581\n11.5\n3.531450\n\n\n6\n10.266667\n9.7\n3.769234\n\n\n7\n8.941935\n8.6\n3.035981\n\n\n8\n8.793548\n8.6\n3.225930\n\n\n9\n10.180000\n10.3\n3.461254"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html",
+    "href": "posts/lessons/lesson5_ggplot.html",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "",
+    "text": "The four main plots we will go over today:\nWhat kinds of data do we have? In general, we have:"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#histogram-counting-the-number-of-numeric-occurances",
+    "href": "posts/lessons/lesson5_ggplot.html#histogram-counting-the-number-of-numeric-occurances",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Histogram: Counting the Number of Numeric Occurances",
+    "text": "Histogram: Counting the Number of Numeric Occurances\n\nX: Numeric, Y: N/A\n\n\nCode\nggplot(dat, aes(x=bmi))+ \n   geom_histogram(bins = 50)+\n    labs(\n        title=\"Y-Axis Auto Counts the\\n Occurances of Each Number\",\n        x=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#bar-plot-counting-the-number-of-categorical-occurances",
+    "href": "posts/lessons/lesson5_ggplot.html#bar-plot-counting-the-number-of-categorical-occurances",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Bar Plot: Counting the Number of Categorical Occurances",
+    "text": "Bar Plot: Counting the Number of Categorical Occurances\n\nMethod 1: geom_bar()Method 2: geom_col()\n\n\n\nX: Categorical, Y: Auto Counts Categories\n\n\nCode\nggplot(dat, aes(x=region))+\n    geom_bar()+\n    labs(\n        title=\"\", \n        x=\"Categorical Column: 'region'\", \n        y=\"Auto Counts the Occurances\\n of Each Category\")+\n    theme(axis.title = element_text(face=\"bold\"))\n\n\n\n\n\n\n\n\n\nX: Categorical, Y: Numeric\n\n\nCode\nplot_data <- dat %>% \n    group_by(region) %>% \n    summarise(count = n()) \n\nggplot(plot_data, aes(x=region, y=count))+\n    geom_col()+\n    labs(\n        title=\"\", \n        x=\"Categorical Column: 'region'\", \n        y=\"Numeric Column: 'count'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#boxplot",
+    "href": "posts/lessons/lesson5_ggplot.html#boxplot",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Boxplot",
+    "text": "Boxplot\n\nX: Categorical, Y: Numeric\n\n\nCode\nggplot(dat, aes(x=region, y=bmi))+\n    geom_boxplot()+\n    labs(x=\"Categorical Column: 'region'\", y=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#scatterplot",
+    "href": "posts/lessons/lesson5_ggplot.html#scatterplot",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Scatterplot",
+    "text": "Scatterplot\n\nX: Numeric, Y: Numeric\n\n\nCode\nggplot(dat, aes(x=age, y=bmi))+\n    geom_point()+\n    labs(x=\"Numeric Column: 'Age'\", y=\"Numeric Column: 'bmi'\")+\n    theme(axis.title = element_text(face=\"bold\"))"
+  },
+  {
     "objectID": "posts/dax/dax.html",
     "href": "posts/dax/dax.html",
     "title": "DAX Reference",
     "section": "",
-    "text": "MAX()\nSee CALENDAR() function reference, example 1.\n\n\nMIN()\nSee CALENDAR() function reference, example 1.\n\n\nSUBSTITUTE(text, oldtext, newtext)\n\nDescription: This is similar to regex and Power Query Editor’s “Replace Values”\nParameters:\n\ntext: The text to manipulate. Can be a column.\noldtext: The piece of text to replace.\nnewtext: The text we want to insert. This can just be two quotation marks to do a blank.\n\n\n\nExample 1\nRetail Price Clean = \nSUBSTITUTE(\n    Dim_StockItem[Recommended Retail Price], \n    \"? \", \n    \"\"\n    )"
+    "text": "CALENDAR(StartDate, EndDate)\n\nDescription: Returns a table with one column of all dates between StartDate and EndDate.\nParameters:\n\nStartDate: The start date in datetime format\nEndDate: The end date in datetime format\n\n\n\n\nExample 1\nDim_DeliveryDate = \nCALENDAR(\n    MIN(Fact_Sales[Delivery Date Key]), \n    MAX(Fact_Sales[Delivery Date Key])\n    )\n\n\n\n\nExample 2\n# Code for another example here\n\n\n\n\nMAX()\nSee CALENDAR() function reference, example 1.\n\n\nMIN()\nSee CALENDAR() function reference, example 1.\n\n\nSUBSTITUTE(text, oldtext, newtext)\n\nDescription: This is similar to regex and Power Query Editor’s “Replace Values”\nParameters:\n\ntext: The text to manipulate. Can be a column.\noldtext: The piece of text to replace.\nnewtext: The text we want to insert. This can just be two quotation marks to do a blank.\n\n\n\n\nExample 1\nRetail Price Clean = \nSUBSTITUTE(\n    Dim_StockItem[Recommended Retail Price], \n    \"? \", \n    \"\"\n    )"
+  },
+  {
+    "objectID": "posts/lessons/delete.html",
+    "href": "posts/lessons/delete.html",
+    "title": "Use tabs to organize content",
+    "section": "",
+    "text": "See here\n\n\nyeah\n\n\n\n\nPlotData\n\n\n\nggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species))+\n    geom_point()\n\n\n\n\n\n\n\nknitr::kable(iris)\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa\n\n\n4.6\n3.4\n1.4\n0.3\nsetosa\n\n\n5.0\n3.4\n1.5\n0.2\nsetosa\n\n\n4.4\n2.9\n1.4\n0.2\nsetosa\n\n\n4.9\n3.1\n1.5\n0.1\nsetosa\n\n\n5.4\n3.7\n1.5\n0.2\nsetosa\n\n\n4.8\n3.4\n1.6\n0.2\nsetosa\n\n\n4.8\n3.0\n1.4\n0.1\nsetosa\n\n\n4.3\n3.0\n1.1\n0.1\nsetosa\n\n\n5.8\n4.0\n1.2\n0.2\nsetosa\n\n\n5.7\n4.4\n1.5\n0.4\nsetosa\n\n\n5.4\n3.9\n1.3\n0.4\nsetosa\n\n\n5.1\n3.5\n1.4\n0.3\nsetosa\n\n\n5.7\n3.8\n1.7\n0.3\nsetosa\n\n\n5.1\n3.8\n1.5\n0.3\nsetosa\n\n\n5.4\n3.4\n1.7\n0.2\nsetosa\n\n\n5.1\n3.7\n1.5\n0.4\nsetosa\n\n\n4.6\n3.6\n1.0\n0.2\nsetosa\n\n\n5.1\n3.3\n1.7\n0.5\nsetosa\n\n\n4.8\n3.4\n1.9\n0.2\nsetosa\n\n\n5.0\n3.0\n1.6\n0.2\nsetosa\n\n\n5.0\n3.4\n1.6\n0.4\nsetosa\n\n\n5.2\n3.5\n1.5\n0.2\nsetosa\n\n\n5.2\n3.4\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.6\n0.2\nsetosa\n\n\n4.8\n3.1\n1.6\n0.2\nsetosa\n\n\n5.4\n3.4\n1.5\n0.4\nsetosa\n\n\n5.2\n4.1\n1.5\n0.1\nsetosa\n\n\n5.5\n4.2\n1.4\n0.2\nsetosa\n\n\n4.9\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.2\n1.2\n0.2\nsetosa\n\n\n5.5\n3.5\n1.3\n0.2\nsetosa\n\n\n4.9\n3.6\n1.4\n0.1\nsetosa\n\n\n4.4\n3.0\n1.3\n0.2\nsetosa\n\n\n5.1\n3.4\n1.5\n0.2\nsetosa\n\n\n5.0\n3.5\n1.3\n0.3\nsetosa\n\n\n4.5\n2.3\n1.3\n0.3\nsetosa\n\n\n4.4\n3.2\n1.3\n0.2\nsetosa\n\n\n5.0\n3.5\n1.6\n0.6\nsetosa\n\n\n5.1\n3.8\n1.9\n0.4\nsetosa\n\n\n4.8\n3.0\n1.4\n0.3\nsetosa\n\n\n5.1\n3.8\n1.6\n0.2\nsetosa\n\n\n4.6\n3.2\n1.4\n0.2\nsetosa\n\n\n5.3\n3.7\n1.5\n0.2\nsetosa\n\n\n5.0\n3.3\n1.4\n0.2\nsetosa\n\n\n7.0\n3.2\n4.7\n1.4\nversicolor\n\n\n6.4\n3.2\n4.5\n1.5\nversicolor\n\n\n6.9\n3.1\n4.9\n1.5\nversicolor\n\n\n5.5\n2.3\n4.0\n1.3\nversicolor\n\n\n6.5\n2.8\n4.6\n1.5\nversicolor\n\n\n5.7\n2.8\n4.5\n1.3\nversicolor\n\n\n6.3\n3.3\n4.7\n1.6\nversicolor\n\n\n4.9\n2.4\n3.3\n1.0\nversicolor\n\n\n6.6\n2.9\n4.6\n1.3\nversicolor\n\n\n5.2\n2.7\n3.9\n1.4\nversicolor\n\n\n5.0\n2.0\n3.5\n1.0\nversicolor\n\n\n5.9\n3.0\n4.2\n1.5\nversicolor\n\n\n6.0\n2.2\n4.0\n1.0\nversicolor\n\n\n6.1\n2.9\n4.7\n1.4\nversicolor\n\n\n5.6\n2.9\n3.6\n1.3\nversicolor\n\n\n6.7\n3.1\n4.4\n1.4\nversicolor\n\n\n5.6\n3.0\n4.5\n1.5\nversicolor\n\n\n5.8\n2.7\n4.1\n1.0\nversicolor\n\n\n6.2\n2.2\n4.5\n1.5\nversicolor\n\n\n5.6\n2.5\n3.9\n1.1\nversicolor\n\n\n5.9\n3.2\n4.8\n1.8\nversicolor\n\n\n6.1\n2.8\n4.0\n1.3\nversicolor\n\n\n6.3\n2.5\n4.9\n1.5\nversicolor\n\n\n6.1\n2.8\n4.7\n1.2\nversicolor\n\n\n6.4\n2.9\n4.3\n1.3\nversicolor\n\n\n6.6\n3.0\n4.4\n1.4\nversicolor\n\n\n6.8\n2.8\n4.8\n1.4\nversicolor\n\n\n6.7\n3.0\n5.0\n1.7\nversicolor\n\n\n6.0\n2.9\n4.5\n1.5\nversicolor\n\n\n5.7\n2.6\n3.5\n1.0\nversicolor\n\n\n5.5\n2.4\n3.8\n1.1\nversicolor\n\n\n5.5\n2.4\n3.7\n1.0\nversicolor\n\n\n5.8\n2.7\n3.9\n1.2\nversicolor\n\n\n6.0\n2.7\n5.1\n1.6\nversicolor\n\n\n5.4\n3.0\n4.5\n1.5\nversicolor\n\n\n6.0\n3.4\n4.5\n1.6\nversicolor\n\n\n6.7\n3.1\n4.7\n1.5\nversicolor\n\n\n6.3\n2.3\n4.4\n1.3\nversicolor\n\n\n5.6\n3.0\n4.1\n1.3\nversicolor\n\n\n5.5\n2.5\n4.0\n1.3\nversicolor\n\n\n5.5\n2.6\n4.4\n1.2\nversicolor\n\n\n6.1\n3.0\n4.6\n1.4\nversicolor\n\n\n5.8\n2.6\n4.0\n1.2\nversicolor\n\n\n5.0\n2.3\n3.3\n1.0\nversicolor\n\n\n5.6\n2.7\n4.2\n1.3\nversicolor\n\n\n5.7\n3.0\n4.2\n1.2\nversicolor\n\n\n5.7\n2.9\n4.2\n1.3\nversicolor\n\n\n6.2\n2.9\n4.3\n1.3\nversicolor\n\n\n5.1\n2.5\n3.0\n1.1\nversicolor\n\n\n5.7\n2.8\n4.1\n1.3\nversicolor\n\n\n6.3\n3.3\n6.0\n2.5\nvirginica\n\n\n5.8\n2.7\n5.1\n1.9\nvirginica\n\n\n7.1\n3.0\n5.9\n2.1\nvirginica\n\n\n6.3\n2.9\n5.6\n1.8\nvirginica\n\n\n6.5\n3.0\n5.8\n2.2\nvirginica\n\n\n7.6\n3.0\n6.6\n2.1\nvirginica\n\n\n4.9\n2.5\n4.5\n1.7\nvirginica\n\n\n7.3\n2.9\n6.3\n1.8\nvirginica\n\n\n6.7\n2.5\n5.8\n1.8\nvirginica\n\n\n7.2\n3.6\n6.1\n2.5\nvirginica\n\n\n6.5\n3.2\n5.1\n2.0\nvirginica\n\n\n6.4\n2.7\n5.3\n1.9\nvirginica\n\n\n6.8\n3.0\n5.5\n2.1\nvirginica\n\n\n5.7\n2.5\n5.0\n2.0\nvirginica\n\n\n5.8\n2.8\n5.1\n2.4\nvirginica\n\n\n6.4\n3.2\n5.3\n2.3\nvirginica\n\n\n6.5\n3.0\n5.5\n1.8\nvirginica\n\n\n7.7\n3.8\n6.7\n2.2\nvirginica\n\n\n7.7\n2.6\n6.9\n2.3\nvirginica\n\n\n6.0\n2.2\n5.0\n1.5\nvirginica\n\n\n6.9\n3.2\n5.7\n2.3\nvirginica\n\n\n5.6\n2.8\n4.9\n2.0\nvirginica\n\n\n7.7\n2.8\n6.7\n2.0\nvirginica\n\n\n6.3\n2.7\n4.9\n1.8\nvirginica\n\n\n6.7\n3.3\n5.7\n2.1\nvirginica\n\n\n7.2\n3.2\n6.0\n1.8\nvirginica\n\n\n6.2\n2.8\n4.8\n1.8\nvirginica\n\n\n6.1\n3.0\n4.9\n1.8\nvirginica\n\n\n6.4\n2.8\n5.6\n2.1\nvirginica\n\n\n7.2\n3.0\n5.8\n1.6\nvirginica\n\n\n7.4\n2.8\n6.1\n1.9\nvirginica\n\n\n7.9\n3.8\n6.4\n2.0\nvirginica\n\n\n6.4\n2.8\n5.6\n2.2\nvirginica\n\n\n6.3\n2.8\n5.1\n1.5\nvirginica\n\n\n6.1\n2.6\n5.6\n1.4\nvirginica\n\n\n7.7\n3.0\n6.1\n2.3\nvirginica\n\n\n6.3\n3.4\n5.6\n2.4\nvirginica\n\n\n6.4\n3.1\n5.5\n1.8\nvirginica\n\n\n6.0\n3.0\n4.8\n1.8\nvirginica\n\n\n6.9\n3.1\n5.4\n2.1\nvirginica\n\n\n6.7\n3.1\n5.6\n2.4\nvirginica\n\n\n6.9\n3.1\n5.1\n2.3\nvirginica\n\n\n5.8\n2.7\n5.1\n1.9\nvirginica\n\n\n6.8\n3.2\n5.9\n2.3\nvirginica\n\n\n6.7\n3.3\n5.7\n2.5\nvirginica\n\n\n6.7\n3.0\n5.2\n2.3\nvirginica\n\n\n6.3\n2.5\n5.0\n1.9\nvirginica\n\n\n6.5\n3.0\n5.2\n2.0\nvirginica\n\n\n6.2\n3.4\n5.4\n2.3\nvirginica\n\n\n5.9\n3.0\n5.1\n1.8\nvirginica\n\n\n\n\n\n\n\n\n\n\n\nyeah"
+  },
+  {
+    "objectID": "posts/lessons/delete.html#another",
+    "href": "posts/lessons/delete.html#another",
+    "title": "Untitled",
+    "section": "Another",
+    "text": "Another\nhey"
+  },
+  {
+    "objectID": "posts/lessons/delete.html#more-here",
+    "href": "posts/lessons/delete.html#more-here",
+    "title": "Untitled",
+    "section": "More Here",
+    "text": "More Here\nhey there"
+  },
+  {
+    "objectID": "posts/lessons/delete.html#results",
+    "href": "posts/lessons/delete.html#results",
+    "title": "Use tabs to organize content",
+    "section": "Results",
+    "text": "Results\n\nPlots\nWe show a scatter plot in this section.\n\npar(mar = c(4, 4, .5, .1))\nplot(mpg ~ hp, data = mtcars, pch = 19)\n\n\n\n\n\n\nTables\nWe show the data in this tab.\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1"
+  },
+  {
+    "objectID": "posts/lessons/delete.html#what-about-this",
+    "href": "posts/lessons/delete.html#what-about-this",
+    "title": "Use tabs to organize content",
+    "section": "What about this?",
+    "text": "What about this?\nyeah"
+  },
+  {
+    "objectID": "posts/lessons/delete.html#what-about-that",
+    "href": "posts/lessons/delete.html#what-about-that",
+    "title": "Use tabs to organize content",
+    "section": "What about that?",
+    "text": "What about that?\n\nPlotData\n\n\n\nggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species))+\n    geom_point()\n\n\n\n\n\n\n\nknitr::kable(iris)\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa\n\n\n4.6\n3.4\n1.4\n0.3\nsetosa\n\n\n5.0\n3.4\n1.5\n0.2\nsetosa\n\n\n4.4\n2.9\n1.4\n0.2\nsetosa\n\n\n4.9\n3.1\n1.5\n0.1\nsetosa\n\n\n5.4\n3.7\n1.5\n0.2\nsetosa\n\n\n4.8\n3.4\n1.6\n0.2\nsetosa\n\n\n4.8\n3.0\n1.4\n0.1\nsetosa\n\n\n4.3\n3.0\n1.1\n0.1\nsetosa\n\n\n5.8\n4.0\n1.2\n0.2\nsetosa\n\n\n5.7\n4.4\n1.5\n0.4\nsetosa\n\n\n5.4\n3.9\n1.3\n0.4\nsetosa\n\n\n5.1\n3.5\n1.4\n0.3\nsetosa\n\n\n5.7\n3.8\n1.7\n0.3\nsetosa\n\n\n5.1\n3.8\n1.5\n0.3\nsetosa\n\n\n5.4\n3.4\n1.7\n0.2\nsetosa\n\n\n5.1\n3.7\n1.5\n0.4\nsetosa\n\n\n4.6\n3.6\n1.0\n0.2\nsetosa\n\n\n5.1\n3.3\n1.7\n0.5\nsetosa\n\n\n4.8\n3.4\n1.9\n0.2\nsetosa\n\n\n5.0\n3.0\n1.6\n0.2\nsetosa\n\n\n5.0\n3.4\n1.6\n0.4\nsetosa\n\n\n5.2\n3.5\n1.5\n0.2\nsetosa\n\n\n5.2\n3.4\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.6\n0.2\nsetosa\n\n\n4.8\n3.1\n1.6\n0.2\nsetosa\n\n\n5.4\n3.4\n1.5\n0.4\nsetosa\n\n\n5.2\n4.1\n1.5\n0.1\nsetosa\n\n\n5.5\n4.2\n1.4\n0.2\nsetosa\n\n\n4.9\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.2\n1.2\n0.2\nsetosa\n\n\n5.5\n3.5\n1.3\n0.2\nsetosa\n\n\n4.9\n3.6\n1.4\n0.1\nsetosa\n\n\n4.4\n3.0\n1.3\n0.2\nsetosa\n\n\n5.1\n3.4\n1.5\n0.2\nsetosa\n\n\n5.0\n3.5\n1.3\n0.3\nsetosa\n\n\n4.5\n2.3\n1.3\n0.3\nsetosa\n\n\n4.4\n3.2\n1.3\n0.2\nsetosa\n\n\n5.0\n3.5\n1.6\n0.6\nsetosa\n\n\n5.1\n3.8\n1.9\n0.4\nsetosa\n\n\n4.8\n3.0\n1.4\n0.3\nsetosa\n\n\n5.1\n3.8\n1.6\n0.2\nsetosa\n\n\n4.6\n3.2\n1.4\n0.2\nsetosa\n\n\n5.3\n3.7\n1.5\n0.2\nsetosa\n\n\n5.0\n3.3\n1.4\n0.2\nsetosa\n\n\n7.0\n3.2\n4.7\n1.4\nversicolor\n\n\n6.4\n3.2\n4.5\n1.5\nversicolor\n\n\n6.9\n3.1\n4.9\n1.5\nversicolor\n\n\n5.5\n2.3\n4.0\n1.3\nversicolor\n\n\n6.5\n2.8\n4.6\n1.5\nversicolor\n\n\n5.7\n2.8\n4.5\n1.3\nversicolor\n\n\n6.3\n3.3\n4.7\n1.6\nversicolor\n\n\n4.9\n2.4\n3.3\n1.0\nversicolor\n\n\n6.6\n2.9\n4.6\n1.3\nversicolor\n\n\n5.2\n2.7\n3.9\n1.4\nversicolor\n\n\n5.0\n2.0\n3.5\n1.0\nversicolor\n\n\n5.9\n3.0\n4.2\n1.5\nversicolor\n\n\n6.0\n2.2\n4.0\n1.0\nversicolor\n\n\n6.1\n2.9\n4.7\n1.4\nversicolor\n\n\n5.6\n2.9\n3.6\n1.3\nversicolor\n\n\n6.7\n3.1\n4.4\n1.4\nversicolor\n\n\n5.6\n3.0\n4.5\n1.5\nversicolor\n\n\n5.8\n2.7\n4.1\n1.0\nversicolor\n\n\n6.2\n2.2\n4.5\n1.5\nversicolor\n\n\n5.6\n2.5\n3.9\n1.1\nversicolor\n\n\n5.9\n3.2\n4.8\n1.8\nversicolor\n\n\n6.1\n2.8\n4.0\n1.3\nversicolor\n\n\n6.3\n2.5\n4.9\n1.5\nversicolor\n\n\n6.1\n2.8\n4.7\n1.2\nversicolor\n\n\n6.4\n2.9\n4.3\n1.3\nversicolor\n\n\n6.6\n3.0\n4.4\n1.4\nversicolor\n\n\n6.8\n2.8\n4.8\n1.4\nversicolor\n\n\n6.7\n3.0\n5.0\n1.7\nversicolor\n\n\n6.0\n2.9\n4.5\n1.5\nversicolor\n\n\n5.7\n2.6\n3.5\n1.0\nversicolor\n\n\n5.5\n2.4\n3.8\n1.1\nversicolor\n\n\n5.5\n2.4\n3.7\n1.0\nversicolor\n\n\n5.8\n2.7\n3.9\n1.2\nversicolor\n\n\n6.0\n2.7\n5.1\n1.6\nversicolor\n\n\n5.4\n3.0\n4.5\n1.5\nversicolor\n\n\n6.0\n3.4\n4.5\n1.6\nversicolor\n\n\n6.7\n3.1\n4.7\n1.5\nversicolor\n\n\n6.3\n2.3\n4.4\n1.3\nversicolor\n\n\n5.6\n3.0\n4.1\n1.3\nversicolor\n\n\n5.5\n2.5\n4.0\n1.3\nversicolor\n\n\n5.5\n2.6\n4.4\n1.2\nversicolor\n\n\n6.1\n3.0\n4.6\n1.4\nversicolor\n\n\n5.8\n2.6\n4.0\n1.2\nversicolor\n\n\n5.0\n2.3\n3.3\n1.0\nversicolor\n\n\n5.6\n2.7\n4.2\n1.3\nversicolor\n\n\n5.7\n3.0\n4.2\n1.2\nversicolor\n\n\n5.7\n2.9\n4.2\n1.3\nversicolor\n\n\n6.2\n2.9\n4.3\n1.3\nversicolor\n\n\n5.1\n2.5\n3.0\n1.1\nversicolor\n\n\n5.7\n2.8\n4.1\n1.3\nversicolor\n\n\n6.3\n3.3\n6.0\n2.5\nvirginica\n\n\n5.8\n2.7\n5.1\n1.9\nvirginica\n\n\n7.1\n3.0\n5.9\n2.1\nvirginica\n\n\n6.3\n2.9\n5.6\n1.8\nvirginica\n\n\n6.5\n3.0\n5.8\n2.2\nvirginica\n\n\n7.6\n3.0\n6.6\n2.1\nvirginica\n\n\n4.9\n2.5\n4.5\n1.7\nvirginica\n\n\n7.3\n2.9\n6.3\n1.8\nvirginica\n\n\n6.7\n2.5\n5.8\n1.8\nvirginica\n\n\n7.2\n3.6\n6.1\n2.5\nvirginica\n\n\n6.5\n3.2\n5.1\n2.0\nvirginica\n\n\n6.4\n2.7\n5.3\n1.9\nvirginica\n\n\n6.8\n3.0\n5.5\n2.1\nvirginica\n\n\n5.7\n2.5\n5.0\n2.0\nvirginica\n\n\n5.8\n2.8\n5.1\n2.4\nvirginica\n\n\n6.4\n3.2\n5.3\n2.3\nvirginica\n\n\n6.5\n3.0\n5.5\n1.8\nvirginica\n\n\n7.7\n3.8\n6.7\n2.2\nvirginica\n\n\n7.7\n2.6\n6.9\n2.3\nvirginica\n\n\n6.0\n2.2\n5.0\n1.5\nvirginica\n\n\n6.9\n3.2\n5.7\n2.3\nvirginica\n\n\n5.6\n2.8\n4.9\n2.0\nvirginica\n\n\n7.7\n2.8\n6.7\n2.0\nvirginica\n\n\n6.3\n2.7\n4.9\n1.8\nvirginica\n\n\n6.7\n3.3\n5.7\n2.1\nvirginica\n\n\n7.2\n3.2\n6.0\n1.8\nvirginica\n\n\n6.2\n2.8\n4.8\n1.8\nvirginica\n\n\n6.1\n3.0\n4.9\n1.8\nvirginica\n\n\n6.4\n2.8\n5.6\n2.1\nvirginica\n\n\n7.2\n3.0\n5.8\n1.6\nvirginica\n\n\n7.4\n2.8\n6.1\n1.9\nvirginica\n\n\n7.9\n3.8\n6.4\n2.0\nvirginica\n\n\n6.4\n2.8\n5.6\n2.2\nvirginica\n\n\n6.3\n2.8\n5.1\n1.5\nvirginica\n\n\n6.1\n2.6\n5.6\n1.4\nvirginica\n\n\n7.7\n3.0\n6.1\n2.3\nvirginica\n\n\n6.3\n3.4\n5.6\n2.4\nvirginica\n\n\n6.4\n3.1\n5.5\n1.8\nvirginica\n\n\n6.0\n3.0\n4.8\n1.8\nvirginica\n\n\n6.9\n3.1\n5.4\n2.1\nvirginica\n\n\n6.7\n3.1\n5.6\n2.4\nvirginica\n\n\n6.9\n3.1\n5.1\n2.3\nvirginica\n\n\n5.8\n2.7\n5.1\n1.9\nvirginica\n\n\n6.8\n3.2\n5.9\n2.3\nvirginica\n\n\n6.7\n3.3\n5.7\n2.5\nvirginica\n\n\n6.7\n3.0\n5.2\n2.3\nvirginica\n\n\n6.3\n2.5\n5.0\n1.9\nvirginica\n\n\n6.5\n3.0\n5.2\n2.0\nvirginica\n\n\n6.2\n3.4\n5.4\n2.3\nvirginica\n\n\n5.9\n3.0\n5.1\n1.8\nvirginica"
+  },
+  {
+    "objectID": "posts/lessons/delete.html#this",
+    "href": "posts/lessons/delete.html#this",
+    "title": "Use tabs to organize content",
+    "section": "This",
+    "text": "This\nyeah"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-1",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-1",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 1:",
+    "text": "Exercise 1:\nShow the distribution of math scores:\n\nuse the dataset from above called bob\nuse the `math score` column and make sure it is wrapped in tick marks. This is necessary when column names contain spaces.\nuse geom_histogram() on line 2\n\nStarter Code:\n\nggplot(data = ___, aes(x = `____ _____`))+ \n    geom__________()\n\n\n\n\n\n\nAttempt the code above then use dropdown for help\n\n\nAnswer\nggplot(data = bob, aes(x = `math score`))+ \n    geom_histogram()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-2",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-2",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nGraph the types of parental education using the parent_education column\n\n\nCode\nggplot(data = bob, aes(parent_education))+\n    geom_bar()\n\n\n\n\n\nGraph the types of lunch categories using the lunch column\n\n\nCode\nggplot(data = bob, mapping = aes(x = lunch))+\n    geom_bar()\n\n\n\n\n\nX: Numeric Y: Numeric Graph the reading score on the x-axis and the writing score on the y-axis\n\n\nCode\nggplot(data = bob, mapping = aes(x = `reading score`, y = `writing score`))+\n    geom_point()\n\n\n\n\n\n\n\nCode\nggplot()+\n    geom_point(data = bob, mapping = aes(x = `reading score`, y = `writing score`, color = \"red\"))+\n    geom_point(data = bob, mapping = aes(x = `math score`, y = `writing score`, color = \"blue\"))\n\n\n\n\n\nboxplot\n\n\nCode\nggplot(bob, aes(lunch, `math score`))+ \n    geom_boxplot()\n\n\n\n\n\nNext week we’ll get into colors"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-1-visualizing-a-distribution-using-a-histogram",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-1-visualizing-a-distribution-using-a-histogram",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 1: Visualizing a Distribution using a Histogram",
+    "text": "Exercise 1: Visualizing a Distribution using a Histogram\nPrompt: Show the distribution of math scores\nInstructions:\n\nuse the dataset from above called bob\nuse the `math score` column and make sure it is wrapped in tick marks. This is necessary when column names contain spaces.\nuse geom_histogram() on line 2\n\nStarter Code:\n\nggplot(data = ___, aes(x = `____ _____`))+ \n    geom____________\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(data = bob, aes(x = `math score`))+ \n    geom_histogram()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-2-visualizing-counts-of-school-degrees",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-2-visualizing-counts-of-school-degrees",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 2: Visualizing Counts of School Degrees",
+    "text": "Exercise 2: Visualizing Counts of School Degrees\nPrompt: Make a bar chart visualizing the count of school degrees\nInstructions:\n\nuse the dataset from above called bob\nuse parent_education column as the x axis\nuse geom_bar() in line 2\n\nStarter Code:\n\nggplot(data = ___, aes(x = ________________))+ \n    geom____________\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(data = bob, aes(x = parent_education))+\n    geom_bar()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-3",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-3",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 3:",
+    "text": "Exercise 3:\nPrompt: Make a scatter plot visualizing the correlation of reading scores and writing scores\nInstructions:\n\nuse the dataset from above called bob\nuse the `reading score` column as the x axis\nuse the `writing score` column as the y axis\nuse the gender column as the color\nuse geom_point() in line 2\n\nStarter Code:\n\nggplot(data = ___, aes(x = `_______ _____`, y = _______________, color = ______))+\n    geom________\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(data = bob, aes(x = `reading score`, y = `writing score`, color = gender))+\n    geom_point()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-4",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-4",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 4:",
+    "text": "Exercise 4:\n\n\n\nCode\nggplot()+\n    geom_point(data = bob, mapping = aes(x = `reading score`, y = `writing score`, color = \"red\"))+\n    geom_point(data = bob, mapping = aes(x = `math score`, y = `writing score`, color = \"blue\"))\n\n\n\n\n\nboxplot\n\n\nCode\nggplot(bob, aes(lunch, `math score`))+ \n    geom_boxplot()\n\n\n\n\n\nGraph the types of lunch categories using the lunch column\n\n\nCode\nggplot(data = bob, mapping = aes(x = lunch))+\n    geom_bar()\n\n\n\n\n\nNext week we’ll get into colors"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-4-boxplot-visualization",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-4-boxplot-visualization",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 4: Boxplot Visualization",
+    "text": "Exercise 4: Boxplot Visualization\nPrompt: Make a scatter plot visualizing the correlation of reading scores and writing scores\nInstructions:\n\nuse the dataset from above called bob\nuse the lunch column as the x axis\nuse the `math score` column as the y axis\nuse geom_histogram() in line 2\n\nNotice that ggplot doesn’t require explicitly specifying the arguments for data, x-axis, and y-axis. Simply their position in the code is enough.\nStarter Code:\n\nggplot(___, aes(_____, ____________))+ \n    geom__________\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(bob, aes(lunch, `math score`))+ \n    geom_boxplot()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-5",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-5",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 5:",
+    "text": "Exercise 5:\nPrompt: Make a bar chart visualizing the types of lunches\nInstructions:\n\nRemake the plot below\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(data = bob, aes(x = lunch, fill = gender))+\n    geom_bar()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-4-visualizing-distriution-using-boxplots",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-4-visualizing-distriution-using-boxplots",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 4: Visualizing Distriution using Boxplots",
+    "text": "Exercise 4: Visualizing Distriution using Boxplots\nPrompt: Make a scatter plot visualizing the correlation of reading scores and writing scores\nInstructions:\n\nuse the dataset from above called bob\nuse the lunch column as the x axis\nuse the `math score` column as the y axis\nuse geom_histogram() in line 2\n\nStarter Code:\n\nggplot(___, aes(_____, ____________))+ \n    geom__________\n\nNotice in the starter code we didn’t specify data, x, and y. ggplot doesn’t require explicitly specifying the arguments for data, x-axis, and y-axis. Those are implied by their position in the code below. This way of writing code require less typing and is very common.\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(bob, aes(lunch, `math score`))+ \n    geom_boxplot()\n\n\n\nFor the remainder of the exercises, no starter code is provided. Look back at previous exercises for help if needed."
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#section",
+    "href": "posts/lessons/lesson5_ggplot.html#section",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "",
+    "text": "Graph the types of lunch categories using the lunch column\n\n\n\n\n\nCode\nggplot()+\n    geom_point(data = bob, mapping = aes(x = `reading score`, y = `writing score`, color = \"red\"))+\n    geom_point(data = bob, mapping = aes(x = `math score`, y = `writing score`, color = \"blue\"))\n\n\n\n\n\nNext week we’ll get into colors, gg_text()/gg_label(), labs(), themes(), legend?, facet_wrap(),"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-4-visualizing-distribution-using-boxplots",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-4-visualizing-distribution-using-boxplots",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 4: Visualizing Distribution using Boxplots",
+    "text": "Exercise 4: Visualizing Distribution using Boxplots\nPrompt: Make a scatter plot visualizing the correlation of reading scores and writing scores\nInstructions:\n\nuse the dataset from above called bob\nuse the lunch column as the x axis\nuse the `math score` column as the y axis\nuse geom_histogram() in line 2\n\nStarter Code:\n\nggplot(___, aes(_____, ____________))+ \n    geom__________\n\nNotice in the starter code we didn’t specify data, x, and y. ggplot doesn’t require explicitly specifying the arguments for data, x-axis, and y-axis. Those are implied by their position in the code below. This way of writing code require less typing and is very common.\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(bob, aes(lunch, `math score`))+ \n    geom_boxplot()\n\n\n\nFor the remainder of the exercises, no starter code is provided. Look back at previous exercises for help if needed."
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-6",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-6",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 6:",
+    "text": "Exercise 6:\nPrompt: Using the iris dataset (which is built into R and ready to use) make the scatter plot below. Look at the x-axis, y-axis, and legend for the columns to use.\nInstructions:\n\nRemake the plot below\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species))+\n    geom_point()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-3-scatter-plot-to-visualize-test-scores",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-3-scatter-plot-to-visualize-test-scores",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 3: Scatter Plot to Visualize Test Scores",
+    "text": "Exercise 3: Scatter Plot to Visualize Test Scores\nPrompt: Make a scatter plot visualizing the correlation of reading scores and writing scores\nInstructions:\n\nuse the dataset from above called bob\nuse the `reading score` column as the x axis\nuse the `writing score` column as the y axis\nuse the gender column as the color\nuse geom_point() in line 2\n\nStarter Code:\n\nggplot(data = ___, aes(x = `_______ _____`, y = _______________, color = ______))+\n    geom________\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(data = bob, aes(x = `reading score`, y = `writing score`, color = gender))+\n    geom_point()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-5-bar-chart",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-5-bar-chart",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 5: Bar Chart",
+    "text": "Exercise 5: Bar Chart\nPrompt: Make a bar chart visualizing the types of lunches\nInstructions:\n\nRemake the plot below\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(data = bob, aes(x = lunch, fill = gender))+\n    geom_bar()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-6-scatter-plot",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-6-scatter-plot",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 6: Scatter Plot",
+    "text": "Exercise 6: Scatter Plot\nPrompt: Using the iris dataset (which is built into R and ready to use) make the scatter plot below. Look at the x-axis, y-axis, and legend for the columns to use.\nInstructions:\n\nRemake the plot below\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(iris, aes(Petal.Width, Petal.Length, color = Species))+\n    geom_point()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-7-boxplot",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-7-boxplot",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 7: Boxplot",
+    "text": "Exercise 7: Boxplot\nPrompt: Using the iris dataset (which is built into R and ready to use) make the boxplot below. Look at the x-axis, y-axis, and legend for the columns to use.\nInstructions:\n\nRemake the plot below\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(iris, aes(Species, Petal.Width, fill = Species))+ \n    geom_boxplot()"
+  },
+  {
+    "objectID": "posts/lessons/lesson5_ggplot.html#exercise-8",
+    "href": "posts/lessons/lesson5_ggplot.html#exercise-8",
+    "title": "Lesson 5: Graphing 1/2",
+    "section": "Exercise 8:",
+    "text": "Exercise 8:\nPrompt: Using the iris dataset (which is built into R and ready to use) make the histogram below. Look at the x-axis, y-axis, and legend for the columns to use.\nInstructions:\n\nRemake the plot below\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(iris, aes(Petal.Length, fill = Species))+\n    geom_histogram()"
   }
 ]

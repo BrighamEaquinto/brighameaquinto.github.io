@@ -2,10 +2,12 @@
   {
     "listing": "/main.html",
     "items": [
-      "/posts/weeks/Oct_5th.html",
-      "/posts/weeks/Oct_12th.html",
-      "/posts/weeks/Oct_19th.html",
-      "/posts/weeks/Oct_26th.html"
+      "/posts/lessons/lesson1_intro.html",
+      "/posts/lessons/lesson2_readr.html",
+      "/posts/lessons/lesson3_dplyr.html",
+      "/posts/lessons/lesson4_dplyr.html",
+      "/posts/lessons/lesson5_ggplot.html",
+      "/posts/lessons/lesson6_ggplot.html"
     ]
   }
 ]

@@ -1,0 +1,4 @@
+---
+title: "Lesson 6: Graphing 2/2"
+toc: true
+---

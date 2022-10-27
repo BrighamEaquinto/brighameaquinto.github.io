@@ -1,0 +1,5 @@
+---
+title: "Lesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange)"
+toc: true
+image: "https://raw.githubusercontent.com/rstudio/hex-stickers/master/SVG/dplyr.svg"
+---

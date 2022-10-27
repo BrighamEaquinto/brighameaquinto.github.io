@@ -52,3 +52,29 @@ dat <- read_csv("datasets/insurance.csv")
 n_distinct(dat$region)
 count(dat$region)
 table(dat$region) 
+
+
+
+
+
+R Scipts vs. RMDs
+The data science process (flow chart of start to finish and where most time is spent)
+
+Lesson 1: Introduction
+  - Installation
+  - the RStudio interface
+  - an introduction to Data Science. Give the full scope of data science.
+  - what about sending the newbies to this page during future weeks? Put a video there? 
+Lesson 2: Readr
+  - reading in data from CSV
+  - reading in data from URL
+  - writing data to CSV
+Lesson 3: Wrangling Data
+  - need another day on this
+Lesson 4: Grouping, Summarising, Arranging
+Lesson 5: Graphing 1/2
+Lesson 6: Graphing 2/2
+
+
+mean(iris)
+
