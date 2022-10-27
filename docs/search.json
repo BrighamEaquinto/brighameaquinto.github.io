@@ -4,7 +4,7 @@
     "href": "main.html",
     "title": "R Bootcamp",
     "section": "",
-    "text": "Lesson 1: Introduction to Data Science & Installation\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 2: Reading Data\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange)\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 5: Graphing 1/2\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 6: Graphing 2/2\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "No matching items"
   },
   {
     "objectID": "posts/weeks/Oct_5th.html",
@@ -529,7 +529,7 @@
     "href": "posts/dax/dax.html",
     "title": "DAX Reference",
     "section": "",
-    "text": "CALENDAR(StartDate, EndDate)\n\nDescription: Returns a table with one column of all dates between StartDate and EndDate.\nParameters:\n\nStartDate: The start date in datetime format\nEndDate: The end date in datetime format\n\n\n\n\nExample 1\nDim_DeliveryDate = \nCALENDAR(\n    MIN(Fact_Sales[Delivery Date Key]), \n    MAX(Fact_Sales[Delivery Date Key])\n    )\n\n\n\n\nExample 2\n# Code for another example here\n\n\n\n\nMAX()\nSee CALENDAR() function reference, example 1.\n\n\nMIN()\nSee CALENDAR() function reference, example 1.\n\n\nSUBSTITUTE(text, oldtext, newtext)\n\nDescription: This is similar to regex and Power Query Editor’s “Replace Values”\nParameters:\n\ntext: The text to manipulate. Can be a column.\noldtext: The piece of text to replace.\nnewtext: The text we want to insert. This can just be two quotation marks to do a blank.\n\n\n\n\nExample 1\nRetail Price Clean = \nSUBSTITUTE(\n    Dim_StockItem[Recommended Retail Price], \n    \"? \", \n    \"\"\n    )"
+    "text": "MAX()\nSee CALENDAR() function reference, example 1.\n\n\nMIN()\nSee CALENDAR() function reference, example 1.\n\n\nSUBSTITUTE(text, oldtext, newtext)\n\nDescription: This is similar to regex and Power Query Editor’s “Replace Values”\nParameters:\n\ntext: The text to manipulate. Can be a column.\noldtext: The piece of text to replace.\nnewtext: The text we want to insert. This can just be two quotation marks to do a blank.\n\n\n\nExample 1\nRetail Price Clean = \nSUBSTITUTE(\n    Dim_StockItem[Recommended Retail Price], \n    \"? \", \n    \"\"\n    )"
   },
   {
     "objectID": "posts/lessons/delete.html",
