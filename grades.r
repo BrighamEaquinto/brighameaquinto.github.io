@@ -1,12 +1,12 @@
 library(tidyverse)
 
-dat <- read_csv("C:/Users/bdeaquinto/Downloads/grades.csv")
+dat <- read_csv("C:/Users/Bethany/Downloads/grades.csv")
 view(dat)
 
-is_math = c("FDMAT108", "MATH101")
-is_stats = c("MATH221A", "MATH325")
-is_major = c("CIT111", "CIT225")
-is_general_ed = c("FDAMF101", "FDENG101")
+is_math = c("FDMAT108", "MATH101", "MATH112X", "MATH109", "MATH101", )
+is_stats = c("MATH221A", "MATH325", "MATH425", )
+is_major = c("CIT111", "CIT225", "CSE111", "MATH425", "CSE350", "BA315", "CSE210", "CSE250",  "CIT225", "CSE110", "MATH498R", "CSE450", "DS460")
+is_general_ed = c("FDAMF101", "FDENG101", "DANCE180M", "ECON151", "FCS160", "GS103A", "REL200C", "GS103B", "GESCI110", "ECON150", "FDHUM110", "REL261", "REL225C", "ESS130", "FDREL275", "GS106A", "CIT110", "DANCE280M", "REL404", "REL250C")
 
 dat1 <- dat %>% 
 select(! c(`Course Program`, `Catalog`, `Grade Type`)) %>% 
@@ -41,18 +41,22 @@ select(! c(`Course Program`, `Catalog`, `Grade Type`)) %>%
     is_stats = case_when(Course %in% is_stats ~ 1, TRUE ~ 0), 
     is_major = case_when(Course %in% is_major ~ 1, TRUE ~ 0), 
     is_general_ed = case_when(Course %in% is_general_ed ~ 1, TRUE ~ 0)
-)
+) %>% 
+pivot_longer(!c(Course, `Course Title`, Credits, Grade, Semester, `Grade Points`), names_to="key", values_to="values") %>% 
+filter(values != 0)
 
 # now ask how they determine which courses go into stats and which go into each bin
 
 view(dat1)
 
 ggplot(data = dat1, mapping = aes(Grade))+ 
-  geom_bar()
+  geom_bar(aes(fill = key))
 
 dat1 %>% 
-  filter(!is.na(gp)) %>% 
+  filter(!is.na(`Grade Points`)) %>% 
   summarise(
-    tgp = sum(gp), 
+    tgp = sum(`Grade Points`), 
     tc = sum(Credits), 
     tgp/tc)
+
+  dat1 %>% arrange(desc(Grade)) %>% view()
