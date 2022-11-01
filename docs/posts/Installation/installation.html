@@ -29,6 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../website_thumbnail.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -101,16 +102,28 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-weeks">    
         <li>
-    <a class="dropdown-item" href="../../posts/weeks/Oct_5th.html">
- <span class="dropdown-text">Week 2 (Oct 5th)</span></a>
+    <a class="dropdown-item" href="../../posts/Installation/installation.html">
+ <span class="dropdown-text">Lesson 1: Installation to Data Science</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../posts/weeks/Oct_12th.html">
- <span class="dropdown-text">Week 3 (Oct 12th)</span></a>
+    <a class="dropdown-item" href="../../posts/weeks/Oct_12th.qmd">
+ <span class="dropdown-text">Lesson 2: Reading Data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../posts/weeks/Oct_19th.html">
- <span class="dropdown-text">Week 4 (Oct 12th)</span></a>
+    <a class="dropdown-item" href="../../posts/lessons/lesson4_dplyr.html">
+ <span class="dropdown-text">Lesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../posts/lessons/lesson4_dplyr.html">
+ <span class="dropdown-text">Lesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../posts/lessons/lesson5_ggplot.html">
+ <span class="dropdown-text">Lesson 5: Graphing 1/2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../posts/lessons/lesson6_ggplot.html">
+ <span class="dropdown-text">Lesson 6: Graphing 2/2</span></a>
   </li>  
     </ul>
   </li>
@@ -148,11 +161,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#first-comparison-r-vs-rstudio" id="toc-first-comparison-r-vs-rstudio" class="nav-link active" data-scroll-target="#first-comparison-r-vs-rstudio">First Comparison: R vs RStudio</a>
+  <li><a href="#introductory-data-science-video" id="toc-introductory-data-science-video" class="nav-link active" data-scroll-target="#introductory-data-science-video">Introductory Data Science Video</a>
   <ul class="collapse">
-  <li><a href="#download-instructions" id="toc-download-instructions" class="nav-link" data-scroll-target="#download-instructions">Download Instructions</a></li>
+  <li><a href="#downloading-r" id="toc-downloading-r" class="nav-link" data-scroll-target="#downloading-r">Downloading R</a>
+  <ul class="collapse">
+  <li><a href="#downloading-rstudio" id="toc-downloading-rstudio" class="nav-link" data-scroll-target="#downloading-rstudio">Downloading RStudio</a></li>
   </ul></li>
-  <li><a href="#second-comparison-r-script-vs-r-markdown-rmd" id="toc-second-comparison-r-script-vs-r-markdown-rmd" class="nav-link" data-scroll-target="#second-comparison-r-script-vs-r-markdown-rmd">Second Comparison: R Script vs R Markdown (RMD)</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/edit/main/posts/Installation/installation.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -162,47 +177,27 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p align="left" width="10" height="10">
-<img src="Rlogo.jpg" class="img-fluid">
-</p>
-<p align="right" width="10" height="10">
-<img src="RStudio.jpg" class="img-fluid">
-</p>
-<!-- ![](RStudio.jpg){:.centered} -->
-<section id="first-comparison-r-vs-rstudio" class="level1">
-<h1>First Comparison: R vs RStudio</h1>
-<div class="columns">
-<div class="column" style="width:&quot;45%&quot;;">
-<p>R is the magical software that lets us do cool things with data.</p>
-</div><div class="column" style="width:&quot;45%&quot;;">
-<p>RStudio is the interface for how to use R.</p>
-</div>
-</div>
-<section id="download-instructions" class="level2">
-<h2 class="anchored" data-anchor-id="download-instructions">Download Instructions</h2>
+<section id="introductory-data-science-video" class="level1">
+<h1>Introductory Data Science Video</h1>
+<p>Insert video here</p>
+<section id="downloading-r" class="level2">
+<h2 class="anchored" data-anchor-id="downloading-r">Downloading R</h2>
+<p><strong>First Option</strong>:</p>
 <p>Google “download R” or go to <a href="https://cran.r-project.org/bin/windows/base/">this link</a> to download it. The page should look like this.</p>
-<p><img src="rstudio_download.jpg" class="img-fluid"></p>
-<!-- Download [R](https://cran.rstudio.com/bin/windows/base/R-4.2.1-win.exe) -->
+<p><strong>Second Option</strong>:</p>
+<p>Use this <a href="https://cran.rstudio.com/bin/windows/base/R-4.2.1-win.exe">direct R download</a></p>
+<!-- ![](rstudio_download.jpg) -->
+<section id="downloading-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="downloading-rstudio">Downloading RStudio</h3>
+<p><strong>First Option</strong>:</p>
 <p>Google “download RStudio” or go to <a href="https://www.rstudio.com/products/rstudio/download/#download">this link</a> to download it. The page should look like this.</p>
-<p><img src="r_download.jpg" class="img-fluid"></p>
-<!-- Download [RStudio](https://download1.rstudio.org/desktop/windows/RStudio-2022.07.2-576.exe) -->
-<hr>
-</section>
-</section>
-<section id="second-comparison-r-script-vs-r-markdown-rmd" class="level1">
-<h1>Second Comparison: R Script vs R Markdown (RMD)</h1>
-<div class="columns">
-<div class="column" style="width:&quot;45%&quot;;">
-<p>R scripts are more for crunching numbers when you do not intend on sharing the results.</p>
-<p>You can do exploratory data analysis (EDA) to become more familiar with your data like make summaries of the data, make graphs, and clean up a dataset.</p>
-</div><div class="column" style="width:&quot;45%&quot;;">
-<p>RMDs are for communicating your analysis. This allows you read in data, manipulate it, make graphs, and comment on the results.</p>
-<p>Here is an example from an <a href="https://byuistats.github.io/Statistics-Notebook/Analyses/StudentHousing.html">analysis on student housing</a> )</p>
-<p>(Later we’ll talk about the new replacement to RMD’s called <a href="https://quarto.org/">QMD’s</a>).</p>
-</div>
-</div>
+<p><strong>Second Option</strong>:</p>
+<p>Use this <a href="https://download1.rstudio.org/desktop/windows/RStudio-2022.07.2-576.exe">direct RStudio download</a></p>
+<!-- ![](r_download.jpg) -->
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

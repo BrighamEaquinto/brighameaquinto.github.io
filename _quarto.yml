@@ -58,7 +58,7 @@ website:
         - text: "Lesson 6: Graphing 2/2"
           href: "posts/lessons/lesson6_ggplot.qmd"
 
-  # sidebar:
+  # sidebar:  
   #   # title: "Tutorials"
   #   style: "docked"
   #   search: true

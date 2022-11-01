@@ -698,5 +698,54 @@
     "title": "Lesson 5: Graphing 1/2",
     "section": "Exercise 8:",
     "text": "Exercise 8:\nPrompt: Using the iris dataset (which is built into R and ready to use) make the histogram below. Look at the x-axis, y-axis, and legend for the columns to use.\nInstructions:\n\nRemake the plot below\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(iris, aes(Petal.Length, fill = Species))+\n    geom_histogram()"
+  },
+  {
+    "objectID": "posts/lessons/lesson6_ggplot.html",
+    "href": "posts/lessons/lesson6_ggplot.html",
+    "title": "Lesson 6: Graphing 2/2",
+    "section": "",
+    "text": "Code\nlibrary(tidyverse)\n\ndat <- read_csv(\"C:/Users/Bethany/Downloads/brighameaquinto.github.io-1/datasets/insurance.csv\")"
+  },
+  {
+    "objectID": "posts/lessons/lesson6_ggplot.html#coloring",
+    "href": "posts/lessons/lesson6_ggplot.html#coloring",
+    "title": "Lesson 6: Graphing 2/2",
+    "section": "Coloring",
+    "text": "Coloring\n\nthe color and fill arguments are accepted inside the aes()\ncolor is the boarder color\nfill is the fill color\nyou can set hard colors or set it to a column in your dataset\nR accepts color names in quotes and hex codes\nscale_fill_manual()\nscale_color_manual()"
+  },
+  {
+    "objectID": "posts/lessons/lesson6_ggplot.html#labs",
+    "href": "posts/lessons/lesson6_ggplot.html#labs",
+    "title": "Lesson 6: Graphing 2/2",
+    "section": "labs()",
+    "text": "labs()\nExplanation\nThe labs() function is used to add label to the plot like the x-axis, the y-axis, and title.\nExample\n\n\nCode\nggplot(dat, aes(x = region, fill = sex))+\n    geom_bar()+ \n    labs(title = \"Counts of Regions\", x = \"Regions\", y = \"Amount\", fill = \"Sex\")+ theme_bw()"
+  },
+  {
+    "objectID": "posts/lessons/lesson6_ggplot.html#faceting",
+    "href": "posts/lessons/lesson6_ggplot.html#faceting",
+    "title": "Lesson 6: Graphing 2/2",
+    "section": "Faceting:",
+    "text": "Faceting:\n\nfacet_wrap() & facet_grid()\nThis of faceting as a third variable. We can set the x and y axes to see information, add color to make it\nX Y: - color - faceting\n\nfacet_wrap() and facet_grid()\n\n\n\nCode\ncolor <- ggplot(dat, aes(x = region, fill = sex))+\n            geom_bar()+ \n            labs(title = \"Non-Faceted Graph\", x = \"\", y = \"Amount\", fill = \"Sex\")+\n            theme(\n                title = element_text(size = 20), \n                axis.title = element_text(size = 10), \n                legend.title = element_text(size = 10))\n\n\nfacet <- ggplot(dat, aes(x = region, fill = sex))+\n            geom_bar()+ \n            facet_wrap(~sex)+\n            labs(title = \"Faceted Graph\", x = \"\", y = \"Amount\", fill = \"Sex\")+\n            theme(\n                title = element_text(size = 20), \n                axis.title = element_text(size = 10), \n                legend.title = element_text(size = 10), \n                legend.position = \"none\")\n\n\n\n\nggpubr::ggarrange(color, facet, nrow = 2)"
+  },
+  {
+    "objectID": "posts/lessons/lesson6_ggplot.html#themes",
+    "href": "posts/lessons/lesson6_ggplot.html#themes",
+    "title": "Lesson 6: Graphing 2/2",
+    "section": "Themes",
+    "text": "Themes\nThe following theme options affect all the non-data aspects\n\ntheme_bw()\ntheme_linedraw()\ntheme_light()\ntheme_dark()\ntheme_minimal()\ntheme_classic()\ntheme_void()\ntheme_test()\n\nNext week we’ll get into colors, gg_text()/gg_label(), labs(), themes(), legend?, facet_wrap(), geom_boxplot() is often used with geom_jitter() to make powerful visualizations."
+  },
+  {
+    "objectID": "posts/lessons/lesson6_ggplot.html#labeling",
+    "href": "posts/lessons/lesson6_ggplot.html#labeling",
+    "title": "Lesson 6: Graphing 2/2",
+    "section": "Labeling",
+    "text": "Labeling\n\nlabs()\nExplanation\nThe labs() function is used to add label to the plot like the x-axis, the y-axis, and title.\nExample\n\n\nCode\nggplot(dat, aes(x = region, fill = sex))+\n    geom_bar()+ \n    labs(title = \"Counts of Regions\", x = \"Regions\", y = \"Amount\", fill = \"Sex\")+ theme_bw()"
+  },
+  {
+    "objectID": "posts/Installation/installation.html",
+    "href": "posts/Installation/installation.html",
+    "title": "Installation",
+    "section": "",
+    "text": "Insert video here\n\n\nFirst Option:\nGoogle “download R” or go to this link to download it. The page should look like this.\nSecond Option:\nUse this direct R download\n\n\n\nFirst Option:\nGoogle “download RStudio” or go to this link to download it. The page should look like this.\nSecond Option:\nUse this direct RStudio download"
   }
 ]

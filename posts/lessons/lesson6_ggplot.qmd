@@ -1,4 +1,117 @@
 ---
 title: "Lesson 6: Graphing 2/2"
 toc: true
+fig-align: center
+fig-width: 8
+fig-height: 3.5
+code-copy: true
+code-overflow: wrap
+code-line-numbers: true
+code-fold: true
+code-tools: true
+eval: true
+message: false
+warning: false
+# toc: true
 ---
+
+```{r}
+library(tidyverse)
+
+dat <- read_csv("C:/Users/Bethany/Downloads/brighameaquinto.github.io-1/datasets/insurance.csv")
+```
+
+
+## Coloring 
+
+- the color and fill arguments are accepted inside the aes() 
+
+
+- color is the boarder color
+- fill is the fill color
+
+- you can set hard colors or set it to a column in your dataset
+- R accepts color names in quotes and hex codes
+
+- `scale_fill_manual()`
+- `scale_color_manual()`
+
+
+
+## Labeling 
+#### `labs()`
+
+**Explanation**
+
+The `labs()` function is used to add label to the plot like the x-axis, the y-axis, and title. 
+
+**Example**
+
+```{r}
+ggplot(dat, aes(x = region, fill = sex))+
+    geom_bar()+ 
+    labs(title = "Counts of Regions", x = "Regions", y = "Amount", fill = "Sex")+ theme_bw()
+```
+
+
+## Faceting
+### `facet_wrap()` & `facet_grid()`
+This of faceting as a third variable. We can set the x and y axes to see information, add color to make it
+
+X Y: 
+- color
+- faceting
+
+- `facet_wrap()` and `facet_grid()`
+
+
+```{r}
+#| fig.height = 5
+
+
+color <- ggplot(dat, aes(x = region, fill = sex))+
+            geom_bar()+ 
+            labs(title = "Non-Faceted Graph", x = "", y = "Amount", fill = "Sex")+
+            theme(
+                title = element_text(size = 20), 
+                axis.title = element_text(size = 10), 
+                legend.title = element_text(size = 10))
+
+
+facet <- ggplot(dat, aes(x = region, fill = sex))+
+            geom_bar()+ 
+            facet_wrap(~sex)+
+            labs(title = "Faceted Graph", x = "", y = "Amount", fill = "Sex")+
+            theme(
+                title = element_text(size = 20), 
+                axis.title = element_text(size = 10), 
+                legend.title = element_text(size = 10), 
+                legend.position = "none")
+
+
+
+
+ggpubr::ggarrange(color, facet, nrow = 2)
+```
+
+
+
+## Themes 
+
+The following theme options affect all the non-data aspects
+
+- `theme_bw()`
+- `theme_linedraw()`
+- `theme_light()`
+- `theme_dark()`
+- `theme_minimal()`
+- `theme_classic()`
+- `theme_void()`
+- `theme_test()`
+
+
+
+
+
+Next week we'll get into colors, gg_text()/gg_label(), labs(), themes(), legend?, facet_wrap(), 
+geom_boxplot() is often used with geom_jitter() to make powerful visualizations.

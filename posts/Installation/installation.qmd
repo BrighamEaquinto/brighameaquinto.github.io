@@ -5,53 +5,63 @@ toc: true
 image: Rlogo.jpg
 ---
 
-<p align="left" width="10" height="10"> ![](Rlogo.jpg) </p>
+# Introductory Data Science Video
 
-<p align="right" width="10" height="10"> ![](RStudio.jpg) </p>
-<!-- ![](RStudio.jpg){:.centered} -->
+Insert video here
 
-# First Comparison: R vs RStudio
+## Downloading R
 
-:::::::::::::: {.columns}
-::: {.column width=\"45%\"}
-R is the magical software that lets us do cool things with data.
-:::
-::: {.column width=\"45%\"}
-RStudio is the interface for how to use R. 
-:::
-::::::::::::::
-
-## Download Instructions
+__First Option__:
 
 Google "download R" or go to [this link](https://cran.r-project.org/bin/windows/base/) to download it. The page should look like this. 
 
-![](rstudio_download.jpg)
+__Second Option__: 
 
-<!-- Download [R](https://cran.rstudio.com/bin/windows/base/R-4.2.1-win.exe) -->
+Use this [direct R download](https://cran.rstudio.com/bin/windows/base/R-4.2.1-win.exe)
+
+<!-- ![](rstudio_download.jpg) -->
+
+### Downloading RStudio
+
+__First Option__:
 
 Google "download RStudio" or go to [this link](https://www.rstudio.com/products/rstudio/download/#download) to download it. The page should look like this.
 
-![](r_download.jpg)
+__Second Option__: 
 
-<!-- Download [RStudio](https://download1.rstudio.org/desktop/windows/RStudio-2022.07.2-576.exe) -->
+Use this [direct RStudio download](https://download1.rstudio.org/desktop/windows/RStudio-2022.07.2-576.exe)
 
-----
+<!-- ![](r_download.jpg) -->
 
-# Second Comparison: R Script vs R Markdown (RMD)
 
-:::::::::::::: {.columns}
-::: {.column width=\"45%\"}
-R scripts are more for crunching numbers when you do not intend on sharing the results. 
 
-You can do exploratory data analysis (EDA) to become more familiar with your data like make summaries of the data, make graphs, and clean up a dataset.   
-:::
-::: {.column width=\"45%\"}
-RMDs are for communicating your analysis. This allows you read in data, manipulate it, make graphs, and comment on the results. 
 
-Here is an example from an [analysis on student housing](https://byuistats.github.io/Statistics-Notebook/Analyses/StudentHousing.html) )
 
-(Later we'll talk about the new replacement to RMD's called [QMD's](https://quarto.org/)).
-:::
-::::::::::::::
+# Outline
 
+By then end of bootcamp you will be able to read in data, wrangling data, and visualize data. The 
+
+Here is an example of what you'll be able to do by the end
+
+- read in data from an online source or manage a downloaded data file
+- determine the steps needed to wrangling a dataset
+- make appropiate visualizations
+
+
+```{r}
+library(tidyverse)
+data1 <- read_csv("datasets/StudentsPerformance.csv")
+# View(data1)
+```
+
+```{r}
+data2 <- data1 %>% 
+    group_by(lunch, `race/ethnicity`) %>% 
+    summarise("Avg Math" = mean(`math score`), "Std Math" = sd(`math score`))
+view(data2)
+```
+
+```{r}
+ggplot(data2, aes())
+```
 

@@ -416,9 +416,3 @@ ggplot(iris, aes(Petal.Length, fill = Species))+
 ```
 
 
-
-
-
-
-<!-- Next week we'll get into colors, gg_text()/gg_label(), labs(), themes(), legend?, facet_wrap(),  -->
-<!-- geom_boxplot() is often used with geom_jitter() to make powerful visualizations. -->
