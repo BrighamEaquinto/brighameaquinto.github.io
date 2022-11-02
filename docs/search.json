@@ -4,7 +4,7 @@
     "href": "main.html",
     "title": "R Bootcamp",
     "section": "",
-    "text": "No matching items"
+    "text": "Lesson 1: Introduction to Data Science & Installation\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 2: Reading Data\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange)\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 5: Graphing 1/2\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 6: Graphing 2/2\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/weeks/Oct_5th.html",
@@ -747,5 +747,40 @@
     "title": "Installation",
     "section": "",
     "text": "Insert video here\n\n\nFirst Option:\nGoogle “download R” or go to this link to download it. The page should look like this.\nSecond Option:\nUse this direct R download\n\n\n\nFirst Option:\nGoogle “download RStudio” or go to this link to download it. The page should look like this.\nSecond Option:\nUse this direct RStudio download"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#selecting-columns",
+    "href": "posts/Installation/installation.html#selecting-columns",
+    "title": "Installation",
+    "section": "Selecting Columns",
+    "text": "Selecting Columns\n\n\n\nBase R\ndf$column_name\ndf[[]]\n\n\n\nTidyverse\n\ndf %>% select(column1, column2)"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#making-new-columns",
+    "href": "posts/Installation/installation.html#making-new-columns",
+    "title": "Installation",
+    "section": "Making New Columns",
+    "text": "Making New Columns\n\n\n\nBase R\ndf$profit <- df$revenue - df$cost\n\n\n\nTidyverse\n\ndf %>% mutate(profit = revenue - cost)"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#filtering-data",
+    "href": "posts/Installation/installation.html#filtering-data",
+    "title": "Installation",
+    "section": "Filtering Data",
+    "text": "Filtering Data\n\n\n\nBase R\ndf[df$temperature > 45]\n\n\n\nTidyverse\n\ndf %>% filter(temperature > 45)"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#grouping-summarising-data",
+    "href": "posts/Installation/installation.html#grouping-summarising-data",
+    "title": "Installation",
+    "section": "Grouping & Summarising Data",
+    "text": "Grouping & Summarising Data\n\n\n\nBase R\nI’m not sure how to do this in BaseR… and that’s okay\n\n\n\nTidyverse\n\ndf %>% \n    group_by(city) %>% \n    summarise(Avg_House_Price = mean(house_price))"
+  },
+  {
+    "objectID": "posts/Installation/installation.html#sorting-data",
+    "href": "posts/Installation/installation.html#sorting-data",
+    "title": "Installation",
+    "section": "Sorting Data",
+    "text": "Sorting Data\n\n\n\nBase R\nmtcars[order(mpg, -cyl),]\n\n\n\nTidyverse\n\nmtcars %>% arrange(mpg, desc(cyl))\n\n\n\n\n\nCheck out this page for more comparisons.\nFiltering Data in Base R:\n\nhttps://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/\nhttps://cran.r-project.org/web/packages/crunch/vignettes/filters.html"
   }
 ]
