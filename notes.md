@@ -78,3 +78,13 @@ Lesson 6: Graphing 2/2
 
 mean(iris)
 
+
+
+
+
+
+Output messages like in lm()'s "using base 10 in log()" if no other given. 
+Have my prefered syntax of powers using {} syntax. 
+If indeterminant form, prompt the user, what would you like to do from here. 
+Can we get it to show work? Out put in latex?!?!
+

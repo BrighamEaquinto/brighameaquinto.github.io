@@ -4,7 +4,7 @@
     "href": "main.html",
     "title": "R Bootcamp",
     "section": "",
-    "text": "Lesson 1: Introduction to Data Science & Installation\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 2: Reading Data\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange)\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 5: Graphing 1/2\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 6: Graphing 2/2\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Lesson 1: Introduction to Data Science & Installation\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 2: Reading Data\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange)\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 5: Graphing 1/2\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 6: Graphing 2/2\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/weeks/Oct_5th.html",
@@ -81,7 +81,7 @@
     "href": "notes.html#ideas",
     "title": "DSS R BootCamp",
     "section": "Ideas",
-    "text": "Ideas\n\nHave a notes to instructors page or part of the repo\nhave a page just for the interface of RStudio\n\nhot keys\nshortcuts\nsuch and such\n\nhave a page for R/Python equivalents\nhave a page for other generally useful things\n\nsetting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows\n\nhow can I use the wiki tab on the github page? What is the proper usage of it?\n\nOthers: - commenting code - assignment operator vs equal sign - pipe operator %>% - filtering operators (==, %in%, |, &, !=) - c(vector) and list conversation\nUse this for advance select statements: https://dplyr.tidyverse.org/reference/select.html\nn_distinct(dat\\(region) count(dat\\)region) table(dat$region)\ndat <- read_csv(“https://covid.ourworldindata.org/data/owid-covid-data.csv”) # object_size(dat) view(dat)\ndat <- read_csv(“datasets/insurance.csv”)\nn_distinct(dat\\(region) count(dat\\)region) table(dat$region)\nR Scipts vs. RMDs The data science process (flow chart of start to finish and where most time is spent)\nLesson 1: Introduction - Installation - the RStudio interface - an introduction to Data Science. Give the full scope of data science. - what about sending the newbies to this page during future weeks? Put a video there? Lesson 2: Readr - reading in data from CSV - reading in data from URL - writing data to CSV Lesson 3: Wrangling Data - need another day on this Lesson 4: Grouping, Summarising, Arranging Lesson 5: Graphing 1/2 Lesson 6: Graphing 2/2\nmean(iris)"
+    "text": "Ideas\n\nHave a notes to instructors page or part of the repo\nhave a page just for the interface of RStudio\n\nhot keys\nshortcuts\nsuch and such\n\nhave a page for R/Python equivalents\nhave a page for other generally useful things\n\nsetting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows\n\nhow can I use the wiki tab on the github page? What is the proper usage of it?\n\nOthers: - commenting code - assignment operator vs equal sign - pipe operator %>% - filtering operators (==, %in%, |, &, !=) - c(vector) and list conversation\nUse this for advance select statements: https://dplyr.tidyverse.org/reference/select.html\nn_distinct(dat\\(region) count(dat\\)region) table(dat$region)\ndat <- read_csv(“https://covid.ourworldindata.org/data/owid-covid-data.csv”) # object_size(dat) view(dat)\ndat <- read_csv(“datasets/insurance.csv”)\nn_distinct(dat\\(region) count(dat\\)region) table(dat$region)\nR Scipts vs. RMDs The data science process (flow chart of start to finish and where most time is spent)\nLesson 1: Introduction - Installation - the RStudio interface - an introduction to Data Science. Give the full scope of data science. - what about sending the newbies to this page during future weeks? Put a video there? Lesson 2: Readr - reading in data from CSV - reading in data from URL - writing data to CSV Lesson 3: Wrangling Data - need another day on this Lesson 4: Grouping, Summarising, Arranging Lesson 5: Graphing 1/2 Lesson 6: Graphing 2/2\nmean(iris)\nOutput messages like in lm()’s “using base 10 in log()” if no other given. Have my prefered syntax of powers using {} syntax. If indeterminant form, prompt the user, what would you like to do from here. Can we get it to show work? Out put in latex?!?!"
   },
   {
     "objectID": "posts/Installation/installation.html#download-instructions",
@@ -704,14 +704,14 @@
     "href": "posts/lessons/lesson6_ggplot.html",
     "title": "Lesson 6: Graphing 2/2",
     "section": "",
-    "text": "Code\nlibrary(tidyverse)\n\ndat <- read_csv(\"C:/Users/Bethany/Downloads/brighameaquinto.github.io-1/datasets/insurance.csv\")"
+    "text": "library(tidyverse)\n\ndat <- read_csv(\"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv\")"
   },
   {
     "objectID": "posts/lessons/lesson6_ggplot.html#coloring",
     "href": "posts/lessons/lesson6_ggplot.html#coloring",
     "title": "Lesson 6: Graphing 2/2",
     "section": "Coloring",
-    "text": "Coloring\n\nthe color and fill arguments are accepted inside the aes()\ncolor is the boarder color\nfill is the fill color\nyou can set hard colors or set it to a column in your dataset\nR accepts color names in quotes and hex codes\nscale_fill_manual()\nscale_color_manual()"
+    "text": "Coloring\n\nthe color and fill arguments are accepted inside the aes(). What about outside?\ncolor is the boarder color\nfill is the fill color\nyou can set hard colors or set it to a column in your dataset\nR accepts color names in quotes and hex codes\nscale_fill_manual()\nscale_color_manual()"
   },
   {
     "objectID": "posts/lessons/lesson6_ggplot.html#labs",
@@ -724,22 +724,22 @@
     "objectID": "posts/lessons/lesson6_ggplot.html#faceting",
     "href": "posts/lessons/lesson6_ggplot.html#faceting",
     "title": "Lesson 6: Graphing 2/2",
-    "section": "Faceting:",
-    "text": "Faceting:\n\nfacet_wrap() & facet_grid()\nThis of faceting as a third variable. We can set the x and y axes to see information, add color to make it\nX Y: - color - faceting\n\nfacet_wrap() and facet_grid()\n\n\n\nCode\ncolor <- ggplot(dat, aes(x = region, fill = sex))+\n            geom_bar()+ \n            labs(title = \"Non-Faceted Graph\", x = \"\", y = \"Amount\", fill = \"Sex\")+\n            theme(\n                title = element_text(size = 20), \n                axis.title = element_text(size = 10), \n                legend.title = element_text(size = 10))\n\n\nfacet <- ggplot(dat, aes(x = region, fill = sex))+\n            geom_bar()+ \n            facet_wrap(~sex)+\n            labs(title = \"Faceted Graph\", x = \"\", y = \"Amount\", fill = \"Sex\")+\n            theme(\n                title = element_text(size = 20), \n                axis.title = element_text(size = 10), \n                legend.title = element_text(size = 10), \n                legend.position = \"none\")\n\n\n\n\nggpubr::ggarrange(color, facet, nrow = 2)"
+    "section": "Faceting",
+    "text": "Faceting\n\nfacet_wrap() & facet_grid()\nThis of faceting as a third variable.\n\nfacet_wrap() and facet_grid()\n\n\n\nCode\nggplot(dat, aes(x = region, fill = sex))+\n            geom_bar()+ \n            labs(title = \"Non-Faceted Graph\", x = \"\", y = \"Amount\", fill = \"Sex\")+\n            theme(\n                title = element_text(size = 20), \n                axis.title = element_text(size = 10), \n                legend.title = element_text(size = 10))"
   },
   {
     "objectID": "posts/lessons/lesson6_ggplot.html#themes",
     "href": "posts/lessons/lesson6_ggplot.html#themes",
     "title": "Lesson 6: Graphing 2/2",
     "section": "Themes",
-    "text": "Themes\nThe following theme options affect all the non-data aspects\n\ntheme_bw()\ntheme_linedraw()\ntheme_light()\ntheme_dark()\ntheme_minimal()\ntheme_classic()\ntheme_void()\ntheme_test()\n\nNext week we’ll get into colors, gg_text()/gg_label(), labs(), themes(), legend?, facet_wrap(), geom_boxplot() is often used with geom_jitter() to make powerful visualizations."
+    "text": "Themes\nThe following theme options affect all the non-data aspects\n\n+ theme_bw()\n+ theme_linedraw()\n+ theme_light()\n+ theme_dark()\n+ theme_minimal()\n+ theme_classic()\n+ theme_void()\n+ theme_test()"
   },
   {
     "objectID": "posts/lessons/lesson6_ggplot.html#labeling",
     "href": "posts/lessons/lesson6_ggplot.html#labeling",
     "title": "Lesson 6: Graphing 2/2",
     "section": "Labeling",
-    "text": "Labeling\n\nlabs()\nExplanation\nThe labs() function is used to add label to the plot like the x-axis, the y-axis, and title.\nExample\n\n\nCode\nggplot(dat, aes(x = region, fill = sex))+\n    geom_bar()+ \n    labs(title = \"Counts of Regions\", x = \"Regions\", y = \"Amount\", fill = \"Sex\")+ theme_bw()"
+    "text": "Labeling\n\nlabs()\nExplanation\nThe labs() function is used to add label to the plot like the x-axis, the y-axis, and title.\nOptions:\n\ntitle\nsubtitle\n\ncaption\nx\ny\n\nExample\n\n\nCode\nggplot(dat, aes(x = region, fill = sex))+\n    geom_bar()+ \n    labs(title = \"Counts of Regions\", x = \"Regions\", y = \"Amount\", fill = \"Sex\")+ \n    theme_bw()"
   },
   {
     "objectID": "posts/Installation/installation.html",
@@ -782,5 +782,26 @@
     "title": "Installation",
     "section": "Sorting Data",
     "text": "Sorting Data\n\n\n\nBase R\nmtcars[order(mpg, -cyl),]\n\n\n\nTidyverse\n\nmtcars %>% arrange(mpg, desc(cyl))\n\n\n\n\n\nCheck out this page for more comparisons.\nFiltering Data in Base R:\n\nhttps://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/\nhttps://cran.r-project.org/web/packages/crunch/vignettes/filters.html"
+  },
+  {
+    "objectID": "posts/lessons/lesson6_ggplot.html#aes-athestic",
+    "href": "posts/lessons/lesson6_ggplot.html#aes-athestic",
+    "title": "Lesson 6: Graphing 2/2",
+    "section": "aes() Athestic",
+    "text": "aes() Athestic\n\nshape\nsize\ncolor\nalpha\nlinetype\ngroup\n\n\n\nCode\nggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species, size = 10))+\n  geom_point(aes(shape = Species))+\n  geom_smooth(method='lm', aes(linetype = Species))\n\n\n\n\n\n\n\nCode\nggplot(iris, aes(Sepal.Width, Sepal.Length, size = 10, color = \"red\"))+\n  geom_point(aes(shape = Species))+\n  geom_smooth(method='lm', aes(linetype = Species))"
+  },
+  {
+    "objectID": "posts/lessons/lesson6_ggplot.html#multiple-geoms",
+    "href": "posts/lessons/lesson6_ggplot.html#multiple-geoms",
+    "title": "Lesson 6: Graphing 2/2",
+    "section": "Multiple Geoms",
+    "text": "Multiple Geoms"
+  },
+  {
+    "objectID": "posts/lessons/lesson6_ggplot.html#other",
+    "href": "posts/lessons/lesson6_ggplot.html#other",
+    "title": "Lesson 6: Graphing 2/2",
+    "section": "Other",
+    "text": "Other\n\ncolors\ngeom_text()/geoom_label()\n\nlabs()\nthemes()\n\nlegend\nfacet_wrap()\n\ngeom_boxplot() is often used with geom_jitter() to make powerful visualizations.\ngeom_bar() position argument\ngeom_jitter()\ngeom_text()\nscales:\n\nscale_x_continuous()\nscale_y_continuous()\nscale_colour_discrete()\n\nggsave(“my-plot.pdf”)\n\n\n\nCode\nbase <- ggplot(mpg, aes(displ, hwy)) +\n  geom_point(aes(colour = class))\n\nbase + theme(legend.position = \"left\")\n\n\n\n\n\nCode\nbase + theme(legend.position = \"top\")\n\n\n\n\n\nCode\nbase + theme(legend.position = \"bottom\")\n\n\n\n\n\nCode\nbase + theme(legend.position = \"right\") # the default"
   }
 ]

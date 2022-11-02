@@ -48,9 +48,12 @@ filter(values != 0)
 # now ask how they determine which courses go into stats and which go into each bin
 
 view(dat1)
+dat1 %>% 
+  count(Course) %>% arrange(desc(n)) %>% filter(n > 1) %>% view()
 
 ggplot(data = dat1, mapping = aes(Grade))+ 
-  geom_bar(aes(fill = key))
+  geom_bar(aes(fill = key))+
+  scale_y_continuous(expand = c(0,0))
 
 dat1 %>% 
   filter(!is.na(`Grade Points`)) %>% 
