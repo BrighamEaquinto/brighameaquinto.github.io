@@ -56,9 +56,7 @@ ggplot(dat, aes(x = region, fill = sex))+
 ### `facet_wrap()` & `facet_grid()`
 This of faceting as a third variable. 
 
-- `facet_wrap()` and `facet_grid()`
-
-
+- `facet_wrap()` 
 
 
 ```{r}
@@ -77,15 +75,13 @@ color <- ggplot(dat, aes(x = region, fill = sex))+
 facet <- ggplot(dat, aes(x = region, fill = sex))+
             geom_bar()+ 
             facet_wrap(~sex)+
+            # facet_wrap(rows = vars(sex))+
             labs(title = "Faceted Graph", x = "", y = "Amount", fill = "Sex")+
             theme(
                 title = element_text(size = 20), 
                 axis.title = element_text(size = 10), 
                 legend.title = element_text(size = 10), 
                 legend.position = "none")
-
-
-
 
 ggpubr::ggarrange(color, facet, nrow = 2)
 ```
@@ -96,11 +92,13 @@ ggpubr::ggarrange(color, facet, nrow = 2)
 #| eval: false
 ggplot(dat, aes(x = region, fill = sex))+
             geom_bar()+ 
-            labs(title = "Non-Faceted Graph", x = "", y = "Amount", fill = "Sex")+
+            facet_wrap(~sex)+
+            labs(title = "Faceted Graph", x = "", y = "Amount", fill = "Sex")+
             theme(
                 title = element_text(size = 20), 
                 axis.title = element_text(size = 10), 
-                legend.title = element_text(size = 10))
+                legend.title = element_text(size = 10), 
+                legend.position = "none")
 ```
 
 ## Themes 
@@ -116,6 +114,108 @@ The following theme options affect all the non-data aspects
 - `+ theme_void()`
 - `+ theme_test()`
 
+
+
+## Coloring
+
+#### Aesthetic
+
+It is possible to set colors dynamically based on column or to set it as a static color.   
+
+Setting colors dynamically and statically. 
+
+
+```{r}
+#| echo: false
+#| fig.height: 2
+
+tl <- ggplot(iris)+ 
+  geom_bar(aes(x = Petal.Length), fill = "orange")
+tl
+```
+```{r}
+#| echo: false
+#| fig.height: 2
+
+tr <- ggplot(iris)+ 
+  geom_bar(aes(x = Petal.Length, fill = Species))
+tr
+```
+
+
+:::{.callout-tip collapse="true"}
+## Further Reading
+
+
+#### Fill vs. Color
+
+`fill = 'orange'` 
+
+`color` left as default 
+```{r}
+#| fig.height: 2
+#| echo: false
+
+tl <- ggplot(iris)+ 
+  geom_bar(aes(x = Petal.Length), fill = "orange")+
+  scale_x_continuous(breaks = c(0:10))+
+  labs(x = "Petal Length", y = "Count")
+tl
+```
+
+<br> 
+
+`fill` left as default 
+
+`color = 'black'` 
+```{r}
+#| fig.height: 2
+#| echo: false
+
+tm <- ggplot(iris)+ 
+  geom_bar(aes(x = Petal.Length), color = "black")+
+  scale_x_continuous(breaks = c(0:10))+
+  labs(x = "Petal Length", y = "Count")
+tm
+```
+
+<br> 
+
+`fill = 'orange'` 
+
+`color = 'black'`  
+```{r}
+#| fig.height: 2
+#| echo: false
+
+bl <- ggplot(iris)+ 
+  geom_bar(aes(x = Petal.Length), fill = "orange", color = "black")+
+  scale_x_continuous(breaks = c(0:10))+
+  labs(x = "Petal Length", y = "Count")
+bl
+```
+
+<br> 
+
+You can do a combination of inside and outside. 
+
+`fill = 'orange'` inside aesthetic
+
+`color = Species` outside aesthetic. Notice this is a column in the dataset, not a static color. 
+```{r}
+#| echo: false
+#| fig.height: 2
+
+br <- ggplot(iris)+ 
+  geom_bar(aes(x = Petal.Length, fill = Species), color = "black")+
+  scale_x_continuous(breaks = c(0:10))+
+  labs(x = "Petal Length", y = "Count")
+br
+```
+
+
+
+:::
 
 <!-- ## Multiple Geoms
 

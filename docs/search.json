@@ -529,7 +529,7 @@
     "href": "posts/dax/dax.html",
     "title": "DAX Reference",
     "section": "",
-    "text": "MAX()\nSee CALENDAR() function reference, example 1.\n\n\nMIN()\nSee CALENDAR() function reference, example 1.\n\n\nSUBSTITUTE(text, oldtext, newtext)\n\nDescription: This is similar to regex and Power Query Editor’s “Replace Values”\nParameters:\n\ntext: The text to manipulate. Can be a column.\noldtext: The piece of text to replace.\nnewtext: The text we want to insert. This can just be two quotation marks to do a blank.\n\n\n\nExample 1\nRetail Price Clean = \nSUBSTITUTE(\n    Dim_StockItem[Recommended Retail Price], \n    \"? \", \n    \"\"\n    )"
+    "text": "CALENDAR(StartDate, EndDate)\n\nDescription: Returns a table with one column of all dates between StartDate and EndDate.\nParameters:\n\nStartDate: The start date in datetime format\nEndDate: The end date in datetime format\n\n\n\nExample 1\nDim_DeliveryDate = \nCALENDAR(\n    MIN(Fact_Sales[Delivery Date Key]), \n    MAX(Fact_Sales[Delivery Date Key])\n    )\n\n\nExample 2\n# Code for another example here\n\n\n\nMAX()\nSee CALENDAR() function reference, example 1.\n\n\nMIN()\nSee CALENDAR() function reference, example 1.\n\n\nSUBSTITUTE(text, oldtext, newtext)\n\nDescription: This is similar to regex and Power Query Editor’s “Replace Values”\nParameters:\n\ntext: The text to manipulate. Can be a column.\noldtext: The piece of text to replace.\nnewtext: The text we want to insert. This can just be two quotation marks to do a blank.\n\n\n\nExample 1\nRetail Price Clean = \nSUBSTITUTE(\n    Dim_StockItem[Recommended Retail Price], \n    \"? \", \n    \"\"\n    )"
   },
   {
     "objectID": "posts/lessons/delete.html",
@@ -711,7 +711,7 @@
     "href": "posts/lessons/lesson6_ggplot.html#coloring",
     "title": "Lesson 6: Graphing 2/2",
     "section": "Coloring",
-    "text": "Coloring\n\nthe color and fill arguments are accepted inside the aes(). What about outside?\ncolor is the boarder color\nfill is the fill color\nyou can set hard colors or set it to a column in your dataset\nR accepts color names in quotes and hex codes\nscale_fill_manual()\nscale_color_manual()"
+    "text": "Coloring\n\nAesthetic\nIt is possible to set colors dynamically based on column or to set it as a static color.\nSetting colors dynamically and statically.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFurther Reading\n\n\n\n\n\nFill vs. Color\nfill = 'orange'\ncolor left as default\n\n\n\n\n\n\nfill left as default\ncolor = 'black'\n\n\n\n\n\n\nfill = 'orange'\ncolor = 'black'\n\n\n\n\n\n\nYou can do a combination of inside and outside.\nfill = 'orange' inside aesthetic\ncolor = Species outside aesthetic. Notice this is a column in the dataset, not a static color."
   },
   {
     "objectID": "posts/lessons/lesson6_ggplot.html#labs",
@@ -725,7 +725,7 @@
     "href": "posts/lessons/lesson6_ggplot.html#faceting",
     "title": "Lesson 6: Graphing 2/2",
     "section": "Faceting",
-    "text": "Faceting\n\nfacet_wrap() & facet_grid()\nThis of faceting as a third variable.\n\nfacet_wrap() and facet_grid()\n\n\n\nCode\nggplot(dat, aes(x = region, fill = sex))+\n            geom_bar()+ \n            labs(title = \"Non-Faceted Graph\", x = \"\", y = \"Amount\", fill = \"Sex\")+\n            theme(\n                title = element_text(size = 20), \n                axis.title = element_text(size = 10), \n                legend.title = element_text(size = 10))"
+    "text": "Faceting\n\nfacet_wrap() & facet_grid()\nThis of faceting as a third variable.\n\nfacet_wrap()\n\n\n\n\n\n\n\n\nCode\nggplot(dat, aes(x = region, fill = sex))+\n            geom_bar()+ \n            facet_wrap(~sex)+\n            labs(title = \"Faceted Graph\", x = \"\", y = \"Amount\", fill = \"Sex\")+\n            theme(\n                title = element_text(size = 20), \n                axis.title = element_text(size = 10), \n                legend.title = element_text(size = 10), \n                legend.position = \"none\")"
   },
   {
     "objectID": "posts/lessons/lesson6_ggplot.html#themes",
