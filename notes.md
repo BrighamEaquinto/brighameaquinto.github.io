@@ -89,3 +89,18 @@ Have my prefered syntax of powers using {} syntax.
 If indeterminant form, prompt the user, what would you like to do from here. 
 Can we get it to show work? Out put in latex?!?!
 
+
+
+
+
+# shape: geom_point 
+# size: geom_point
+# fill: 
+# color: 
+# stroke: geom_line
+# linetype: geom_line 
+# alpha: inside and outside changes. Columns work as normal. 
+# group: 
+# position: 
+# width: 
+# Why isn't there a list of the options for each of these for each geom???

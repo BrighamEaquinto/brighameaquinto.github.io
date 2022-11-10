@@ -1,56 +1,59 @@
 ---
 title: "Lesson 2: Reading Data"
 toc: true
-image: "pictures/readr.jpg"
 ---
 
+## Looking At Datasets
 
-## First Practice
+Options to See Data:
 
-Read in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv 
+- `view()`
+- `head()`
 
+<br>
 
-From this dataset: 
+## Build-in Datasets
 
-1. select the Apartment, Gender, and Price columns
-
-2. filter the Gender column to female apartments and remove NAs `!is.na(Price)`
-
-3. find the average price of apartments
-
+Run this code to see a list of built in datasets: 
 ```{r}
 #| eval: false
-housing_data <- read_csv("https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv")
-head(housing_data)
-
-# Starter Code
-housing_data %>% 
-    select() %>% 
-    filter( , !is.na(Price)) %>% 
-    summarise(mean())
+data()
 ```
 
-
-
-## Second Practice
-
 The `iris` dataset is built into R. 
-
-
-1. Create a new column to tell if the Sepal.Length is bigger than or equal to 5
-
-2. Sort the data by Petal.Length
 
 ```{r}
 #| eval: false
 head(iris)
+```
+```{r}
+#| eval: false
+view(iris)
+```
+<br>
 
-# Starter Code
-iris %>%
-    mutate() %>% 
-    arrange()
+## Reading Data from URL
+
+Read in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv 
+
+```{r}
+#| eval: false
+housing_data <- read_csv("https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv")
+
+head(housing_data)
+
+```
+<br> 
+
+## Reading Data from Local CSV File
+
+```{r}
+
 ```
 
 
-## Third Practice 
 
+# Other Topics: 
+
+- directories
+- running code

@@ -1,5 +1,5 @@
 ---
-title: "Lesson 5: Graphing 1/2"
+title: "Lesson 5: Graphing Part 1"
 toc: true
 fig-align: center
 fig-width: 8

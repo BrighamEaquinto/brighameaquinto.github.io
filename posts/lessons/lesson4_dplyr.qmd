@@ -1,5 +1,5 @@
 ---
-title: "Lesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)"
+title: "Lesson 4: Wrangling Data: Last 3 Verbs"
 toc: true
 ---
 

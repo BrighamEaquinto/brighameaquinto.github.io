@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2001-02-01">
 
 <title>DSS R BootCamp - Lesson 2: Reading Data</title>
 <style>
@@ -174,20 +173,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="dropdown-text">Lesson 2: Reading Data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../posts/lessons/lesson4_dplyr.html">
- <span class="dropdown-text">Lesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange</span></a>
+    <a class="dropdown-item" href="../../posts/lessons/lesson3_dplyr.html">
+ <span class="dropdown-text">Lesson 3: Wangling Data: First Three Verbs</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../posts/lessons/lesson4_dplyr.html">
- <span class="dropdown-text">Lesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)</span></a>
+ <span class="dropdown-text">Lesson 4: Wrangling Data: Last Three Verbs</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../posts/lessons/lesson5_ggplot.html">
- <span class="dropdown-text">Lesson 5: Graphing 1/2</span></a>
+ <span class="dropdown-text">Lesson 5: Graphing: Part 1</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../posts/lessons/lesson6_ggplot.html">
- <span class="dropdown-text">Lesson 6: Graphing 2/2</span></a>
+ <span class="dropdown-text">Lesson 6: Graphing: Part 2</span></a>
   </li>  
     </ul>
   </li>
@@ -212,12 +211,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <div class="quarto-title-meta">
 
       
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">February 1, 2001</p>
-      </div>
-    </div>
     
       
     </div>
@@ -231,11 +224,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#first-practice" id="toc-first-practice" class="nav-link active" data-scroll-target="#first-practice">First Practice</a></li>
-  <li><a href="#second-practice" id="toc-second-practice" class="nav-link" data-scroll-target="#second-practice">Second Practice</a></li>
-  <li><a href="#third-practice" id="toc-third-practice" class="nav-link" data-scroll-target="#third-practice">Third Practice</a></li>
+  <li><a href="#looking-at-datasets" id="toc-looking-at-datasets" class="nav-link active" data-scroll-target="#looking-at-datasets">Looking At Datasets</a></li>
+  <li><a href="#build-in-datasets" id="toc-build-in-datasets" class="nav-link" data-scroll-target="#build-in-datasets">Build-in Datasets</a></li>
+  <li><a href="#reading-data-from-url" id="toc-reading-data-from-url" class="nav-link" data-scroll-target="#reading-data-from-url">Reading Data from URL</a></li>
+  <li><a href="#reading-data-from-local-csv-file" id="toc-reading-data-from-local-csv-file" class="nav-link" data-scroll-target="#reading-data-from-local-csv-file">Reading Data from Local CSV File</a></li>
+  <li><a href="#other-topics" id="toc-other-topics" class="nav-link" data-scroll-target="#other-topics">Other Topics:</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/edit/main/posts/lessons/lesson2_readr.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
@@ -243,44 +238,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<section id="first-practice" class="level2">
-<h2 class="anchored" data-anchor-id="first-practice">First Practice</h2>
-<p>Read in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv</p>
-<p>From this dataset:</p>
-<ol type="1">
-<li><p>select the Apartment, Gender, and Price columns</p></li>
-<li><p>filter the Gender column to female apartments and remove NAs <code>!is.na(Price)</code></p></li>
-<li><p>find the average price of apartments</p></li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>housing_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(housing_data)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Starter Code</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>housing_data <span class="sc">%&gt;%</span> </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>( , <span class="sc">!</span><span class="fu">is.na</span>(Price)) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="fu">mean</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="looking-at-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="looking-at-datasets">Looking At Datasets</h2>
+<p>Options to See Data:</p>
+<ul>
+<li><code>view()</code></li>
+<li><code>head()</code></li>
+</ul>
+<p><br></p>
 </section>
-<section id="second-practice" class="level2">
-<h2 class="anchored" data-anchor-id="second-practice">Second Practice</h2>
+<section id="build-in-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="build-in-datasets">Build-in Datasets</h2>
+<p>Run this code to see a list of built in datasets:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>The <code>iris</code> dataset is built into R.</p>
-<ol type="1">
-<li><p>Create a new column to tell if the Sepal.Length is bigger than or equal to 5</p></li>
-<li><p>Sort the data by Petal.Length</p></li>
-</ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iris)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Starter Code</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>iris <span class="sc">%&gt;%</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+</section>
+<section id="reading-data-from-url" class="level2">
+<h2 class="anchored" data-anchor-id="reading-data-from-url">Reading Data from URL</h2>
+<p>Read in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>housing_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(housing_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+</section>
+<section id="reading-data-from-local-csv-file" class="level2">
+<h2 class="anchored" data-anchor-id="reading-data-from-local-csv-file">Reading Data from Local CSV File</h2>
+<div class="cell">
+
 </div>
 </section>
-<section id="third-practice" class="level2">
-<h2 class="anchored" data-anchor-id="third-practice">Third Practice</h2>
+<section id="other-topics" class="level1">
+<h1>Other Topics:</h1>
+<ul>
+<li>directories</li>
+</ul>
 
 
 </section>

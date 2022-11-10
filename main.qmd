@@ -28,3 +28,6 @@ filter-ui: false
 page-layout: full
 title-block-banner: true
 ---
+
+![](website_thumbnail.png){ style="display: block; margin: 0 auto" }
+<br>

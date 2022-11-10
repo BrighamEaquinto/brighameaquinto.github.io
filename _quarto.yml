@@ -22,7 +22,7 @@ website:
   title: "DSS R BootCamp"
   favicon: website_thumbnail.png
   repo-url: https://github.com/BrighamEaquinto/brighameaquinto.github.io.git
-  repo-actions: [edit, issue]
+  # repo-actions: [edit, issue]
   page-navigation: true
 
   navbar:
@@ -49,13 +49,13 @@ website:
           href: "posts/Installation/installation.qmd"
         - text: "Lesson 2: Reading Data" 
           href: "posts/weeks/Oct_12th.qmd"
-        - text: "Lesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange"
+        - text: "Lesson 3: Wangling Data: First Three Verbs"
           href: "posts/lessons/lesson3_dplyr.qmd"
-        - text: "Lesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)"
+        - text: "Lesson 4: Wrangling Data: Last Three Verbs"
           href: "posts/lessons/lesson4_dplyr.qmd"
-        - text: "Lesson 5: Graphing 1/2"
+        - text: "Lesson 5: Graphing: Part 1"
           href: "posts/lessons/lesson5_ggplot.qmd"
-        - text: "Lesson 6: Graphing 2/2"
+        - text: "Lesson 6: Graphing: Part 2"
           href: "posts/lessons/lesson6_ggplot.qmd"
 
   # sidebar:  
