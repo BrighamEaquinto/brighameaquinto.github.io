@@ -26,12 +26,13 @@ Can't enter or color headers using Markdown, must use CSS instead:
 - how can I use the wiki tab on the github page? What is the proper usage of it?
 
 
-Others: 
+Others to sprinkle in lessons or have as a stand alone: 
 - commenting code 
 - assignment operator vs equal sign
 - pipe operator %>%
 - filtering operators (==, %in%, |, &, !=)
 - c(vector) and list conversation
+- syntax
 
 
 Use this for advance select statements: https://dplyr.tidyverse.org/reference/select.html

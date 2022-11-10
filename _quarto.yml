@@ -50,7 +50,7 @@ website:
         - text: "Lesson 2: Reading Data" 
           href: "posts/weeks/Oct_12th.qmd"
         - text: "Lesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange"
-          href: "posts/lessons/lesson4_dplyr.qmd"
+          href: "posts/lessons/lesson3_dplyr.qmd"
         - text: "Lesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)"
           href: "posts/lessons/lesson4_dplyr.qmd"
         - text: "Lesson 5: Graphing 1/2"

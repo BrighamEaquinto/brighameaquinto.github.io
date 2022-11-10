@@ -4,7 +4,7 @@
     "href": "main.html",
     "title": "R Bootcamp",
     "section": "",
-    "text": "Lesson 1: Introduction to Data Science & Installation\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 2: Reading Data\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 3: Wangling Data: First Four Verbs (Select, Filter, Mutate, Arrange)\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 5: Graphing 1/2\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 6: Graphing 2/2\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Lesson 1: Introduction to Data Science & Installation\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 2: Reading Data\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 3: Wangling Data: First Three Verbs\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 4: Wrangling Data: Last 2 Verbs (Grouping, Summarising, and Arranging)\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 5: Graphing 1/2\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 6: Graphing 2/2\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/weeks/Oct_5th.html",
@@ -711,7 +711,7 @@
     "href": "posts/lessons/lesson6_ggplot.html#coloring",
     "title": "Lesson 6: Graphing 2/2",
     "section": "Coloring",
-    "text": "Coloring\n\nAesthetic\nIt is possible to set colors dynamically based on column or to set it as a static color.\nSetting colors dynamically and statically.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFurther Reading\n\n\n\n\n\nFill vs. Color\nfill = 'orange'\ncolor left as default\n\n\n\n\n\n\nfill left as default\ncolor = 'black'\n\n\n\n\n\n\nfill = 'orange'\ncolor = 'black'\n\n\n\n\n\n\nYou can do a combination of inside and outside.\nfill = 'orange' inside aesthetic\ncolor = Species outside aesthetic. Notice this is a column in the dataset, not a static color."
+    "text": "Coloring\n\nAesthetic\nIt is possible to set colors dynamically based on column of data or to set it as a static color.\n\nfill and color inside aesthetic to a column of data\nfill and color outside aesthetic to a static color\n\nSetting colors dynamically and statically.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMore Examples for Better Understanding\n\n\n\n\n\n\n\n\nCase 1\ngeom_bar(aes(x = Petal.Length), fill = \"orange\")\n\nfill is set to ‘orange’ outside the aesthetic\ncolor is not used\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCase 2\ngeom_bar(aes(x = Petal.Length), color = \"black\")\n\nfill is not used\ncolor is set to ‘black’ outside the aesthetic\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCase 3\ngeom_bar(aes(x = Petal.Length), fill = \"orange\", color = \"black\")\n\nfill is set to ‘orange’ outside of the aesthetic\ncolor is set to ‘black’ outside of the aesthetic\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCase 4\nYou can do a combination of inside and outside of the aesthetic.\ngeom_bar(aes(x = Petal.Length, fill = Species), color = \"black\")\n\nfill is set to ‘orange’ inside of the aesthetic\ncolor is set to Species outside of the aesthetic. Notice this is a column in the dataset, not a static color."
   },
   {
     "objectID": "posts/lessons/lesson6_ggplot.html#labs",
@@ -803,5 +803,96 @@
     "title": "Lesson 6: Graphing 2/2",
     "section": "Other",
     "text": "Other\n\ncolors\ngeom_text()/geoom_label()\n\nlabs()\nthemes()\n\nlegend\nfacet_wrap()\n\ngeom_boxplot() is often used with geom_jitter() to make powerful visualizations.\ngeom_bar() position argument\ngeom_jitter()\ngeom_text()\nscales:\n\nscale_x_continuous()\nscale_y_continuous()\nscale_colour_discrete()\n\nggsave(“my-plot.pdf”)\n\n\n\nCode\nbase <- ggplot(mpg, aes(displ, hwy)) +\n  geom_point(aes(colour = class))\n\nbase + theme(legend.position = \"left\")\n\n\n\n\n\nCode\nbase + theme(legend.position = \"top\")\n\n\n\n\n\nCode\nbase + theme(legend.position = \"bottom\")\n\n\n\n\n\nCode\nbase + theme(legend.position = \"right\") # the default"
+  },
+  {
+    "objectID": "posts/lessons/lesson6_ggplot.html#labeling-1",
+    "href": "posts/lessons/lesson6_ggplot.html#labeling-1",
+    "title": "Lesson 6: Graphing 2/2",
+    "section": "Labeling",
+    "text": "Labeling\n\nlabs()\nExplanation\nThe labs() function is used to add label to the plot like the x-axis, the y-axis, and title.\nOptions:\n\ntitle\nsubtitle\n\ncaption\nx\ny\n\nExample\nquarto-executable-code-5450563D\nggplot(dat, aes(x = region, fill = sex))+\n    geom_bar()+ \n    labs(title = \"Counts of Regions\", x = \"Regions\", y = \"Amount\", fill = \"Sex\")+ \n    theme_bw()"
+  },
+  {
+    "objectID": "posts/lessons/lesson6_ggplot.html#faceting-1",
+    "href": "posts/lessons/lesson6_ggplot.html#faceting-1",
+    "title": "Lesson 6: Graphing 2/2",
+    "section": "Faceting",
+    "text": "Faceting\n\nfacet_wrap() & facet_grid()\nThis of faceting as a third variable.\n\nfacet_wrap()\n\nquarto-executable-code-5450563D\n#| echo: false\n#| fig.height: 5\n\ncolor <- ggplot(dat, aes(x = region, fill = sex))+\n            geom_bar()+ \n            labs(title = \"Non-Faceted Graph\", x = \"\", y = \"Amount\", fill = \"Sex\")+\n            theme(\n                title = element_text(size = 20), \n                axis.title = element_text(size = 10), \n                legend.title = element_text(size = 10))\n\n\nfacet <- ggplot(dat, aes(x = region, fill = sex))+\n            geom_bar()+ \n            facet_wrap(~sex)+\n            # facet_wrap(rows = vars(sex))+\n            labs(title = \"Faceted Graph\", x = \"\", y = \"Amount\", fill = \"Sex\")+\n            theme(\n                title = element_text(size = 20), \n                axis.title = element_text(size = 10), \n                legend.title = element_text(size = 10), \n                legend.position = \"none\")\n\nggpubr::ggarrange(color, facet, nrow = 2)\nquarto-executable-code-5450563D\n#| code-fold: true\n#| code-summary: \"Code\"\n#| eval: false\nggplot(dat, aes(x = region, fill = sex))+\n            geom_bar()+ \n            facet_wrap(~sex)+\n            labs(title = \"Faceted Graph\", x = \"\", y = \"Amount\", fill = \"Sex\")+\n            theme(\n                title = element_text(size = 20), \n                axis.title = element_text(size = 10), \n                legend.title = element_text(size = 10), \n                legend.position = \"none\")"
+  },
+  {
+    "objectID": "posts/lessons/lesson6_ggplot.html#themes-1",
+    "href": "posts/lessons/lesson6_ggplot.html#themes-1",
+    "title": "Lesson 6: Graphing 2/2",
+    "section": "Themes",
+    "text": "Themes\nThe following theme options affect all the non-data aspects\n\n+ theme_bw()\n+ theme_linedraw()\n+ theme_light()\n+ theme_dark()\n+ theme_minimal()\n+ theme_classic()\n+ theme_void()\n+ theme_test()"
+  },
+  {
+    "objectID": "posts/lessons/lesson6_ggplot.html#coloring-1",
+    "href": "posts/lessons/lesson6_ggplot.html#coloring-1",
+    "title": "Lesson 6: Graphing 2/2",
+    "section": "Coloring",
+    "text": "Coloring\n\nAesthetic\nIt is possible to set colors dynamically based on column or to set it as a static color.\nSetting colors dynamically and statically.\nquarto-executable-code-5450563D\n#| echo: false\n#| fig.height: 2\n\ntl <- ggplot(iris)+ \n  geom_bar(aes(x = Petal.Length), fill = \"orange\")\ntl\nquarto-executable-code-5450563D\n#| echo: false\n#| fig.height: 2\n\ntr <- ggplot(iris)+ \n  geom_bar(aes(x = Petal.Length, fill = Species))\ntr\n\n\n\n\n\n\nFurther Reading\n\n\n\n\n\n\n\n\nCase 1\nfill is set to ‘orange’ and color left as the default like this:\ngeom_bar(aes(x = Petal.Length), fill = \"orange\")\n\n\n\n\n\nquarto-executable-code-5450563D\n#| fig.height: 3\n#| echo: false\n\ntl <- ggplot(iris)+ \n  geom_bar(aes(x = Petal.Length), fill = \"orange\")+\n  scale_x_continuous(breaks = c(0:10))+\n  scale_y_continuous(breaks = c(0:10))+\n  labs(x = \"Petal Length\", y = \"Count\")\ntl\n\n\n\n\n\n\n\n\n\n\n\n\n\nfill left as default\ncolor = 'black' quarto-executable-code-5450563D\n#| fig.height: 3\n#| echo: false\n\ntm <- ggplot(iris)+ \n  geom_bar(aes(x = Petal.Length), color = \"black\")+\n  scale_x_continuous(breaks = c(0:10))+\n  labs(x = \"Petal Length\", y = \"Count\")\ntm\n\nfill = 'orange'\ncolor = 'black'\nquarto-executable-code-5450563D\n#| fig.height: 2\n#| echo: false\n\nbl <- ggplot(iris)+ \n  geom_bar(aes(x = Petal.Length), fill = \"orange\", color = \"black\")+\n  scale_x_continuous(breaks = c(0:10))+\n  labs(x = \"Petal Length\", y = \"Count\")\nbl\n\nYou can do a combination of inside and outside.\nfill = 'orange' inside aesthetic\ncolor = Species outside aesthetic. Notice this is a column in the dataset, not a static color. quarto-executable-code-5450563D\n#| echo: false\n#| fig.height: 2\n\nbr <- ggplot(iris)+ \n  geom_bar(aes(x = Petal.Length, fill = Species), color = \"black\")+\n  scale_x_continuous(breaks = c(0:10))+\n  labs(x = \"Petal Length\", y = \"Count\")\nbr\n\n\n\n\n\n```````````````````"
+  },
+  {
+    "objectID": "posts/lessons/lesson6_ggplot.html#scales",
+    "href": "posts/lessons/lesson6_ggplot.html#scales",
+    "title": "Lesson 6: Graphing 2/2",
+    "section": "Scales",
+    "text": "Scales\n\n\nCode\nscale_x_continuous(\n  breaks = seq(15, 40, by = 5), \n  labels = , \n  limits = \n  )\n\nscale_colour_brewer(palette = \"Set1\")\n\nscale_colour_manual(values = c(Republican = \"red\", Democratic = \"blue\"))"
+  },
+  {
+    "objectID": "posts/lessons/lesson3_dplyr.html",
+    "href": "posts/lessons/lesson3_dplyr.html",
+    "title": "Lesson 3: Wangling Data: First Three Verbs",
+    "section": "",
+    "text": "This lesson is focused on the first three wrangling verbs: select(), filter(), and mutate().\nThis will be our starting dataframe used in each of the examples below."
+  },
+  {
+    "objectID": "posts/lessons/lesson3_dplyr.html#filtering-rows",
+    "href": "posts/lessons/lesson3_dplyr.html#filtering-rows",
+    "title": "Lesson 3: Wangling Data: First Three Verbs",
+    "section": "Filtering Rows",
+    "text": "Filtering Rows\nSyntax: filter()\nFiltering is used in the scenarios like, “Only need students that are age 16 years old”, or “Only the the redwood trees in this forest that are taller than 30 ft”.\n\n\n\nScenario\nSay we want this dataframe to the right where the cars are made by ford (manufacturer column) and the amount of highway miles per gallon is greater than 20 (hwy column). filter() allows allows us to achieve this.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\nclass\n\n\n\n\nford\nmustang\n3.8\n1999\n6\nmanual(m5)\nr\n18\n26\nr\nsubcompact\n\n\nford\nmustang\n3.8\n1999\n6\nauto(l4)\nr\n18\n25\nr\nsubcompact\n\n\nford\nmustang\n4.0\n2008\n6\nmanual(m5)\nr\n17\n26\nr\nsubcompact\n\n\nford\nmustang\n4.0\n2008\n6\nauto(l5)\nr\n16\n24\nr\nsubcompact\n\n\nford\nmustang\n4.6\n1999\n8\nauto(l4)\nr\n15\n21\nr\nsubcompact\n\n\nford\nmustang\n4.6\n1999\n8\nmanual(m5)\nr\n15\n22\nr\nsubcompact\n\n\n\n\n\n\n\n\nCode Solution\n\nmpg %>%\n    filter(manufacturer == \"ford\", hwy > 20)\n\n\nfilter(iris, Sepal.Length != '5.1') %>% head() \nfilter(iris, Species != 'setosa', Sepal.Length != 7) %>% head() \n\nfilter(iris, Species != c('setosa', 'versicolor')) %>% head() \nfilter(iris, !Species %in% c('setosa', 'versicolor')) %>% head() \n\n\n\n\n\n\n\nOperators to use in Filter Statements\n\n\n\n\n\n\n\nBasic Operators:\n> greater than\n< less than\n== equals\n>= greater than or equal to\n<= less than or equal to\n\n\n\nAdvace Operators\n!= is not equal to\n%in% c() is in"
+  },
+  {
+    "objectID": "posts/lessons/lesson3_dplyr.html#making-new-columns",
+    "href": "posts/lessons/lesson3_dplyr.html#making-new-columns",
+    "title": "Lesson 3: Wangling Data: First Three Verbs",
+    "section": "Making New Columns",
+    "text": "Making New Columns\nSyntax: mutate()\nThink of the mutate() verb as starting with one column and change it to where you want it to become–mutating a column. You can make new columns not based on columns, based on one column, or based on multiple columns.\n\n\n\nScenario\nSay we want this dataframe to the right where there was an error in the data and the city miles per gallon needs 5 more miles than what it currently had (cty column) and we need the a column for the engine displacement (displ column) divided by the number of cylinders (cylcolumn). In reality this second task is not a useful but we’re doing it for practice sake.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\nclass\nnew_col\n\n\n\n\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n23\n29\np\ncompact\n0.4500000\n\n\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n26\n29\np\ncompact\n0.4500000\n\n\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n25\n31\np\ncompact\n0.5000000\n\n\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n26\n30\np\ncompact\n0.5000000\n\n\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n21\n26\np\ncompact\n0.4666667\n\n\naudi\na4\n2.8\n1999\n6\nmanual(m5)\nf\n23\n26\np\ncompact\n0.4666667\n\n\n\n\n\n\n\n\nCode Solution\n\nmpg %>%\n    mutate(cty = cty + 5, new_col = displ/cyl)"
+  },
+  {
+    "objectID": "posts/lessons/lesson3_dplyr.html#selecting-columns",
+    "href": "posts/lessons/lesson3_dplyr.html#selecting-columns",
+    "title": "Lesson 3: Wangling Data: First Three Verbs",
+    "section": "Selecting Columns",
+    "text": "Selecting Columns\nSyntax: select()\nThink of it as selecting check boxes for each column to use. Any selected, whether it’s just one column or whether they’re many columns, will be available once this select() code is completed.\n\n\n\nScenario\nSay we want this dataframe to the right where not all of the columns are needed, only the manufacturer, model, cty, and hwy columns. select() allows us to achieve this.\n\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ncty\nhwy\n\n\n\n\naudi\na4\n18\n29\n\n\naudi\na4\n21\n29\n\n\naudi\na4\n20\n31\n\n\naudi\na4\n21\n30\n\n\naudi\na4\n16\n26\n\n\n\n\n\n\n\n\nCode Solution\n\nmpg %>% \n    select(manufacturer, model, cty, hwy)"
+  },
+  {
+    "objectID": "posts/lessons/lesson3_dplyr.html#explanation",
+    "href": "posts/lessons/lesson3_dplyr.html#explanation",
+    "title": "Lesson 3: Wangling Data: First Four Verbs (Select Columns, Filtering Rows, Making New Columns)",
+    "section": "Explanation",
+    "text": "Explanation\nThis is for grabbing the columns you find important to use further in your analysis.\nSay we start with this dataframe to the right but not all of the columns are needed. select() allows grabbing specific columns rather than having all of them."
+  },
+  {
+    "objectID": "posts/lessons/lesson3_dplyr.html#title",
+    "href": "posts/lessons/lesson3_dplyr.html#title",
+    "title": "Lesson 3: Wangling Data: First Four Verbs (Select Columns, Filtering Rows, Making New Columns)",
+    "section": "Title",
+    "text": "Title\nWe want to get to this"
+  },
+  {
+    "objectID": "posts/lessons/lesson3_dplyr.html#select-practice-examples",
+    "href": "posts/lessons/lesson3_dplyr.html#select-practice-examples",
+    "title": "Lesson 3: Wangling Data: First Four Verbs (Select Columns, Filtering Rows, Making New Columns)",
+    "section": "Select Practice Examples",
+    "text": "Select Practice Examples"
+  },
+  {
+    "objectID": "posts/lessons/lesson3_dplyr.html#practice-exercises",
+    "href": "posts/lessons/lesson3_dplyr.html#practice-exercises",
+    "title": "Lesson 3: Wangling Data: First Three Verbs",
+    "section": "Practice Exercises",
+    "text": "Practice Exercises"
   }
 ]

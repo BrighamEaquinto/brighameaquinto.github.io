@@ -120,7 +120,11 @@ The following theme options affect all the non-data aspects
 
 #### Aesthetic
 
-It is possible to set colors dynamically based on column or to set it as a static color.   
+It is possible to set colors **dynamically** based on column of data or to set it as a **static** color.   
+
+- `fill` and `color` inside aesthetic to a column of data
+- `fill` and `color` outside aesthetic to a static color
+
 
 Setting colors dynamically and statically. 
 
@@ -144,48 +148,80 @@ tr
 
 
 :::{.callout-tip collapse="true"}
-## Further Reading
+## More Examples for Better Understanding
 
+::: columns
+::: {.column width="35%"}
+#### Case 1
 
-#### Fill vs. Color
+`geom_bar(aes(x = Petal.Length), fill = "orange")`
 
-`fill = 'orange'` 
+- `fill` is set to 'orange' _outside_ the aesthetic 
+- `color` is not used
 
-`color` left as default 
+:::
+::: {.column width="3%"}
+:::
+::: {.column width="62%"}
+<br>
+
 ```{r}
-#| fig.height: 2
+#| fig.height: 3
 #| echo: false
 
 tl <- ggplot(iris)+ 
   geom_bar(aes(x = Petal.Length), fill = "orange")+
-  scale_x_continuous(breaks = c(0:10))+
+  scale_x_continuous(breaks = c(0:20))+
+  scale_y_continuous(breaks = c(0:20))+
   labs(x = "Petal Length", y = "Count")
 tl
 ```
+:::
+:::
 
-<br> 
+----
 
-`fill` left as default 
+::: columns
+::: {.column width="35%"}
+#### Case 2 
 
-`color = 'black'` 
+`geom_bar(aes(x = Petal.Length), color = "black")`
+
+- `fill` is not used
+- `color` is set to 'black' _outside_ the aesthetic
+:::
+::: {.column width="3%"}
+:::
+::: {.column width="62%"}
 ```{r}
-#| fig.height: 2
+#| fig.height: 3
 #| echo: false
-
 tm <- ggplot(iris)+ 
   geom_bar(aes(x = Petal.Length), color = "black")+
-  scale_x_continuous(breaks = c(0:10))+
+  scale_x_continuous(breaks = c(0:20))+
+  scale_y_continuous(n.breaks = 10)+
   labs(x = "Petal Length", y = "Count")
 tm
 ```
+:::
+:::
 
-<br> 
+----
 
-`fill = 'orange'` 
+::: columns
+::: {.column width="35%"}
+#### Case 3
 
-`color = 'black'`  
+`geom_bar(aes(x = Petal.Length), fill = "orange", color = "black")`
+
+- `fill` is set to 'orange' outside of the aesthetic
+- `color` is set to 'black' outside of the aesthetic
+:::
+::: {.column width="3%"}
+:::
+::: {.column width="62%"}
 ```{r}
-#| fig.height: 2
+#| fig.height: 3
 #| echo: false
 
 bl <- ggplot(iris)+ 
@@ -194,17 +230,28 @@ bl <- ggplot(iris)+
   labs(x = "Petal Length", y = "Count")
 bl
 ```
+:::
+:::
 
-<br> 
+----
 
-You can do a combination of inside and outside. 
+::: columns
+::: {.column width="35%"}
+#### Case 4
 
-`fill = 'orange'` inside aesthetic
+You can do a combination of inside and outside of the aesthetic. 
 
-`color = Species` outside aesthetic. Notice this is a column in the dataset, not a static color. 
+`geom_bar(aes(x = Petal.Length, fill = Species), color = "black")`
+
+- `fill` is set to 'orange' _inside_ of the aesthetic
+- `color` is set to `Species` _outside_ of the aesthetic. Notice this is a column in the dataset, not a static color. 
+:::
+::: {.column width="3%"}
+:::
+::: {.column width="62%"}
 ```{r}
 #| echo: false
-#| fig.height: 2
+#| fig.height: 3
 
 br <- ggplot(iris)+ 
   geom_bar(aes(x = Petal.Length, fill = Species), color = "black")+
@@ -212,10 +259,42 @@ br <- ggplot(iris)+
   labs(x = "Petal Length", y = "Count")
 br
 ```
-
-
-
 :::
+:::
+:::
+
+
+
+## Scales 
+
+```{r}
+#| eval: false
+
+ggplot(iris, aes(Petal.Width, Petal.Length, color = Species))+
+  geom_point()+
+  scale_x_continuous(breaks = seq(0, 4, 1))+
+  scale_y_continuous(breaks = seq(0,10,1))
+
+ggplot(mpg, aes(class, fill = class))+
+  geom_bar()+
+  # scale_x_discrete(limits = c("2seater"))
+  scale_fill_manual(values = c("blue", "blue", "blue", "blue", "blue", "blue", "red"))
+
+# scale_x_continuous(
+#   breaks = seq(15, 40, by = 5), 
+#   labels = , 
+#   limits = 
+#   )
+
+# scale_colour_brewer(palette = "Set1")
+
+# scale_colour_manual(values = c(Republican = "red", Democratic = "blue"))
+
+
+```
+
+
+
 
 <!-- ## Multiple Geoms
 
@@ -253,16 +332,7 @@ base + theme(legend.position = "right") # the default
 
 
 
-
-
-
-
-
-
-
 <br><br>
-
-
 
 
 ## aes() Athestic
@@ -273,6 +343,12 @@ base + theme(legend.position = "right") # the default
 - alpha
 - linetype 
 - group
+
+
+shape, fill, color, size, stroke, linetype, alpha, group
+
+
+
 
 ```{r}
 ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species, size = 10))+
