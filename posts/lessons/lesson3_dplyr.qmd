@@ -315,11 +315,13 @@ dat %>%
 
 ### Question 5 
 
-Make a new column called `bmi_modified` that is the of the bmi -12
+Make a new column called `bmi_modified` that is the of the bmi - 12
 
 ```{r}
+#| echo: false
+
 dat %>% 
-    mutate(bmi_modified = bmi - 12)%>%
+    mutate(bmi_modified = bmi - 12) %>%
     head() %>%  
     knitr::kable()
 ```
@@ -329,9 +331,52 @@ dat %>%
 #| eval: false
 
 dat %>% 
-    mutate(bmi_modified = bmi - 12)%>%
-    head()
+    mutate(bmi_modified = bmi - 12) 
 ```
 
 ### Question 6
 
+Make a new column called `age_modified` that is the current age divided by 2
+
+```{r}
+#| echo: false
+
+dat %>% 
+    mutate(age_modified = age/2) %>%
+    head() %>%  
+    knitr::kable()
+```
+
+```{r}
+#| code-summary: "Code Solution"
+#| code-fold: true
+#| eval: false
+
+dat %>% 
+    mutate(age_modified = age/2) 
+```
+
+## Question 7: Combining It Together
+
+
+```{r}
+#| echo: false
+
+dat %>% 
+    select(age, sex, charges) %>% 
+    filter(age > 50, sex == "female") %>% 
+    mutate(real_charges = charges * 4) %>%
+    head() %>%  
+    knitr::kable()
+```
+
+```{r}
+#| code-summary: "Code Solution"
+#| code-fold: true
+#| eval: false
+
+dat %>% 
+    select(age, sex, charges) %>% 
+    filter(age > 50, sex == "female") %>% 
+    mutate(real_charges = charges * 4)
+```
