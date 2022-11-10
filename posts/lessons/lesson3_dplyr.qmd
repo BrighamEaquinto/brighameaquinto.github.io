@@ -358,6 +358,9 @@ dat %>%
 
 ## Question 7: Combining It Together
 
+- only use the age, sex, and charges columns
+- make sure the age column is less than 50 and there are only females
+- make a new column called **real_charges** which is the charges times 4
 
 ```{r}
 #| echo: false

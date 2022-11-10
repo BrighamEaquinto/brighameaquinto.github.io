@@ -900,6 +900,6 @@
     "href": "posts/lessons/lesson3_dplyr.html#question-7-combining-it-together",
     "title": "Lesson 3: Wangling Data: First Three Verbs",
     "section": "Question 7: Combining It Together",
-    "text": "Question 7: Combining It Together\n\n\n\n\n\nage\nsex\ncharges\nreal_charges\n\n\n\n\n60\nfemale\n28923.14\n115692.55\n\n\n62\nfemale\n27808.73\n111234.90\n\n\n56\nfemale\n11090.72\n44362.87\n\n\n52\nfemale\n10797.34\n43189.34\n\n\n60\nfemale\n13228.85\n52915.39\n\n\n59\nfemale\n14001.13\n56004.54\n\n\n\n\n\n\n\nCode Solution\ndat %>% \n    select(age, sex, charges) %>% \n    filter(age > 50, sex == \"female\") %>% \n    mutate(real_charges = charges * 4)"
+    "text": "Question 7: Combining It Together\n\nonly use the age, sex, and charges columns\nmake sure the age column is less than 50 and there are only females\nmake a new column called real_charges which is the charges times 4\n\n\n\n\n\n\nage\nsex\ncharges\nreal_charges\n\n\n\n\n60\nfemale\n28923.14\n115692.55\n\n\n62\nfemale\n27808.73\n111234.90\n\n\n56\nfemale\n11090.72\n44362.87\n\n\n52\nfemale\n10797.34\n43189.34\n\n\n60\nfemale\n13228.85\n52915.39\n\n\n59\nfemale\n14001.13\n56004.54\n\n\n\n\n\n\n\nCode Solution\ndat %>% \n    select(age, sex, charges) %>% \n    filter(age > 50, sex == \"female\") %>% \n    mutate(real_charges = charges * 4)"
   }
 ]
