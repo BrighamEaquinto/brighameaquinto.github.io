@@ -126,16 +126,9 @@ knitr::kable(data)
 ### Code Solution
 ```{r}
 #| eval: false
+
 mpg %>%
     filter(manufacturer == "ford", hwy > 20)
-
-
-filter(iris, Sepal.Length != '5.1') %>% head() 
-filter(iris, Species != 'setosa', Sepal.Length != 7) %>% head() 
-
-filter(iris, Species != c('setosa', 'versicolor')) %>% head() 
-filter(iris, !Species %in% c('setosa', 'versicolor')) %>% head() 
-
 ```
 
 :::{.callout-tip collapse="true"}
@@ -204,6 +197,141 @@ mpg %>%
     mutate(cty = cty + 5, new_col = displ/cyl)
 ```
 
+<br> 
 
 ## Practice Exercises
+
+New dataset in use for the practices exercises:
+
+```{r}
+#| message: false
+#| warning: false
+#| echo: true
+
+library(tidyverse)
+dat <- read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv")
+```
+
+
+### Question 1
+
+Select the age, sex, and bmi columns
+
+```{r}
+#| echo: false
+
+dat %>% 
+    select(age, sex, bmi) %>%
+    head() %>%  
+    knitr::kable()
+```
+
+
+```{r}
+#| code-summary: "Code Solution"
+#| code-fold: true
+#| eval: false
+
+dat %>% 
+    select(age, sex, bmi)
+```
+
+
+### Question 2
+
+Select the charges, region, and age columns
+
+```{r}
+#| echo: false
+
+dat %>% 
+    select(charges, region, age) %>%
+    head() %>%  
+    knitr::kable()
+```
+
+
+```{r}
+#| code-summary: "Code Solution"
+#| code-fold: true
+#| eval: false
+
+dat %>% 
+    select(charges, region, age)
+```
+
+
+### Question 3 
+
+Filter the data like this: 
+
+- `sex` is only male
+- `region` is only northeast
+
+
+```{r}
+#| echo: false
+
+dat %>% 
+    filter(sex == "male", region == "northeast") %>%
+    head() %>%  
+    knitr::kable()
+```
+
+```{r}
+#| code-summary: "Code Solution"
+#| code-fold: true
+#| eval: false
+
+dat %>% 
+    filter(sex == "male", region == "northeast")
+```
+
+
+### Question 4 
+
+Filter the data like this: 
+
+- `age` is younger than or equal to 40
+- `bmi` is greater than 21
+
+
+```{r}
+#| echo: false
+
+dat %>% 
+    filter(age <= 40, bmi > 21) %>%
+    head() %>%  
+    knitr::kable()
+```
+```{r}
+#| code-summary: "Code Solution"
+#| code-fold: true
+#| eval: false
+
+dat %>% 
+    filter(age <= 40, bmi > 21)
+```
+
+### Question 5 
+
+Make a new column called `bmi_modified` that is the of the bmi -12
+
+```{r}
+dat %>% 
+    mutate(bmi_modified = bmi - 12)%>%
+    head() %>%  
+    knitr::kable()
+```
+```{r}
+#| code-summary: "Code Solution"
+#| code-fold: true
+#| eval: false
+
+dat %>% 
+    mutate(bmi_modified = bmi - 12)%>%
+    head()
+```
+
+### Question 6
 

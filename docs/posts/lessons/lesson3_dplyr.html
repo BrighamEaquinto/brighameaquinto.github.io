@@ -236,7 +236,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul class="collapse">
   <li><a href="#code-solution-2" id="toc-code-solution-2" class="nav-link" data-scroll-target="#code-solution-2">Code Solution</a></li>
   </ul></li>
-  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises">Practice Exercises</a></li>
+  <li><a href="#practice-exercises" id="toc-practice-exercises" class="nav-link" data-scroll-target="#practice-exercises">Practice Exercises</a>
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
+  <li><a href="#question-4-1" id="toc-question-4-1" class="nav-link" data-scroll-target="#question-4-1">Question 4</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/edit/main/posts/lessons/lesson3_dplyr.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/BrighamEaquinto/brighameaquinto.github.io.git/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -597,14 +604,7 @@ Explanation
 <h3 class="anchored" data-anchor-id="code-solution-1">Code Solution</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>mpg <span class="sc">%&gt;%</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>    <span class="fu">filter</span>(manufacturer <span class="sc">==</span> <span class="st">"ford"</span>, hwy <span class="sc">&gt;</span> <span class="dv">20</span>)</span>
-<span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="fu">filter</span>(iris, Sepal.Length <span class="sc">!=</span> <span class="st">'5.1'</span>) <span class="sc">%&gt;%</span> <span class="fu">head</span>() </span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="fu">filter</span>(iris, Species <span class="sc">!=</span> <span class="st">'setosa'</span>, Sepal.Length <span class="sc">!=</span> <span class="dv">7</span>) <span class="sc">%&gt;%</span> <span class="fu">head</span>() </span>
-<span id="cb2-7"><a href="#cb2-7"></a></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="fu">filter</span>(iris, Species <span class="sc">!=</span> <span class="fu">c</span>(<span class="st">'setosa'</span>, <span class="st">'versicolor'</span>)) <span class="sc">%&gt;%</span> <span class="fu">head</span>() </span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="fu">filter</span>(iris, <span class="sc">!</span>Species <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'setosa'</span>, <span class="st">'versicolor'</span>)) <span class="sc">%&gt;%</span> <span class="fu">head</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2"></a>    <span class="fu">filter</span>(manufacturer <span class="sc">==</span> <span class="st">"ford"</span>, hwy <span class="sc">&gt;</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -648,7 +648,7 @@ Operators to use in Filter Statements
 <div class="column" style="width:35%;">
 <section id="scenario-2" class="level3">
 <h3 class="anchored" data-anchor-id="scenario-2">Scenario</h3>
-<p>Say we want this dataframe to the right where there was an error in the data and <strong>the city miles per gallon needs 5 more miles than what it currently had</strong> (<code>cty</code> column) and <strong>we need the a column for the engine displacement</strong> (<code>displ</code> column) <strong>divided by the number of cylinders</strong> (<code>cyl</code>column). In reality this second task is not a useful but we’re doing it for practice sake.</p>
+<p>Say we want this dataframe to the right (make sure to scroll to see the other columns) where there was an error in the data and <strong>the city miles per gallon needs 5 more miles than what it currently had</strong> (<code>cty</code> column) and <strong>we need the a column for the engine displacement</strong> (<code>displ</code> column) <strong>divided by the number of cylinders</strong> (<code>cyl</code>column). In reality this second task is not a useful but we’re doing it for practice sake.</p>
 </section>
 </div><div class="column" style="width:3%;">
 
@@ -783,12 +783,313 @@ Operators to use in Filter Statements
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>mpg <span class="sc">%&gt;%</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a>    <span class="fu">mutate</span>(<span class="at">cty =</span> cty <span class="sc">+</span> <span class="dv">5</span>, <span class="at">new_col =</span> displ<span class="sc">/</span>cyl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p><br></p>
 </section>
 </section>
 <section id="practice-exercises" class="level2">
 <h2 class="anchored" data-anchor-id="practice-exercises">Practice Exercises</h2>
+<p>New dataset in use for the practices exercises:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb4-2"><a href="#cb4-2"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="question-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
+<p>Select the age, sex, and bmi columns</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: right;">age</th>
+<th style="text-align: left;">sex</th>
+<th style="text-align: right;">bmi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">19</td>
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">27.900</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">18</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">33.770</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">28</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">33.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">33</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">22.705</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">32</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">28.880</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">31</td>
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">25.740</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>dat <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2"></a>    <span class="fu">select</span>(age, sex, bmi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="question-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
+<p>Select the charges, region, and age columns</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: right;">charges</th>
+<th style="text-align: left;">region</th>
+<th style="text-align: right;">age</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">16884.924</td>
+<td style="text-align: left;">southwest</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1725.552</td>
+<td style="text-align: left;">southeast</td>
+<td style="text-align: right;">18</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4449.462</td>
+<td style="text-align: left;">southeast</td>
+<td style="text-align: right;">28</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">21984.471</td>
+<td style="text-align: left;">northwest</td>
+<td style="text-align: right;">33</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3866.855</td>
+<td style="text-align: left;">northwest</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3756.622</td>
+<td style="text-align: left;">southeast</td>
+<td style="text-align: right;">31</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>dat <span class="sc">%&gt;%</span> </span>
+<span id="cb6-2"><a href="#cb6-2"></a>    <span class="fu">select</span>(charges, region, age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="question-3" class="level3">
+<h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
+<p>Filter the data like this:</p>
+<ul>
+<li><code>sex</code> is only male</li>
+<li><code>region</code> is only northeast</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: right;">age</th>
+<th style="text-align: left;">sex</th>
+<th style="text-align: right;">bmi</th>
+<th style="text-align: right;">children</th>
+<th style="text-align: left;">smoker</th>
+<th style="text-align: left;">region</th>
+<th style="text-align: right;">charges</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">37</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">29.830</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">northeast</td>
+<td style="text-align: right;">6406.411</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">25</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">26.220</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">northeast</td>
+<td style="text-align: right;">2721.321</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">23</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">23.845</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">northeast</td>
+<td style="text-align: right;">2395.172</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">35</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">36.670</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">northeast</td>
+<td style="text-align: right;">39774.276</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">38</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">37.050</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">northeast</td>
+<td style="text-align: right;">6079.672</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">43</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">27.360</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">northeast</td>
+<td style="text-align: right;">8606.217</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>dat <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2"></a>    <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="st">"male"</span>, region <span class="sc">==</span> <span class="st">"northeast"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="question-4" class="level3">
+<h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
+<p>Filter the data like this:</p>
+<ul>
+<li><code>age</code> is younger than or equal to 40</li>
+<li><code>bmi</code> is greater than 21</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>dat <span class="sc">%&gt;%</span> </span>
+<span id="cb8-2"><a href="#cb8-2"></a>    <span class="fu">filter</span>(age <span class="sc">&lt;=</span> <span class="dv">40</span>, bmi <span class="sc">&gt;</span> <span class="dv">21</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>    <span class="fu">head</span>() <span class="sc">%&gt;%</span>  </span>
+<span id="cb8-4"><a href="#cb8-4"></a>    knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: right;">age</th>
+<th style="text-align: left;">sex</th>
+<th style="text-align: right;">bmi</th>
+<th style="text-align: right;">children</th>
+<th style="text-align: left;">smoker</th>
+<th style="text-align: left;">region</th>
+<th style="text-align: right;">charges</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">19</td>
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">27.900</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">yes</td>
+<td style="text-align: left;">southwest</td>
+<td style="text-align: right;">16884.924</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">18</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">33.770</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">southeast</td>
+<td style="text-align: right;">1725.552</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">28</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">33.000</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">southeast</td>
+<td style="text-align: right;">4449.462</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">33</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">22.705</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">northwest</td>
+<td style="text-align: right;">21984.471</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">32</td>
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">28.880</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">northwest</td>
+<td style="text-align: right;">3866.855</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">31</td>
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">25.740</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">no</td>
+<td style="text-align: left;">southeast</td>
+<td style="text-align: right;">3756.622</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>dat <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a>    <span class="fu">filter</span>(age <span class="sc">&lt;=</span> <span class="dv">40</span>, bmi <span class="sc">&gt;</span> <span class="dv">21</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="question-4-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-4-1">Question 4</h3>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
