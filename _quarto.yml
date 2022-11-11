@@ -28,7 +28,7 @@ website:
 
   navbar:
     background: primary
-    # logo: website_thumbnail.jpg
+    logo: pictures\website_thumbnail.png
     pinned: true
     title: false
     # collapse: false
@@ -37,27 +37,27 @@ website:
       - text: "DSS Bootcamp"
         href: main.qmd
       - text: "Installation"
-        href: "lessons/lesson1_intro.qmd"
+        href: lessons/lesson1_intro.qmd
       - text: "Reading Data"
-        href: "lessons/lesson2_readr.qmd"
+        href: lessons\lesson2_readr.qmd
       - text: "Wrangling Data"
         menu: 
         - text: "Lesson 3"
-          href: "lessons/lesson3_dplyr.qmd"
+          href: lessons\lesson3_dplyr.qmd
         - text: "Lesson 4"
-          href: "lessons/lesson4_dplyr.qmd"
+          href: lessons\lesson4_dplyr.qmd
       - text: "Visualizing Data"
         menu: 
           - text: "Lesson 5"
-            href: "lessons/lesson5_ggplot.qmd"
+            href: lessons\lesson5_ggplot.qmd
           - text: "Lesson 6"
-            href: "lessons/lesson6_ggplot.qmd"
+            href: lessons\lesson6_ggplot.qmd
       - text: "Other"
         menu: 
         - text: "Dax" 
-          href: "other/dax/dax.qmd"
+          href: other\dax\dax.qmd
         - text: "Welcome"
-          href: "other/welcome/welcome.qmd"
+          href: other\welcome\welcome.qmd
 
 
 
