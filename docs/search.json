@@ -89,5 +89,89 @@
     "title": "Wrangling Data",
     "section": "",
     "text": "Base R is the native tools that R has to deal with data. The syntax is outdated and better tools are available to use.\nThe syntax to work in Base R is very similar to native python syntax. The biggest downside is that it’s not possible to chain operations together like selecting columns and filtering data. You would to constantly assign and reassign variables which results in very messy and unreadable code.\nIf you use this, I will turn in my grave. Please don’t make your life more difficult, use the Tidyverse.\nBase R is native to R; no additional installations are required.\n\n\n\n\nThe Tidyverse allows chainable actions like this:\n\nnew_dataset <- dataset %>% \n    select() %>%\n    filter() %>% \n    mutate() %>% \n    group_by() %>% \n    summarise() %>%\n    arrange()\n\nRun this code in the console to download the tidyverse\n\ninstall.packages(\"tidyverse\")\n\nIn order to be able to use this package, put this code at the top of your R Script or RMD file\n\nlibrary(tidyverse)\n\n\n\n\n\n\n\n\n\n\n\ndf$column_name\ndf[[]]\n\n\n\n\n\ndf %>% select(column1, column2)\n\n\n\n\n\n\n\n\n\n\n\ndf$profit <- df$revenue - df$cost\n\n\n\n\n\ndf %>% mutate(profit = revenue - cost)\n\n\n\n\n\n\n\n\n\n\n\n\ndf[df$temperature > 45]\n\n\n\n\n\ndf %>% filter(temperature > 45)\n\n\n\n\n\n\n\n\n\n\n\nI’m not sure how to do this in BaseR… and that’s okay\n\n\n\n\n\ndf %>% \n    group_by(city) %>% \n    summarise(Avg_House_Price = mean(house_price))\n\n\n\n\n\n\n\n\n\n\n\nmtcars[order(mpg, -cyl),]\n\n\n\n\n\nmtcars %>% arrange(mpg, desc(cyl))\n\n\n\n\n\nCheck out this page for more comparisons.\nFiltering Data in Base R:\n\nhttps://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/\nhttps://cran.r-project.org/web/packages/crunch/vignettes/filters.html"
+  },
+  {
+    "objectID": "lessons/lesson2_readr.html",
+    "href": "lessons/lesson2_readr.html",
+    "title": "Lesson 2: Reading Data",
+    "section": "",
+    "text": "Options to See Data:\n\nview()\nhead()"
+  },
+  {
+    "objectID": "lessons/lesson2_readr.html#build-in-datasets",
+    "href": "lessons/lesson2_readr.html#build-in-datasets",
+    "title": "Lesson 2: Reading Data",
+    "section": "Build-in Datasets",
+    "text": "Build-in Datasets\nRun this code to see a list of built in datasets:\n\ndata()\n\nThe iris dataset is built into R.\n\nhead(iris)\n\n\nview(iris)"
+  },
+  {
+    "objectID": "lessons/lesson2_readr.html#reading-data-from-url",
+    "href": "lessons/lesson2_readr.html#reading-data-from-url",
+    "title": "Lesson 2: Reading Data",
+    "section": "Reading Data from URL",
+    "text": "Reading Data from URL\nRead in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\n\nhousing_data <- read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\")\n\nhead(housing_data)"
+  },
+  {
+    "objectID": "lessons/lesson2_readr.html#reading-data-from-local-csv-file",
+    "href": "lessons/lesson2_readr.html#reading-data-from-local-csv-file",
+    "title": "Lesson 2: Reading Data",
+    "section": "Reading Data from Local CSV File",
+    "text": "Reading Data from Local CSV File"
+  },
+  {
+    "objectID": "lessons/lesson3_dplyr.html",
+    "href": "lessons/lesson3_dplyr.html",
+    "title": "Lesson 3: Wangling Data: First Three Verbs",
+    "section": "",
+    "text": "This lesson is focused on the first three wrangling verbs: select(), filter(), and mutate().\nThis will be our starting dataframe used in each of the examples below."
+  },
+  {
+    "objectID": "lessons/lesson3_dplyr.html#selecting-columns",
+    "href": "lessons/lesson3_dplyr.html#selecting-columns",
+    "title": "Lesson 3: Wangling Data: First Three Verbs",
+    "section": "Selecting Columns",
+    "text": "Selecting Columns\nSyntax: select()\nThink of it as selecting check boxes for each column to use. Any selected, whether it’s just one column or whether they’re many columns, will be available once this select() code is completed.\n\n\n\nScenario\nSay we want this dataframe to the right where not all of the columns are needed, only the manufacturer, model, cty, and hwy columns. select() allows us to achieve this.\n\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ncty\nhwy\n\n\n\n\naudi\na4\n18\n29\n\n\naudi\na4\n21\n29\n\n\naudi\na4\n20\n31\n\n\naudi\na4\n21\n30\n\n\naudi\na4\n16\n26\n\n\n\n\n\n\n\n\nCode Solution\n\nmpg %>% \n    select(manufacturer, model, cty, hwy)"
+  },
+  {
+    "objectID": "lessons/lesson3_dplyr.html#filtering-rows",
+    "href": "lessons/lesson3_dplyr.html#filtering-rows",
+    "title": "Lesson 3: Wangling Data: First Three Verbs",
+    "section": "Filtering Rows",
+    "text": "Filtering Rows\nSyntax: filter()\nFiltering is used in the scenarios like, “Only need students that are age 16 years old”, or “Only the the redwood trees in this forest that are taller than 30 ft”.\n\n\n\nScenario\nSay we want this dataframe to the right where the cars are made by ford (manufacturer column) and the amount of highway miles per gallon is greater than 20 (hwy column). filter() allows allows us to achieve this.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\nclass\n\n\n\n\nford\nmustang\n3.8\n1999\n6\nmanual(m5)\nr\n18\n26\nr\nsubcompact\n\n\nford\nmustang\n3.8\n1999\n6\nauto(l4)\nr\n18\n25\nr\nsubcompact\n\n\nford\nmustang\n4.0\n2008\n6\nmanual(m5)\nr\n17\n26\nr\nsubcompact\n\n\nford\nmustang\n4.0\n2008\n6\nauto(l5)\nr\n16\n24\nr\nsubcompact\n\n\nford\nmustang\n4.6\n1999\n8\nauto(l4)\nr\n15\n21\nr\nsubcompact\n\n\nford\nmustang\n4.6\n1999\n8\nmanual(m5)\nr\n15\n22\nr\nsubcompact\n\n\n\n\n\n\n\n\nCode Solution\n\nmpg %>%\n    filter(manufacturer == \"ford\", hwy > 20)\n\n\n\n\n\n\n\nOperators to use in Filter Statements\n\n\n\n\n\n\n\nBasic Operators:\n> greater than\n< less than\n== equals\n>= greater than or equal to\n<= less than or equal to\n\n\n\nAdvace Operators\n!= is not equal to\n%in% c() is in"
+  },
+  {
+    "objectID": "lessons/lesson3_dplyr.html#making-new-columns",
+    "href": "lessons/lesson3_dplyr.html#making-new-columns",
+    "title": "Lesson 3: Wangling Data: First Three Verbs",
+    "section": "Making New Columns",
+    "text": "Making New Columns\nSyntax: mutate()\nThink of the mutate() verb as starting with one column and change it to where you want it to become–mutating a column. You can make new columns not based on columns, based on one column, or based on multiple columns.\n\n\n\nScenario\nSay we want this dataframe to the right (make sure to scroll to see the other columns) where there was an error in the data and the city miles per gallon needs 5 more miles than what it currently had (cty column) and we need the a column for the engine displacement (displ column) divided by the number of cylinders (cylcolumn). In reality this second task is not a useful but we’re doing it for practice sake.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\nclass\nnew_col\n\n\n\n\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n23\n29\np\ncompact\n0.4500000\n\n\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n26\n29\np\ncompact\n0.4500000\n\n\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n25\n31\np\ncompact\n0.5000000\n\n\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n26\n30\np\ncompact\n0.5000000\n\n\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n21\n26\np\ncompact\n0.4666667\n\n\naudi\na4\n2.8\n1999\n6\nmanual(m5)\nf\n23\n26\np\ncompact\n0.4666667\n\n\n\n\n\n\n\n\nCode Solution\n\nmpg %>%\n    mutate(cty = cty + 5, new_col = displ/cyl)"
+  },
+  {
+    "objectID": "lessons/lesson3_dplyr.html#practice-exercises",
+    "href": "lessons/lesson3_dplyr.html#practice-exercises",
+    "title": "Lesson 3: Wangling Data: First Three Verbs",
+    "section": "Practice Exercises",
+    "text": "Practice Exercises\nNew dataset in use for the practices exercises:\n\nlibrary(tidyverse)\ndat <- read_csv(\"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv\")\n\n\nQuestion 1\nSelect the age, sex, and bmi columns\n\n\n\n\n\nage\nsex\nbmi\n\n\n\n\n19\nfemale\n27.900\n\n\n18\nmale\n33.770\n\n\n28\nmale\n33.000\n\n\n33\nmale\n22.705\n\n\n32\nmale\n28.880\n\n\n31\nfemale\n25.740\n\n\n\n\n\n\n\nCode Solution\ndat %>% \n    select(age, sex, bmi)\n\n\n\n\n\nQuestion 2\nSelect the charges, region, and age columns.\n\n\n\n\n\n\n\n\n\ncharges\nregion\nage\n\n\n\n\n16884.924\nsouthwest\n19\n\n\n1725.552\nsoutheast\n18\n\n\n4449.462\nsoutheast\n28\n\n\n21984.471\nnorthwest\n33\n\n\n3866.855\nnorthwest\n32\n\n\n3756.622\nsoutheast\n31\n\n\n\n\n\n\n\n\n\n\n\nCode Solution\ndat %>% \n    select(charges, region, age)\n\n\n\n\n\nQuestion 3\nFilter the data where sex is only male and region is only northeast.\n\n\n\n\n\nage\nsex\nbmi\nchildren\nsmoker\nregion\ncharges\n\n\n\n\n37\nmale\n29.830\n2\nno\nnortheast\n6406.411\n\n\n25\nmale\n26.220\n0\nno\nnortheast\n2721.321\n\n\n23\nmale\n23.845\n0\nno\nnortheast\n2395.172\n\n\n35\nmale\n36.670\n1\nyes\nnortheast\n39774.276\n\n\n38\nmale\n37.050\n1\nno\nnortheast\n6079.672\n\n\n43\nmale\n27.360\n3\nno\nnortheast\n8606.217\n\n\n\n\n\n\n\nCode Solution\ndat %>% \n    filter(sex == \"male\", region == \"northeast\")\n\n\n\n\n\nQuestion 4\nFilter the data like this:\n\nage is younger than or equal to 40\nbmi is greater than 21\n\n\n\n\n\n\nage\nsex\nbmi\nchildren\nsmoker\nregion\ncharges\n\n\n\n\n19\nfemale\n27.900\n0\nyes\nsouthwest\n16884.924\n\n\n18\nmale\n33.770\n1\nno\nsoutheast\n1725.552\n\n\n28\nmale\n33.000\n3\nno\nsoutheast\n4449.462\n\n\n33\nmale\n22.705\n0\nno\nnorthwest\n21984.471\n\n\n32\nmale\n28.880\n0\nno\nnorthwest\n3866.855\n\n\n31\nfemale\n25.740\n0\nno\nsoutheast\n3756.622\n\n\n\n\n\n\n\nCode Solution\ndat %>% \n    filter(age <= 40, bmi > 21)\n\n\n\n\n\nQuestion 5\nMake a new column called bmi_modified that is the of the bmi - 12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nage\nsex\nbmi\nchildren\nsmoker\nregion\ncharges\nbmi_modified\n\n\n\n\n19\nfemale\n27.900\n0\nyes\nsouthwest\n16884.924\n15.900\n\n\n18\nmale\n33.770\n1\nno\nsoutheast\n1725.552\n21.770\n\n\n28\nmale\n33.000\n3\nno\nsoutheast\n4449.462\n21.000\n\n\n33\nmale\n22.705\n0\nno\nnorthwest\n21984.471\n10.705\n\n\n32\nmale\n28.880\n0\nno\nnorthwest\n3866.855\n16.880\n\n\n31\nfemale\n25.740\n0\nno\nsoutheast\n3756.622\n13.740\n\n\n\n\n\n\n\nCode Solution\ndat %>% \n    mutate(bmi_modified = bmi - 12) \n\n\n\n\n\nQuestion 6\nMake a new column called age_modified that is the current age divided by 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nage\nsex\nbmi\nchildren\nsmoker\nregion\ncharges\nage_modified\n\n\n\n\n19\nfemale\n27.900\n0\nyes\nsouthwest\n16884.924\n9.5\n\n\n18\nmale\n33.770\n1\nno\nsoutheast\n1725.552\n9.0\n\n\n28\nmale\n33.000\n3\nno\nsoutheast\n4449.462\n14.0\n\n\n33\nmale\n22.705\n0\nno\nnorthwest\n21984.471\n16.5\n\n\n32\nmale\n28.880\n0\nno\nnorthwest\n3866.855\n16.0\n\n\n31\nfemale\n25.740\n0\nno\nsoutheast\n3756.622\n15.5\n\n\n\n\n\n\n\nCode Solution\ndat %>% \n    mutate(age_modified = age/2)"
+  },
+  {
+    "objectID": "lessons/lesson3_dplyr.html#question-7-combining-it-all-together",
+    "href": "lessons/lesson3_dplyr.html#question-7-combining-it-all-together",
+    "title": "Lesson 3: Wangling Data: First Three Verbs",
+    "section": "Question 7: Combining It All Together",
+    "text": "Question 7: Combining It All Together\n\n\n\nOnly use the age, sex, and charges columns\nMake sure the age column is greater than 50 and there are only females\nMake a new column called real_charges which is the charges times 4\n\n\n\n\n\n\n\n\n\nage\nsex\ncharges\nreal_charges\n\n\n\n\n60\nfemale\n28923.14\n115692.55\n\n\n62\nfemale\n27808.73\n111234.90\n\n\n56\nfemale\n11090.72\n44362.87\n\n\n52\nfemale\n10797.34\n43189.34\n\n\n60\nfemale\n13228.85\n52915.39\n\n\n59\nfemale\n14001.13\n56004.54\n\n\n\n\n\n\n\n\n\nCode Solution\ndat %>% \n    select(age, sex, charges) %>% \n    filter(age > 50, sex == \"female\") %>% \n    mutate(real_charges = charges * 4)"
+  },
+  {
+    "objectID": "other/dax/dax.html",
+    "href": "other/dax/dax.html",
+    "title": "DAX Reference",
+    "section": "",
+    "text": "CALENDAR(StartDate, EndDate)\n\nDescription: Returns a table with one column of all dates between StartDate and EndDate.\nParameters:\n\nStartDate: The start date in datetime format\nEndDate: The end date in datetime format\n\n\n\n\nExample 1\nDim_DeliveryDate = \nCALENDAR(\n    MIN(Fact_Sales[Delivery Date Key]), \n    MAX(Fact_Sales[Delivery Date Key])\n    )\n\n\n\n\nExample 2\n# Code for another example here\n\n\n\n\nMAX()\nSee CALENDAR() function reference, example 1.\n\n\nMIN()\nSee CALENDAR() function reference, example 1.\n\n\nSUBSTITUTE(text, oldtext, newtext)\n\nDescription: This is similar to regex and Power Query Editor’s “Replace Values”\nParameters:\n\ntext: The text to manipulate. Can be a column.\noldtext: The piece of text to replace.\nnewtext: The text we want to insert. This can just be two quotation marks to do a blank.\n\n\n\n\nExample 1\nRetail Price Clean = \nSUBSTITUTE(\n    Dim_StockItem[Recommended Retail Price], \n    \"? \", \n    \"\"\n    )"
+  },
+  {
+    "objectID": "lessons/lesson1_intro.html",
+    "href": "lessons/lesson1_intro.html",
+    "title": "Lesson 1: Introduction to Data Science & Installation",
+    "section": "",
+    "text": "Insert video here\n\n\nFirst Option:\nGoogle “download R” or go to this link to download it. The page should look like this.\nSecond Option:\nUse this direct R download\n\n\n\nFirst Option:\nGoogle “download RStudio” or go to this link to download it. The page should look like this.\nSecond Option:\nUse this direct RStudio download"
   }
 ]
