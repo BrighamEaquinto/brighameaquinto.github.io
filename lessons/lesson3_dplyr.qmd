@@ -1,5 +1,5 @@
 ---
-title: "Lesson 3: Wangling Data: First Three Verbs"
+title: "Lesson 3: First Three Wrangling Verbs"
 toc: true
 code-overflow: scroll
 code-line-numbers: true

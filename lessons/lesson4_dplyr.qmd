@@ -1,5 +1,5 @@
 ---
-title: "Lesson 4: Wrangling Data: Last 3 Verbs"
+title: "Lesson 4: Last Three Wrangling Verbs"
 toc: true
 ---
 
