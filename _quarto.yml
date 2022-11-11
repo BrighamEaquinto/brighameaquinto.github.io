@@ -11,8 +11,6 @@ format:
     code-fold: false
     code-tools: false
     code-line-numbers: true
-    # code-summary: "Show the code"
-    # smooth-scroll: true
     theme: 
       light: flatly
       dark: darkly
@@ -35,22 +33,22 @@ website:
     collapse-below: md
     left: 
       - text: "DSS Bootcamp"
-        href: main.qmd
+        href: index.qmd
       - text: "Installation"
         href: lessons/lesson1_intro.qmd
       - text: "Reading Data"
         href: lessons\lesson2_readr.qmd
       - text: "Wrangling Data"
         menu: 
-        - text: "Lesson 3"
+        - text: "Wrangling Part 1"
           href: lessons\lesson3_dplyr.qmd
-        - text: "Lesson 4"
+        - text: "Wrangling Part 2"
           href: lessons\lesson4_dplyr.qmd
       - text: "Visualizing Data"
         menu: 
-          - text: "Lesson 5"
+          - text: "Visualizing Part 1"
             href: lessons\lesson5_ggplot.qmd
-          - text: "Lesson 6"
+          - text: "Visualizing Part 2"
             href: lessons\lesson6_ggplot.qmd
       - text: "Other"
         menu: 
@@ -58,7 +56,6 @@ website:
           href: other\dax\dax.qmd
         - text: "Welcome"
           href: other\welcome\welcome.qmd
-
 
 
   page-footer: 
