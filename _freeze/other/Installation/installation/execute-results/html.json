@@ -1,0 +1,14 @@
+{
+  "hash": "7b346cde9377bbba2e0b332659dd1f32",
+  "result": {
+    "markdown": "---\ntitle: \"Installation\"\ndata: September 2022\ntoc: true\nimage: Rlogo.jpg\neval: false\n---\n\n\n# Introductory Data Science Video\n\nInsert video here\n\n## Downloading R\n\n__First Option__:\n\nGoogle \"download R\" or go to [this link](https://cran.r-project.org/bin/windows/base/) to download it. The page should look like this. \n\n__Second Option__: \n\nUse this [direct R download](https://cran.rstudio.com/bin/windows/base/R-4.2.1-win.exe)\n\n<!-- ![](rstudio_download.jpg) -->\n\n### Downloading RStudio\n\n__First Option__:\n\nGoogle \"download RStudio\" or go to [this link](https://www.rstudio.com/products/rstudio/download/#download) to download it. The page should look like this.\n\n__Second Option__: \n\nUse this [direct RStudio download](https://download1.rstudio.org/desktop/windows/RStudio-2022.07.2-576.exe)\n\n<!-- ![](r_download.jpg) -->\n\n\n\n\n\n# Outline\n\nBy then end of bootcamp you will be able to read in data, wrangling data, and visualize data. The \n\nHere is an example of what you'll be able to do by the end\n\n- read in data from an online source or manage a downloaded data file\n- determine the steps needed to wrangling a dataset\n- make appropiate visualizations\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\ndata1 <- read_csv(\"datasets/StudentsPerformance.csv\")\n# View(data1)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ndata2 <- data1 %>% \n    group_by(lunch, `race/ethnicity`) %>% \n    summarise(\"Avg Math\" = mean(`math score`), \"Std Math\" = sd(`math score`))\nview(data2)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(data2, aes())\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

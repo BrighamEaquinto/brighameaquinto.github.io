@@ -36,14 +36,22 @@ website:
     left: 
       - text: "DSS Bootcamp"
         href: main.qmd
-      - text: "Install R & RStudio"
+      - text: "Installation"
         href: posts\Installation\installation.qmd
       - text: "Reading Data"
-        href: posts\Reading Data\reading_data.qmd
+        href: "lessons/lesson2_readr.qmd"
       - text: "Wrangling Data"
-        href: posts\Wrangling Data\wrangling_data.qmd
+        menu: 
+        - text: "Lesson 3"
+          href: "lessons/lesson3_dplyr.qmd"
+        - text: "Lesson 4"
+          href: "lessons/lesson4_dplyr.qmd"
       - text: "Visualizing Data"
-        href: posts\Visualize Data\visualizing_data.qmd
+        menu: 
+          - text: "Lesson 5"
+            href: "lessons/lesson5_ggplot.qmd"
+          - text: "Lesson 6"
+            href: "lessons/lesson6_ggplot.qmd"
       - text: "Weeks"
         menu: 
         - text: "Lesson 1: Installation to Data Science" 

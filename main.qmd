@@ -4,7 +4,7 @@ toc: true
 listing: 
   - id: Weeks
     fields: [image, title, subtitle, categories]
-    contents: "posts/lessons/*.qmd"
+    contents: "lessons/*.qmd"
 categories: false
 sort-ui: false
 filter-ui: false
@@ -13,4 +13,5 @@ title-block-banner: true
 ---
 
 ![](website_thumbnail.png){ style="display: block; margin: 0 auto" }
+
 <br>

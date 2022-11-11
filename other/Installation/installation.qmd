@@ -3,6 +3,7 @@ title: "Installation"
 data: September 2022
 toc: true
 image: Rlogo.jpg
+eval: false
 ---
 
 # Introductory Data Science Video
