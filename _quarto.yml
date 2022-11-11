@@ -10,6 +10,7 @@ format:
     code-overflow: wrap
     code-fold: false
     code-tools: false
+    code-line-numbers: true
     # code-summary: "Show the code"
     # smooth-scroll: true
     theme: 
