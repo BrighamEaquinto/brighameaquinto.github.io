@@ -15,7 +15,7 @@ warning: false
 # toc: true
 ---
 
-![](pictures/ggplot2.jpg){fig-align="center"}
+<!-- ![](pictures/ggplot2.jpg){fig-align="center"} -->
 
 
 ```{r}

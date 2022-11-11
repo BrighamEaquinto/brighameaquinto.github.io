@@ -328,9 +328,6 @@ base + theme(legend.position = "right") # the default
 ```
 
 
-![](pictures/ggplot_themes.jpg)
-
-
 
 <br><br>
 
