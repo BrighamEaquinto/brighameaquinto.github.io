@@ -4,9 +4,17 @@ toc: true
 eval: false
 ---
 
+::: {layout-ncol=2}
+
+![](pictures\Rlogo.png)
+
+![](pictures\RStudio.png)
+
+:::
+
+
 # Introductory Data Science Video
 
-Insert video here
 
 <center>
 
@@ -14,7 +22,7 @@ Insert video here
 </center>
 
 :::{.callout-tip collapse="true"}
-# Suplimental Videos
+# Click Here for Suplimental Videos
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5HlbV1wKBmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
@@ -35,7 +43,7 @@ __Second Option__:
 
 Use this [direct R download](https://cran.rstudio.com/bin/windows/base/R-4.2.1-win.exe)
 
-<!-- ![](rstudio_download.jpg) -->
+![](pictures/rstudio_download.jpg){fig-align="center"}
 
 ### Downloading RStudio
 
@@ -47,10 +55,7 @@ __Second Option__:
 
 Use this [direct RStudio download](https://download1.rstudio.org/desktop/windows/RStudio-2022.07.2-576.exe)
 
-<!-- ![](r_download.jpg) -->
-
-
-
+![](pictures/r_download.png){ style="display: block; margin: 0 auto" }
 
 
 # Outline

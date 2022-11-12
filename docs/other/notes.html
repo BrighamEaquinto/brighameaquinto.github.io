@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DSS R BootCamp - R Bootcamp</title>
+<title>DSS R BootCamp – notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,29 +20,90 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./website_thumbnail.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../website_thumbnail.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -62,39 +123,10 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-Weeks .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-subtitle','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-Weeks'] = new List('listing-Weeks', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -104,8 +136,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-md navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./pictures\website_thumbnail.png" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../pictures\website_thumbnail.png" alt="" class="navbar-logo">
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -114,15 +146,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link" href="../index.html">
  <span class="menu-text">DSS Bootcamp</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./lessons/lesson1_intro.html">
+    <a class="nav-link" href="../lessons/lesson1_intro.html">
  <span class="menu-text">Installation</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./lessons/lesson2_readr.html">
+    <a class="nav-link" href="../lessons/lesson2_readr.html">
  <span class="menu-text">Reading Data</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -131,11 +163,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-wrangling-data">    
         <li>
-    <a class="dropdown-item" href="./lessons/lesson3_dplyr.html">
+    <a class="dropdown-item" href="../lessons/lesson3_dplyr.html">
  <span class="dropdown-text">Wrangling Part 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lessons/lesson4_dplyr.html">
+    <a class="dropdown-item" href="../lessons/lesson4_dplyr.html">
  <span class="dropdown-text">Wrangling Part 2</span></a>
   </li>  
     </ul>
@@ -146,11 +178,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-visualizing-data">    
         <li>
-    <a class="dropdown-item" href="./lessons/lesson5_ggplot.html">
+    <a class="dropdown-item" href="../lessons/lesson5_ggplot.html">
  <span class="dropdown-text">Visualizing Part 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lessons/lesson6_ggplot.html">
+    <a class="dropdown-item" href="../lessons/lesson6_ggplot.html">
  <span class="dropdown-text">Visualizing Part 2</span></a>
   </li>  
     </ul>
@@ -161,11 +193,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-other">    
         <li>
-    <a class="dropdown-item" href="./other/dax/dax.html">
+    <a class="dropdown-item" href="../other/dax/dax.html">
  <span class="dropdown-text">Dax</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./other/welcome/welcome.html">
+    <a class="dropdown-item" href="../other/welcome/welcome.html">
  <span class="dropdown-text">Welcome</span></a>
   </li>  
     </ul>
@@ -180,171 +212,84 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">R Bootcamp</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
+<p>Options:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Can’t enter or color headers using Markdown, must use CSS instead: <code>&lt;h6 align="center"; style="color:#808080"&gt; Base R &lt;/h6&gt;</code></p>
+<section id="ideas" class="level2">
+<h2 class="anchored" data-anchor-id="ideas">Ideas</h2>
+<ul>
+<li>Have a notes to instructors page or part of the repo</li>
+<li>have a page just for the interface of RStudio
+<ul>
+<li>hot keys</li>
+<li>shortcuts</li>
+<li>such and such</li>
+</ul></li>
+<li>have a page for R/Python equivalents</li>
+<li>have a page for other generally useful things
+<ul>
+<li>setting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows</li>
+</ul></li>
+<li>how can I use the wiki tab on the github page? What is the proper usage of it?</li>
+</ul>
+<p>Others to sprinkle in lessons or have as a stand alone: - commenting code - assignment operator vs equal sign - pipe operator %&gt;% - filtering operators (==, %in%, |, &amp;, !=) - c(vector) and list conversation - syntax</p>
+<p>Use this for advance select statements: https://dplyr.tidyverse.org/reference/select.html</p>
+<p>n_distinct(dat<span class="math inline">\(region) count(dat\)</span>region) table(dat$region)</p>
+<p>dat &lt;- read_csv(“https://covid.ourworldindata.org/data/owid-covid-data.csv”) # object_size(dat) view(dat)</p>
+<p>dat &lt;- read_csv(“datasets/insurance.csv”)</p>
+<p>n_distinct(dat<span class="math inline">\(region) count(dat\)</span>region) table(dat$region)</p>
+<p>R Scipts vs.&nbsp;RMDs The data science process (flow chart of start to finish and where most time is spent)</p>
+<p>Lesson 1: Introduction - Installation - the RStudio interface - an introduction to Data Science. Give the full scope of data science. - what about sending the newbies to this page during future weeks? Put a video there? Lesson 2: Readr - reading in data from CSV - reading in data from URL - writing data to CSV Lesson 3: Wrangling Data - need another day on this Lesson 4: Grouping, Summarising, Arranging Lesson 5: Graphing 1/2 Lesson 6: Graphing 2/2</p>
+<p>mean(iris)</p>
+<p>Output messages like in lm()’s “using base 10 in log()” if no other given. Have my prefered syntax of powers using {} syntax. If indeterminant form, prompt the user, what would you like to do from here. Can we get it to show work? Out put in latex?!?!</p>
+</section>
+<section id="shape-geom_point" class="level1">
+<h1>shape: geom_point</h1>
+</section>
+<section id="size-geom_point" class="level1">
+<h1>size: geom_point</h1>
+</section>
+<section id="fill" class="level1">
+<h1>fill:</h1>
+</section>
+<section id="color" class="level1">
+<h1>color:</h1>
+</section>
+<section id="stroke-geom_line" class="level1">
+<h1>stroke: geom_line</h1>
+</section>
+<section id="linetype-geom_line" class="level1">
+<h1>linetype: geom_line</h1>
+</section>
+<section id="alpha-inside-and-outside-changes.-columns-work-as-normal." class="level1">
+<h1>alpha: inside and outside changes. Columns work as normal.</h1>
+</section>
+<section id="group" class="level1">
+<h1>group:</h1>
+</section>
+<section id="position" class="level1">
+<h1>position:</h1>
+</section>
+<section id="width" class="level1">
+<h1>width:</h1>
+</section>
+<section id="why-isnt-there-a-list-of-the-options-for-each-of-these-for-each-geom" class="level1">
+<h1>Why isn’t there a list of the options for each of these for each geom???</h1>
 
-<p><img src="pictures/website_thumbnail.png" class="img-fluid" style="display: block; margin: 0 auto"></p>
-<p><br></p>
 
+</section>
 
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-Weeks">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1668230066651" data-listing-reading-time-sort="0.97">
-<div class="thumbnail">
-<p><a href="./lessons/lesson1_intro.html"> <img src="./lessons/pictures/Rlogo.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./lessons/lesson1_intro.html">
-<h3 class="no-anchor listing-title">
-Lesson 1: Introduction to Data Science &amp; Installation
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./lessons/lesson1_intro.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1668119867561" data-listing-reading-time-sort="0.305">
-<div class="thumbnail">
-<a href="./lessons/lesson2_readr.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./lessons/lesson2_readr.html"></a></p>
-</div>
-<div class="body">
-<a href="./lessons/lesson2_readr.html">
-<h3 class="no-anchor listing-title">
-Lesson 2: Reading Data
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./lessons/lesson2_readr.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1668202501351" data-listing-reading-time-sort="5.105">
-<div class="thumbnail">
-<a href="./lessons/lesson3_dplyr.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./lessons/lesson3_dplyr.html"></a></p>
-</div>
-<div class="body">
-<a href="./lessons/lesson3_dplyr.html">
-<h3 class="no-anchor listing-title">
-Lesson 3: First Three Wrangling Verbs
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./lessons/lesson3_dplyr.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1668202508321" data-listing-reading-time-sort="8.115">
-<div class="thumbnail">
-<a href="./lessons/lesson4_dplyr.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./lessons/lesson4_dplyr.html"></a></p>
-</div>
-<div class="body">
-<a href="./lessons/lesson4_dplyr.html">
-<h3 class="no-anchor listing-title">
-Lesson 4: Last Three Wrangling Verbs
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./lessons/lesson4_dplyr.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1668196537470" data-listing-reading-time-sort="6.965">
-<div class="thumbnail">
-<p><a href="./lessons/lesson5_ggplot.html"> <img src="./lessons/pictures/ggplot2.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./lessons/lesson5_ggplot.html">
-<h3 class="no-anchor listing-title">
-Lesson 5: Graphing Part 1
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./lessons/lesson5_ggplot.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1668196540401" data-listing-reading-time-sort="5.83">
-<div class="thumbnail">
-<a href="./lessons/lesson6_ggplot.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="./lessons/lesson6_ggplot.html"></a></p>
-</div>
-<div class="body">
-<a href="./lessons/lesson6_ggplot.html">
-<h3 class="no-anchor listing-title">
-Lesson 6: Graphing Part 2
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./lessons/lesson6_ggplot.html"> </a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

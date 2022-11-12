@@ -4,7 +4,7 @@
     "href": "lessons/lesson1_intro.html",
     "title": "Lesson 1: Introduction to Data Science & Installation",
     "section": "",
-    "text": "Insert video here\n\n\n\n\n\n\n\n\n\nSuplimental Videos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirst Option:\nGoogle “download R” or go to this link to download it. The page should look like this.\nSecond Option:\nUse this direct R download\n\n\n\nFirst Option:\nGoogle “download RStudio” or go to this link to download it. The page should look like this.\nSecond Option:\nUse this direct RStudio download"
+    "text": "r logo\n\n\n\n\n\n\n\nr studio logo"
   },
   {
     "objectID": "index.html",
@@ -390,5 +390,26 @@
     "title": "Wrangling Data",
     "section": "",
     "text": "Base R is the native tools that R has to deal with data. The syntax is outdated and better tools are available to use.\nThe syntax to work in Base R is very similar to native python syntax. The biggest downside is that it’s not possible to chain operations together like selecting columns and filtering data. You would to constantly assign and reassign variables which results in very messy and unreadable code.\nIf you use this, I will turn in my grave. Please don’t make your life more difficult, use the Tidyverse.\nBase R is native to R; no additional installations are required.\n\n\n\n\nThe Tidyverse allows chainable actions like this:\n\nnew_dataset <- dataset %>% \n    select() %>%\n    filter() %>% \n    mutate() %>% \n    group_by() %>% \n    summarise() %>%\n    arrange()\n\nRun this code in the console to download the tidyverse\n\ninstall.packages(\"tidyverse\")\n\nIn order to be able to use this package, put this code at the top of your R Script or RMD file\n\nlibrary(tidyverse)\n\n\n\n\n\n\n\n\n\n\n\ndf$column_name\ndf[[]]\n\n\n\n\n\ndf %>% select(column1, column2)\n\n\n\n\n\n\n\n\n\n\n\ndf$profit <- df$revenue - df$cost\n\n\n\n\n\ndf %>% mutate(profit = revenue - cost)\n\n\n\n\n\n\n\n\n\n\n\n\ndf[df$temperature > 45]\n\n\n\n\n\ndf %>% filter(temperature > 45)\n\n\n\n\n\n\n\n\n\n\n\nI’m not sure how to do this in BaseR… and that’s okay\n\n\n\n\n\ndf %>% \n    group_by(city) %>% \n    summarise(Avg_House_Price = mean(house_price))\n\n\n\n\n\n\n\n\n\n\n\nmtcars[order(mpg, -cyl),]\n\n\n\n\n\nmtcars %>% arrange(mpg, desc(cyl))\n\n\n\n\n\nCheck out this page for more comparisons.\nFiltering Data in Base R:\n\nhttps://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/\nhttps://cran.r-project.org/web/packages/crunch/vignettes/filters.html"
+  },
+  {
+    "objectID": "other/notes.html",
+    "href": "other/notes.html",
+    "title": "DSS R BootCamp",
+    "section": "",
+    "text": "Options:\nCan’t enter or color headers using Markdown, must use CSS instead: <h6 align=\"center\"; style=\"color:#808080\"> Base R </h6>"
+  },
+  {
+    "objectID": "other/notes.html#ideas",
+    "href": "other/notes.html#ideas",
+    "title": "DSS R BootCamp",
+    "section": "Ideas",
+    "text": "Ideas\n\nHave a notes to instructors page or part of the repo\nhave a page just for the interface of RStudio\n\nhot keys\nshortcuts\nsuch and such\n\nhave a page for R/Python equivalents\nhave a page for other generally useful things\n\nsetting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows\n\nhow can I use the wiki tab on the github page? What is the proper usage of it?\n\nOthers to sprinkle in lessons or have as a stand alone: - commenting code - assignment operator vs equal sign - pipe operator %>% - filtering operators (==, %in%, |, &, !=) - c(vector) and list conversation - syntax\nUse this for advance select statements: https://dplyr.tidyverse.org/reference/select.html\nn_distinct(dat\\(region) count(dat\\)region) table(dat$region)\ndat <- read_csv(“https://covid.ourworldindata.org/data/owid-covid-data.csv”) # object_size(dat) view(dat)\ndat <- read_csv(“datasets/insurance.csv”)\nn_distinct(dat\\(region) count(dat\\)region) table(dat$region)\nR Scipts vs. RMDs The data science process (flow chart of start to finish and where most time is spent)\nLesson 1: Introduction - Installation - the RStudio interface - an introduction to Data Science. Give the full scope of data science. - what about sending the newbies to this page during future weeks? Put a video there? Lesson 2: Readr - reading in data from CSV - reading in data from URL - writing data to CSV Lesson 3: Wrangling Data - need another day on this Lesson 4: Grouping, Summarising, Arranging Lesson 5: Graphing 1/2 Lesson 6: Graphing 2/2\nmean(iris)\nOutput messages like in lm()’s “using base 10 in log()” if no other given. Have my prefered syntax of powers using {} syntax. If indeterminant form, prompt the user, what would you like to do from here. Can we get it to show work? Out put in latex?!?!"
+  },
+  {
+    "objectID": "lessons/lesson1_intro.html#downloading-r",
+    "href": "lessons/lesson1_intro.html#downloading-r",
+    "title": "Lesson 1: Introduction to Data Science & Installation",
+    "section": "Downloading R",
+    "text": "Downloading R\nFirst Option:\nGoogle “download R” or go to this link to download it. The page should look like this.\nSecond Option:\nUse this direct R download\n\n\n\n\n\n\nDownloading RStudio\nFirst Option:\nGoogle “download RStudio” or go to this link to download it. The page should look like this.\nSecond Option:\nUse this direct RStudio download"
   }
 ]
