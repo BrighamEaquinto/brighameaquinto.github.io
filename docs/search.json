@@ -25,7 +25,7 @@
     "href": "lessons/lesson2_readr.html#build-in-datasets",
     "title": "Lesson 2: Reading Data",
     "section": "Build-in Datasets",
-    "text": "Build-in Datasets\nRun this code to see a list of built in datasets:\n\ndata()\n\nThe iris dataset is built into R.\n\nhead(iris)\n\n\nview(iris)"
+    "text": "Build-in Datasets\nRun this code to see a list of built in datasets:\n\ndata()\n\nThe iris dataset is commonly used and built into R; no additional downloads are necessary.\n\nhead(iris)\n\n\nview(iris)"
   },
   {
     "objectID": "lessons/lesson2_readr.html#reading-data-from-url",
@@ -39,7 +39,7 @@
     "href": "lessons/lesson2_readr.html#reading-data-from-local-csv-file",
     "title": "Lesson 2: Reading Data",
     "section": "Reading Data from Local CSV File",
-    "text": "Reading Data from Local CSV File"
+    "text": "Reading Data from Local CSV File\nFirst, let’s make a folder on your computer to use for bootcamp. I suggest putting it in your downloads folder or your documents folder and call it “R Bootcamp”.\nNext, click the “Session” button at the top of RStudio, then “Set Working Directory”, then “Choose Directory” and use your computer’s file directory to navigate to the folder you made for bootcamp.\nThis set your “working directory” which basically makes it easier for us to deal with files.\nDownload csv"
   },
   {
     "objectID": "lessons/lesson3_dplyr.html",

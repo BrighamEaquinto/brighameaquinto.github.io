@@ -21,7 +21,7 @@ Run this code to see a list of built in datasets:
 data()
 ```
 
-The `iris` dataset is built into R. 
+The `iris` dataset is commonly used and built into R; no additional downloads are necessary. 
 
 ```{r}
 #| eval: false
@@ -48,9 +48,13 @@ head(housing_data)
 
 ## Reading Data from Local CSV File
 
-```{r}
+First, let's make a folder on your computer to use for bootcamp. I suggest putting it in your downloads folder or your documents folder and call it "R Bootcamp". 
 
-```
+Next, click the "Session" button at the top of RStudio, then "Set Working Directory", then "Choose Directory" and use your computer's file directory to navigate to the folder you made for bootcamp. 
+
+This set your "working directory" which basically makes it easier for us to deal with files. 
+
+[Download csv](brighameaquinto.github.io\datasets\insurance.csv "Download")
 
 
 
