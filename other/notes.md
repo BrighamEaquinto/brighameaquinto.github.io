@@ -104,3 +104,27 @@ Can we get it to show work? Out put in latex?!?!
 # position: 
 # width: 
 # Why isn't there a list of the options for each of these for each geom???
+
+
+
+![](Rlogo.png){width=20%}
+
+
+# ArE yOu KiDdInG mE?!?
+
+::: {layout-ncol=2}
+- Item X
+- Item Y
+- Item Z
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur gravida eu erat et fring. Morbi congue augue vel eros ullamcorper, eget convallis tortor sagittis. Fusce sodales viverra mauris a fringilla. Donec feugiat, justo eu blandit placerat, enim dui volutpat turpis, eu dictum lectus urna eu urna. Mauris sed massa ornare, interdum ipsum a, semper massa. 
+
+huh 
+
+where does this go?
+:::
+
+
+https://about.gitlab.com/handbook/markdown-guide/ 
+
+

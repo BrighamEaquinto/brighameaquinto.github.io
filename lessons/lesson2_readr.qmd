@@ -1,5 +1,6 @@
 ---
 title: "Lesson 2: Reading Data"
+subtitle: Learning the ggplot2 package
 toc: true
 ---
 

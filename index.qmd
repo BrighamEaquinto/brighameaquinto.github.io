@@ -3,7 +3,7 @@ title: "R Bootcamp"
 toc: true
 listing: 
   - id: Weeks
-    fields: [image, title, subtitle, categories]
+    fields: [title, subtitle, categories]
     contents: "lessons/*.qmd"
 categories: false
 sort-ui: false

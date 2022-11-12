@@ -4,14 +4,14 @@
     "href": "lessons/lesson1_intro.html",
     "title": "Lesson 1: Introduction to Data Science & Installation",
     "section": "",
-    "text": "r logo\n\n\n\n\n\n\n\nr studio logo"
+    "text": "::: {layout=“[10,-20,10] layout-valign=”middle”“}\n:::"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "R Bootcamp",
     "section": "",
-    "text": "Lesson 1: Introduction to Data Science & Installation\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 2: Reading Data\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 3: First Three Wrangling Verbs\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 4: Last Three Wrangling Verbs\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 5: Graphing Part 1\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nLesson 6: Graphing Part 2\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Lesson 1: Introduction to Data Science & Installation\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 2: Reading Data\n\n\nLearning the ggplot2 package\n\n\n\n\n \n\n\n\n\n\n\nLesson 3: First Three Wrangling Verbs\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 4: Last Three Wrangling Verbs\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 5: Graphing Part 1\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 6: Graphing Part 2\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "lessons/lesson2_readr.html",

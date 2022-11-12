@@ -1,21 +1,20 @@
 ---
 title: "Lesson 1: Introduction to Data Science & Installation"
+# subtitle: 
 toc: true
 eval: false
 ---
 
-::: {layout-ncol=2}
+::: {layout="[10,-20,10]" layout-valign="center"}
 
-![](pictures\Rlogo.png)
+![](Rlogo.png)
 
-![](pictures\RStudio.png)
+![](RStudio.png)
 
 :::
 
 
 # Introductory Data Science Video
-
-
 <center>
 
 {{< video src="https://www.youtube.com/embed/uswU1s3M2VE" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen >}}
@@ -43,7 +42,7 @@ __Second Option__:
 
 Use this [direct R download](https://cran.rstudio.com/bin/windows/base/R-4.2.1-win.exe)
 
-![](pictures/rstudio_download.jpg){fig-align="center"}
+![](rstudio_download.jpg){fig-align="center"}
 
 ### Downloading RStudio
 
@@ -55,7 +54,7 @@ __Second Option__:
 
 Use this [direct RStudio download](https://download1.rstudio.org/desktop/windows/RStudio-2022.07.2-576.exe)
 
-![](pictures/r_download.png){ style="display: block; margin: 0 auto" }
+![](r_download.png){fig-align="center"}
 
 
 # Outline

@@ -19,14 +19,14 @@ format:
 
 website:
   title: "DSS R BootCamp"
-  favicon: website_thumbnail.png
+  favicon: pictures\website_thumbnail.png
   repo-url: https://github.com/BrighamEaquinto/brighameaquinto.github.io.git
   # repo-actions: [edit, issue]
   page-navigation: true
 
   navbar:
     background: primary
-    logo: pictures\website_thumbnail.png
+    # logo: pictures\website_thumbnail.png
     pinned: true
     title: false
     # collapse: false
@@ -50,13 +50,12 @@ website:
             href: lessons\lesson5_ggplot.qmd
           - text: "Visualizing Part 2"
             href: lessons\lesson6_ggplot.qmd
-      - text: "Other"
-        menu: 
-        - text: "Dax" 
-          href: other\dax\dax.qmd
-        - text: "Welcome"
-          href: other\welcome\welcome.qmd
-
+      # - text: "Other"
+      #   menu: 
+      #   - text: "Dax" 
+      #     href: other\dax\dax.qmd
+      #   - text: "Welcome"
+      #     href: other\welcome\welcome.qmd
 
   page-footer: 
     left: 
