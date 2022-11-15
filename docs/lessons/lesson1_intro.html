@@ -2,19 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.20">
+<meta name="generator" content="quarto-1.2.219">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DSS R BootCamp – notes</title>
+<title>DSS R BootCamp - Lesson 1: Introduction to Data Science &amp; Installation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -53,7 +58,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -66,7 +71,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -81,24 +86,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./website_thumbnail.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../pictures/website_thumbnail.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -119,9 +124,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -130,26 +134,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-md navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./pictures\website_thumbnail.png" alt="" class="navbar-logo">
-    </a>
-  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="../index.html">
  <span class="menu-text">DSS Bootcamp</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./lessons/lesson1_intro.html">
+    <a class="nav-link active" href="../lessons/lesson1_intro.html" aria-current="page">
  <span class="menu-text">Installation</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./lessons/lesson2_readr.html">
+    <a class="nav-link" href="../lessons/lesson2_readr.html">
  <span class="menu-text">Reading Data</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -158,11 +157,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-wrangling-data">    
         <li>
-    <a class="dropdown-item" href="./lessons/lesson3_dplyr.html">
+    <a class="dropdown-item" href="../lessons/lesson3_dplyr.html">
  <span class="dropdown-text">Wrangling Part 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lessons/lesson4_dplyr.html">
+    <a class="dropdown-item" href="../lessons/lesson4_dplyr.html">
  <span class="dropdown-text">Wrangling Part 2</span></a>
   </li>  
     </ul>
@@ -173,27 +172,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-visualizing-data">    
         <li>
-    <a class="dropdown-item" href="./lessons/lesson5_ggplot.html">
+    <a class="dropdown-item" href="../lessons/lesson5_ggplot.html">
  <span class="dropdown-text">Visualizing Part 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lessons/lesson6_ggplot.html">
+    <a class="dropdown-item" href="../lessons/lesson6_ggplot.html">
  <span class="dropdown-text">Visualizing Part 2</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-other" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Other</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-other">    
-        <li>
-    <a class="dropdown-item" href="./other/dax/dax.html">
- <span class="dropdown-text">Dax</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./other/welcome/welcome.html">
- <span class="dropdown-text">Welcome</span></a>
   </li>  
     </ul>
   </li>
@@ -210,76 +194,131 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introductory-data-science-video" id="toc-introductory-data-science-video" class="nav-link active" data-scroll-target="#introductory-data-science-video">Introductory Data Science Video</a>
+  <ul class="collapse">
+  <li><a href="#downloading-r" id="toc-downloading-r" class="nav-link" data-scroll-target="#downloading-r">Downloading R</a>
+  <ul class="collapse">
+  <li><a href="#downloading-rstudio" id="toc-downloading-rstudio" class="nav-link" data-scroll-target="#downloading-rstudio">Downloading RStudio</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#outline" id="toc-outline" class="nav-link" data-scroll-target="#outline">Outline</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lesson 1: Introduction to Data Science &amp; Installation</h1>
+</div>
 
 
 
-<p>Options:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Can’t enter or color headers using Markdown, must use CSS instead: <code>&lt;h6 align="center"; style="color:#808080"&gt; Base R &lt;/h6&gt;</code></p>
-<section id="ideas" class="level2">
-<h2 class="anchored" data-anchor-id="ideas">Ideas</h2>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 11.5%;justify-content: center;">
+<p><img src="Rlogo.png" class="img-fluid"></p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 76.9%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 11.5%;justify-content: center;">
+<p><img src="RStudio.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<section id="introductory-data-science-video" class="level1">
+<h1>Introductory Data Science Video</h1>
+<center>
+<div class="quarto-video"><iframe src="https://www.youtube.com/embed/uswU1s3M2VE" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</center>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Click Here for Suplimental Videos
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5HlbV1wKBmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</center>
+<center>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/X3paOmcrTjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</center>
+</div>
+</div>
+</div>
+<section id="downloading-r" class="level2">
+<h2 class="anchored" data-anchor-id="downloading-r">Downloading R</h2>
+<p><strong>First Option</strong>:</p>
+<p>Google “download R” or go to <a href="https://cran.r-project.org/bin/windows/base/">this link</a> to download it. The page should look like this.</p>
+<p><strong>Second Option</strong>:</p>
+<p>Use this <a href="https://cran.rstudio.com/bin/windows/base/R-4.2.1-win.exe">direct R download</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="rstudio_download.jpg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<section id="downloading-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="downloading-rstudio">Downloading RStudio</h3>
+<p><strong>First Option</strong>:</p>
+<p>Google “download RStudio” or go to <a href="https://www.rstudio.com/products/rstudio/download/#download">this link</a> to download it. The page should look like this.</p>
+<p><strong>Second Option</strong>:</p>
+<p>Use this <a href="https://download1.rstudio.org/desktop/windows/RStudio-2022.07.2-576.exe">direct RStudio download</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="r_download.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="outline" class="level1">
+<h1>Outline</h1>
+<p>By then end of bootcamp you will be able to read in data, wrangling data, and visualize data. The</p>
+<p>Here is an example of what you’ll be able to do by the end</p>
 <ul>
-<li>Have a notes to instructors page or part of the repo</li>
-<li>have a page just for the interface of RStudio
-<ul>
-<li>hot keys</li>
-<li>shortcuts</li>
-<li>such and such</li>
-</ul></li>
-<li>have a page for R/Python equivalents</li>
-<li>have a page for other generally useful things
-<ul>
-<li>setting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows</li>
-</ul></li>
-<li>how can I use the wiki tab on the github page? What is the proper usage of it?</li>
+<li>read in data from an online source or manage a downloaded data file</li>
+<li>determine the steps needed to wrangling a dataset</li>
+<li>make appropiate visualizations</li>
 </ul>
-<p>Others to sprinkle in lessons or have as a stand alone: - commenting code - assignment operator vs equal sign - pipe operator %&gt;% - filtering operators (==, %in%, |, &amp;, !=) - c(vector) and list conversation - syntax</p>
-<p>Use this for advance select statements: https://dplyr.tidyverse.org/reference/select.html</p>
-<p>n_distinct(dat<span class="math inline">\(region) count(dat\)</span>region) table(dat$region)</p>
-<p>dat &lt;- read_csv(“https://covid.ourworldindata.org/data/owid-covid-data.csv”) # object_size(dat) view(dat)</p>
-<p>dat &lt;- read_csv(“datasets/insurance.csv”)</p>
-<p>n_distinct(dat<span class="math inline">\(region) count(dat\)</span>region) table(dat$region)</p>
-<p>R Scipts vs.&nbsp;RMDs The data science process (flow chart of start to finish and where most time is spent)</p>
-<p>Lesson 1: Introduction - Installation - the RStudio interface - an introduction to Data Science. Give the full scope of data science. - what about sending the newbies to this page during future weeks? Put a video there? Lesson 2: Readr - reading in data from CSV - reading in data from URL - writing data to CSV Lesson 3: Wrangling Data - need another day on this Lesson 4: Grouping, Summarising, Arranging Lesson 5: Graphing 1/2 Lesson 6: Graphing 2/2</p>
-<p>mean(iris)</p>
-<p>Output messages like in lm()’s “using base 10 in log()” if no other given. Have my prefered syntax of powers using {} syntax. If indeterminant form, prompt the user, what would you like to do from here. Can we get it to show work? Out put in latex?!?!</p>
-</section>
-<section id="shape-geom_point" class="level1">
-<h1>shape: geom_point</h1>
-</section>
-<section id="size-geom_point" class="level1">
-<h1>size: geom_point</h1>
-</section>
-<section id="fill" class="level1">
-<h1>fill:</h1>
-</section>
-<section id="color" class="level1">
-<h1>color:</h1>
-</section>
-<section id="stroke-geom_line" class="level1">
-<h1>stroke: geom_line</h1>
-</section>
-<section id="linetype-geom_line" class="level1">
-<h1>linetype: geom_line</h1>
-</section>
-<section id="alpha-inside-and-outside-changes.-columns-work-as-normal." class="level1">
-<h1>alpha: inside and outside changes. Columns work as normal.</h1>
-</section>
-<section id="group" class="level1">
-<h1>group:</h1>
-</section>
-<section id="position" class="level1">
-<h1>position:</h1>
-</section>
-<section id="width" class="level1">
-<h1>width:</h1>
-</section>
-<section id="why-isnt-there-a-list-of-the-options-for-each-of-these-for-each-geom" class="level1">
-<h1>Why isn’t there a list of the options for each of these for each geom???</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>data1 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"datasets/StudentsPerformance.csv"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># View(data1)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>data2 <span class="ot">&lt;-</span> data1 <span class="sc">%&gt;%</span> </span>
+<span id="cb2-2"><a href="#cb2-2"></a>    <span class="fu">group_by</span>(lunch, <span class="st">`</span><span class="at">race/ethnicity</span><span class="st">`</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="fu">summarise</span>(<span class="st">"Avg Math"</span> <span class="ot">=</span> <span class="fu">mean</span>(<span class="st">`</span><span class="at">math score</span><span class="st">`</span>), <span class="st">"Std Math"</span> <span class="ot">=</span> <span class="fu">sd</span>(<span class="st">`</span><span class="at">math score</span><span class="st">`</span>))</span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="fu">view</span>(data2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">ggplot</span>(data2, <span class="fu">aes</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>
@@ -299,7 +338,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   const toggleBodyColorPrimary = () => {
-    toggleBodyColorMode(window.document.querySelector("link#quarto-bootstrap"));
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
   }
   toggleBodyColorPrimary();  
   const disableStylesheet = (stylesheets) => {
@@ -353,6 +395,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         }
       }
     }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
   }
   const isFileUrl = () => { 
     return window.location.protocol === 'file:';
@@ -404,7 +456,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   // Switch to dark mode if need be
   if (hasAlternateSentinel()) {
     toggleColorMode(true);
-  } 
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -426,7 +480,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -454,31 +525,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

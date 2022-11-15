@@ -1,5 +1,0 @@
----
-title: "Lesson 1: Introduction to Data Science & Installation"
-toc: true
----
-

@@ -1,0 +1,87 @@
+---
+title: "Lesson 1: Introduction to Data Science & Installation"
+# subtitle: 
+toc: true
+eval: false
+---
+
+::: {layout="[3,-20,3]" layout-valign="center"}
+
+![](Rlogo.png)
+
+![](RStudio.png)
+
+:::
+
+
+# Introductory Data Science Video
+<center>
+
+{{< video src="https://www.youtube.com/embed/uswU1s3M2VE" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen >}}
+</center>
+
+:::{.callout-tip collapse="true"}
+# Click Here for Suplimental Videos
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5HlbV1wKBmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/X3paOmcrTjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
+:::
+
+## Downloading R
+
+__First Option__:
+
+Google "download R" or go to [this link](https://cran.r-project.org/bin/windows/base/) to download it. The page should look like this. 
+
+__Second Option__: 
+
+Use this [direct R download](https://cran.rstudio.com/bin/windows/base/R-4.2.1-win.exe)
+
+![](rstudio_download.jpg){fig-align="center"}
+
+### Downloading RStudio
+
+__First Option__:
+
+Google "download RStudio" or go to [this link](https://www.rstudio.com/products/rstudio/download/#download) to download it. The page should look like this.
+
+__Second Option__: 
+
+Use this [direct RStudio download](https://download1.rstudio.org/desktop/windows/RStudio-2022.07.2-576.exe)
+
+![](r_download.png){fig-align="center"}
+
+
+# Outline
+
+By then end of bootcamp you will be able to read in data, wrangling data, and visualize data. The 
+
+Here is an example of what you'll be able to do by the end
+
+- read in data from an online source or manage a downloaded data file
+- determine the steps needed to wrangling a dataset
+- make appropiate visualizations
+
+
+```{r}
+library(tidyverse)
+data1 <- read_csv("datasets/StudentsPerformance.csv")
+# View(data1)
+```
+
+```{r}
+data2 <- data1 %>% 
+    group_by(lunch, `race/ethnicity`) %>% 
+    summarise("Avg Math" = mean(`math score`), "Std Math" = sd(`math score`))
+view(data2)
+```
+
+```{r}
+ggplot(data2, aes())
+```
+

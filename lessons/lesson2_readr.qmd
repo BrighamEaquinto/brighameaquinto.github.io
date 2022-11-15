@@ -1,0 +1,65 @@
+---
+title: "Lesson 2: Reading Data"
+subtitle: Learning the ggplot2 package
+toc: true
+---
+
+## Looking At Datasets
+
+Options to See Data:
+
+- `view()`: this opens a new tab to view the data in a spreadsheet style like Excel
+- `head()`: this returns the top six rows of a dataset, or the "head" of the data
+
+<br>
+
+## Build-in Datasets
+
+Run this code to see a list of built in datasets: 
+```{r}
+#| eval: false
+data()
+```
+
+The `iris` dataset is commonly used and built into R; no additional downloads are necessary. 
+
+```{r}
+#| eval: false
+view(iris)
+```
+```{r}
+#| eval: false
+head(iris)
+```
+
+<br>
+
+## Reading Data from URL
+
+Read in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv 
+
+```{r}
+#| eval: false
+housing_data <- read_csv("https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv")
+
+head(housing_data)
+
+```
+<br> 
+
+## Reading Data from Local CSV File
+
+First, let's make a folder on your computer to use for bootcamp. I suggest putting it in your downloads folder or your documents folder and call it "R Bootcamp". 
+
+Next, click the "Session" button at the top of RStudio, then "Set Working Directory", then "Choose Directory" and use your computer's file directory to navigate to the folder you made for bootcamp. 
+
+This set your "working directory" which basically makes it easier for us to deal with files. 
+
+[Download csv](brighameaquinto.github.io\datasets\insurance.csv "Download")
+
+
+
+# Other Topics: 
+
+- directories
+- running code

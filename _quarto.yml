@@ -10,8 +10,7 @@ format:
     code-overflow: wrap
     code-fold: false
     code-tools: false
-    # code-summary: "Show the code"
-    # smooth-scroll: true
+    code-line-numbers: true
     theme: 
       light: flatly
       dark: darkly
@@ -20,50 +19,43 @@ format:
 
 website:
   title: "DSS R BootCamp"
-  favicon: website_thumbnail.png
+  favicon: pictures\website_thumbnail.png
   repo-url: https://github.com/BrighamEaquinto/brighameaquinto.github.io.git
   # repo-actions: [edit, issue]
   page-navigation: true
 
   navbar:
     background: primary
-    # logo: website_thumbnail.jpg
+    # logo: pictures\website_thumbnail.png
     pinned: true
     title: false
     # collapse: false
     collapse-below: md
     left: 
       - text: "DSS Bootcamp"
-        href: main.qmd
-      - text: "Install R & RStudio"
-        href: posts\Installation\installation.qmd
+        href: index.qmd
+      - text: "Installation"
+        href: lessons/lesson1_intro.qmd
       - text: "Reading Data"
-        href: posts\Reading Data\reading_data.qmd
+        href: lessons\lesson2_readr.qmd
       - text: "Wrangling Data"
-        href: posts\Wrangling Data\wrangling_data.qmd
-      - text: "Visualizing Data"
-        href: posts\Visualize Data\visualizing_data.qmd
-      - text: "Weeks"
         menu: 
-        - text: "Lesson 1: Installation to Data Science" 
-          href: "posts/Installation/installation.qmd"
-        - text: "Lesson 2: Reading Data" 
-          href: "posts/weeks/Oct_12th.qmd"
-        - text: "Lesson 3: Wangling Data: First Three Verbs"
-          href: "posts/lessons/lesson3_dplyr.qmd"
-        - text: "Lesson 4: Wrangling Data: Last Three Verbs"
-          href: "posts/lessons/lesson4_dplyr.qmd"
-        - text: "Lesson 5: Graphing: Part 1"
-          href: "posts/lessons/lesson5_ggplot.qmd"
-        - text: "Lesson 6: Graphing: Part 2"
-          href: "posts/lessons/lesson6_ggplot.qmd"
-
-  # sidebar:  
-  #   # title: "Tutorials"
-  #   style: "docked"
-  #   search: true
-  #   background: light
-  #   collapse-level: 2
+        - text: "Wrangling Part 1"
+          href: lessons\lesson3_dplyr.qmd
+        - text: "Wrangling Part 2"
+          href: lessons\lesson4_dplyr.qmd
+      - text: "Visualizing Data"
+        menu: 
+          - text: "Visualizing Part 1"
+            href: lessons\lesson5_ggplot.qmd
+          - text: "Visualizing Part 2"
+            href: lessons\lesson6_ggplot.qmd
+      # - text: "Other"
+      #   menu: 
+      #   - text: "Dax" 
+      #     href: other\dax\dax.qmd
+      #   - text: "Welcome"
+      #     href: other\welcome\welcome.qmd
 
   page-footer: 
     left: 

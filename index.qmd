@@ -1,0 +1,17 @@
+---
+title: "R Bootcamp"
+toc: true
+listing: 
+  - id: Weeks
+    fields: [title, subtitle, categories]
+    contents: "lessons/*.qmd"
+categories: false
+sort-ui: false
+filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+![](pictures/website_thumbnail.png){ style="display: block; margin: 0 auto" }
+
+<br>

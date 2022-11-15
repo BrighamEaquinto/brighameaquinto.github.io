@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DSS R BootCamp – notes</title>
+<title>DSS R BootCamp - Lesson 2: Reading Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,24 +81,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./website_thumbnail.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../pictures/website_thumbnail.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -119,9 +119,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -130,26 +129,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-md navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./pictures\website_thumbnail.png" alt="" class="navbar-logo">
-    </a>
-  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="../index.html">
  <span class="menu-text">DSS Bootcamp</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./lessons/lesson1_intro.html">
+    <a class="nav-link" href="../lessons/lesson1_intro.html">
  <span class="menu-text">Installation</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./lessons/lesson2_readr.html">
+    <a class="nav-link active" href="../lessons/lesson2_readr.html" aria-current="page">
  <span class="menu-text">Reading Data</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -158,11 +152,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-wrangling-data">    
         <li>
-    <a class="dropdown-item" href="./lessons/lesson3_dplyr.html">
+    <a class="dropdown-item" href="../lessons/lesson3_dplyr.html">
  <span class="dropdown-text">Wrangling Part 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lessons/lesson4_dplyr.html">
+    <a class="dropdown-item" href="../lessons/lesson4_dplyr.html">
  <span class="dropdown-text">Wrangling Part 2</span></a>
   </li>  
     </ul>
@@ -173,27 +167,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-visualizing-data">    
         <li>
-    <a class="dropdown-item" href="./lessons/lesson5_ggplot.html">
+    <a class="dropdown-item" href="../lessons/lesson5_ggplot.html">
  <span class="dropdown-text">Visualizing Part 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./lessons/lesson6_ggplot.html">
+    <a class="dropdown-item" href="../lessons/lesson6_ggplot.html">
  <span class="dropdown-text">Visualizing Part 2</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-other" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Other</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-other">    
-        <li>
-    <a class="dropdown-item" href="./other/dax/dax.html">
- <span class="dropdown-text">Dax</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./other/welcome/welcome.html">
- <span class="dropdown-text">Welcome</span></a>
   </li>  
     </ul>
   </li>
@@ -210,76 +189,90 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#looking-at-datasets" id="toc-looking-at-datasets" class="nav-link active" data-scroll-target="#looking-at-datasets">Looking At Datasets</a></li>
+  <li><a href="#build-in-datasets" id="toc-build-in-datasets" class="nav-link" data-scroll-target="#build-in-datasets">Build-in Datasets</a></li>
+  <li><a href="#reading-data-from-url" id="toc-reading-data-from-url" class="nav-link" data-scroll-target="#reading-data-from-url">Reading Data from URL</a></li>
+  <li><a href="#reading-data-from-local-csv-file" id="toc-reading-data-from-local-csv-file" class="nav-link" data-scroll-target="#reading-data-from-local-csv-file">Reading Data from Local CSV File</a></li>
+  <li><a href="#other-topics" id="toc-other-topics" class="nav-link" data-scroll-target="#other-topics">Other Topics:</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lesson 2: Reading Data</h1>
+<p class="subtitle lead">Learning the ggplot2 package</p>
+</div>
 
 
 
-<p>Options:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Can’t enter or color headers using Markdown, must use CSS instead: <code>&lt;h6 align="center"; style="color:#808080"&gt; Base R &lt;/h6&gt;</code></p>
-<section id="ideas" class="level2">
-<h2 class="anchored" data-anchor-id="ideas">Ideas</h2>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="looking-at-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="looking-at-datasets">Looking At Datasets</h2>
+<p>Options to See Data:</p>
 <ul>
-<li>Have a notes to instructors page or part of the repo</li>
-<li>have a page just for the interface of RStudio
-<ul>
-<li>hot keys</li>
-<li>shortcuts</li>
-<li>such and such</li>
-</ul></li>
-<li>have a page for R/Python equivalents</li>
-<li>have a page for other generally useful things
-<ul>
-<li>setting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows</li>
-</ul></li>
-<li>how can I use the wiki tab on the github page? What is the proper usage of it?</li>
+<li><code>view()</code>: this opens a new tab to view the data in a spreadsheet style like Excel</li>
+<li><code>head()</code>: this returns the top six rows of a dataset, or the “head” of the data</li>
 </ul>
-<p>Others to sprinkle in lessons or have as a stand alone: - commenting code - assignment operator vs equal sign - pipe operator %&gt;% - filtering operators (==, %in%, |, &amp;, !=) - c(vector) and list conversation - syntax</p>
-<p>Use this for advance select statements: https://dplyr.tidyverse.org/reference/select.html</p>
-<p>n_distinct(dat<span class="math inline">\(region) count(dat\)</span>region) table(dat$region)</p>
-<p>dat &lt;- read_csv(“https://covid.ourworldindata.org/data/owid-covid-data.csv”) # object_size(dat) view(dat)</p>
-<p>dat &lt;- read_csv(“datasets/insurance.csv”)</p>
-<p>n_distinct(dat<span class="math inline">\(region) count(dat\)</span>region) table(dat$region)</p>
-<p>R Scipts vs.&nbsp;RMDs The data science process (flow chart of start to finish and where most time is spent)</p>
-<p>Lesson 1: Introduction - Installation - the RStudio interface - an introduction to Data Science. Give the full scope of data science. - what about sending the newbies to this page during future weeks? Put a video there? Lesson 2: Readr - reading in data from CSV - reading in data from URL - writing data to CSV Lesson 3: Wrangling Data - need another day on this Lesson 4: Grouping, Summarising, Arranging Lesson 5: Graphing 1/2 Lesson 6: Graphing 2/2</p>
-<p>mean(iris)</p>
-<p>Output messages like in lm()’s “using base 10 in log()” if no other given. Have my prefered syntax of powers using {} syntax. If indeterminant form, prompt the user, what would you like to do from here. Can we get it to show work? Out put in latex?!?!</p>
+<p>Examples of this are in the section below. <br></p>
 </section>
-<section id="shape-geom_point" class="level1">
-<h1>shape: geom_point</h1>
+<section id="build-in-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="build-in-datasets">Build-in Datasets</h2>
+<p>Run this code to see a list of built in datasets:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">data</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The <code>iris</code> dataset is commonly used and built into R; no additional downloads are necessary.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">head</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">view</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
 </section>
-<section id="size-geom_point" class="level1">
-<h1>size: geom_point</h1>
+<section id="reading-data-from-url" class="level2">
+<h2 class="anchored" data-anchor-id="reading-data-from-url">Reading Data from URL</h2>
+<p>Read in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>housing_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">head</span>(housing_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
 </section>
-<section id="fill" class="level1">
-<h1>fill:</h1>
+<section id="reading-data-from-local-csv-file" class="level2">
+<h2 class="anchored" data-anchor-id="reading-data-from-local-csv-file">Reading Data from Local CSV File</h2>
+<p>First, let’s make a folder on your computer to use for bootcamp. I suggest putting it in your downloads folder or your documents folder and call it “R Bootcamp”.</p>
+<p>Next, click the “Session” button at the top of RStudio, then “Set Working Directory”, then “Choose Directory” and use your computer’s file directory to navigate to the folder you made for bootcamp.</p>
+<p>This set your “working directory” which basically makes it easier for us to deal with files.</p>
+<p><a href="brighameaquinto.github.io\datasets\insurance.csv" title="Download">Download csv</a></p>
+<div class="cell">
+
+</div>
 </section>
-<section id="color" class="level1">
-<h1>color:</h1>
-</section>
-<section id="stroke-geom_line" class="level1">
-<h1>stroke: geom_line</h1>
-</section>
-<section id="linetype-geom_line" class="level1">
-<h1>linetype: geom_line</h1>
-</section>
-<section id="alpha-inside-and-outside-changes.-columns-work-as-normal." class="level1">
-<h1>alpha: inside and outside changes. Columns work as normal.</h1>
-</section>
-<section id="group" class="level1">
-<h1>group:</h1>
-</section>
-<section id="position" class="level1">
-<h1>position:</h1>
-</section>
-<section id="width" class="level1">
-<h1>width:</h1>
-</section>
-<section id="why-isnt-there-a-list-of-the-options-for-each-of-these-for-each-geom" class="level1">
-<h1>Why isn’t there a list of the options for each of these for each geom???</h1>
+<section id="other-topics" class="level1">
+<h1>Other Topics:</h1>
+<ul>
+<li>directories</li>
+<li>running code</li>
+</ul>
 
 
 </section>
