@@ -8,8 +8,8 @@ toc: true
 
 Options to See Data:
 
-- `view()`
-- `head()`
+- `view()`: this opens a new tab to view the data in a spreadsheet style like Excel
+- `head()`: this returns the top six rows of a dataset, or the "head" of the data
 
 <br>
 
@@ -25,12 +25,13 @@ The `iris` dataset is commonly used and built into R; no additional downloads ar
 
 ```{r}
 #| eval: false
-head(iris)
+view(iris)
 ```
 ```{r}
 #| eval: false
-view(iris)
+head(iris)
 ```
+
 <br>
 
 ## Reading Data from URL
