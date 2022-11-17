@@ -18,14 +18,14 @@
     "href": "lessons/lesson2_readr.html",
     "title": "Lesson 2: Reading Data",
     "section": "",
-    "text": "Options to See Data:\n\nview()\nhead()"
+    "text": "Options to See Data:\n\nview(): this opens a new tab to view the data in a spreadsheet style like Excel\nhead(): this returns the top six rows of a dataset, or the “head” of the data"
   },
   {
     "objectID": "lessons/lesson2_readr.html#build-in-datasets",
     "href": "lessons/lesson2_readr.html#build-in-datasets",
     "title": "Lesson 2: Reading Data",
     "section": "Build-in Datasets",
-    "text": "Build-in Datasets\nRun this code to see a list of built in datasets:\n\ndata()\n\nThe iris dataset is commonly used and built into R; no additional downloads are necessary.\n\nhead(iris)\n\n\nview(iris)"
+    "text": "Build-in Datasets\nRun this code to see a list of built in datasets:\n\ndata()\n\nThe iris dataset is commonly used and built into R; no additional downloads are necessary.\n\nview(iris)\n\n\nhead(iris)"
   },
   {
     "objectID": "lessons/lesson2_readr.html#reading-data-from-url",
