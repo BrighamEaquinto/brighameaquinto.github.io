@@ -7,27 +7,6 @@
     "text": "All Together\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 1: Introduction to Data Science & Installation\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 2: Reading Data\n\n\nLearning the ggplot2 package\n\n\n\n\n \n\n\n\n\n\n\nLesson 3: First Three Wrangling Verbs\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 4: Last Three Wrangling Verbs\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 5: Graphing Part 1\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 6: Graphing Part 2\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "lessons/all_together.html",
-    "href": "lessons/all_together.html",
-    "title": "All Together",
-    "section": "",
-    "text": "Click to download data"
-  },
-  {
-    "objectID": "lessons/all_together.html#part-1",
-    "href": "lessons/all_together.html#part-1",
-    "title": "All Together",
-    "section": "Part 1",
-    "text": "Part 1\nShow me a distribution of the departure delay times by each carrier for flights that depart after 5pm\n\n\n\n\n\n\nIdea for Graph"
-  },
-  {
-    "objectID": "lessons/all_together.html#part-2",
-    "href": "lessons/all_together.html#part-2",
-    "title": "All Together",
-    "section": "Part 2",
-    "text": "Part 2\nWhich airports out of JFK, LGA, & EWR have the lowest average departure delay time?\n\n\nCode\nflights %>% \n    filter(!is.na(dep_delay), origin %in% c('JFK', 'LGA', 'EWR')) %>% \n    group_by(origin) %>% \n    summarise(Average = mean(dep_delay)) %>% \n    knitr::kable()\n\n\n\n\n\norigin\nAverage\n\n\n\n\nEWR\n15.10795\n\n\nJFK\n12.11216\n\n\nLGA\n10.34688"
-  },
-  {
     "objectID": "lessons/lesson1_intro.html#downloading-r",
     "href": "lessons/lesson1_intro.html#downloading-r",
     "title": "Lesson 1: Introduction to Data Science & Installation",
@@ -306,6 +285,27 @@
     "title": "Lesson 6: Graphing Part 2",
     "section": "Scales",
     "text": "Scales\n\n\nCode\nggplot(iris, aes(Petal.Width, Petal.Length, color = Species))+\n  geom_point()+\n  scale_x_continuous(breaks = seq(0, 4, 1))+\n  scale_y_continuous(breaks = seq(0,10,1))\n\nggplot(mpg, aes(class, fill = class))+\n  geom_bar()+\n  # scale_x_discrete(limits = c(\"2seater\"))\n  scale_fill_manual(values = c(\"blue\", \"blue\", \"blue\", \"blue\", \"blue\", \"blue\", \"red\"))\n\n# scale_x_continuous(\n#   breaks = seq(15, 40, by = 5), \n#   labels = , \n#   limits = \n#   )\n\n# scale_colour_brewer(palette = \"Set1\")\n\n# scale_colour_manual(values = c(Republican = \"red\", Democratic = \"blue\"))"
+  },
+  {
+    "objectID": "lessons/lesson7_practice.html",
+    "href": "lessons/lesson7_practice.html",
+    "title": "All Together",
+    "section": "",
+    "text": "Click to download data"
+  },
+  {
+    "objectID": "lessons/lesson7_practice.html#part-1",
+    "href": "lessons/lesson7_practice.html#part-1",
+    "title": "All Together",
+    "section": "Part 1",
+    "text": "Part 1\nShow me a distribution of the departure delay times by each carrier for flights that depart after 5pm\n\n\n\n\n\n\nIdea for Graph"
+  },
+  {
+    "objectID": "lessons/lesson7_practice.html#part-2",
+    "href": "lessons/lesson7_practice.html#part-2",
+    "title": "All Together",
+    "section": "Part 2",
+    "text": "Part 2\nWhich airports out of JFK, LGA, & EWR have the lowest average departure delay time?\n\n\nCode\nflights %>% \n    filter(!is.na(dep_delay), origin %in% c('JFK', 'LGA', 'EWR')) %>% \n    group_by(origin) %>% \n    summarise(Average = mean(dep_delay)) %>% \n    knitr::kable()\n\n\n\n\n\norigin\nAverage\n\n\n\n\nEWR\n15.10795\n\n\nJFK\n12.11216\n\n\nLGA\n10.34688"
   },
   {
     "objectID": "other/dax/dax.html",
