@@ -13,13 +13,11 @@ library(tidyverse)
 ```
 
 
-# Question 1 
-
 
 <a href="flights.csv" download>Click to download data</a>
 
 
-### Part 1
+## Part 1
 
 Show me a distribution of the departure delay times by each carrier for flights that depart after 5pm
 
@@ -40,7 +38,7 @@ flights %>%
 
 :::
 
-### Part 2 
+## Part 2 
 
 Which airports out of JFK, LGA, & EWR have the lowest average departure delay time? 
 
@@ -50,19 +48,4 @@ flights %>%
     group_by(origin) %>% 
     summarise(Average = mean(dep_delay)) %>% 
     knitr::kable()
-```
-
-
-# Question 2
-Which origin airport is best to minimize my chances of a late arrival when I am using Delta Airlines?
-
-```{r}
-
-```
-
-# Question 3
-Which destination airport is the worst (you decide on the metric for worst) airport for arrival time?
-
-```{r}
-
 ```
