@@ -417,6 +417,20 @@
     "href": "lessons/all_together.html",
     "title": "All Together",
     "section": "",
-    "text": "Question 1\nClick to download data\n\nPart 1\nShow me a distribution of the departure delay times by each carrier for flights that depart after 5pm\n\n\n\n\n\n\nIdea for Graph\n\n\n\n\n\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\n\nPart 2\nWhich airports out of JFK, LGA, & EWR have the lowest average departure delay time?\n\n\nCode\nflights %>% \n    filter(!is.na(dep_delay), origin %in% c('JFK', 'LGA', 'EWR')) %>% \n    group_by(origin) %>% \n    summarise(Average = mean(dep_delay)) %>% \n    knitr::kable()\n\n\n\n\n\norigin\nAverage\n\n\n\n\nEWR\n15.10795\n\n\nJFK\n12.11216\n\n\nLGA\n10.34688\n\n\n\n\n\n\n\n\nQuestion 2\nWhich origin airport is best to minimize my chances of a late arrival when I am using Delta Airlines?\n\n\n\n\n\nQuestion 3\nWhich destination airport is the worst (you decide on the metric for worst) airport for arrival time?"
+    "text": "Click to download data"
+  },
+  {
+    "objectID": "lessons/all_together.html#part-1",
+    "href": "lessons/all_together.html#part-1",
+    "title": "All Together",
+    "section": "Part 1",
+    "text": "Part 1\nShow me a distribution of the departure delay times by each carrier for flights that depart after 5pm\n\n\n\n\n\n\nIdea for Graph"
+  },
+  {
+    "objectID": "lessons/all_together.html#part-2",
+    "href": "lessons/all_together.html#part-2",
+    "title": "All Together",
+    "section": "Part 2",
+    "text": "Part 2\nWhich airports out of JFK, LGA, & EWR have the lowest average departure delay time?\n\n\nCode\nflights %>% \n    filter(!is.na(dep_delay), origin %in% c('JFK', 'LGA', 'EWR')) %>% \n    group_by(origin) %>% \n    summarise(Average = mean(dep_delay)) %>% \n    knitr::kable()\n\n\n\n\n\norigin\nAverage\n\n\n\n\nEWR\n15.10795\n\n\nJFK\n12.11216\n\n\nLGA\n10.34688"
   }
 ]

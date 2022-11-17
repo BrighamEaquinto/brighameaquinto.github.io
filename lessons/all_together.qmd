@@ -29,7 +29,7 @@ Show me a distribution of the departure delay times by each carrier for flights 
 #| message: false
 
 flights %>% 
-    filter(hour < 17, !is.na(dep_delay)) %>%
+    filter(hour > 17, !is.na(dep_delay)) %>%
     ggplot(aes(dep_delay))+ 
     geom_histogram()+
     facet_wrap(~carrier)+ 
