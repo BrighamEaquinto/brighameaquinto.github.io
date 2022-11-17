@@ -54,8 +54,9 @@ Next, click the "Session" button at the top of RStudio, then "Set Working Direct
 
 This set your "working directory" which basically makes it easier for us to deal with files. 
 
-[Download csv](brighameaquinto.github.io\datasets\insurance.csv "Download")
 
+
+<p>Download the <a href="datasets\insurance.csv" target="_blank">datasets\insurance.csv</a> document to provide your answers to questions asked in the steps below.</p>
 
 
 # Other Topics: 

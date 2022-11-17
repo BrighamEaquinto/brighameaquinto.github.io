@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/lessons/all_together.html",
       "/lessons/lesson1_intro.html",
       "/lessons/lesson2_readr.html",
       "/lessons/lesson3_dplyr.html",

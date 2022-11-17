@@ -128,3 +128,14 @@ where does this go?
 https://about.gitlab.com/handbook/markdown-guide/ 
 
 
+
+::: columns
+::: {.column width="35%"}
+
+:::
+::: {.column width="3%"}
+
+:::
+::: {.column width="62%"}
+:::
+:::

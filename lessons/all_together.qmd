@@ -1,0 +1,68 @@
+---
+title: All Together
+code-fold: true
+---
+
+```{r}
+#| message: false
+#| warning: false
+#| echo: false
+
+library(nycflights13) 
+library(tidyverse)
+```
+
+
+# Question 1 
+
+
+<a href="flights.csv" download>Click to download data</a>
+
+
+### Part 1
+
+Show me a distribution of the departure delay times by each carrier for flights that depart after 5pm
+
+:::{.callout-note collapse="true"}
+# Idea for Graph
+
+```{r}
+#| echo: false
+#| message: false
+
+flights %>% 
+    filter(hour < 17, !is.na(dep_delay)) %>%
+    ggplot(aes(dep_delay))+ 
+    geom_histogram()+
+    facet_wrap(~carrier)+ 
+    labs(title="Distribution of Departure Delay Times", x="Delay Minutes", y="Count of Minutes")
+```
+
+:::
+
+### Part 2 
+
+Which airports out of JFK, LGA, & EWR have the lowest average departure delay time? 
+
+```{r}
+flights %>% 
+    filter(!is.na(dep_delay), origin %in% c('JFK', 'LGA', 'EWR')) %>% 
+    group_by(origin) %>% 
+    summarise(Average = mean(dep_delay)) %>% 
+    knitr::kable()
+```
+
+
+# Question 2
+Which origin airport is best to minimize my chances of a late arrival when I am using Delta Airlines?
+
+```{r}
+
+```
+
+# Question 3
+Which destination airport is the worst (you decide on the metric for worst) airport for arrival time?
+
+```{r}
+
+```

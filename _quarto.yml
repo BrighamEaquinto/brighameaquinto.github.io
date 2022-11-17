@@ -50,6 +50,8 @@ website:
             href: lessons\lesson5_ggplot.qmd
           - text: "Visualizing Part 2"
             href: lessons\lesson6_ggplot.qmd
+      - text: Final Practice
+        href: lessons\all_together.qmd
       # - text: "Other"
       #   menu: 
       #   - text: "Dax" 
