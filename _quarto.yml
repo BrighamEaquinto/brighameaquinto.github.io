@@ -40,21 +40,21 @@ website:
       - text: "Installation"
         href: lessons/lesson1_intro.qmd
       - text: "Reading Data"
-        href: lessons\lesson2_readr.qmd
+        href: lessons/lesson2_readr.qmd
       - text: "Wrangling Data"
         menu: 
         - text: "Wrangling Part 1"
-          href: lessons\lesson3_dplyr.qmd
+          href: lessons/lesson3_dplyr.qmd
         - text: "Wrangling Part 2"
-          href: lessons\lesson4_dplyr.qmd
+          href: lessons/lesson4_dplyr.qmd
       - text: "Visualizing Data"
         menu: 
           - text: "Visualizing Part 1"
-            href: lessons\lesson5_ggplot.qmd
+            href: lessons/lesson5_ggplot.qmd
           - text: "Visualizing Part 2"
-            href: lessons\lesson6_ggplot.qmd
+            href: lessons/lesson6_ggplot.qmd
       - text: Final Practice
-        href: lessons\all_together.qmd
+        href: lessons/lesson7_practice.qmd
 
   page-footer: 
     left: 
@@ -63,5 +63,4 @@ website:
       - icon: linkedin
         href: https://www.linkedin.com/in/brighameaquinto/
     background: secondary
-
 

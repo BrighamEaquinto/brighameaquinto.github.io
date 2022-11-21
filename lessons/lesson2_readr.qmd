@@ -1,7 +1,7 @@
 ---
 title: "Lesson 2: Reading Data"
 subtitle: Learning the ggplot2 package
-image: https://raw.githubusercontent.com/rstudio/hex-stickers/main/SVG/readr.svg
+# image: https://raw.githubusercontent.com/rstudio/hex-stickers/main/SVG/readr.svg
 toc: true
 ---
 
