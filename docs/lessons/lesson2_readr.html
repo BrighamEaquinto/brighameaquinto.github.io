@@ -92,7 +92,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../pictures/website_thumbnail.png" rel="icon" type="image/png">
+<link href="../images/website_thumbnail.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -132,17 +132,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-sm navbar-dark ">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/website_thumbnail.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">DSS R BootCamp</span>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html">
- <span class="menu-text">DSS Bootcamp</span></a>
-  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../lessons/lesson1_intro.html">
  <span class="menu-text">Installation</span></a>
@@ -258,7 +262,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="reading-data-from-url" class="level2">
 <h2 class="anchored" data-anchor-id="reading-data-from-url">Reading Data from URL</h2>
-<p>Read in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv</p>
+<p>Read in this dataset from this URL: <code>https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>housing_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv"</span>)</span>
 <span id="cb4-2"><a href="#cb4-2"></a></span>
@@ -272,7 +276,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Next, click the “Session” button at the top of RStudio, then “Set Working Directory”, then “Choose Directory” and use your computer’s file directory to navigate to the folder you made for bootcamp.</p>
 <p>This set your “working directory” which basically makes it easier for us to deal with files.</p>
 <p>
-Download the <a href="datasets\insurance.csv" target="_blank">datasets.csv</a> document to provide your answers to questions asked in the steps below.
+Download the <a href="datasets/insurance.csv" target="_blank">datasets.csv</a> document to provide your answers to questions asked in the steps below.
 </p>
 </section>
 <section id="other-topics" class="level1">

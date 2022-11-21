@@ -1,6 +1,7 @@
 ---
 title: "Lesson 2: Reading Data"
 subtitle: Learning the ggplot2 package
+image: https://raw.githubusercontent.com/rstudio/hex-stickers/main/SVG/readr.svg
 toc: true
 ---
 
@@ -36,7 +37,7 @@ head(iris)
 
 ## Reading Data from URL
 
-Read in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv 
+Read in this dataset from this URL: `https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv`
 
 ```{r}
 #| eval: false
@@ -57,7 +58,7 @@ This set your "working directory" which basically makes it easier for us to deal
 
 
 
-<p>Download the <a href="datasets\insurance.csv" target="_blank">datasets\insurance.csv</a> document to provide your answers to questions asked in the steps below.</p>
+<p>Download the <a href="datasets/insurance.csv" target="_blank">datasets\insurance.csv</a> document to provide your answers to questions asked in the steps below.</p>
 
 
 # Other Topics: 

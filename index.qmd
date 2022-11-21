@@ -1,15 +1,18 @@
 ---
-title: "R Bootcamp"
+# title: "R Bootcamp"
 toc: true
 listing: 
   - id: Weeks
-    fields: [title, subtitle, categories]
+    fields: [title, subtitle, image]
     contents: "lessons/*.qmd"
+# image: images/website_thumbnail.png
+# logo: images/website_thumbnail.png
 categories: false
 sort-ui: false
 filter-ui: false
 page-layout: full
-title-block-banner: true
+title-block-banner: false
+title-block-style: none
 ---
 
 ![](images/website_thumbnail.png){ style="display: block; margin: 0 auto" }

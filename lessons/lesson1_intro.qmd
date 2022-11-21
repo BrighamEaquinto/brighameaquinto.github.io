@@ -1,9 +1,10 @@
 ---
-title: "Lesson 1: Introduction to Data Science & Installation"
+title: "Lesson 1: Introduction & Installation"
 # subtitle: 
 toc: true
 eval: false
 ---
+----
 
 ::: {layout="[3,-20,3]" layout-valign="center"}
 

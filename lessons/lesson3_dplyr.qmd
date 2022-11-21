@@ -348,7 +348,7 @@ dat %>%
 ```
 <br>
 
-## Question 7: Combining It All Together
+### Question 7: Combining It All Together
 ::: columns
 ::: {.column width="35%"}
 - Only use the age, sex, and charges columns
