@@ -52,8 +52,12 @@ website:
             href: lessons/lesson5_ggplot.qmd
           - text: "Visualizing Part 2"
             href: lessons/lesson6_ggplot.qmd
-      - text: Final Practice
-        href: lessons/lesson7_practice.qmd  
+      - text: Practices
+        menu: 
+          - text: Practice 1
+            href: lessons/lesson7_practice.qmd
+          - text: R or Python?
+            href: lessons/lesson8_python.qmd  
   page-footer: 
     left: 
       - icon: github
