@@ -7,7 +7,7 @@ project:
 format:
   html:
     code-copy: true 
-    code-overflow: wrap
+    code-overflow: scroll
     code-fold: false
     code-tools: false
     code-line-numbers: true
@@ -28,7 +28,6 @@ website:
   repo-url: https://github.com/BrighamEaquinto/brighameaquinto.github.io.git
   # repo-actions: [edit, issue]
   page-navigation: true
-
   navbar:
     background: primary
     logo: images/website_thumbnail.png
@@ -54,8 +53,7 @@ website:
           - text: "Visualizing Part 2"
             href: lessons/lesson6_ggplot.qmd
       - text: Final Practice
-        href: lessons/lesson7_practice.qmd
-
+        href: lessons/lesson7_practice.qmd  
   page-footer: 
     left: 
       - icon: github
@@ -63,4 +61,3 @@ website:
       - icon: linkedin
         href: https://www.linkedin.com/in/brighameaquinto/
     background: secondary
-

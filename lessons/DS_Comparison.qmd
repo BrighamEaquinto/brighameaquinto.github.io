@@ -1,0 +1,86 @@
+---
+title: "Comparison"
+format: html
+---
+
+
+```{python}
+import pandas as pd
+import numpy as np
+from plotnine import *
+dat = pd.read_csv("C:/Users/Bethany/Downloads/grades.csv")
+```
+
+```{python}
+is_math = ("FDMAT108", "MATH101")
+is_stats = ("MATH221A", "MATH325")
+is_major = ("CIT111", "CIT225")
+is_general_ed = ("FDAMF101", "FDENG101")
+```
+
+```{python}
+dat1 = (dat
+    .drop(['Course Program', 'Catalog', 'Grade Type'], axis = 1)
+    .query("~Grade.str.startswith('N/A')")
+    .assign(
+        Grade = lambda X: pd.Categorical(X.Grade, categories = ["A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F", "P", "W"]), 
+        Semester = lambda X: pd.Categorical(X.Semester, ["WI19", "SP19", "FA19", "WI20", "SP20", "FA20", "WI21", "SP21", "FA21", "WI22", "SP22", "FA22"]),
+        Grade_Points = lambda X: X['Grade'].replace({
+            "A": 4, "A-": 3.7,
+            "B+": 3.4, "B": 3,
+            "B-": 2.7, "C+": 2.4,
+            "C": 2, "C-": 1.7,
+            "D+": 0.4, "D": 1,
+            "D-": 0.7, "F": 0,
+            "UW": 0, "P": np.nan,
+            "W": np.nan, "I": np.nan,
+            "T": np.nan, "NR": np.nan}),
+        Course = lambda X: X['Course'].replace({r"-\d\d": "", r"\W":""}, regex=True),
+        is_math = lambda X: np.where(X['Course'].isin(is_math), True, False), 
+        is_stats = lambda X: np.where(X['Course'].isin(is_stats), True, False), 
+        is_major = lambda X: np.where(X['Course'].isin(is_major), 1, 0), 
+        is_general_ed = lambda X: np.where(X['Course'].isin(is_general_ed), 1, 0)
+        )
+)
+```
+
+
+
+```{r}
+library(tidyverse)
+
+dat <- read_csv("C:/Users/Bethany/Downloads/grades.csv")
+```
+
+```{r}
+is_math = c("FDMAT108", "MATH101")
+is_stats = c("MATH221A", "MATH325")
+is_major = c("CIT111", "CIT225")
+is_general_ed = c("FDAMF101", "FDENG101")
+```
+
+```{r}
+dat1 <- dat %>% 
+select(! c(`Course Program`, `Catalog`, `Grade Type`)) %>% 
+  filter(!str_starts(Grade, "N/A")) %>% 
+  mutate(
+    Grade = fct_relevel(Grade, c("A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F", "P", "W")), 
+    Semester = fct_relevel(Semester, "WI19", "SP19", "FA19", "WI20", "SP20", "FA20", "WI21", "SP21", "FA21", "WI22", "SP22", "FA22"), 
+    `Grade Points` = case_when(
+      Grade == "A" ~ 4, Grade == "A-" ~ 3.7, 
+      Grade == "B+" ~ 3.4, Grade == "B" ~ 3,
+      Grade == "B-" ~ 2.7, Grade == "C+" ~ 2.4,
+      Grade == "C" ~ 2, Grade == "C-" ~ 1.7,
+      Grade == "D+" ~ 0.4, Grade == "D" ~ 1,
+      Grade == "D-" ~ 0.7, Grade == "F" ~ 0,
+      Grade == "UW" ~ 0, Grade == "P" ~ NA_real_,
+      Grade == "W" ~ NA_real_, Grade == "I" ~ NA_real_,
+      Grade == "T" ~ NA_real_, Grade == "NR" ~ NA_real_), 
+    Course = str_replace(Course, "-\\d\\d", ""), 
+    Course = str_replace(Course, "\\W", ""), 
+    is_math = case_when(Course %in% is_math ~ 1, TRUE ~ 0),
+    is_stats = case_when(Course %in% is_stats ~ 1, TRUE ~ 0), 
+    is_major = case_when(Course %in% is_major ~ 1, TRUE ~ 0), 
+    is_general_ed = case_when(Course %in% is_general_ed ~ 1, TRUE ~ 0)
+)
+```

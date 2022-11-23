@@ -83,3 +83,11 @@ dat1 %>%
     tgp = sum(gp), 
     tc = sum(Credits), 
     tgp/tc)
+
+ggplot(dat1, aes(Grade))+
+    geom_bar()+
+    labs(
+        title = "Title", 
+        x = "Grade Distribution", 
+        y = "Count", 
+        caption = "Subtitle")
