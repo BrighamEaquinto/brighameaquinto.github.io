@@ -1,8 +1,8 @@
 ---
-# title: "Lesson 8: R vs. Python"
+title: "Lesson 8: R vs. Python"
 format: html
 warning: false
-toc: true
+toc: true 
 ---
 
 ```{r}
@@ -12,6 +12,8 @@ use_python("C:\\Users\\Bethany\\AppData\\Local\\Programs\\Python\\PYTHON~1\\pyth
 # use_virtualenv("myenv")
 ```
 
+
+In this article you will see the same analysis preformed in R & Python. Note the similarities and differences. 
 
 ::: {layout="[15,-10,15]"}
 
