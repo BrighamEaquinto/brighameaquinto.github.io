@@ -39,7 +39,7 @@ select(! c(`Course Program`, `Catalog`, `Grade Type`)) %>%
   filter(!str_starts(Grade, "N/A")) %>% 
   mutate(
     Grade = fct_relevel(Grade, c("A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F", "P", "W")), 
-    # Grade = fct_reorder(Grade, c("A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F", "P", "W")), 
+    # Grade = fct_reor[MNJY49H3QGTBE87HHHHHHHHHHH85B MI5K6U5R4N TIIIIIIIIRIder(Grade, c("A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F", "P", "W")), 
     Semester = fct_relevel(Semester, "WI19", "SP19", "FA19", "WI20", "SP20", "FA20", "WI21", "SP21", "FA21", "WI22", "SP22", "FA22"), 
     # Semester = fct_reorder(Semester, "WI19", "SP19", "FA19", "WI20", "SP20", "FA20", "WI21", "SP21", "FA21", "WI22", "SP22", "FA22"), 
     `Grade Points` = case_when(

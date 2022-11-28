@@ -1,0 +1,49 @@
+Course,Course Title,Course Program,Catalog,Credits,Grade Type,Grade,Semester
+DANCE180M-05,"Social Dance, Beginning",Undergraduate Program,UG17,1,Pass/Fail Option,P,WI19
+FDAMF101-10,American Foundations,Undergraduate Program,UG17,3,Letter Grade,A,WI19
+FDENG101-28,Writing & Reasoning Foundations,Undergraduate Program,UG17,3,Letter Grade,A,WI19
+FDMAT108-61,Math for the Real World,Undergraduate Program,UG17,3,Letter Grade,A,WI19
+FDREL275-02,Teachings of Book of Mormon,Undergraduate Program,UG17,2,Letter Grade,A,WI19
+GS 106A-02,College Success,Undergraduate Program,UG17,1,Letter Grade,A,WI19
+CIT 110-13,Introduction to Excel,Undergraduate Program,UG19,3,Letter Grade,A,SP19
+DANCE280M-01,Social Dance Intermediate I,Undergraduate Program,UG19,1,Letter Grade,A,SP19
+FDHUM110-02,Foundations of Humanities,Undergraduate Program,UG19,3,Letter Grade,A-,SP19
+GESCI110-02,Sustaining Human Life,Undergraduate Program,UG19,3,Letter Grade,B,SP19
+REL 261-01,Introduction to Family History,Undergraduate Program,UG19,2,Letter Grade,A-,SP19
+ECON 150-01,Econ Principles & Problems Micro,Undergraduate Program,UG19,3,Letter Grade,B+,FA19
+ECON 151-04,Econ Principles & Problems-Macro,Undergraduate Program,UG19,3,Pass/Fail Option,P,WI20
+FCS 160-01,Home & Family Resource Mgmt,Undergraduate Program,UG19,3,Pass/Fail Option,P,WI20
+MATH 101-06,Intermediate Algebra,Undergraduate Program,UG19,3,Withdrawn,W,WI20
+MATH 221A-01,Business Statistics,Undergraduate Program,UG19,3,Letter Grade,B,WI20
+CIT 111-01,Introduction to Databases,Undergraduate Program,UG20,3,Letter Grade,C,SP20
+GS 103A-01,Concentration,Undergraduate Program,UG20,0.5,Letter Grade,D,SP20
+GS 103B-01,Note Taking and Listening,Undergraduate Program,UG20,0.5,Letter Grade,C+,SP20
+MATH 325-03,Intermediate Statistics,Undergraduate Program,UG20,3,Letter Grade,D,SP20
+REL 225C-16,Foundations of the Restoration,Undergraduate Program,UG20,2,Letter Grade,A-,SP20
+CIT 225-01,Database Design & Development,Undergraduate Program,UG20,3,Letter Grade,A,FA20
+CSE 110-11,Programming Building Blocks,Undergraduate Program,UG20,2,Letter Grade,A,FA20
+MATH 101-12,Intermediate Algebra,Undergraduate Program,UG20,3,Letter Grade,B-,FA20
+MATH 325-01,Intermediate Statistics,Undergraduate Program,UG20,3,Letter Grade,A-,FA20
+REL 200C-14,The Eternal Family,Undergraduate Program,UG20,2,Letter Grade,C,FA20
+CSE 111-06,Programming with Functions,Undergraduate Program,UG20,2,Letter Grade,C,WI21
+CSE 350-01,Data Wrangling and Visualization,Undergraduate Program,UG20,3,Letter Grade,B-,WI21
+MATH 109-01,Precalculus,Undergraduate Program,UG20,5,Letter Grade,F,WI21
+BA 315-02,Business Analytics,Undergraduate Program,UG21,3,Letter Grade,B,SP21
+ESS 130-01,Body Weight Management,Undergraduate Program,UG21,1,Letter Grade,A-,SP21
+MATH 109-03,Precalculus,Undergraduate Program,UG21,5,Letter Grade,F,SP21
+CSE 210-13,Programming with Classes,Undergraduate Program,UG21,2,Letter Grade,B,FA21
+CSE 250-03,Data Science Programming,Undergraduate Program,UG21,2,Letter Grade,A-,FA21
+MATH 109-06,Precalculus,Undergraduate Program,UG21,5,Letter Grade,B+,FA21
+MATH 425-01,Applied Linear Regression,Undergraduate Program,UG21,3,Letter Grade,C+,FA21
+REL 404-01,Writings of Isaiah,Undergraduate Program,UG21,2,Letter Grade,A,FA21
+MATH 112X-02,Calculus I,Undergraduate Program,UG21,4,Withdrawn,W,WI22
+MATH 498R-02,Internship,Undergraduate Program,UG21,2,Internship Grade,A,WI22
+CSE 450-02,Machine Learning,Undergraduate Program,UG22,3,Letter Grade,A,SP22
+DS 460-01,Big Data Programming & Analytics,Undergraduate Program,UG22,3,Letter Grade,A,SP22
+MATH 112X-01,Calculus I,Undergraduate Program,UG22,4,Letter Grade,D-,SP22
+REL 250C-32,Jesus Christ Everlasting Gospel,Undergraduate Program,UG22,2,Letter Grade,A,SP22
+ART 231-01,Design Thinking: Inquiry and Inn,Undergraduate Program,UG22,3,Letter Grade,N/A until 12/22/2022,FA22
+DS 499-01,Senior Project in Data Science,Undergraduate Program,UG22,3,Letter Grade,N/A until 12/22/2022,FA22
+MATH 112X-06,Calculus I,Undergraduate Program,UG22,4,Letter Grade,N/A until 12/22/2022,FA22
+MATH 488-01,Stat & Data Sci Consulting,Undergraduate Program,UG22,3,Letter Grade,N/A until 12/22/2022,FA22
+REL 352-02,Christian History,Undergraduate Program,UG22,2,Letter Grade,N/A until 12/22/2022,FA22
