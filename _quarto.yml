@@ -57,7 +57,7 @@ website:
           - text: Practice 1
             href: lessons/extra/lesson7_practice.qmd
           - text: R or Python?
-            href: lessons/extra/lesson8_python.qmd  
+            href: lessons/extra/lesson8_python.qmd 
   page-footer: 
     left: 
       - icon: github
