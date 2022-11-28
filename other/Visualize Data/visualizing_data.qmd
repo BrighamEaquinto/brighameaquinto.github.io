@@ -1,9 +1,0 @@
----
-title: "Visualize Data"
----
-
-
-#ggplot
-
-
-<!-- ![](dplyr.jpg) -->

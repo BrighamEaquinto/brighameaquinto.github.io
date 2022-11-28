@@ -6,16 +6,18 @@ eval: false
 ---
 
 
+
 ::: {layout="[3,-20,3]" layout-valign="center"}
 
 ![](Rlogo.png)
 
 ![](RStudio.png)
 
-:::
+::: 
 
 
-# Introductory Data Science Video
+
+# Introduction to Data Science
 <center>
 
 {{< video src="https://www.youtube.com/embed/uswU1s3M2VE" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen >}}
@@ -33,7 +35,20 @@ eval: false
 
 :::
 
-## Downloading R
+
+## Course Outline: 
+
+The purpose of R Bootcamp is to be able to __read__, __wrangle__, and __visualize__ data using R in RStudio. By the end of the course you will be able to contribute to a society project next semester. 
+
+
+## What is Data? Which Kind of Data Are We Going to Use?
+
+We will be working with tabular data (think excel files; rows and columns). Other data includes pictures, videos, and audio.
+
+
+# Downloads 
+
+#### Downloading R
 
 __First Option__:
 
@@ -45,7 +60,8 @@ Use this [direct R download](https://cran.rstudio.com/bin/windows/base/R-4.2.1-w
 
 ![](rstudio_download.jpg){fig-align="center"}
 
-### Downloading RStudio
+
+#### Downloading RStudio
 
 __First Option__:
 
@@ -57,32 +73,4 @@ Use this [direct RStudio download](https://download1.rstudio.org/desktop/windows
 
 ![](r_download.png){fig-align="center"}
 
-
-# Outline
-
-By then end of bootcamp you will be able to read in data, wrangling data, and visualize data. The 
-
-Here is an example of what you'll be able to do by the end
-
-- read in data from an online source or manage a downloaded data file
-- determine the steps needed to wrangling a dataset
-- make appropiate visualizations
-
-
-```{r}
-library(tidyverse)
-data1 <- read_csv("datasets/StudentsPerformance.csv")
-# View(data1)
-```
-
-```{r}
-data2 <- data1 %>% 
-    group_by(lunch, `race/ethnicity`) %>% 
-    summarise("Avg Math" = mean(`math score`), "Std Math" = sd(`math score`))
-view(data2)
-```
-
-```{r}
-ggplot(data2, aes())
-```
-
+<!-- add this later: https://github.com/dracula/gh-pages -->

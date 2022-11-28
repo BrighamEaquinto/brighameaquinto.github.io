@@ -7,6 +7,34 @@
     "text": "Lesson 1: Introduction & Installation\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 2: Reading Data\n\n\nLearning the ggplot2 package\n\n\n\n\n \n\n\n\n\n\n\nLesson 3: First Three Wrangling Verbs\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 4: Last Three Wrangling Verbs\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 5: Graphing Part 1\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 6: Graphing Part 2\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
+    "objectID": "lessons/extra/lesson7_practice.html",
+    "href": "lessons/extra/lesson7_practice.html",
+    "title": "Lesson 7: All Together",
+    "section": "",
+    "text": "Click to download data"
+  },
+  {
+    "objectID": "lessons/extra/lesson7_practice.html#part-1",
+    "href": "lessons/extra/lesson7_practice.html#part-1",
+    "title": "Lesson 7: All Together",
+    "section": "Part 1",
+    "text": "Part 1\nShow me a distribution of the departure delay times by each carrier for flights that depart after 5pm\n\n\n\n\n\n\nIdea for Graph"
+  },
+  {
+    "objectID": "lessons/extra/lesson7_practice.html#part-2",
+    "href": "lessons/extra/lesson7_practice.html#part-2",
+    "title": "Lesson 7: All Together",
+    "section": "Part 2",
+    "text": "Part 2\nWhich airports out of JFK, LGA, & EWR have the lowest average departure delay time?\n\n\nCode\nflights %>% \n    filter(!is.na(dep_delay), origin %in% c('JFK', 'LGA', 'EWR')) %>% \n    group_by(origin) %>% \n    summarise(Average = mean(dep_delay)) %>% \n    knitr::kable()\n\n\n\n\n\norigin\nAverage\n\n\n\n\nEWR\n15.10795\n\n\nJFK\n12.11216\n\n\nLGA\n10.34688"
+  },
+  {
+    "objectID": "lessons/extra/lesson8_python.html",
+    "href": "lessons/extra/lesson8_python.html",
+    "title": "Lesson 8: R vs. Python",
+    "section": "",
+    "text": "In this article you will see the same analysis preformed in R & Python. Note the similarities and differences.\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\nR\n\n\nlibrary(tidyverse)\n\n\ndat <- read_csv(\"C:/Users/Bethany/Downloads/grades.csv\")\n\n\nis_math <- c(\"FDMAT108\", \"MATH101\")\nis_stats <- c(\"MATH221A\", \"MATH325\")\nis_major <- c(\"CIT111\", \"CIT225\")\nis_general_ed <- c(\"FDAMF101\", \"FDENG101\")\n\n\ndat1 <- dat %>% \n  select(!c(`Course Program`, `Catalog`, `Grade Type`)) %>% \n  filter(!str_starts(Grade, \"N/A\")) %>% \n  mutate(\n    Grade = fct_relevel(Grade, c(\"A\", \"A-\", \"B+\", \"B\", \"B-\", \"C+\", \"C\", \"C-\", \"D+\", \"D\", \"D-\", \"F\", \"P\", \"W\")), \n    Semester = fct_relevel(Semester, \"WI19\", \"SP19\", \"FA19\", \"WI20\", \"SP20\", \"FA20\", \"WI21\", \"SP21\", \"FA21\", \"WI22\", \"SP22\", \"FA22\"), \n    `Grade Points` = case_when(\n      Grade == \"A\" ~ 4, \n      Grade == \"A-\" ~ 3.7, \n      Grade == \"B+\" ~ 3.4, \n      Grade == \"B\" ~ 3,\n      Grade == \"B-\" ~ 2.7, \n      Grade == \"C+\" ~ 2.4,\n      Grade == \"C\" ~ 2, \n      Grade == \"C-\" ~ 1.7,\n      Grade == \"D+\" ~ 0.4, \n      Grade == \"D\" ~ 1,\n      Grade == \"D-\" ~ 0.7, \n      Grade == \"F\" ~ 0,\n      Grade == \"UW\" ~ 0, \n      Grade == \"P\" ~ NA_real_,\n      Grade == \"W\" ~ NA_real_, \n      Grade == \"I\" ~ NA_real_,\n      Grade == \"T\" ~ NA_real_, \n      Grade == \"NR\" ~ NA_real_), \n    Course = str_replace(Course, \"-\\\\d\\\\d\", \"\"), \n    Course = str_replace(Course, \"\\\\W\", \"\"), \n    is_math = case_when(Course %in% is_math ~ 1, TRUE ~ 0),\n    is_stats = case_when(Course %in% is_stats ~ 1, TRUE ~ 0), \n    is_major = case_when(Course %in% is_major ~ 1, TRUE ~ 0), \n    is_general_ed = case_when(Course %in% is_general_ed ~ 1, TRUE ~ 0)\n)\n\n\n\nhead(dat1)\n\n# A tibble: 6 × 10\n  Course   `Course Title` Credits Grade Semester `Grade Points` is_math is_stats\n  <chr>    <chr>            <dbl> <fct> <fct>             <dbl>   <dbl>    <dbl>\n1 DANCE18… Social Dance,…       1 P     WI19                 NA       0        0\n2 FDAMF101 American Foun…       3 A     WI19                  4       0        0\n3 FDENG101 Writing & Rea…       3 A     WI19                  4       0        0\n4 FDMAT108 Math for the …       3 A     WI19                  4       1        0\n5 FDREL275 Teachings of …       2 A     WI19                  4       0        0\n6 GS106A   College Succe…       1 A     WI19                  4       0        0\n# … with 2 more variables: is_major <dbl>, is_general_ed <dbl>\n\n\n\n\n\n\n\n\nPython\n\n\nimport pandas as pd\nimport numpy as np\nfrom plotnine import *\ndat = pd.read_csv(\"C:/Users/Bethany/Downloads/grades.csv\")\n\n\nis_math = (\"FDMAT108\", \"MATH101\")\nis_stats = (\"MATH221A\", \"MATH325\")\nis_major = (\"CIT111\", \"CIT225\")\nis_general_ed = (\"FDAMF101\", \"FDENG101\")\n\n\ndat1 = (dat\n    .drop(['Course Program', 'Catalog', 'Grade Type'], axis = 1)\n    .query(\"~Grade.str.startswith('N/A')\")\n    .assign(\n        Grade = lambda X: pd.Categorical(X.Grade, categories = [\"A\", \"A-\", \"B+\", \"B\", \"B-\", \"C+\", \"C\", \"C-\", \"D+\", \"D\", \"D-\", \"F\", \"P\", \"W\"]), \n        Semester = lambda X: pd.Categorical(X.Semester, [\"WI19\", \"SP19\", \"FA19\", \"WI20\", \"SP20\", \"FA20\", \"WI21\", \"SP21\", \"FA21\", \"WI22\", \"SP22\", \"FA22\"]),\n        Grade_Points = lambda X: X['Grade'].replace({\n            \"A\": 4, \n            \"A-\": 3.7,\n            \"B+\": 3.4, \n            \"B\": 3,\n            \"B-\": 2.7, \n            \"C+\": 2.4,\n            \"C\": 2, \n            \"C-\": 1.7,\n            \"D+\": 0.4, \n            \"D\": 1,\n            \"D-\": 0.7, \n            \"F\": 0,\n            \"UW\": 0, \n            \"P\": np.nan,\n            \"W\": np.nan, \n            \"I\": np.nan,\n            \"T\": np.nan, \n            \"NR\": np.nan}),\n        Course = lambda X: X['Course'].replace({r\"-\\d\\d\": \"\", r\"\\W\":\"\"}, regex=True),\n        is_math = lambda X: np.where(X['Course'].isin(is_math), True, False), \n        is_stats = lambda X: np.where(X['Course'].isin(is_stats), True, False), \n        is_major = lambda X: np.where(X['Course'].isin(is_major), 1, 0), \n        is_general_ed = lambda X: np.where(X['Course'].isin(is_general_ed), 1, 0)\n        )\n)\n\n\ndat1.head()\n\n      Course                     Course Title  ...  is_major is_general_ed\n0  DANCE180M          Social Dance, Beginning  ...         0             0\n1   FDAMF101             American Foundations  ...         0             1\n2   FDENG101  Writing & Reasoning Foundations  ...         0             1\n3   FDMAT108          Math for the Real World  ...         0             0\n4   FDREL275      Teachings of Book of Mormon  ...         0             0\n\n[5 rows x 10 columns]"
+  },
+  {
     "objectID": "lessons/lesson1_intro.html#downloading-r",
     "href": "lessons/lesson1_intro.html#downloading-r",
     "title": "Lesson 1: Introduction & Installation",
@@ -280,55 +308,6 @@
     "text": "Scales\n\n\nCode\nggplot(iris, aes(Petal.Width, Petal.Length, color = Species))+\n  geom_point()+\n  scale_x_continuous(breaks = seq(0, 4, 1))+\n  scale_y_continuous(breaks = seq(0,10,1))\n\nggplot(mpg, aes(class, fill = class))+\n  geom_bar()+\n  # scale_x_discrete(limits = c(\"2seater\"))\n  scale_fill_manual(values = c(\"blue\", \"blue\", \"blue\", \"blue\", \"blue\", \"blue\", \"red\"))\n\n# scale_x_continuous(\n#   breaks = seq(15, 40, by = 5), \n#   labels = , \n#   limits = \n#   )\n\n# scale_colour_brewer(palette = \"Set1\")\n\n# scale_colour_manual(values = c(Republican = \"red\", Democratic = \"blue\"))"
   },
   {
-    "objectID": "lessons/lesson7_practice.html",
-    "href": "lessons/lesson7_practice.html",
-    "title": "Lesson 7: All Together",
-    "section": "",
-    "text": "Click to download data"
-  },
-  {
-    "objectID": "lessons/lesson7_practice.html#part-1",
-    "href": "lessons/lesson7_practice.html#part-1",
-    "title": "Lesson 7: All Together",
-    "section": "Part 1",
-    "text": "Part 1\nShow me a distribution of the departure delay times by each carrier for flights that depart after 5pm\n\n\n\n\n\n\nIdea for Graph"
-  },
-  {
-    "objectID": "lessons/lesson7_practice.html#part-2",
-    "href": "lessons/lesson7_practice.html#part-2",
-    "title": "Lesson 7: All Together",
-    "section": "Part 2",
-    "text": "Part 2\nWhich airports out of JFK, LGA, & EWR have the lowest average departure delay time?\n\n\nCode\nflights %>% \n    filter(!is.na(dep_delay), origin %in% c('JFK', 'LGA', 'EWR')) %>% \n    group_by(origin) %>% \n    summarise(Average = mean(dep_delay)) %>% \n    knitr::kable()\n\n\n\n\n\norigin\nAverage\n\n\n\n\nEWR\n15.10795\n\n\nJFK\n12.11216\n\n\nLGA\n10.34688"
-  },
-  {
-    "objectID": "lessons/lesson8_python.html",
-    "href": "lessons/lesson8_python.html",
-    "title": "Lesson 8: R vs. Python",
-    "section": "",
-    "text": "In this article you will see the same analysis preformed in R & Python. Note the similarities and differences.\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\nR\n\n\nlibrary(tidyverse)\n\n\ndat <- read_csv(\"C:/Users/Bethany/Downloads/grades.csv\")\n\n\nis_math <- c(\"FDMAT108\", \"MATH101\")\nis_stats <- c(\"MATH221A\", \"MATH325\")\nis_major <- c(\"CIT111\", \"CIT225\")\nis_general_ed <- c(\"FDAMF101\", \"FDENG101\")\n\n\ndat1 <- dat %>% \n  select(!c(`Course Program`, `Catalog`, `Grade Type`)) %>% \n  filter(!str_starts(Grade, \"N/A\")) %>% \n  mutate(\n    Grade = fct_relevel(Grade, c(\"A\", \"A-\", \"B+\", \"B\", \"B-\", \"C+\", \"C\", \"C-\", \"D+\", \"D\", \"D-\", \"F\", \"P\", \"W\")), \n    Semester = fct_relevel(Semester, \"WI19\", \"SP19\", \"FA19\", \"WI20\", \"SP20\", \"FA20\", \"WI21\", \"SP21\", \"FA21\", \"WI22\", \"SP22\", \"FA22\"), \n    `Grade Points` = case_when(\n      Grade == \"A\" ~ 4, \n      Grade == \"A-\" ~ 3.7, \n      Grade == \"B+\" ~ 3.4, \n      Grade == \"B\" ~ 3,\n      Grade == \"B-\" ~ 2.7, \n      Grade == \"C+\" ~ 2.4,\n      Grade == \"C\" ~ 2, \n      Grade == \"C-\" ~ 1.7,\n      Grade == \"D+\" ~ 0.4, \n      Grade == \"D\" ~ 1,\n      Grade == \"D-\" ~ 0.7, \n      Grade == \"F\" ~ 0,\n      Grade == \"UW\" ~ 0, \n      Grade == \"P\" ~ NA_real_,\n      Grade == \"W\" ~ NA_real_, \n      Grade == \"I\" ~ NA_real_,\n      Grade == \"T\" ~ NA_real_, \n      Grade == \"NR\" ~ NA_real_), \n    Course = str_replace(Course, \"-\\\\d\\\\d\", \"\"), \n    Course = str_replace(Course, \"\\\\W\", \"\"), \n    is_math = case_when(Course %in% is_math ~ 1, TRUE ~ 0),\n    is_stats = case_when(Course %in% is_stats ~ 1, TRUE ~ 0), \n    is_major = case_when(Course %in% is_major ~ 1, TRUE ~ 0), \n    is_general_ed = case_when(Course %in% is_general_ed ~ 1, TRUE ~ 0)\n)\n\n\n\nhead(dat1)\n\n# A tibble: 6 × 10\n  Course   `Course Title` Credits Grade Semester `Grade Points` is_math is_stats\n  <chr>    <chr>            <dbl> <fct> <fct>             <dbl>   <dbl>    <dbl>\n1 DANCE18… Social Dance,…       1 P     WI19                 NA       0        0\n2 FDAMF101 American Foun…       3 A     WI19                  4       0        0\n3 FDENG101 Writing & Rea…       3 A     WI19                  4       0        0\n4 FDMAT108 Math for the …       3 A     WI19                  4       1        0\n5 FDREL275 Teachings of …       2 A     WI19                  4       0        0\n6 GS106A   College Succe…       1 A     WI19                  4       0        0\n# … with 2 more variables: is_major <dbl>, is_general_ed <dbl>\n\n\n\n\n\n\n\n\nPython\n\n\nimport pandas as pd\nimport numpy as np\nfrom plotnine import *\ndat = pd.read_csv(\"C:/Users/Bethany/Downloads/grades.csv\")\n\n\nis_math = (\"FDMAT108\", \"MATH101\")\nis_stats = (\"MATH221A\", \"MATH325\")\nis_major = (\"CIT111\", \"CIT225\")\nis_general_ed = (\"FDAMF101\", \"FDENG101\")\n\n\ndat1 = (dat\n    .drop(['Course Program', 'Catalog', 'Grade Type'], axis = 1)\n    .query(\"~Grade.str.startswith('N/A')\")\n    .assign(\n        Grade = lambda X: pd.Categorical(X.Grade, categories = [\"A\", \"A-\", \"B+\", \"B\", \"B-\", \"C+\", \"C\", \"C-\", \"D+\", \"D\", \"D-\", \"F\", \"P\", \"W\"]), \n        Semester = lambda X: pd.Categorical(X.Semester, [\"WI19\", \"SP19\", \"FA19\", \"WI20\", \"SP20\", \"FA20\", \"WI21\", \"SP21\", \"FA21\", \"WI22\", \"SP22\", \"FA22\"]),\n        Grade_Points = lambda X: X['Grade'].replace({\n            \"A\": 4, \n            \"A-\": 3.7,\n            \"B+\": 3.4, \n            \"B\": 3,\n            \"B-\": 2.7, \n            \"C+\": 2.4,\n            \"C\": 2, \n            \"C-\": 1.7,\n            \"D+\": 0.4, \n            \"D\": 1,\n            \"D-\": 0.7, \n            \"F\": 0,\n            \"UW\": 0, \n            \"P\": np.nan,\n            \"W\": np.nan, \n            \"I\": np.nan,\n            \"T\": np.nan, \n            \"NR\": np.nan}),\n        Course = lambda X: X['Course'].replace({r\"-\\d\\d\": \"\", r\"\\W\":\"\"}, regex=True),\n        is_math = lambda X: np.where(X['Course'].isin(is_math), True, False), \n        is_stats = lambda X: np.where(X['Course'].isin(is_stats), True, False), \n        is_major = lambda X: np.where(X['Course'].isin(is_major), 1, 0), \n        is_general_ed = lambda X: np.where(X['Course'].isin(is_general_ed), 1, 0)\n        )\n)\n\n\ndat1.head()\n\n      Course                     Course Title  ...  is_major is_general_ed\n0  DANCE180M          Social Dance, Beginning  ...         0             0\n1   FDAMF101             American Foundations  ...         0             1\n2   FDENG101  Writing & Reasoning Foundations  ...         0             1\n3   FDMAT108          Math for the Real World  ...         0             0\n4   FDREL275      Teachings of Book of Mormon  ...         0             0\n\n[5 rows x 10 columns]"
-  },
-  {
-    "objectID": "other/dax/dax.html",
-    "href": "other/dax/dax.html",
-    "title": "DAX Reference",
-    "section": "",
-    "text": "CALENDAR(StartDate, EndDate)\n\nDescription: Returns a table with one column of all dates between StartDate and EndDate.\nParameters:\n\nStartDate: The start date in datetime format\nEndDate: The end date in datetime format\n\n\n\n\nExample 1\nDim_DeliveryDate = \nCALENDAR(\n    MIN(Fact_Sales[Delivery Date Key]), \n    MAX(Fact_Sales[Delivery Date Key])\n    )\n\n\n\n\nExample 2\n# Code for another example here\n\n\n\n\nMAX()\nSee CALENDAR() function reference, example 1.\n\n\nMIN()\nSee CALENDAR() function reference, example 1.\n\n\nSUBSTITUTE(text, oldtext, newtext)\n\nDescription: This is similar to regex and Power Query Editor’s “Replace Values”\nParameters:\n\ntext: The text to manipulate. Can be a column.\noldtext: The piece of text to replace.\nnewtext: The text we want to insert. This can just be two quotation marks to do a blank.\n\n\n\n\nExample 1\nRetail Price Clean = \nSUBSTITUTE(\n    Dim_StockItem[Recommended Retail Price], \n    \"? \", \n    \"\"\n    )"
-  },
-  {
-    "objectID": "other/notes.html",
-    "href": "other/notes.html",
-    "title": "DSS R BootCamp",
-    "section": "",
-    "text": "Options:\nCan’t enter or color headers using Markdown, must use CSS instead: <h6 align=\"center\"; style=\"color:#808080\"> Base R </h6>"
-  },
-  {
-    "objectID": "other/notes.html#ideas",
-    "href": "other/notes.html#ideas",
-    "title": "DSS R BootCamp",
-    "section": "Ideas",
-    "text": "Ideas\n\nHave a notes to instructors page or part of the repo\nhave a page just for the interface of RStudio\n\nhot keys\nshortcuts\nsuch and such\n\nhave a page for R/Python equivalents\nhave a page for other generally useful things\n\nsetting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows\n\nhow can I use the wiki tab on the github page? What is the proper usage of it?\n\nOthers to sprinkle in lessons or have as a stand alone: - commenting code - assignment operator vs equal sign - pipe operator %>% - filtering operators (==, %in%, |, &, !=) - c(vector) and list conversation - syntax\nUse this for advance select statements: https://dplyr.tidyverse.org/reference/select.html\nn_distinct(dat\\(region) count(dat\\)region) table(dat$region)\ndat <- read_csv(“https://covid.ourworldindata.org/data/owid-covid-data.csv”) # object_size(dat) view(dat)\ndat <- read_csv(“datasets/insurance.csv”)\nn_distinct(dat\\(region) count(dat\\)region) table(dat$region)\nR Scipts vs. RMDs The data science process (flow chart of start to finish and where most time is spent)\nLesson 1: Introduction - Installation - the RStudio interface - an introduction to Data Science. Give the full scope of data science. - what about sending the newbies to this page during future weeks? Put a video there? Lesson 2: Readr - reading in data from CSV - reading in data from URL - writing data to CSV Lesson 3: Wrangling Data - need another day on this Lesson 4: Grouping, Summarising, Arranging Lesson 5: Graphing 1/2 Lesson 6: Graphing 2/2\nmean(iris)\nOutput messages like in lm()’s “using base 10 in log()” if no other given. Have my prefered syntax of powers using {} syntax. If indeterminant form, prompt the user, what would you like to do from here. Can we get it to show work? Out put in latex?!?!"
-  },
-  {
     "objectID": "other/Reading Data/reading_data.html",
     "href": "other/Reading Data/reading_data.html",
     "title": "Reading Data",
@@ -406,31 +385,24 @@
     "text": "Base R is the native tools that R has to deal with data. The syntax is outdated and better tools are available to use.\nThe syntax to work in Base R is very similar to native python syntax. The biggest downside is that it’s not possible to chain operations together like selecting columns and filtering data. You would to constantly assign and reassign variables which results in very messy and unreadable code.\nIf you use this, I will turn in my grave. Please don’t make your life more difficult, use the Tidyverse.\nBase R is native to R; no additional installations are required.\n\n\n\n\nThe Tidyverse allows chainable actions like this:\n\nnew_dataset <- dataset %>% \n    select() %>%\n    filter() %>% \n    mutate() %>% \n    group_by() %>% \n    summarise() %>%\n    arrange()\n\nRun this code in the console to download the tidyverse\n\ninstall.packages(\"tidyverse\")\n\nIn order to be able to use this package, put this code at the top of your R Script or RMD file\n\nlibrary(tidyverse)\n\n\n\n\n\n\n\n\n\n\n\ndf$column_name\ndf[[]]\n\n\n\n\n\ndf %>% select(column1, column2)\n\n\n\n\n\n\n\n\n\n\n\ndf$profit <- df$revenue - df$cost\n\n\n\n\n\ndf %>% mutate(profit = revenue - cost)\n\n\n\n\n\n\n\n\n\n\n\n\ndf[df$temperature > 45]\n\n\n\n\n\ndf %>% filter(temperature > 45)\n\n\n\n\n\n\n\n\n\n\n\nI’m not sure how to do this in BaseR… and that’s okay\n\n\n\n\n\ndf %>% \n    group_by(city) %>% \n    summarise(Avg_House_Price = mean(house_price))\n\n\n\n\n\n\n\n\n\n\n\nmtcars[order(mpg, -cyl),]\n\n\n\n\n\nmtcars %>% arrange(mpg, desc(cyl))\n\n\n\n\n\nCheck out this page for more comparisons.\nFiltering Data in Base R:\n\nhttps://www.mitchcraver.com/2021/06/15/subsetting-and-filtering-a-data-frame-in-r/\nhttps://cran.r-project.org/web/packages/crunch/vignettes/filters.html"
   },
   {
-    "objectID": "lessons/extra/lesson7_practice.html",
-    "href": "lessons/extra/lesson7_practice.html",
-    "title": "Lesson 7: All Together",
+    "objectID": "lessons/lesson1_intro.html#course-outline",
+    "href": "lessons/lesson1_intro.html#course-outline",
+    "title": "Lesson 1: Introduction & Installation",
+    "section": "Course Outline:",
+    "text": "Course Outline:\nThe purpose of R Bootcamp is to be able to read, wrangle, and visualize data using R in RStudio. By the end of the course you will be able to contribute to a society project next semester."
+  },
+  {
+    "objectID": "lessons/lesson1_intro.html#what-is-data-which-kind-of-data-are-we-going-to-use",
+    "href": "lessons/lesson1_intro.html#what-is-data-which-kind-of-data-are-we-going-to-use",
+    "title": "Lesson 1: Introduction & Installation",
+    "section": "What is Data? Which Kind of Data Are We Going to Use?",
+    "text": "What is Data? Which Kind of Data Are We Going to Use?\nWe will be working with tabular data (think excel files; rows and columns). Other data includes pictures, videos, and audio."
+  },
+  {
+    "objectID": "lessons/lesson1_intro.html",
+    "href": "lessons/lesson1_intro.html",
+    "title": "Lesson 1: Introduction & Installation",
     "section": "",
-    "text": "Click to download data"
-  },
-  {
-    "objectID": "lessons/extra/lesson7_practice.html#part-1",
-    "href": "lessons/extra/lesson7_practice.html#part-1",
-    "title": "Lesson 7: All Together",
-    "section": "Part 1",
-    "text": "Part 1\nShow me a distribution of the departure delay times by each carrier for flights that depart after 5pm\n\n\n\n\n\n\nIdea for Graph"
-  },
-  {
-    "objectID": "lessons/extra/lesson7_practice.html#part-2",
-    "href": "lessons/extra/lesson7_practice.html#part-2",
-    "title": "Lesson 7: All Together",
-    "section": "Part 2",
-    "text": "Part 2\nWhich airports out of JFK, LGA, & EWR have the lowest average departure delay time?\n\n\nCode\nflights %>% \n    filter(!is.na(dep_delay), origin %in% c('JFK', 'LGA', 'EWR')) %>% \n    group_by(origin) %>% \n    summarise(Average = mean(dep_delay)) %>% \n    knitr::kable()\n\n\n\n\n\norigin\nAverage\n\n\n\n\nEWR\n15.10795\n\n\nJFK\n12.11216\n\n\nLGA\n10.34688"
-  },
-  {
-    "objectID": "lessons/extra/lesson8_python.html",
-    "href": "lessons/extra/lesson8_python.html",
-    "title": "Lesson 8: R vs. Python",
-    "section": "",
-    "text": "In this article you will see the same analysis preformed in R & Python. Note the similarities and differences.\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\nR\n\n\n\n\n\n\n\n\nPython"
+    "text": "Click Here for Suplimental Videos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe purpose of R Bootcamp is to be able to read, wrangle, and visualize data using R in RStudio. By the end of the course you will be able to contribute to a society project next semester.\n\n\n\nnavigating file systems\ncopy file paths\nRStudio’s “Import Dataset” button\n\n\n\n\nThe Six Wrangling Verbs:\n\nselect()\nfilter()\nmutate()\ngroup_by()\nsummarise()\narrange()\n\n\n\n\n\nWhen to use which plots: histograms, boxplots, scatterplots, & bar charts\ncode for each\n\n\n\n\n\nWe will be working with tabular data (think excel files; rows and columns). Other data includes pictures, videos, and audio.\n\nlibrary(tidyverse)\ndata1 <- read_csv(\"datasets/StudentsPerformance.csv\")\n# View(data1)\n\n\ndata2 <- data1 %>% \n    group_by(lunch, `race/ethnicity`) %>% \n    summarise(\"Avg Math\" = mean(`math score`), \"Std Math\" = sd(`math score`))\nview(data2)\n\n\nggplot(data2, aes())"
   }
 ]

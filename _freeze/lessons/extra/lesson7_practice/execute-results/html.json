@@ -1,0 +1,16 @@
+{
+  "hash": "159fb40f0f07e3e3a6feea5273517f8c",
+  "result": {
+    "markdown": "---\ntitle: \"Lesson 7: All Together\"\ncode-fold: true\n---\n\n::: {.cell}\n\n:::\n\n\n\n\n<a href=\"flights.csv\" download>Click to download data</a>\n\n\n## Part 1\n\nShow me a distribution of the departure delay times by each carrier for flights that depart after 5pm\n\n:::{.callout-note collapse=\"true\"}\n# Idea for Graph\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](lesson7_practice_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\n:::\n\n## Part 2 \n\nWhich airports out of JFK, LGA, & EWR have the lowest average departure delay time? \n\n\n::: {.cell}\n\n```{.r .cell-code}\nflights %>% \n    filter(!is.na(dep_delay), origin %in% c('JFK', 'LGA', 'EWR')) %>% \n    group_by(origin) %>% \n    summarise(Average = mean(dep_delay)) %>% \n    knitr::kable()\n```\n\n::: {.cell-output-display}\n|origin |  Average|\n|:------|--------:|\n|EWR    | 15.10795|\n|JFK    | 12.11216|\n|LGA    | 10.34688|\n:::\n:::",
+    "supporting": [
+      "lesson7_practice_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
