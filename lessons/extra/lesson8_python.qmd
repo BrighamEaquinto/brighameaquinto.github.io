@@ -148,6 +148,7 @@ dat1 = (dat
 ```
 
 ```{python}
+#| eval: false
 dat1.head()
 ```
 
