@@ -13,6 +13,86 @@ use_python("C:\\Users\\Bethany\\AppData\\Local\\Programs\\Python\\PYTHON~1\\pyth
 ```
 
 
+::: {.panel-tabset}
+
+# Comparison 1
+
+
+
+::: columns
+::: {.column width="45%"}
+
+## R 
+
+```{r}
+library(tidyverse)
+library(knitr)
+```
+
+```{r}
+
+iris %>% 
+  select(Species, Sepal.Width, Sepal.Length) %>% 
+  filter(Sepal.Width >= 3, Species %in% c("setosa", "virginica")) %>% 
+  mutate(
+    Sepal_Ratio = round(Sepal.Width/Sepal.Length, 4), 
+    small_ratio = ifelse(Sepal_Ratio < 0.7, 1, 0)) %>%
+  arrange(Species, desc(Sepal.Length)) %>% 
+  head()
+
+```
+ 
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="45%"}
+
+## Python
+
+```{python}
+import pandas as pd
+import numpy as np
+```
+
+```{python}
+#| echo: false
+#| 
+iris = (
+    pd.read_csv("https://gist.github.com/curran/a08a1080b88344b0c8a7/raw/0e7a9b0a5d22642a06d3d5b9bcbad9890c8ee534/iris.csv")
+    .rename(columns = 
+        {'sepal_length':"Sepal.Length", 
+        'sepal_width':"Sepal.Width", 
+        'petal_length':"Petal.Length", 
+        'petal_width':"Petal.Width",
+        'species':"Species"
+        })
+)
+
+```
+
+
+```{python}
+(iris
+  .filter(["Species", "Sepal.Width", "Sepal.Length"])
+  .query('(`Sepal.Width` >= 3) & (Species in ["setosa", "virginica"])')
+  .assign(
+    Sepal_Ratio = lambda x: round( x['Sepal.Width'] / x['Sepal.Length'], 4), 
+    small_ratio = lambda x: np.where(x['Sepal_Ratio'], 1, 0))
+  .sort_values(["Species", "Sepal.Length"], ascending = [True, False])
+  .head() )
+```
+
+
+:::
+:::
+
+
+
+# Comparison 2 
+
+
+
+
 In this article you will see the same analysis preformed in R & Python. Note the similarities and differences. 
 
 ::: {layout="[15,-10,15]"}
@@ -148,9 +228,191 @@ dat1 = (dat
 ```
 
 ```{python}
-#| eval: false
 dat1.head()
 ```
 
 :::
 :::
+
+
+
+
+# Tutorial 
+
+
+### Reading in Data 
+
+::: columns
+::: {.column width="45%"}
+
+**In R (Dplyr)**:
+
+```{r}
+#| eval: false
+library(tidyverse)
+dat1 <- read_csv()
+```
+ 
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="45%"}
+
+**In Python (Pandas)**:
+
+```{python}
+#| eval: false
+import pandas as pd
+dat1 = pd.read_csv()
+```
+
+
+:::
+:::
+
+### Wrangling Verbs
+
+
+::: columns
+::: {.column width="45%"}
+
+What we are familiar with in R (Tidyverse): 
+
+```{r}
+#| eval: false
+#| code-line-numbers: false
+select()
+```
+```{r}
+#| eval: false
+#| code-line-numbers: false
+filter()
+```
+```{r}
+#| eval: false
+#| code-line-numbers: false
+group_by()
+```
+```{r}
+#| eval: false
+#| code-line-numbers: false
+summarise()
+```
+```{r}
+#| eval: false
+#| code-line-numbers: false
+arrange()
+```
+
+
+
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="45%"}
+
+Here are the Python (Pandas) translations: 
+```{python}
+#| eval: false
+#| code-line-numbers: false
+.filter()
+```
+```{python}
+#| eval: false
+#| code-line-numbers: false
+.query()
+```
+```{python}
+#| eval: false
+#| code-line-numbers: false
+.groupby()
+```
+```{python}
+#| eval: false
+#| code-line-numbers: false
+.agg()
+```
+```{python}
+#| eval: false
+#| code-line-numbers: false
+.sort_values()
+```
+
+
+
+:::
+:::
+
+
+
+### Visualization
+
+**Package Options Include**: 
+
+- Seaborn (Very good plotting package)
+- Plotly (Very good plotting package)
+- PyPlot (Good, basic plotting package)
+- Altair (I do not recomend this package; this is what is taught in DS 250)
+- Plotnine (This is how to use ggplot in python)
+
+
+
+
+
+
+# Practice
+
+<a href="insurance.csv" download>Click to download</a>
+
+
+### Question 1
+
+1) Grab the `age`, `sex`, and `charges` columns 
+
+2) Filter the data to only females
+
+3) Sort the data by age decending 
+
+```{python}
+#| code-fold: true
+#| code-summary: "Code Solution"
+import pandas as pd
+
+dat = pd.read_csv("insurance.csv")
+
+(dat
+  .filter(['age', 'sex', 'charges'], axis = 1)
+  .query('sex == "female"')
+  .sort_values('age')
+)
+```
+
+
+### Question 2 
+
+1) Grab the `region` and `charges` columns 
+
+2) Filter the data to charges greater than 2000 
+
+3) Group by region and find the total charges by region
+
+```{python}
+#| code-fold: true
+#| code-summary: "Code Solution"
+import pandas as pd
+
+dat = pd.read_csv("insurance.csv")
+
+(dat
+  .filter(["charges", 'region'], axis = 1)
+  .query('charges > 1000')
+  .groupby(['region'])
+  .agg(
+    Sum_Charges = ('charges', 'sum'),
+    Total_Charges = ('charges', 'count'))
+)
+```
+
+
+
+::: 

@@ -245,6 +245,73 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 
 </div>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Comparison 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Comparison 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Tutorial</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Practice</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="columns">
+<div class="column" style="width:45%;">
+<section id="r" class="level2">
+<h2 class="anchored" data-anchor-id="r">R</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(knitr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>iris <span class="sc">%&gt;%</span> </span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">select</span>(Species, Sepal.Width, Sepal.Length) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">filter</span>(Sepal.Width <span class="sc">&gt;=</span> <span class="dv">3</span>, Species <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"setosa"</span>, <span class="st">"virginica"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="at">Sepal_Ratio =</span> <span class="fu">round</span>(Sepal.Width<span class="sc">/</span>Sepal.Length, <span class="dv">4</span>), </span>
+<span id="cb2-6"><a href="#cb2-6"></a>    <span class="at">small_ratio =</span> <span class="fu">ifelse</span>(Sepal_Ratio <span class="sc">&lt;</span> <span class="fl">0.7</span>, <span class="dv">1</span>, <span class="dv">0</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>  <span class="fu">arrange</span>(Species, <span class="fu">desc</span>(Sepal.Length)) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-8"><a href="#cb2-8"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Species Sepal.Width Sepal.Length Sepal_Ratio small_ratio
+1  setosa         4.0          5.8      0.6897           1
+2  setosa         4.4          5.7      0.7719           0
+3  setosa         3.8          5.7      0.6667           1
+4  setosa         4.2          5.5      0.7636           0
+5  setosa         3.5          5.5      0.6364           1
+6  setosa         3.9          5.4      0.7222           0</code></pre>
+</div>
+</div>
+</section>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:45%;">
+<section id="python" class="level2">
+<h2 class="anchored" data-anchor-id="python">Python</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>(iris</span>
+<span id="cb5-2"><a href="#cb5-2"></a>  .<span class="bu">filter</span>([<span class="st">"Species"</span>, <span class="st">"Sepal.Width"</span>, <span class="st">"Sepal.Length"</span>])</span>
+<span id="cb5-3"><a href="#cb5-3"></a>  .query(<span class="st">'(`Sepal.Width` &gt;= 3) &amp; (Species in ["setosa", "virginica"])'</span>)</span>
+<span id="cb5-4"><a href="#cb5-4"></a>  .assign(</span>
+<span id="cb5-5"><a href="#cb5-5"></a>    Sepal_Ratio <span class="op">=</span> <span class="kw">lambda</span> x: <span class="bu">round</span>( x[<span class="st">'Sepal.Width'</span>] <span class="op">/</span> x[<span class="st">'Sepal.Length'</span>], <span class="dv">4</span>), </span>
+<span id="cb5-6"><a href="#cb5-6"></a>    small_ratio <span class="op">=</span> <span class="kw">lambda</span> x: np.where(x[<span class="st">'Sepal_Ratio'</span>], <span class="dv">1</span>, <span class="dv">0</span>))</span>
+<span id="cb5-7"><a href="#cb5-7"></a>  .sort_values([<span class="st">"Species"</span>, <span class="st">"Sepal.Length"</span>], ascending <span class="op">=</span> [<span class="va">True</span>, <span class="va">False</span>])</span>
+<span id="cb5-8"><a href="#cb5-8"></a>  .head() )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Species  Sepal.Width  Sepal.Length  Sepal_Ratio  small_ratio
+14  setosa          4.0           5.8       0.6897            1
+15  setosa          4.4           5.7       0.7719            1
+18  setosa          3.8           5.7       0.6667            1
+33  setosa          4.2           5.5       0.7636            1
+36  setosa          3.5           5.5       0.6364            1</code></pre>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>In this article you will see the same analysis preformed in R &amp; Python. Note the similarities and differences.</p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -262,58 +329,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="columns">
 <div class="column" style="width:47.5%;">
 <center>
-<section id="r" class="level1">
+<section id="r-1" class="level1">
 <h1>R</h1>
 </section></center>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/Bethany/Downloads/grades.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/Bethany/Downloads/grades.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>is_math <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"FDMAT108"</span>, <span class="st">"MATH101"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2"></a>is_stats <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"MATH221A"</span>, <span class="st">"MATH325"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3"></a>is_major <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"CIT111"</span>, <span class="st">"CIT225"</span>)</span>
-<span id="cb2-4"><a href="#cb2-4"></a>is_general_ed <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"FDAMF101"</span>, <span class="st">"FDENG101"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>is_math <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"FDMAT108"</span>, <span class="st">"MATH101"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2"></a>is_stats <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"MATH221A"</span>, <span class="st">"MATH325"</span>)</span>
+<span id="cb8-3"><a href="#cb8-3"></a>is_major <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"CIT111"</span>, <span class="st">"CIT225"</span>)</span>
+<span id="cb8-4"><a href="#cb8-4"></a>is_general_ed <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"FDAMF101"</span>, <span class="st">"FDENG101"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>dat1 <span class="ot">&lt;-</span> dat <span class="sc">%&gt;%</span> </span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">select</span>(<span class="sc">!</span><span class="fu">c</span>(<span class="st">`</span><span class="at">Course Program</span><span class="st">`</span>, <span class="st">`</span><span class="at">Catalog</span><span class="st">`</span>, <span class="st">`</span><span class="at">Grade Type</span><span class="st">`</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_starts</span>(Grade, <span class="st">"N/A"</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb3-5"><a href="#cb3-5"></a>    <span class="at">Grade =</span> <span class="fu">fct_relevel</span>(Grade, <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"A-"</span>, <span class="st">"B+"</span>, <span class="st">"B"</span>, <span class="st">"B-"</span>, <span class="st">"C+"</span>, <span class="st">"C"</span>, <span class="st">"C-"</span>, <span class="st">"D+"</span>, <span class="st">"D"</span>, <span class="st">"D-"</span>, <span class="st">"F"</span>, <span class="st">"P"</span>, <span class="st">"W"</span>)), </span>
-<span id="cb3-6"><a href="#cb3-6"></a>    <span class="at">Semester =</span> <span class="fu">fct_relevel</span>(Semester, <span class="st">"WI19"</span>, <span class="st">"SP19"</span>, <span class="st">"FA19"</span>, <span class="st">"WI20"</span>, <span class="st">"SP20"</span>, <span class="st">"FA20"</span>, <span class="st">"WI21"</span>, <span class="st">"SP21"</span>, <span class="st">"FA21"</span>, <span class="st">"WI22"</span>, <span class="st">"SP22"</span>, <span class="st">"FA22"</span>), </span>
-<span id="cb3-7"><a href="#cb3-7"></a>    <span class="st">`</span><span class="at">Grade Points</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">case_when</span>(</span>
-<span id="cb3-8"><a href="#cb3-8"></a>      Grade <span class="sc">==</span> <span class="st">"A"</span> <span class="sc">~</span> <span class="dv">4</span>, </span>
-<span id="cb3-9"><a href="#cb3-9"></a>      Grade <span class="sc">==</span> <span class="st">"A-"</span> <span class="sc">~</span> <span class="fl">3.7</span>, </span>
-<span id="cb3-10"><a href="#cb3-10"></a>      Grade <span class="sc">==</span> <span class="st">"B+"</span> <span class="sc">~</span> <span class="fl">3.4</span>, </span>
-<span id="cb3-11"><a href="#cb3-11"></a>      Grade <span class="sc">==</span> <span class="st">"B"</span> <span class="sc">~</span> <span class="dv">3</span>,</span>
-<span id="cb3-12"><a href="#cb3-12"></a>      Grade <span class="sc">==</span> <span class="st">"B-"</span> <span class="sc">~</span> <span class="fl">2.7</span>, </span>
-<span id="cb3-13"><a href="#cb3-13"></a>      Grade <span class="sc">==</span> <span class="st">"C+"</span> <span class="sc">~</span> <span class="fl">2.4</span>,</span>
-<span id="cb3-14"><a href="#cb3-14"></a>      Grade <span class="sc">==</span> <span class="st">"C"</span> <span class="sc">~</span> <span class="dv">2</span>, </span>
-<span id="cb3-15"><a href="#cb3-15"></a>      Grade <span class="sc">==</span> <span class="st">"C-"</span> <span class="sc">~</span> <span class="fl">1.7</span>,</span>
-<span id="cb3-16"><a href="#cb3-16"></a>      Grade <span class="sc">==</span> <span class="st">"D+"</span> <span class="sc">~</span> <span class="fl">0.4</span>, </span>
-<span id="cb3-17"><a href="#cb3-17"></a>      Grade <span class="sc">==</span> <span class="st">"D"</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
-<span id="cb3-18"><a href="#cb3-18"></a>      Grade <span class="sc">==</span> <span class="st">"D-"</span> <span class="sc">~</span> <span class="fl">0.7</span>, </span>
-<span id="cb3-19"><a href="#cb3-19"></a>      Grade <span class="sc">==</span> <span class="st">"F"</span> <span class="sc">~</span> <span class="dv">0</span>,</span>
-<span id="cb3-20"><a href="#cb3-20"></a>      Grade <span class="sc">==</span> <span class="st">"UW"</span> <span class="sc">~</span> <span class="dv">0</span>, </span>
-<span id="cb3-21"><a href="#cb3-21"></a>      Grade <span class="sc">==</span> <span class="st">"P"</span> <span class="sc">~</span> <span class="cn">NA_real_</span>,</span>
-<span id="cb3-22"><a href="#cb3-22"></a>      Grade <span class="sc">==</span> <span class="st">"W"</span> <span class="sc">~</span> <span class="cn">NA_real_</span>, </span>
-<span id="cb3-23"><a href="#cb3-23"></a>      Grade <span class="sc">==</span> <span class="st">"I"</span> <span class="sc">~</span> <span class="cn">NA_real_</span>,</span>
-<span id="cb3-24"><a href="#cb3-24"></a>      Grade <span class="sc">==</span> <span class="st">"T"</span> <span class="sc">~</span> <span class="cn">NA_real_</span>, </span>
-<span id="cb3-25"><a href="#cb3-25"></a>      Grade <span class="sc">==</span> <span class="st">"NR"</span> <span class="sc">~</span> <span class="cn">NA_real_</span>), </span>
-<span id="cb3-26"><a href="#cb3-26"></a>    <span class="at">Course =</span> <span class="fu">str_replace</span>(Course, <span class="st">"-</span><span class="sc">\\</span><span class="st">d</span><span class="sc">\\</span><span class="st">d"</span>, <span class="st">""</span>), </span>
-<span id="cb3-27"><a href="#cb3-27"></a>    <span class="at">Course =</span> <span class="fu">str_replace</span>(Course, <span class="st">"</span><span class="sc">\\</span><span class="st">W"</span>, <span class="st">""</span>), </span>
-<span id="cb3-28"><a href="#cb3-28"></a>    <span class="at">is_math =</span> <span class="fu">case_when</span>(Course <span class="sc">%in%</span> is_math <span class="sc">~</span> <span class="dv">1</span>, <span class="cn">TRUE</span> <span class="sc">~</span> <span class="dv">0</span>),</span>
-<span id="cb3-29"><a href="#cb3-29"></a>    <span class="at">is_stats =</span> <span class="fu">case_when</span>(Course <span class="sc">%in%</span> is_stats <span class="sc">~</span> <span class="dv">1</span>, <span class="cn">TRUE</span> <span class="sc">~</span> <span class="dv">0</span>), </span>
-<span id="cb3-30"><a href="#cb3-30"></a>    <span class="at">is_major =</span> <span class="fu">case_when</span>(Course <span class="sc">%in%</span> is_major <span class="sc">~</span> <span class="dv">1</span>, <span class="cn">TRUE</span> <span class="sc">~</span> <span class="dv">0</span>), </span>
-<span id="cb3-31"><a href="#cb3-31"></a>    <span class="at">is_general_ed =</span> <span class="fu">case_when</span>(Course <span class="sc">%in%</span> is_general_ed <span class="sc">~</span> <span class="dv">1</span>, <span class="cn">TRUE</span> <span class="sc">~</span> <span class="dv">0</span>)</span>
-<span id="cb3-32"><a href="#cb3-32"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>dat1 <span class="ot">&lt;-</span> dat <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">select</span>(<span class="sc">!</span><span class="fu">c</span>(<span class="st">`</span><span class="at">Course Program</span><span class="st">`</span>, <span class="st">`</span><span class="at">Catalog</span><span class="st">`</span>, <span class="st">`</span><span class="at">Grade Type</span><span class="st">`</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_starts</span>(Grade, <span class="st">"N/A"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-4"><a href="#cb9-4"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb9-5"><a href="#cb9-5"></a>    <span class="at">Grade =</span> <span class="fu">fct_relevel</span>(Grade, <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"A-"</span>, <span class="st">"B+"</span>, <span class="st">"B"</span>, <span class="st">"B-"</span>, <span class="st">"C+"</span>, <span class="st">"C"</span>, <span class="st">"C-"</span>, <span class="st">"D+"</span>, <span class="st">"D"</span>, <span class="st">"D-"</span>, <span class="st">"F"</span>, <span class="st">"P"</span>, <span class="st">"W"</span>)), </span>
+<span id="cb9-6"><a href="#cb9-6"></a>    <span class="at">Semester =</span> <span class="fu">fct_relevel</span>(Semester, <span class="st">"WI19"</span>, <span class="st">"SP19"</span>, <span class="st">"FA19"</span>, <span class="st">"WI20"</span>, <span class="st">"SP20"</span>, <span class="st">"FA20"</span>, <span class="st">"WI21"</span>, <span class="st">"SP21"</span>, <span class="st">"FA21"</span>, <span class="st">"WI22"</span>, <span class="st">"SP22"</span>, <span class="st">"FA22"</span>), </span>
+<span id="cb9-7"><a href="#cb9-7"></a>    <span class="st">`</span><span class="at">Grade Points</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">case_when</span>(</span>
+<span id="cb9-8"><a href="#cb9-8"></a>      Grade <span class="sc">==</span> <span class="st">"A"</span> <span class="sc">~</span> <span class="dv">4</span>, </span>
+<span id="cb9-9"><a href="#cb9-9"></a>      Grade <span class="sc">==</span> <span class="st">"A-"</span> <span class="sc">~</span> <span class="fl">3.7</span>, </span>
+<span id="cb9-10"><a href="#cb9-10"></a>      Grade <span class="sc">==</span> <span class="st">"B+"</span> <span class="sc">~</span> <span class="fl">3.4</span>, </span>
+<span id="cb9-11"><a href="#cb9-11"></a>      Grade <span class="sc">==</span> <span class="st">"B"</span> <span class="sc">~</span> <span class="dv">3</span>,</span>
+<span id="cb9-12"><a href="#cb9-12"></a>      Grade <span class="sc">==</span> <span class="st">"B-"</span> <span class="sc">~</span> <span class="fl">2.7</span>, </span>
+<span id="cb9-13"><a href="#cb9-13"></a>      Grade <span class="sc">==</span> <span class="st">"C+"</span> <span class="sc">~</span> <span class="fl">2.4</span>,</span>
+<span id="cb9-14"><a href="#cb9-14"></a>      Grade <span class="sc">==</span> <span class="st">"C"</span> <span class="sc">~</span> <span class="dv">2</span>, </span>
+<span id="cb9-15"><a href="#cb9-15"></a>      Grade <span class="sc">==</span> <span class="st">"C-"</span> <span class="sc">~</span> <span class="fl">1.7</span>,</span>
+<span id="cb9-16"><a href="#cb9-16"></a>      Grade <span class="sc">==</span> <span class="st">"D+"</span> <span class="sc">~</span> <span class="fl">0.4</span>, </span>
+<span id="cb9-17"><a href="#cb9-17"></a>      Grade <span class="sc">==</span> <span class="st">"D"</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb9-18"><a href="#cb9-18"></a>      Grade <span class="sc">==</span> <span class="st">"D-"</span> <span class="sc">~</span> <span class="fl">0.7</span>, </span>
+<span id="cb9-19"><a href="#cb9-19"></a>      Grade <span class="sc">==</span> <span class="st">"F"</span> <span class="sc">~</span> <span class="dv">0</span>,</span>
+<span id="cb9-20"><a href="#cb9-20"></a>      Grade <span class="sc">==</span> <span class="st">"UW"</span> <span class="sc">~</span> <span class="dv">0</span>, </span>
+<span id="cb9-21"><a href="#cb9-21"></a>      Grade <span class="sc">==</span> <span class="st">"P"</span> <span class="sc">~</span> <span class="cn">NA_real_</span>,</span>
+<span id="cb9-22"><a href="#cb9-22"></a>      Grade <span class="sc">==</span> <span class="st">"W"</span> <span class="sc">~</span> <span class="cn">NA_real_</span>, </span>
+<span id="cb9-23"><a href="#cb9-23"></a>      Grade <span class="sc">==</span> <span class="st">"I"</span> <span class="sc">~</span> <span class="cn">NA_real_</span>,</span>
+<span id="cb9-24"><a href="#cb9-24"></a>      Grade <span class="sc">==</span> <span class="st">"T"</span> <span class="sc">~</span> <span class="cn">NA_real_</span>, </span>
+<span id="cb9-25"><a href="#cb9-25"></a>      Grade <span class="sc">==</span> <span class="st">"NR"</span> <span class="sc">~</span> <span class="cn">NA_real_</span>), </span>
+<span id="cb9-26"><a href="#cb9-26"></a>    <span class="at">Course =</span> <span class="fu">str_replace</span>(Course, <span class="st">"-</span><span class="sc">\\</span><span class="st">d</span><span class="sc">\\</span><span class="st">d"</span>, <span class="st">""</span>), </span>
+<span id="cb9-27"><a href="#cb9-27"></a>    <span class="at">Course =</span> <span class="fu">str_replace</span>(Course, <span class="st">"</span><span class="sc">\\</span><span class="st">W"</span>, <span class="st">""</span>), </span>
+<span id="cb9-28"><a href="#cb9-28"></a>    <span class="at">is_math =</span> <span class="fu">case_when</span>(Course <span class="sc">%in%</span> is_math <span class="sc">~</span> <span class="dv">1</span>, <span class="cn">TRUE</span> <span class="sc">~</span> <span class="dv">0</span>),</span>
+<span id="cb9-29"><a href="#cb9-29"></a>    <span class="at">is_stats =</span> <span class="fu">case_when</span>(Course <span class="sc">%in%</span> is_stats <span class="sc">~</span> <span class="dv">1</span>, <span class="cn">TRUE</span> <span class="sc">~</span> <span class="dv">0</span>), </span>
+<span id="cb9-30"><a href="#cb9-30"></a>    <span class="at">is_major =</span> <span class="fu">case_when</span>(Course <span class="sc">%in%</span> is_major <span class="sc">~</span> <span class="dv">1</span>, <span class="cn">TRUE</span> <span class="sc">~</span> <span class="dv">0</span>), </span>
+<span id="cb9-31"><a href="#cb9-31"></a>    <span class="at">is_general_ed =</span> <span class="fu">case_when</span>(Course <span class="sc">%in%</span> is_general_ed <span class="sc">~</span> <span class="dv">1</span>, <span class="cn">TRUE</span> <span class="sc">~</span> <span class="dv">0</span>)</span>
+<span id="cb9-32"><a href="#cb9-32"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><n></n></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">head</span>(dat1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">head</span>(dat1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 10
   Course   `Course Title` Credits Grade Semester `Grade Points` is_math is_stats
@@ -332,59 +399,221 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </div><div class="column" style="width:47.5%;">
 <center>
-<section id="python" class="level1">
+<section id="python-1" class="level1">
 <h1>Python</h1>
 </section></center>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>dat <span class="op">=</span> pd.read_csv(<span class="st">"C:/Users/Bethany/Downloads/grades.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a>dat <span class="op">=</span> pd.read_csv(<span class="st">"C:/Users/Bethany/Downloads/grades.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>is_math <span class="op">=</span> (<span class="st">"FDMAT108"</span>, <span class="st">"MATH101"</span>)</span>
-<span id="cb7-2"><a href="#cb7-2"></a>is_stats <span class="op">=</span> (<span class="st">"MATH221A"</span>, <span class="st">"MATH325"</span>)</span>
-<span id="cb7-3"><a href="#cb7-3"></a>is_major <span class="op">=</span> (<span class="st">"CIT111"</span>, <span class="st">"CIT225"</span>)</span>
-<span id="cb7-4"><a href="#cb7-4"></a>is_general_ed <span class="op">=</span> (<span class="st">"FDAMF101"</span>, <span class="st">"FDENG101"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>is_math <span class="op">=</span> (<span class="st">"FDMAT108"</span>, <span class="st">"MATH101"</span>)</span>
+<span id="cb13-2"><a href="#cb13-2"></a>is_stats <span class="op">=</span> (<span class="st">"MATH221A"</span>, <span class="st">"MATH325"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3"></a>is_major <span class="op">=</span> (<span class="st">"CIT111"</span>, <span class="st">"CIT225"</span>)</span>
+<span id="cb13-4"><a href="#cb13-4"></a>is_general_ed <span class="op">=</span> (<span class="st">"FDAMF101"</span>, <span class="st">"FDENG101"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>dat1 <span class="op">=</span> (dat</span>
-<span id="cb8-2"><a href="#cb8-2"></a>    .drop([<span class="st">'Course Program'</span>, <span class="st">'Catalog'</span>, <span class="st">'Grade Type'</span>], axis <span class="op">=</span> <span class="dv">1</span>)</span>
-<span id="cb8-3"><a href="#cb8-3"></a>    .query(<span class="st">"~Grade.str.startswith('N/A')"</span>)</span>
-<span id="cb8-4"><a href="#cb8-4"></a>    .assign(</span>
-<span id="cb8-5"><a href="#cb8-5"></a>        Grade <span class="op">=</span> <span class="kw">lambda</span> X: pd.Categorical(X.Grade, categories <span class="op">=</span> [<span class="st">"A"</span>, <span class="st">"A-"</span>, <span class="st">"B+"</span>, <span class="st">"B"</span>, <span class="st">"B-"</span>, <span class="st">"C+"</span>, <span class="st">"C"</span>, <span class="st">"C-"</span>, <span class="st">"D+"</span>, <span class="st">"D"</span>, <span class="st">"D-"</span>, <span class="st">"F"</span>, <span class="st">"P"</span>, <span class="st">"W"</span>]), </span>
-<span id="cb8-6"><a href="#cb8-6"></a>        Semester <span class="op">=</span> <span class="kw">lambda</span> X: pd.Categorical(X.Semester, [<span class="st">"WI19"</span>, <span class="st">"SP19"</span>, <span class="st">"FA19"</span>, <span class="st">"WI20"</span>, <span class="st">"SP20"</span>, <span class="st">"FA20"</span>, <span class="st">"WI21"</span>, <span class="st">"SP21"</span>, <span class="st">"FA21"</span>, <span class="st">"WI22"</span>, <span class="st">"SP22"</span>, <span class="st">"FA22"</span>]),</span>
-<span id="cb8-7"><a href="#cb8-7"></a>        Grade_Points <span class="op">=</span> <span class="kw">lambda</span> X: X[<span class="st">'Grade'</span>].replace({</span>
-<span id="cb8-8"><a href="#cb8-8"></a>            <span class="st">"A"</span>: <span class="dv">4</span>, </span>
-<span id="cb8-9"><a href="#cb8-9"></a>            <span class="st">"A-"</span>: <span class="fl">3.7</span>,</span>
-<span id="cb8-10"><a href="#cb8-10"></a>            <span class="st">"B+"</span>: <span class="fl">3.4</span>, </span>
-<span id="cb8-11"><a href="#cb8-11"></a>            <span class="st">"B"</span>: <span class="dv">3</span>,</span>
-<span id="cb8-12"><a href="#cb8-12"></a>            <span class="st">"B-"</span>: <span class="fl">2.7</span>, </span>
-<span id="cb8-13"><a href="#cb8-13"></a>            <span class="st">"C+"</span>: <span class="fl">2.4</span>,</span>
-<span id="cb8-14"><a href="#cb8-14"></a>            <span class="st">"C"</span>: <span class="dv">2</span>, </span>
-<span id="cb8-15"><a href="#cb8-15"></a>            <span class="st">"C-"</span>: <span class="fl">1.7</span>,</span>
-<span id="cb8-16"><a href="#cb8-16"></a>            <span class="st">"D+"</span>: <span class="fl">0.4</span>, </span>
-<span id="cb8-17"><a href="#cb8-17"></a>            <span class="st">"D"</span>: <span class="dv">1</span>,</span>
-<span id="cb8-18"><a href="#cb8-18"></a>            <span class="st">"D-"</span>: <span class="fl">0.7</span>, </span>
-<span id="cb8-19"><a href="#cb8-19"></a>            <span class="st">"F"</span>: <span class="dv">0</span>,</span>
-<span id="cb8-20"><a href="#cb8-20"></a>            <span class="st">"UW"</span>: <span class="dv">0</span>, </span>
-<span id="cb8-21"><a href="#cb8-21"></a>            <span class="st">"P"</span>: np.nan,</span>
-<span id="cb8-22"><a href="#cb8-22"></a>            <span class="st">"W"</span>: np.nan, </span>
-<span id="cb8-23"><a href="#cb8-23"></a>            <span class="st">"I"</span>: np.nan,</span>
-<span id="cb8-24"><a href="#cb8-24"></a>            <span class="st">"T"</span>: np.nan, </span>
-<span id="cb8-25"><a href="#cb8-25"></a>            <span class="st">"NR"</span>: np.nan}),</span>
-<span id="cb8-26"><a href="#cb8-26"></a>        Course <span class="op">=</span> <span class="kw">lambda</span> X: X[<span class="st">'Course'</span>].replace({<span class="vs">r"-\d\d"</span>: <span class="st">""</span>, <span class="vs">r"\W"</span>:<span class="st">""</span>}, regex<span class="op">=</span><span class="va">True</span>),</span>
-<span id="cb8-27"><a href="#cb8-27"></a>        is_math <span class="op">=</span> <span class="kw">lambda</span> X: np.where(X[<span class="st">'Course'</span>].isin(is_math), <span class="va">True</span>, <span class="va">False</span>), </span>
-<span id="cb8-28"><a href="#cb8-28"></a>        is_stats <span class="op">=</span> <span class="kw">lambda</span> X: np.where(X[<span class="st">'Course'</span>].isin(is_stats), <span class="va">True</span>, <span class="va">False</span>), </span>
-<span id="cb8-29"><a href="#cb8-29"></a>        is_major <span class="op">=</span> <span class="kw">lambda</span> X: np.where(X[<span class="st">'Course'</span>].isin(is_major), <span class="dv">1</span>, <span class="dv">0</span>), </span>
-<span id="cb8-30"><a href="#cb8-30"></a>        is_general_ed <span class="op">=</span> <span class="kw">lambda</span> X: np.where(X[<span class="st">'Course'</span>].isin(is_general_ed), <span class="dv">1</span>, <span class="dv">0</span>)</span>
-<span id="cb8-31"><a href="#cb8-31"></a>        )</span>
-<span id="cb8-32"><a href="#cb8-32"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>dat1 <span class="op">=</span> (dat</span>
+<span id="cb14-2"><a href="#cb14-2"></a>    .drop([<span class="st">'Course Program'</span>, <span class="st">'Catalog'</span>, <span class="st">'Grade Type'</span>], axis <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb14-3"><a href="#cb14-3"></a>    .query(<span class="st">"~Grade.str.startswith('N/A')"</span>)</span>
+<span id="cb14-4"><a href="#cb14-4"></a>    .assign(</span>
+<span id="cb14-5"><a href="#cb14-5"></a>        Grade <span class="op">=</span> <span class="kw">lambda</span> X: pd.Categorical(X.Grade, categories <span class="op">=</span> [<span class="st">"A"</span>, <span class="st">"A-"</span>, <span class="st">"B+"</span>, <span class="st">"B"</span>, <span class="st">"B-"</span>, <span class="st">"C+"</span>, <span class="st">"C"</span>, <span class="st">"C-"</span>, <span class="st">"D+"</span>, <span class="st">"D"</span>, <span class="st">"D-"</span>, <span class="st">"F"</span>, <span class="st">"P"</span>, <span class="st">"W"</span>]), </span>
+<span id="cb14-6"><a href="#cb14-6"></a>        Semester <span class="op">=</span> <span class="kw">lambda</span> X: pd.Categorical(X.Semester, [<span class="st">"WI19"</span>, <span class="st">"SP19"</span>, <span class="st">"FA19"</span>, <span class="st">"WI20"</span>, <span class="st">"SP20"</span>, <span class="st">"FA20"</span>, <span class="st">"WI21"</span>, <span class="st">"SP21"</span>, <span class="st">"FA21"</span>, <span class="st">"WI22"</span>, <span class="st">"SP22"</span>, <span class="st">"FA22"</span>]),</span>
+<span id="cb14-7"><a href="#cb14-7"></a>        Grade_Points <span class="op">=</span> <span class="kw">lambda</span> X: X[<span class="st">'Grade'</span>].replace({</span>
+<span id="cb14-8"><a href="#cb14-8"></a>            <span class="st">"A"</span>: <span class="dv">4</span>, </span>
+<span id="cb14-9"><a href="#cb14-9"></a>            <span class="st">"A-"</span>: <span class="fl">3.7</span>,</span>
+<span id="cb14-10"><a href="#cb14-10"></a>            <span class="st">"B+"</span>: <span class="fl">3.4</span>, </span>
+<span id="cb14-11"><a href="#cb14-11"></a>            <span class="st">"B"</span>: <span class="dv">3</span>,</span>
+<span id="cb14-12"><a href="#cb14-12"></a>            <span class="st">"B-"</span>: <span class="fl">2.7</span>, </span>
+<span id="cb14-13"><a href="#cb14-13"></a>            <span class="st">"C+"</span>: <span class="fl">2.4</span>,</span>
+<span id="cb14-14"><a href="#cb14-14"></a>            <span class="st">"C"</span>: <span class="dv">2</span>, </span>
+<span id="cb14-15"><a href="#cb14-15"></a>            <span class="st">"C-"</span>: <span class="fl">1.7</span>,</span>
+<span id="cb14-16"><a href="#cb14-16"></a>            <span class="st">"D+"</span>: <span class="fl">0.4</span>, </span>
+<span id="cb14-17"><a href="#cb14-17"></a>            <span class="st">"D"</span>: <span class="dv">1</span>,</span>
+<span id="cb14-18"><a href="#cb14-18"></a>            <span class="st">"D-"</span>: <span class="fl">0.7</span>, </span>
+<span id="cb14-19"><a href="#cb14-19"></a>            <span class="st">"F"</span>: <span class="dv">0</span>,</span>
+<span id="cb14-20"><a href="#cb14-20"></a>            <span class="st">"UW"</span>: <span class="dv">0</span>, </span>
+<span id="cb14-21"><a href="#cb14-21"></a>            <span class="st">"P"</span>: np.nan,</span>
+<span id="cb14-22"><a href="#cb14-22"></a>            <span class="st">"W"</span>: np.nan, </span>
+<span id="cb14-23"><a href="#cb14-23"></a>            <span class="st">"I"</span>: np.nan,</span>
+<span id="cb14-24"><a href="#cb14-24"></a>            <span class="st">"T"</span>: np.nan, </span>
+<span id="cb14-25"><a href="#cb14-25"></a>            <span class="st">"NR"</span>: np.nan}),</span>
+<span id="cb14-26"><a href="#cb14-26"></a>        Course <span class="op">=</span> <span class="kw">lambda</span> X: X[<span class="st">'Course'</span>].replace({<span class="vs">r"-\d\d"</span>: <span class="st">""</span>, <span class="vs">r"\W"</span>:<span class="st">""</span>}, regex<span class="op">=</span><span class="va">True</span>),</span>
+<span id="cb14-27"><a href="#cb14-27"></a>        is_math <span class="op">=</span> <span class="kw">lambda</span> X: np.where(X[<span class="st">'Course'</span>].isin(is_math), <span class="va">True</span>, <span class="va">False</span>), </span>
+<span id="cb14-28"><a href="#cb14-28"></a>        is_stats <span class="op">=</span> <span class="kw">lambda</span> X: np.where(X[<span class="st">'Course'</span>].isin(is_stats), <span class="va">True</span>, <span class="va">False</span>), </span>
+<span id="cb14-29"><a href="#cb14-29"></a>        is_major <span class="op">=</span> <span class="kw">lambda</span> X: np.where(X[<span class="st">'Course'</span>].isin(is_major), <span class="dv">1</span>, <span class="dv">0</span>), </span>
+<span id="cb14-30"><a href="#cb14-30"></a>        is_general_ed <span class="op">=</span> <span class="kw">lambda</span> X: np.where(X[<span class="st">'Course'</span>].isin(is_general_ed), <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb14-31"><a href="#cb14-31"></a>        )</span>
+<span id="cb14-32"><a href="#cb14-32"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>dat1.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>dat1.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      Course                     Course Title  ...  is_major is_general_ed
+0  DANCE180M          Social Dance, Beginning  ...         0             0
+1   FDAMF101             American Foundations  ...         0             1
+2   FDENG101  Writing &amp; Reasoning Foundations  ...         0             1
+3   FDMAT108          Math for the Real World  ...         0             0
+4   FDREL275      Teachings of Book of Mormon  ...         0             0
+
+[5 rows x 10 columns]</code></pre>
+</div>
 </div>
 
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<section id="reading-in-data" class="level3">
+<h3 class="anchored" data-anchor-id="reading-in-data">Reading in Data</h3>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><strong>In R (Dplyr)</strong>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb17-2"><a href="#cb17-2"></a>dat1 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:45%;">
+<p><strong>In Python (Pandas)</strong>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb18-2"><a href="#cb18-2"></a>dat1 <span class="op">=</span> pd.read_csv()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="wrangling-verbs" class="level3">
+<h3 class="anchored" data-anchor-id="wrangling-verbs">Wrangling Verbs</h3>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p>What we are familiar with in R (Tidyverse):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:45%;">
+<p>Here are the Python (Pandas) translations:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24" data-code-line-numbers="false"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>.<span class="bu">filter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="false"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>.query()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26" data-code-line-numbers="false"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>.groupby()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="false"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>.agg()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28" data-code-line-numbers="false"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>.sort_values()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualization" class="level3">
+<h3 class="anchored" data-anchor-id="visualization">Visualization</h3>
+<p><strong>Package Options Include</strong>:</p>
+<ul>
+<li>Seaborn (Very good plotting package)</li>
+<li>Plotly (Very good plotting package)</li>
+<li>PyPlot (Good, basic plotting package)</li>
+<li>Altair (I do not recomend this package; this is what is taught in DS 250)</li>
+<li>Plotnine (This is how to use ggplot in python)</li>
+</ul>
+</section>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p><a href="insurance.csv" download="">Click to download</a></p>
+<section id="question-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
+<ol type="1">
+<li><p>Grab the <code>age</code>, <code>sex</code>, and <code>charges</code> columns</p></li>
+<li><p>Filter the data to only females</p></li>
+<li><p>Sort the data by age decending</p></li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb29-2"><a href="#cb29-2"></a></span>
+<span id="cb29-3"><a href="#cb29-3"></a>dat <span class="op">=</span> pd.read_csv(<span class="st">"insurance.csv"</span>)</span>
+<span id="cb29-4"><a href="#cb29-4"></a></span>
+<span id="cb29-5"><a href="#cb29-5"></a>(dat</span>
+<span id="cb29-6"><a href="#cb29-6"></a>  .<span class="bu">filter</span>([<span class="st">'age'</span>, <span class="st">'sex'</span>, <span class="st">'charges'</span>], axis <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb29-7"><a href="#cb29-7"></a>  .query(<span class="st">'sex == "female"'</span>)</span>
+<span id="cb29-8"><a href="#cb29-8"></a>  .sort_values(<span class="st">'age'</span>)</span>
+<span id="cb29-9"><a href="#cb29-9"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>     age     sex      charges
+46    18  female   3393.35635
+728   18  female   2217.60120
+803   18  female  38792.68560
+942   18  female   2217.46915
+50    18  female   2211.13075
+..   ...     ...          ...
+768   64  female  14319.03100
+94    64  female  47291.05500
+664   64  female  27037.91410
+801   64  female  14313.84630
+890   64  female  29330.98315
+
+[662 rows x 3 columns]</code></pre>
+</div>
+</div>
+</section>
+<section id="question-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
+<ol type="1">
+<li><p>Grab the <code>region</code> and <code>charges</code> columns</p></li>
+<li><p>Filter the data to charges greater than 2000</p></li>
+<li><p>Group by region and find the total charges by region</p></li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb31-2"><a href="#cb31-2"></a></span>
+<span id="cb31-3"><a href="#cb31-3"></a>dat <span class="op">=</span> pd.read_csv(<span class="st">"insurance.csv"</span>)</span>
+<span id="cb31-4"><a href="#cb31-4"></a></span>
+<span id="cb31-5"><a href="#cb31-5"></a>(dat</span>
+<span id="cb31-6"><a href="#cb31-6"></a>  .<span class="bu">filter</span>([<span class="st">"charges"</span>, <span class="st">'region'</span>], axis <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb31-7"><a href="#cb31-7"></a>  .query(<span class="st">'charges &gt; 1000'</span>)</span>
+<span id="cb31-8"><a href="#cb31-8"></a>  .groupby([<span class="st">'region'</span>])</span>
+<span id="cb31-9"><a href="#cb31-9"></a>  .agg(</span>
+<span id="cb31-10"><a href="#cb31-10"></a>    Sum_Charges <span class="op">=</span> (<span class="st">'charges'</span>, <span class="st">'sum'</span>),</span>
+<span id="cb31-11"><a href="#cb31-11"></a>    Total_Charges <span class="op">=</span> (<span class="st">'charges'</span>, <span class="st">'count'</span>))</span>
+<span id="cb31-12"><a href="#cb31-12"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>            Sum_Charges  Total_Charges
+region                                
+northeast  4.343669e+06            324
+northwest  4.035712e+06            325
+southeast  5.363690e+06            364
+southwest  4.012755e+06            325</code></pre>
+</div>
+</div>
+</section>
+</div>
 </div>
 </div>
 
