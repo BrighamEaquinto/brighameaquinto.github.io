@@ -5,13 +5,13 @@ warning: false
 toc: true 
 ---
 
-
 ```{r}
 #| echo: false
 library(reticulate)
 use_python("C:\\Users\\Bethany\\AppData\\Local\\Programs\\Python\\PYTHON~1\\python.exe")
 # use_virtualenv("myenv")
 ```
+
 
 
 ::: {.panel-tabset}
@@ -24,6 +24,7 @@ use_python("C:\\Users\\Bethany\\AppData\\Local\\Programs\\Python\\PYTHON~1\\pyth
 ::: {.column width="45%"}
 
 ## R 
+
 
 ```{r}
 library(tidyverse)
@@ -42,6 +43,7 @@ iris %>%
   head()
 
 ```
+
  
 :::
 ::: {.column width="10%"}
@@ -49,6 +51,7 @@ iris %>%
 ::: {.column width="45%"}
 
 ## Python
+
 
 ```{python}
 import pandas as pd
@@ -71,7 +74,6 @@ iris = (
 
 ```
 
-
 ```{python}
 (iris
   .filter(["Species", "Sepal.Width", "Sepal.Length"])
@@ -82,6 +84,7 @@ iris = (
   .sort_values(["Species", "Sepal.Length"], ascending = [True, False])
   .head() )
 ```
+
 
 
 :::
@@ -112,6 +115,7 @@ In this article you will see the same analysis preformed in R & Python. Note the
 # R
 
 </center>
+
 
 ```{r}
 library(tidyverse)
@@ -163,11 +167,14 @@ dat1 <- dat %>%
 )
 ```
 
+
 <n>
+
 
 ```{r}
 head(dat1)
 ```
+
 
 :::
 ::: {.column width="5%"}
@@ -179,6 +186,7 @@ head(dat1)
 # Python 
 
 </center>
+
 
 ```{python}
 import pandas as pd
@@ -233,6 +241,7 @@ dat1 = (dat
 dat1.head()
 ```
 
+
 :::
 :::
 
@@ -249,11 +258,13 @@ dat1.head()
 
 **In R (Dplyr)**:
 
+
 ```{r}
 #| eval: false
 library(tidyverse)
 dat1 <- read_csv()
 ```
+
  
 :::
 ::: {.column width="10%"}
@@ -262,11 +273,13 @@ dat1 <- read_csv()
 
 **In Python (Pandas)**:
 
+
 ```{python}
 #| eval: false
 import pandas as pd
 dat1 = pd.read_csv()
 ```
+
 
 
 :::
@@ -280,31 +293,37 @@ dat1 = pd.read_csv()
 
 What we are familiar with in R (Tidyverse): 
 
+
 ```{r}
 #| eval: false
 #| code-line-numbers: false
 select()
 ```
+
 ```{r}
 #| eval: false
 #| code-line-numbers: false
 filter()
 ```
+
 ```{r}
 #| eval: false
 #| code-line-numbers: false
 group_by()
 ```
+
 ```{r}
 #| eval: false
 #| code-line-numbers: false
 summarise()
 ```
+
 ```{r}
 #| eval: false
 #| code-line-numbers: false
 arrange()
 ```
+
 
 
 
@@ -314,31 +333,37 @@ arrange()
 ::: {.column width="45%"}
 
 Here are the Python (Pandas) translations: 
+
 ```{python}
 #| eval: false
 #| code-line-numbers: false
 .filter()
 ```
+
 ```{python}
 #| eval: false
 #| code-line-numbers: false
 .query()
 ```
+
 ```{python}
 #| eval: false
 #| code-line-numbers: false
 .groupby()
 ```
+
 ```{python}
 #| eval: false
 #| code-line-numbers: false
 .agg()
 ```
+
 ```{python}
 #| eval: false
 #| code-line-numbers: false
 .sort_values()
 ```
+
 
 
 
@@ -375,6 +400,7 @@ Here are the Python (Pandas) translations:
 
 3) Sort the data by age decending 
 
+
 ```{python}
 #| code-fold: true
 #| code-summary: "Code Solution"
@@ -390,6 +416,7 @@ dat = pd.read_csv("insurance.csv")
 ```
 
 
+
 ### Question 2 
 
 1) Grab the `region` and `charges` columns 
@@ -397,6 +424,7 @@ dat = pd.read_csv("insurance.csv")
 2) Filter the data to charges greater than 2000 
 
 3) Group by region and find the total charges by region
+
 
 ```{python}
 #| code-fold: true
@@ -414,6 +442,7 @@ dat = pd.read_csv("insurance.csv")
     Total_Charges = ('charges', 'count'))
 )
 ```
+
 
 
 
