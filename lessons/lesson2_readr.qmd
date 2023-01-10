@@ -1,54 +1,157 @@
 ---
 title: "Lesson 2: Reading Data"
-subtitle: Learning the ggplot2 package
-# image: https://raw.githubusercontent.com/rstudio/hex-stickers/main/SVG/readr.svg
+subtitle: Learning the readr package
+image: https://raw.githubusercontent.com/rstudio/hex-stickers/main/SVG/readr.svg
 toc: true
+code-copy: false
 ---
 
-## Looking At Datasets
+We will cover three main options how to importing data:
 
-Options to See Data:
+- Built-in Datasets
+- Local Datasets (downloaded on your computer)
+- Online Datasets
 
-- `view()`: this opens a new tab to view the data in a spreadsheet style like Excel
-- `head()`: this returns the top six rows of a dataset, or the "head" of the data
+Below are examples on each of these methods to import data
 
-<br>
-
-## Build-in Datasets
-
-Run this code to see a list of built in datasets: 
-```{r}
-#| eval: false
-data()
-```
+# Built-in Datasets
 
 The `iris` dataset is commonly used and built into R; no additional downloads are necessary. 
 
 ```{r}
 #| eval: false
-view(iris)
+
+View(iris)
 ```
 ```{r}
 #| eval: false
+
 head(iris)
 ```
 
 <br>
 
-## Reading Data from URL
+# Reading Data from Local CSV File
 
-Read in this dataset from this URL: `https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv`
+## Option 1: Import Dataset Button
+
+Another option is to use the "Import Dataset" button in the environment pane of RStudio. 
+
+![](data_import_button.jpg)
+
+![](data_import_pop_up.jpg)
+
+The data will now be available to you.
+
+
+## Option 2: Copy File Path Option
+
+The [readr package](https://readr.tidyverse.org/) is the first package that we will learn about. This allows us to read in rectangular data like cvs files. 
+
+This is the typical way it goes when you have data located on your computer.
 
 ```{r}
 #| eval: false
+
+library(tidyverse)
+
+dataset <- read_csv(file_path)
+
+head(dataset)
+```
+
+
+<!-- The following applies for Windows Users only. Mac users can disregard this. -->
+
+<!-- 
+Copy the file path from your computer and paste it in the function. One downside to this is you have to manually replace each backslash `\` with a forwardslash `/` or add another backslash `\` next to each other backslash `\`. Look below for clarification.  
+-->
+
+
+:::{.callout-warning}
+# Windows Users: This will not run
+::: columns
+::: {.column width="20%"}
+One backslash `\`
+:::
+::: {.column width="1%"}
+:::
+::: {.column width="79%"}
+```{r}
+#| eval: false
+
+data1 <- read_csv("C:\Users\name\Downloads\dataset.csv")
+```
+:::
+:::
+:::
+:::{.callout-tip}
+# Windows Users: Either of these options will run
+::: columns
+::: {.column width="20%"}
+Two backslashes `\\`
+:::
+::: {.column width="1%"}
+:::
+::: {.column width="79%"}
+```{r}
+#| eval: false
+
+data1 <- read_csv("C:\\Users\\name\\Downloads\\dataset.csv")
+```
+:::
+:::
+::: columns
+::: {.column width="20%"}
+One forwardslash `/`
+:::
+::: {.column width="1%"}
+:::
+::: {.column width="79%"}
+```{r}
+#| eval: false
+
+data1 <- read_csv("C:/Users/name/Downloads/dataset.csv")
+```
+:::
+:::
+:::
+
+<br>
+
+## Option 3: URL Method
+
+Often you get your data from online somewhere like [GitHub](https://github.com/) or [Kaggle](https://kaggle.com/). While there is the option to download the file, then read it from your computer locally, like we just did above, there's also the option to read in data from a URL. 
+
+A benefit is that less memory is used on your computer. Another is that you can send your analysis with the data being read in from a URL, and others will be able to run the script without any data issues. 
+
+Below is an example.  
+```{r}
+#| eval: false
+library(tidyverse)
+
 housing_data <- read_csv("https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv")
+```
+
+
+## How to Look at the Data?
+
+`view()`: this opens a new tab to view the data in a spreadsheet style like Excel
+
+`head()`: this returns the top six rows of a dataset, or the "head" of the data
+
+
+```{r}
+#| eval: false
 
 head(housing_data)
-
+View(housing_data)
 ```
+
+
 <br> 
 
-## Reading Data from Local CSV File
+# Practices 
 
 First, let's make a folder on your computer to use for bootcamp. I suggest putting it in your downloads folder or your documents folder and call it "R Bootcamp". 
 
@@ -58,10 +161,278 @@ This set your "working directory" which basically makes it easier for us to deal
 
 
 
-<p>Download the <a href="datasets/insurance.csv" target="_blank">datasets\insurance.csv</a> document to provide your answers to questions asked in the steps below.</p>
+## Practice 1: 📃 Insurance 📑
+
+**Instructions**: 
+
+1. Click the link to download the <a href="insurance.csv" download>insurance</a> dataset. 
+2. Use the two commands learned from above to look at the data. 
+
+**Starter Code:**
+```{r}
+#| eval: false
+#| code-fold: false
+
+library(tidyverse)
+
+insurance <- read_csv("path_to_dataset")
+```
+
+::: columns
+::: {.column width="10%"}
+:::
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+
+insurance <- read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv")
+
+insurance |>
+    head() |> 
+    knitr::kable(align = 'c')
+```
+:::
+::: {.column width="10%"}
+:::
+:::
+
+**Answer**:
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: Code Solution
+
+library(tidyverse)
+
+insurance <- read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv")
+
+head(insurance)
+
+View(insurance)
+```
+
+## Practice 2: 🚗 Honda Cars 🚙
 
 
-# Other Topics: 
+**Instructions**: 
 
-- directories
-- running code
+1. Open this [website](https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CivicCorolla.csv) in a new tab and copy the URL, or right-click and copy the URL.  
+2. Use the two commands learned from above to look at the data. 
+
+
+::: columns
+::: {.column width="10%"}
+:::
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+bob <- read_csv("https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CivicCorolla.csv")
+
+bob |>
+    head() |> 
+    knitr::kable(align = 'c')
+```
+:::
+::: {.column width="10%"}
+:::
+:::
+
+
+**Starter Code:**
+```{r}
+#| eval: false
+#| code-fold: false
+
+library(tidyverse)
+
+bob <- read_csv("path_to_URL")
+```
+
+
+**Answer**:
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: Code Solution
+
+library(tidyverse)
+
+bob <- read_csv("https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CivicCorolla.csv")
+
+head(bob)
+
+View(bob)
+```
+
+
+## Practice 3: 🦷 ToothGrowth 😁
+
+**Instructions**: 
+
+1. Look at the `ToothGrowth` dataset (this dataset is built into R)
+
+::: columns
+::: {.column width="20%"}
+:::
+::: {.column width="60%"}
+```{r}
+#| echo: false
+
+ToothGrowth |>
+    head() |> 
+    knitr::kable(align = 'c')
+```
+:::
+::: {.column width="20%"}
+:::
+:::
+
+**Answer**:
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: Code Solution
+
+head(ToothGrowth)
+
+View(ToothGrowth)
+```
+
+
+## Practice 4: 📚 Student Performance Dataset 🧠
+
+
+**Instructions**: 
+
+1. Click the link to download the <a href="StudentsPerformance.csv" download>insurance</a> dataset. 
+2. Use the two commands learned from above to look at the data.
+
+
+**Starter Code:**
+```{r}
+#| eval: false
+#| code-fold: false
+
+library(tidyverse)
+
+dataset <- read_csv("path_to_dataset")
+```
+
+::: columns
+::: {.column width="5%"}
+:::
+::: {.column width="90%"}
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+student_performance <- read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/StudentsPerformance.csv")
+
+student_performance |>
+    head() |> 
+    knitr::kable(align = 'c')
+```
+:::
+::: {.column width="5%"}
+:::
+:::
+
+**Answer**:
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: Code Solution
+
+head(student_performance)
+
+View(student_performance)
+```
+
+
+## Practice 5: 🏡 Rent Prices 🏘️
+
+**Instructions**: 
+
+1. Open this [website](https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CivicCorolla.csv) and copy the URL. 
+2. Use the two commands learned from above to look at the data. 
+
+
+::: columns
+::: {.column width="10%"}
+:::
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+bob <- read_csv("https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CivicCorolla.csv")
+
+bob |>
+    head() |> 
+    knitr::kable(align = 'c')
+```
+:::
+::: {.column width="10%"}
+:::
+:::
+
+
+**Answer**:
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: Code Solution
+
+head(bob)
+
+View(bob)
+```
+
+
+## Practice 6: 🌺 Iris 🌻
+
+**Instructions**: 
+
+1. Look at the `iris` dataset (this dataset is built into R)
+
+::: columns
+::: {.column width="20%"}
+:::
+::: {.column width="60%"}
+```{r}
+#| echo: false
+
+iris |>
+    head() |> 
+    knitr::kable(align = 'c')
+```
+:::
+::: {.column width="20%"}
+:::
+:::
+
+**Answer**:
+
+```{r}
+#| eval: false
+#| code-fold: true
+#| code-summary: Code Solution
+
+head(iris)
+
+View(iris)
+```

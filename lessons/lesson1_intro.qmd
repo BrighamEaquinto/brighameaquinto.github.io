@@ -58,7 +58,7 @@ __Second Option__:
 
 Use this [direct R download](https://cran.rstudio.com/bin/windows/base/R-4.2.1-win.exe)
 
-![](rstudio_download.jpg){fig-align="center"}
+<img1 src="rstudio_download.jpg"> 
 
 
 #### Downloading RStudio
@@ -72,5 +72,3 @@ __Second Option__:
 Use this [direct RStudio download](https://download1.rstudio.org/desktop/windows/RStudio-2022.07.2-576.exe)
 
 ![](r_download.png){fig-align="center"}
-
-<!-- add this later: https://github.com/dracula/gh-pages -->

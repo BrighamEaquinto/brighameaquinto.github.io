@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "DSS R BootCamp",
     "section": "",
-    "text": "Lesson 1: Introduction & Installation\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 2: Reading Data\n\n\nLearning the ggplot2 package\n\n\n\n\n \n\n\n\n\n\n\nLesson 3: First Three Wrangling Verbs\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 4: Last Three Wrangling Verbs\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 5: Graphing Part 1\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 6: Graphing Part 2\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Lesson 1: Introduction & Installation\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nLesson 2: Reading Data\n\n\nLearning the readr package\n\n\n\n\n \n\n\n\n\n\n\nLesson 3: First Three Wrangling Verbs\n\n\nLearning the dplyr package\n\n\n\n\n \n\n\n\n\n\n\nLesson 4: Last Three Wrangling Verbs\n\n\nLearning the dplyr package\n\n\n\n\n \n\n\n\n\n\n\nLesson 5: Graphing Part 1\n\n\nLearning the ggplot2 package\n\n\n\n\n \n\n\n\n\n\n\nLesson 6: Graphing Part 2\n\n\nLearning the ggplot2 package\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "lessons/extra/lesson7_practice.html",
@@ -60,28 +60,77 @@
     "href": "lessons/lesson2_readr.html",
     "title": "Lesson 2: Reading Data",
     "section": "",
-    "text": "Options to See Data:\n\nview(): this opens a new tab to view the data in a spreadsheet style like Excel\nhead(): this returns the top six rows of a dataset, or the “head” of the data"
+    "text": "We will cover three main options how to importing data:\nBelow are examples on each of these methods to import data"
   },
   {
-    "objectID": "lessons/lesson2_readr.html#build-in-datasets",
-    "href": "lessons/lesson2_readr.html#build-in-datasets",
+    "objectID": "lessons/lesson2_readr.html#option-1-import-dataset-button",
+    "href": "lessons/lesson2_readr.html#option-1-import-dataset-button",
     "title": "Lesson 2: Reading Data",
-    "section": "Build-in Datasets",
-    "text": "Build-in Datasets\nRun this code to see a list of built in datasets:\n\ndata()\n\nThe iris dataset is commonly used and built into R; no additional downloads are necessary.\n\nview(iris)\n\n\nhead(iris)"
+    "section": "Option 1: Import Dataset Button",
+    "text": "Option 1: Import Dataset Button\nAnother option is to use the “Import Dataset” button in the environment pane of RStudio.\n\n\nThe data will now be available to you."
   },
   {
-    "objectID": "lessons/lesson2_readr.html#reading-data-from-url",
-    "href": "lessons/lesson2_readr.html#reading-data-from-url",
+    "objectID": "lessons/lesson2_readr.html#option-2-copy-file-path-option",
+    "href": "lessons/lesson2_readr.html#option-2-copy-file-path-option",
     "title": "Lesson 2: Reading Data",
-    "section": "Reading Data from URL",
-    "text": "Reading Data from URL\nRead in this dataset from this URL: https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\n\nhousing_data <- read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\")\n\nhead(housing_data)"
+    "section": "Option 2: Copy File Path Option",
+    "text": "Option 2: Copy File Path Option\nThe readr package is the first package that we will learn about. This allows us to read in rectangular data like cvs files.\nThis is the typical way it goes when you have data located on your computer.\n\nlibrary(tidyverse)\n\ndataset <- read_csv(file_path)\n\nhead(dataset)\n\n\n\n\n\n\n\n\n\nWindows Users: This will not run\n\n\n\n\n\nOne backslash \\\n\n\n\n\ndata1 <- read_csv(\"C:\\Users\\name\\Downloads\\dataset.csv\")\n\n\n\n\n\n\n\n\n\n\n\nWindows Users: Either of these options will run\n\n\n\n\n\nTwo backslashes \\\\\n\n\n\n\ndata1 <- read_csv(\"C:\\\\Users\\\\name\\\\Downloads\\\\dataset.csv\")\n\n\n\n\n\nOne forwardslash /\n\n\n\n\ndata1 <- read_csv(\"C:/Users/name/Downloads/dataset.csv\")"
   },
   {
-    "objectID": "lessons/lesson2_readr.html#reading-data-from-local-csv-file",
-    "href": "lessons/lesson2_readr.html#reading-data-from-local-csv-file",
+    "objectID": "lessons/lesson2_readr.html#option-3-url-method",
+    "href": "lessons/lesson2_readr.html#option-3-url-method",
     "title": "Lesson 2: Reading Data",
-    "section": "Reading Data from Local CSV File",
-    "text": "Reading Data from Local CSV File\nFirst, let’s make a folder on your computer to use for bootcamp. I suggest putting it in your downloads folder or your documents folder and call it “R Bootcamp”.\nNext, click the “Session” button at the top of RStudio, then “Set Working Directory”, then “Choose Directory” and use your computer’s file directory to navigate to the folder you made for bootcamp.\nThis set your “working directory” which basically makes it easier for us to deal with files.\n\nDownload the datasets.csv document to provide your answers to questions asked in the steps below."
+    "section": "Option 3: URL Method",
+    "text": "Option 3: URL Method\nOften you get your data from online somewhere like GitHub or Kaggle. While there is the option to download the file, then read it from your computer locally, like we just did above, there’s also the option to read in data from a URL.\nA benefit is that less memory is used on your computer. Another is that you can send your analysis with the data being read in from a URL, and others will be able to run the script without any data issues.\nBelow is an example.\n\nlibrary(tidyverse)\n\nhousing_data <- read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\")"
+  },
+  {
+    "objectID": "lessons/lesson2_readr.html#how-to-look-at-the-data",
+    "href": "lessons/lesson2_readr.html#how-to-look-at-the-data",
+    "title": "Lesson 2: Reading Data",
+    "section": "How to Look at the Data?",
+    "text": "How to Look at the Data?\nview(): this opens a new tab to view the data in a spreadsheet style like Excel\nhead(): this returns the top six rows of a dataset, or the “head” of the data\n\nhead(housing_data)\nView(housing_data)"
+  },
+  {
+    "objectID": "lessons/lesson2_readr.html#practice-1-insurance",
+    "href": "lessons/lesson2_readr.html#practice-1-insurance",
+    "title": "Lesson 2: Reading Data",
+    "section": "Practice 1: 📃 Insurance 📑",
+    "text": "Practice 1: 📃 Insurance 📑\nInstructions:\n\nClick the link to download the insurance dataset.\nUse the two commands learned from above to look at the data.\n\nStarter Code:\n\nlibrary(tidyverse)\n\ninsurance <- read_csv(\"path_to_dataset\")\n\n\n\n\n\n\n\n\n\n\nage\nsex\nbmi\nchildren\nsmoker\nregion\ncharges\n\n\n\n\n19\nfemale\n27.900\n0\nyes\nsouthwest\n16884.924\n\n\n18\nmale\n33.770\n1\nno\nsoutheast\n1725.552\n\n\n28\nmale\n33.000\n3\nno\nsoutheast\n4449.462\n\n\n33\nmale\n22.705\n0\nno\nnorthwest\n21984.471\n\n\n32\nmale\n28.880\n0\nno\nnorthwest\n3866.855\n\n\n31\nfemale\n25.740\n0\nno\nsoutheast\n3756.622\n\n\n\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nlibrary(tidyverse)\n\ninsurance <- read_csv(\"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv\")\n\nhead(insurance)\n\nView(insurance)"
+  },
+  {
+    "objectID": "lessons/lesson2_readr.html#practice-2-honda-cars",
+    "href": "lessons/lesson2_readr.html#practice-2-honda-cars",
+    "title": "Lesson 2: Reading Data",
+    "section": "Practice 2: 🚗 Honda Cars 🚙",
+    "text": "Practice 2: 🚗 Honda Cars 🚙\nInstructions:\n\nOpen this website in a new tab and copy the URL, or right-click and copy the URL.\n\nUse the two commands learned from above to look at the data.\n\n\n\n\n\n\n\n\n\n\nModel\nTrim\nYear\nMileage\nPrice\n\n\n\n\nCivic\nLX\n2013\n52911\n9900\n\n\nCivic\nLX\n2017\n27966\n15495\n\n\nCivic\nLX\n2016\n21639\n14995\n\n\nCivic\nLX\n2017\n21893\n15595\n\n\nCivic\nLX\n2015\n39868\n11498\n\n\nCivic\nLX\n2015\n26416\n14000\n\n\n\n\n\n\n\n\n\nStarter Code:\n\nlibrary(tidyverse)\n\nbob <- read_csv(\"path_to_URL\")\n\nAnswer:\n\n\nCode Solution\nlibrary(tidyverse)\n\nbob <- read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CivicCorolla.csv\")\n\nhead(bob)\n\nView(bob)"
+  },
+  {
+    "objectID": "lessons/lesson2_readr.html#practice-3-toothgrowth",
+    "href": "lessons/lesson2_readr.html#practice-3-toothgrowth",
+    "title": "Lesson 2: Reading Data",
+    "section": "Practice 3: 🦷 ToothGrowth 😁",
+    "text": "Practice 3: 🦷 ToothGrowth 😁\nInstructions:\n\nLook at the ToothGrowth dataset (this dataset is built into R)\n\n\n\n\n\n\n\n\n\n\nlen\nsupp\ndose\n\n\n\n\n4.2\nVC\n0.5\n\n\n11.5\nVC\n0.5\n\n\n7.3\nVC\n0.5\n\n\n5.8\nVC\n0.5\n\n\n6.4\nVC\n0.5\n\n\n10.0\nVC\n0.5\n\n\n\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nhead(ToothGrowth)\n\nView(ToothGrowth)"
+  },
+  {
+    "objectID": "lessons/lesson2_readr.html#practice-4-student-performance-dataset",
+    "href": "lessons/lesson2_readr.html#practice-4-student-performance-dataset",
+    "title": "Lesson 2: Reading Data",
+    "section": "Practice 4: 📚 Student Performance Dataset 🧠",
+    "text": "Practice 4: 📚 Student Performance Dataset 🧠\nInstructions:\n\nClick the link to download the insurance dataset.\nUse the two commands learned from above to look at the data.\n\nStarter Code:\n\nlibrary(tidyverse)\n\ndataset <- read_csv(\"path_to_dataset\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngender\nrace/ethnicity\nparental level of education\nlunch\ntest preparation course\nmath score\nreading score\nwriting score\n\n\n\n\nfemale\ngroup B\nbachelor’s degree\nstandard\nnone\n72\n72\n74\n\n\nfemale\ngroup C\nsome college\nstandard\ncompleted\n69\n90\n88\n\n\nfemale\ngroup B\nmaster’s degree\nstandard\nnone\n90\n95\n93\n\n\nmale\ngroup A\nassociate’s degree\nfree/reduced\nnone\n47\n57\n44\n\n\nmale\ngroup C\nsome college\nstandard\nnone\n76\n78\n75\n\n\nfemale\ngroup B\nassociate’s degree\nstandard\nnone\n71\n83\n78\n\n\n\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nhead(student_performance)\n\nView(student_performance)"
+  },
+  {
+    "objectID": "lessons/lesson2_readr.html#practice-5-rent-prices",
+    "href": "lessons/lesson2_readr.html#practice-5-rent-prices",
+    "title": "Lesson 2: Reading Data",
+    "section": "Practice 5: 🏡 Rent Prices 🏘️",
+    "text": "Practice 5: 🏡 Rent Prices 🏘️\nInstructions:\n\nOpen this website and copy the URL.\nUse the two commands learned from above to look at the data.\n\n\n\n\n\n\n\n\n\n\nModel\nTrim\nYear\nMileage\nPrice\n\n\n\n\nCivic\nLX\n2013\n52911\n9900\n\n\nCivic\nLX\n2017\n27966\n15495\n\n\nCivic\nLX\n2016\n21639\n14995\n\n\nCivic\nLX\n2017\n21893\n15595\n\n\nCivic\nLX\n2015\n39868\n11498\n\n\nCivic\nLX\n2015\n26416\n14000\n\n\n\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nhead(bob)\n\nView(bob)"
+  },
+  {
+    "objectID": "lessons/lesson2_readr.html#practice-6-iris",
+    "href": "lessons/lesson2_readr.html#practice-6-iris",
+    "title": "Lesson 2: Reading Data",
+    "section": "Practice 6: 🌺 Iris 🌻",
+    "text": "Practice 6: 🌺 Iris 🌻\nInstructions:\n\nLook at the iris dataset (this dataset is built into R)\n\n\n\n\n\n\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa\n\n\n\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nhead(iris)\n\nView(iris)"
   },
   {
     "objectID": "lessons/lesson3_dplyr.html",
@@ -320,26 +369,5 @@
     "title": "Lesson 6: Graphing Part 2",
     "section": "Scales",
     "text": "Scales\n\n\nCode\nggplot(iris, aes(Petal.Width, Petal.Length, color = Species))+\n  geom_point()+\n  scale_x_continuous(breaks = seq(0, 4, 1))+\n  scale_y_continuous(breaks = seq(0,10,1))\n\nggplot(mpg, aes(class, fill = class))+\n  geom_bar()+\n  # scale_x_discrete(limits = c(\"2seater\"))\n  scale_fill_manual(values = c(\"blue\", \"blue\", \"blue\", \"blue\", \"blue\", \"blue\", \"red\"))\n\n# scale_x_continuous(\n#   breaks = seq(15, 40, by = 5), \n#   labels = , \n#   limits = \n#   )\n\n# scale_colour_brewer(palette = \"Set1\")\n\n# scale_colour_manual(values = c(Republican = \"red\", Democratic = \"blue\"))"
-  },
-  {
-    "objectID": "other/Reading Data/reading_data.html",
-    "href": "other/Reading Data/reading_data.html",
-    "title": "Reading Data",
-    "section": "",
-    "text": "The readr package is the first package that we will learn about. This allows us to read in rectangular data like cvs files.\nThis is the typical way it goes when you have data located on your computer.\n\nlibrary(tidyverse)\n\ndataset <- read_csv(file_path)\n\nhead(dataset)\n\nCopy the file path from your computer and paste it in the function. One downside to this is you have to manually replace each backslash \\ with a forwardslash /\nHere is an example:\n\nlibrary(tidyverse)\n\nbob <- read_csv(\"C:/Users/Bethany/Downloads/US_Population_200_Years.csv\")\n\nhead(bob)\n\n# A tibble: 6 × 7\n   Rank City             Population  Year PopDate    Longitude Latitude\n  <dbl> <chr>                 <dbl> <dbl> <chr>          <dbl>    <dbl>\n1     1 New York, NY          33131  1790 06/01/1790     -73.9     40.7\n2     2 Philadelphia, PA      44096  1790 06/01/1790     -75.1     40.0\n3     3 Boston, MA            18320  1790 06/01/1790     -71.1     42.3\n4     4 Charleston, SC        16359  1790 06/01/1790     -80.0     32.8\n5     5 Baltimore, MD         13503  1790 06/01/1790     -76.6     39.3\n6     7 Salem, MA              7921  1790 06/01/1790     -70.9     42.5"
-  },
-  {
-    "objectID": "other/Reading Data/reading_data.html#method-2-import-dataset-button-option",
-    "href": "other/Reading Data/reading_data.html#method-2-import-dataset-button-option",
-    "title": "Reading Data",
-    "section": "Method 2: “Import Dataset” Button Option",
-    "text": "Method 2: “Import Dataset” Button Option\nAnother option is to use the “Import Dataset” button in the environment pane of RStudio.\n\n\nThe data will now be in your environment."
-  },
-  {
-    "objectID": "other/Reading Data/reading_data.html#method-3-getting-data-from-a-url",
-    "href": "other/Reading Data/reading_data.html#method-3-getting-data-from-a-url",
-    "title": "Reading Data",
-    "section": "Method 3: Getting data from a URL",
-    "text": "Method 3: Getting data from a URL\nOften you get your data from online somewhere like GitHub or Kaggle. While there is the option to download the file, then read it from your computer locally, like we just did above, there’s also the option to read in data from a URL.\nA benefit is that less memory is used on your computer. Another is that you can send your analysis with the data being read in from a URL, and others will be able to run the script without any data issues.\nBelow is an example.\n\nlibrary(tidyverse)\n\ndata1 <- read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv\")\n\nhead(data1)"
   }
 ]

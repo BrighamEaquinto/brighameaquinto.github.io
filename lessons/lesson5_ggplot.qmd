@@ -1,5 +1,6 @@
 ---
 title: "Lesson 5: Graphing Part 1"
+subtitle: Learning the ggplot2 package
 toc: true
 fig-align: center
 fig-width: 8

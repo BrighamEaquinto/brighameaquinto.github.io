@@ -1,5 +1,6 @@
 ---
 title: "Lesson 3: First Three Wrangling Verbs"
+subtitle: Learning the dplyr package
 toc: true
 code-overflow: scroll
 code-line-numbers: true

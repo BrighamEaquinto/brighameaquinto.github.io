@@ -199,7 +199,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
       <h1 class="title">Lesson 2: Reading Data</h1>
-            <p class="subtitle lead">Learning the ggplot2 package</p>
+            <p class="subtitle lead">Learning the readr package</p>
                       </div>
   </div>
     
@@ -220,11 +220,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#looking-at-datasets" id="toc-looking-at-datasets" class="nav-link active" data-scroll-target="#looking-at-datasets">Looking At Datasets</a></li>
-  <li><a href="#build-in-datasets" id="toc-build-in-datasets" class="nav-link" data-scroll-target="#build-in-datasets">Build-in Datasets</a></li>
-  <li><a href="#reading-data-from-url" id="toc-reading-data-from-url" class="nav-link" data-scroll-target="#reading-data-from-url">Reading Data from URL</a></li>
-  <li><a href="#reading-data-from-local-csv-file" id="toc-reading-data-from-local-csv-file" class="nav-link" data-scroll-target="#reading-data-from-local-csv-file">Reading Data from Local CSV File</a></li>
-  <li><a href="#other-topics" id="toc-other-topics" class="nav-link" data-scroll-target="#other-topics">Other Topics:</a></li>
+  <li><a href="#built-in-datasets" id="toc-built-in-datasets" class="nav-link active" data-scroll-target="#built-in-datasets">Built-in Datasets</a></li>
+  <li><a href="#reading-data-from-local-csv-file" id="toc-reading-data-from-local-csv-file" class="nav-link" data-scroll-target="#reading-data-from-local-csv-file">Reading Data from Local CSV File</a>
+  <ul class="collapse">
+  <li><a href="#option-1-import-dataset-button" id="toc-option-1-import-dataset-button" class="nav-link" data-scroll-target="#option-1-import-dataset-button">Option 1: Import Dataset Button</a></li>
+  <li><a href="#option-2-copy-file-path-option" id="toc-option-2-copy-file-path-option" class="nav-link" data-scroll-target="#option-2-copy-file-path-option">Option 2: Copy File Path Option</a></li>
+  <li><a href="#option-3-url-method" id="toc-option-3-url-method" class="nav-link" data-scroll-target="#option-3-url-method">Option 3: URL Method</a></li>
+  <li><a href="#how-to-look-at-the-data" id="toc-how-to-look-at-the-data" class="nav-link" data-scroll-target="#how-to-look-at-the-data">How to Look at the Data?</a></li>
+  </ul></li>
+  <li><a href="#practices" id="toc-practices" class="nav-link" data-scroll-target="#practices">Practices</a>
+  <ul class="collapse">
+  <li><a href="#practice-1-insurance" id="toc-practice-1-insurance" class="nav-link" data-scroll-target="#practice-1-insurance">Practice 1: 📃 Insurance 📑</a></li>
+  <li><a href="#practice-2-honda-cars" id="toc-practice-2-honda-cars" class="nav-link" data-scroll-target="#practice-2-honda-cars">Practice 2: 🚗 Honda Cars 🚙</a></li>
+  <li><a href="#practice-3-toothgrowth" id="toc-practice-3-toothgrowth" class="nav-link" data-scroll-target="#practice-3-toothgrowth">Practice 3: 🦷 ToothGrowth 😁</a></li>
+  <li><a href="#practice-4-student-performance-dataset" id="toc-practice-4-student-performance-dataset" class="nav-link" data-scroll-target="#practice-4-student-performance-dataset">Practice 4: 📚 Student Performance Dataset 🧠</a></li>
+  <li><a href="#practice-5-rent-prices" id="toc-practice-5-rent-prices" class="nav-link" data-scroll-target="#practice-5-rent-prices">Practice 5: 🏡 Rent Prices 🏘️</a></li>
+  <li><a href="#practice-6-iris" id="toc-practice-6-iris" class="nav-link" data-scroll-target="#practice-6-iris">Practice 6: 🌺 Iris 🌻</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -234,57 +246,696 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<section id="looking-at-datasets" class="level2">
-<h2 class="anchored" data-anchor-id="looking-at-datasets">Looking At Datasets</h2>
-<p>Options to See Data:</p>
+<p>We will cover three main options how to importing data:</p>
 <ul>
-<li><code>view()</code>: this opens a new tab to view the data in a spreadsheet style like Excel</li>
-<li><code>head()</code>: this returns the top six rows of a dataset, or the “head” of the data</li>
+<li>Built-in Datasets</li>
+<li>Local Datasets (downloaded on your computer)</li>
+<li>Online Datasets</li>
 </ul>
-<p><br></p>
-</section>
-<section id="build-in-datasets" class="level2">
-<h2 class="anchored" data-anchor-id="build-in-datasets">Build-in Datasets</h2>
-<p>Run this code to see a list of built in datasets:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">data</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p>Below are examples on each of these methods to import data</p>
+<section id="built-in-datasets" class="level1">
+<h1>Built-in Datasets</h1>
 <p>The <code>iris</code> dataset is commonly used and built into R; no additional downloads are necessary.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">view</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">View</span>(iris)</span></code></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">head</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">head</span>(iris)</span></code></pre></div>
 </div>
 <p><br></p>
 </section>
-<section id="reading-data-from-url" class="level2">
-<h2 class="anchored" data-anchor-id="reading-data-from-url">Reading Data from URL</h2>
-<p>Read in this dataset from this URL: <code>https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv</code></p>
+<section id="reading-data-from-local-csv-file" class="level1">
+<h1>Reading Data from Local CSV File</h1>
+<section id="option-1-import-dataset-button" class="level2">
+<h2 class="anchored" data-anchor-id="option-1-import-dataset-button">Option 1: Import Dataset Button</h2>
+<p>Another option is to use the “Import Dataset” button in the environment pane of RStudio.</p>
+<p><img src="data_import_button.jpg" class="img-fluid"></p>
+<p><img src="data_import_pop_up.jpg" class="img-fluid"></p>
+<p>The data will now be available to you.</p>
+</section>
+<section id="option-2-copy-file-path-option" class="level2">
+<h2 class="anchored" data-anchor-id="option-2-copy-file-path-option">Option 2: Copy File Path Option</h2>
+<p>The <a href="https://readr.tidyverse.org/">readr package</a> is the first package that we will learn about. This allows us to read in rectangular data like cvs files.</p>
+<p>This is the typical way it goes when you have data located on your computer.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>housing_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv"</span>)</span>
-<span id="cb4-2"><a href="#cb4-2"></a></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">head</span>(housing_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-2"><a href="#cb3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3"></a>dataset <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(file_path)</span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="fu">head</span>(dataset)</span></code></pre></div>
+</div>
+<!-- The following applies for Windows Users only. Mac users can disregard this. -->
+<!-- 
+Copy the file path from your computer and paste it in the function. One downside to this is you have to manually replace each backslash `\` with a forwardslash `/` or add another backslash `\` next to each other backslash `\`. Look below for clarification.  
+-->
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Windows Users: This will not run
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="columns">
+<div class="column" style="width:20%;">
+<p>One backslash <code>\</code></p>
+</div><div class="column" style="width:1%;">
+
+</div><div class="column" style="width:79%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>data1 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:\Users</span><span class="sc">\n</span><span class="st">ame\Downloads\dataset.csv"</span>)</span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Windows Users: Either of these options will run
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="columns">
+<div class="column" style="width:20%;">
+<p>Two backslashes <code>\\</code></p>
+</div><div class="column" style="width:1%;">
+
+</div><div class="column" style="width:79%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>data1 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">name</span><span class="sc">\\</span><span class="st">Downloads</span><span class="sc">\\</span><span class="st">dataset.csv"</span>)</span></code></pre></div>
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p>One forwardslash <code>/</code></p>
+</div><div class="column" style="width:1%;">
+
+</div><div class="column" style="width:79%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>data1 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/name/Downloads/dataset.csv"</span>)</span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <p><br></p>
 </section>
-<section id="reading-data-from-local-csv-file" class="level2">
-<h2 class="anchored" data-anchor-id="reading-data-from-local-csv-file">Reading Data from Local CSV File</h2>
+<section id="option-3-url-method" class="level2">
+<h2 class="anchored" data-anchor-id="option-3-url-method">Option 3: URL Method</h2>
+<p>Often you get your data from online somewhere like <a href="https://github.com/">GitHub</a> or <a href="https://kaggle.com/">Kaggle</a>. While there is the option to download the file, then read it from your computer locally, like we just did above, there’s also the option to read in data from a URL.</p>
+<p>A benefit is that less memory is used on your computer. Another is that you can send your analysis with the data being read in from a URL, and others will be able to run the script without any data issues.</p>
+<p>Below is an example.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a>housing_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/Rent.csv"</span>)</span></code></pre></div>
+</div>
+</section>
+<section id="how-to-look-at-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-look-at-the-data">How to Look at the Data?</h2>
+<p><code>view()</code>: this opens a new tab to view the data in a spreadsheet style like Excel</p>
+<p><code>head()</code>: this returns the top six rows of a dataset, or the “head” of the data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">head</span>(housing_data)</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">View</span>(housing_data)</span></code></pre></div>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="practices" class="level1">
+<h1>Practices</h1>
 <p>First, let’s make a folder on your computer to use for bootcamp. I suggest putting it in your downloads folder or your documents folder and call it “R Bootcamp”.</p>
 <p>Next, click the “Session” button at the top of RStudio, then “Set Working Directory”, then “Choose Directory” and use your computer’s file directory to navigate to the folder you made for bootcamp.</p>
 <p>This set your “working directory” which basically makes it easier for us to deal with files.</p>
-<p>
-Download the <a href="datasets/insurance.csv" target="_blank">datasets.csv</a> document to provide your answers to questions asked in the steps below.
-</p>
+<section id="practice-1-insurance" class="level2">
+<h2 class="anchored" data-anchor-id="practice-1-insurance">Practice 1: 📃 Insurance 📑</h2>
+<p><strong>Instructions</strong>:</p>
+<ol type="1">
+<li>Click the link to download the <a href="insurance.csv" download="">insurance</a> dataset.</li>
+<li>Use the two commands learned from above to look at the data.</li>
+</ol>
+<p><strong>Starter Code:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb9-2"><a href="#cb9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3"></a>insurance <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"path_to_dataset"</span>)</span></code></pre></div>
+</div>
+<div class="columns">
+<div class="column" style="width:10%;">
+
+</div><div class="column" style="width:80%;">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: center;">age</th>
+<th style="text-align: center;">sex</th>
+<th style="text-align: center;">bmi</th>
+<th style="text-align: center;">children</th>
+<th style="text-align: center;">smoker</th>
+<th style="text-align: center;">region</th>
+<th style="text-align: center;">charges</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">27.900</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">yes</td>
+<td style="text-align: center;">southwest</td>
+<td style="text-align: center;">16884.924</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">33.770</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">southeast</td>
+<td style="text-align: center;">1725.552</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">33.000</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">southeast</td>
+<td style="text-align: center;">4449.462</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">33</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">22.705</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">northwest</td>
+<td style="text-align: center;">21984.471</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">28.880</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">northwest</td>
+<td style="text-align: center;">3866.855</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">31</td>
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">25.740</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">southeast</td>
+<td style="text-align: center;">3756.622</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div>
+</div>
+<p><strong>Answer</strong>:</p>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb10-2"><a href="#cb10-2"></a></span>
+<span id="cb10-3"><a href="#cb10-3"></a>insurance <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv"</span>)</span>
+<span id="cb10-4"><a href="#cb10-4"></a></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="fu">head</span>(insurance)</span>
+<span id="cb10-6"><a href="#cb10-6"></a></span>
+<span id="cb10-7"><a href="#cb10-7"></a><span class="fu">View</span>(insurance)</span></code></pre></div>
+</details>
+</div>
 </section>
-<section id="other-topics" class="level1">
-<h1>Other Topics:</h1>
-<ul>
-<li>directories</li>
-<li>running code</li>
-</ul>
+<section id="practice-2-honda-cars" class="level2">
+<h2 class="anchored" data-anchor-id="practice-2-honda-cars">Practice 2: 🚗 Honda Cars 🚙</h2>
+<p><strong>Instructions</strong>:</p>
+<ol type="1">
+<li>Open this <a href="https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CivicCorolla.csv">website</a> in a new tab and copy the URL, or right-click and copy the URL.<br>
+</li>
+<li>Use the two commands learned from above to look at the data.</li>
+</ol>
+<div class="columns">
+<div class="column" style="width:10%;">
+
+</div><div class="column" style="width:80%;">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Model</th>
+<th style="text-align: center;">Trim</th>
+<th style="text-align: center;">Year</th>
+<th style="text-align: center;">Mileage</th>
+<th style="text-align: center;">Price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Civic</td>
+<td style="text-align: center;">LX</td>
+<td style="text-align: center;">2013</td>
+<td style="text-align: center;">52911</td>
+<td style="text-align: center;">9900</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Civic</td>
+<td style="text-align: center;">LX</td>
+<td style="text-align: center;">2017</td>
+<td style="text-align: center;">27966</td>
+<td style="text-align: center;">15495</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Civic</td>
+<td style="text-align: center;">LX</td>
+<td style="text-align: center;">2016</td>
+<td style="text-align: center;">21639</td>
+<td style="text-align: center;">14995</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Civic</td>
+<td style="text-align: center;">LX</td>
+<td style="text-align: center;">2017</td>
+<td style="text-align: center;">21893</td>
+<td style="text-align: center;">15595</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Civic</td>
+<td style="text-align: center;">LX</td>
+<td style="text-align: center;">2015</td>
+<td style="text-align: center;">39868</td>
+<td style="text-align: center;">11498</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Civic</td>
+<td style="text-align: center;">LX</td>
+<td style="text-align: center;">2015</td>
+<td style="text-align: center;">26416</td>
+<td style="text-align: center;">14000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div>
+</div>
+<p><strong>Starter Code:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a>bob <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"path_to_URL"</span>)</span></code></pre></div>
+</div>
+<p><strong>Answer</strong>:</p>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb12-2"><a href="#cb12-2"></a></span>
+<span id="cb12-3"><a href="#cb12-3"></a>bob <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CivicCorolla.csv"</span>)</span>
+<span id="cb12-4"><a href="#cb12-4"></a></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="fu">head</span>(bob)</span>
+<span id="cb12-6"><a href="#cb12-6"></a></span>
+<span id="cb12-7"><a href="#cb12-7"></a><span class="fu">View</span>(bob)</span></code></pre></div>
+</details>
+</div>
+</section>
+<section id="practice-3-toothgrowth" class="level2">
+<h2 class="anchored" data-anchor-id="practice-3-toothgrowth">Practice 3: 🦷 ToothGrowth 😁</h2>
+<p><strong>Instructions</strong>:</p>
+<ol type="1">
+<li>Look at the <code>ToothGrowth</code> dataset (this dataset is built into R)</li>
+</ol>
+<div class="columns">
+<div class="column" style="width:20%;">
+
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: center;">len</th>
+<th style="text-align: center;">supp</th>
+<th style="text-align: center;">dose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">4.2</td>
+<td style="text-align: center;">VC</td>
+<td style="text-align: center;">0.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">11.5</td>
+<td style="text-align: center;">VC</td>
+<td style="text-align: center;">0.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7.3</td>
+<td style="text-align: center;">VC</td>
+<td style="text-align: center;">0.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5.8</td>
+<td style="text-align: center;">VC</td>
+<td style="text-align: center;">0.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6.4</td>
+<td style="text-align: center;">VC</td>
+<td style="text-align: center;">0.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10.0</td>
+<td style="text-align: center;">VC</td>
+<td style="text-align: center;">0.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div><div class="column" style="width:20%;">
+
+</div>
+</div>
+<p><strong>Answer</strong>:</p>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">head</span>(ToothGrowth)</span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="fu">View</span>(ToothGrowth)</span></code></pre></div>
+</details>
+</div>
+</section>
+<section id="practice-4-student-performance-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="practice-4-student-performance-dataset">Practice 4: 📚 Student Performance Dataset 🧠</h2>
+<p><strong>Instructions</strong>:</p>
+<ol type="1">
+<li>Click the link to download the <a href="StudentsPerformance.csv" download="">insurance</a> dataset.</li>
+<li>Use the two commands learned from above to look at the data.</li>
+</ol>
+<p><strong>Starter Code:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb14-2"><a href="#cb14-2"></a></span>
+<span id="cb14-3"><a href="#cb14-3"></a>dataset <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"path_to_dataset"</span>)</span></code></pre></div>
+</div>
+<div class="columns">
+<div class="column" style="width:5%;">
+
+</div><div class="column" style="width:90%;">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 11%">
+<col style="width: 21%">
+<col style="width: 10%">
+<col style="width: 18%">
+<col style="width: 8%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">gender</th>
+<th style="text-align: center;">race/ethnicity</th>
+<th style="text-align: center;">parental level of education</th>
+<th style="text-align: center;">lunch</th>
+<th style="text-align: center;">test preparation course</th>
+<th style="text-align: center;">math score</th>
+<th style="text-align: center;">reading score</th>
+<th style="text-align: center;">writing score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">group B</td>
+<td style="text-align: center;">bachelor’s degree</td>
+<td style="text-align: center;">standard</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: center;">72</td>
+<td style="text-align: center;">72</td>
+<td style="text-align: center;">74</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">group C</td>
+<td style="text-align: center;">some college</td>
+<td style="text-align: center;">standard</td>
+<td style="text-align: center;">completed</td>
+<td style="text-align: center;">69</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: center;">88</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">group B</td>
+<td style="text-align: center;">master’s degree</td>
+<td style="text-align: center;">standard</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: center;">95</td>
+<td style="text-align: center;">93</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">group A</td>
+<td style="text-align: center;">associate’s degree</td>
+<td style="text-align: center;">free/reduced</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: center;">47</td>
+<td style="text-align: center;">57</td>
+<td style="text-align: center;">44</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">group C</td>
+<td style="text-align: center;">some college</td>
+<td style="text-align: center;">standard</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: center;">76</td>
+<td style="text-align: center;">78</td>
+<td style="text-align: center;">75</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">group B</td>
+<td style="text-align: center;">associate’s degree</td>
+<td style="text-align: center;">standard</td>
+<td style="text-align: center;">none</td>
+<td style="text-align: center;">71</td>
+<td style="text-align: center;">83</td>
+<td style="text-align: center;">78</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div>
+</div>
+<p><strong>Answer</strong>:</p>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">head</span>(student_performance)</span>
+<span id="cb15-2"><a href="#cb15-2"></a></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="fu">View</span>(student_performance)</span></code></pre></div>
+</details>
+</div>
+</section>
+<section id="practice-5-rent-prices" class="level2">
+<h2 class="anchored" data-anchor-id="practice-5-rent-prices">Practice 5: 🏡 Rent Prices 🏘️</h2>
+<p><strong>Instructions</strong>:</p>
+<ol type="1">
+<li>Open this <a href="https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CivicCorolla.csv">website</a> and copy the URL.</li>
+<li>Use the two commands learned from above to look at the data.</li>
+</ol>
+<div class="columns">
+<div class="column" style="width:10%;">
+
+</div><div class="column" style="width:80%;">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Model</th>
+<th style="text-align: center;">Trim</th>
+<th style="text-align: center;">Year</th>
+<th style="text-align: center;">Mileage</th>
+<th style="text-align: center;">Price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Civic</td>
+<td style="text-align: center;">LX</td>
+<td style="text-align: center;">2013</td>
+<td style="text-align: center;">52911</td>
+<td style="text-align: center;">9900</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Civic</td>
+<td style="text-align: center;">LX</td>
+<td style="text-align: center;">2017</td>
+<td style="text-align: center;">27966</td>
+<td style="text-align: center;">15495</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Civic</td>
+<td style="text-align: center;">LX</td>
+<td style="text-align: center;">2016</td>
+<td style="text-align: center;">21639</td>
+<td style="text-align: center;">14995</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Civic</td>
+<td style="text-align: center;">LX</td>
+<td style="text-align: center;">2017</td>
+<td style="text-align: center;">21893</td>
+<td style="text-align: center;">15595</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Civic</td>
+<td style="text-align: center;">LX</td>
+<td style="text-align: center;">2015</td>
+<td style="text-align: center;">39868</td>
+<td style="text-align: center;">11498</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Civic</td>
+<td style="text-align: center;">LX</td>
+<td style="text-align: center;">2015</td>
+<td style="text-align: center;">26416</td>
+<td style="text-align: center;">14000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div>
+</div>
+<p><strong>Answer</strong>:</p>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">head</span>(bob)</span>
+<span id="cb16-2"><a href="#cb16-2"></a></span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="fu">View</span>(bob)</span></code></pre></div>
+</details>
+</div>
+</section>
+<section id="practice-6-iris" class="level2">
+<h2 class="anchored" data-anchor-id="practice-6-iris">Practice 6: 🌺 Iris 🌻</h2>
+<p><strong>Instructions</strong>:</p>
+<ol type="1">
+<li>Look at the <code>iris</code> dataset (this dataset is built into R)</li>
+</ol>
+<div class="columns">
+<div class="column" style="width:20%;">
+
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Sepal.Length</th>
+<th style="text-align: center;">Sepal.Width</th>
+<th style="text-align: center;">Petal.Length</th>
+<th style="text-align: center;">Petal.Width</th>
+<th style="text-align: center;">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">5.1</td>
+<td style="text-align: center;">3.5</td>
+<td style="text-align: center;">1.4</td>
+<td style="text-align: center;">0.2</td>
+<td style="text-align: center;">setosa</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4.9</td>
+<td style="text-align: center;">3.0</td>
+<td style="text-align: center;">1.4</td>
+<td style="text-align: center;">0.2</td>
+<td style="text-align: center;">setosa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4.7</td>
+<td style="text-align: center;">3.2</td>
+<td style="text-align: center;">1.3</td>
+<td style="text-align: center;">0.2</td>
+<td style="text-align: center;">setosa</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4.6</td>
+<td style="text-align: center;">3.1</td>
+<td style="text-align: center;">1.5</td>
+<td style="text-align: center;">0.2</td>
+<td style="text-align: center;">setosa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5.0</td>
+<td style="text-align: center;">3.6</td>
+<td style="text-align: center;">1.4</td>
+<td style="text-align: center;">0.2</td>
+<td style="text-align: center;">setosa</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5.4</td>
+<td style="text-align: center;">3.9</td>
+<td style="text-align: center;">1.7</td>
+<td style="text-align: center;">0.4</td>
+<td style="text-align: center;">setosa</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div><div class="column" style="width:20%;">
+
+</div>
+</div>
+<p><strong>Answer</strong>:</p>
+<div class="cell">
+<details>
+<summary>Code Solution</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">head</span>(iris)</span>
+<span id="cb17-2"><a href="#cb17-2"></a></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="fu">View</span>(iris)</span></code></pre></div>
+</details>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -430,44 +1081,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
-    }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,

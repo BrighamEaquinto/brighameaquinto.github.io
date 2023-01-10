@@ -1,5 +1,6 @@
 ---
 title: "Lesson 4: Last Three Wrangling Verbs"
+subtitle: Learning the dplyr package
 toc: true
 ---
 
