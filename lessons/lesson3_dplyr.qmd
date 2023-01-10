@@ -1,6 +1,6 @@
 ---
 title: "Lesson 3: First Three Wrangling Verbs"
-subtitle: Learning the dplyr package
+subtitle: Learning the dplyr package (part 1)
 toc: true
 code-overflow: scroll
 code-line-numbers: true
@@ -215,14 +215,25 @@ dat <- read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquin
 
 ### Question 1
 Select the age, sex, and bmi columns
+
+::: columns
+::: {.column width="20%"}
+:::
+::: {.column width="60%"}
 ```{r}
 #| echo: false
 
 dat %>% 
     select(age, sex, bmi) %>%
     head() %>%  
-    knitr::kable()
+    knitr::kable(align = 'c')
 ```
+:::
+::: {.column width="20%"}
+:::
+:::
+
+
 ```{r}
 #| code-summary: "Code Solution"
 #| code-fold: true
@@ -237,19 +248,19 @@ dat %>%
 Select the `charges`, `region`, and `age` columns.
 
 ::: columns
-::: {.column width="30%"}
+::: {.column width="20%"}
 :::
-::: {.column width="40%"}
+::: {.column width="60%"}
 ```{r}
 #| echo: false
 
 dat %>% 
     select(charges, region, age) %>%
     head() %>%  
-    knitr::kable()
+    knitr::kable(align = 'c')
 ```
 :::
-::: {.column width="30%"}
+::: {.column width="20%"}
 :::
 :::
 ```{r}
@@ -264,14 +275,24 @@ dat %>%
 
 ### Question 3 
 Filter the data where `sex` is only male and `region` is only northeast.
+
+::: columns
+::: {.column width="5%"}
+:::
+::: {.column width="90%"}
 ```{r}
 #| echo: false
 
 dat %>% 
     filter(sex == "male", region == "northeast") %>%
     head() %>%  
-    knitr::kable()
+    knitr::kable(align = 'c')
 ```
+:::
+::: {.column width="5%"}
+:::
+:::
+
 ```{r}
 #| code-summary: "Code Solution"
 #| code-fold: true
@@ -288,14 +309,24 @@ Filter the data like this:
 
 - `age` is younger than or equal to 40
 - `bmi` is greater than 21
+
+::: columns
+::: {.column width="5%"}
+:::
+::: {.column width="90%"}
 ```{r}
 #| echo: false
 
 dat %>% 
     filter(age <= 40, bmi > 21) %>%
     head() %>%  
-    knitr::kable()
+    knitr::kable(align = 'c')
 ```
+:::
+::: {.column width="5%"}
+:::
+:::
+
 ```{r}
 #| code-summary: "Code Solution"
 #| code-fold: true
@@ -310,14 +341,24 @@ dat %>%
 
 Make a new column called `bmi_modified` that is the of the bmi - 12
 
+
+::: columns
+::: {.column width="5%"}
+:::
+::: {.column width="90%"}
 ```{r}
 #| echo: false
 
 dat %>% 
     mutate(bmi_modified = bmi - 12) %>%
     head() %>%  
-    knitr::kable()
+    knitr::kable(align = 'c')
 ```
+:::
+::: {.column width="5%"}
+:::
+:::
+
 ```{r}
 #| code-summary: "Code Solution"
 #| code-fold: true
@@ -331,14 +372,24 @@ dat %>%
 
 ### Question 6
 Make a new column called `age_modified` that is the current age divided by 2
+
+::: columns
+::: {.column width="5%"}
+:::
+::: {.column width="90%"}
 ```{r}
 #| echo: false
 
 dat %>% 
     mutate(age_modified = age/2) %>%
     head() %>%  
-    knitr::kable()
+    knitr::kable(align = 'c')
 ```
+:::
+::: {.column width="5%"}
+:::
+:::
+
 ```{r}
 #| code-summary: "Code Solution"
 #| code-fold: true
@@ -367,7 +418,7 @@ dat %>%
     filter(age > 50, sex == "female") %>% 
     mutate(real_charges = charges * 4) %>%
     head() %>%  
-    knitr::kable()
+    knitr::kable(align = 'c')
 ```
 :::
 :::

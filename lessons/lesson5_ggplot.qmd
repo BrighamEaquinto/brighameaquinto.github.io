@@ -1,27 +1,22 @@
 ---
 title: "Lesson 5: Graphing Part 1"
-subtitle: Learning the ggplot2 package
+subtitle: Learning the ggplot2 package (part 1)
 toc: true
 fig-align: center
 fig-width: 8
 fig-height: 3.5
-code-copy: true
-code-overflow: wrap
-code-line-numbers: true
 code-fold: true
-code-tools: true
 eval: true
 message: false
 warning: false
 # toc: true
 ---
 
-<!-- ![](pictures/ggplot2.jpg){fig-align="center"} -->
+![](ggplot2.png){fig-align="center" width="125.05" height="145.55"}
 
 
 ```{r}
-#| code-fold: true
-#| code-summary: "Data Used in examples below"
+#| echo: false
 #| message: false
 #| warning: false
 
@@ -30,26 +25,13 @@ library(tidyverse)
 dat <- read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv")
 ```
 
-The four main plots we will go over today:
-
-- histogram
-- boxplot
-- scatterplot
-- bar plot
-
-What kinds of data do we have? In general, we have:
-
-- numerical
-- categorical 
-
-
-
 ## Histogram: Counting the Number of Numeric Occurances
 
 ###### X: Numeric, Y: N/A
 
 ```{r}
 #| code-fold: true
+
 ggplot(dat, aes(x=bmi))+ 
    geom_histogram(bins = 50)+
     labs(
@@ -121,6 +103,17 @@ ggplot(dat, aes(x=age, y=bmi))+
 ```
 
 
+```{r}
+#| code-fold: true
+#| code-summary: "Data Used in examples below"
+#| message: false
+#| warning: false
+
+library(tidyverse)
+
+dat <- read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv")
+```
+
 
 # Practice Exercises
 
@@ -143,12 +136,29 @@ This is our dataset for this practice:
 # knitr::kable(head(bob))  
 ```
 
-> |gender |race/ethnicity |lunch        |test preparation course | math score| reading score| writing score|parent_education   |
-> |:------|:--------------|:------------|:-----------------------|----------:|-------------:|-------------:|:------------------|
-> |female |group B        |standard     |none                    |         72|            72|            74|bachelor's degree  |
-> |female |group C        |standard     |completed               |         69|            90|            88|some college       |
-> |female |group B        |standard     |none                    |         90|            95|            93|master's degree    |
-> |male   |group A        |free/reduced |none                    |         47|            57|            44|associate's degree |
+|gender |race/ethnicity |lunch        |test preparation course | math score| reading score| writing score|parent_education   |
+|:------|:--------------|:------------|:-----------------------|----------:|-------------:|-------------:|:------------------|
+|female |group B        |standard     |none                    |         72|            72|            74|bachelor's degree  |
+|female |group C        |standard     |completed               |         69|            90|            88|some college       |
+|female |group B        |standard     |none                    |         90|            95|            93|master's degree    |
+|male   |group A        |free/reduced |none                    |         47|            57|            44|associate's degree |
+
+
+:::{.callout-important}
+# Back-Ticks and Single Quotation Marks
+
+When columns have spaces in the column name (like `test perparation course`, `math score`, `reading score`, and `writing score`), you must wrap the column in **\`**back-ticks**\`** and not 'single quotation marks' to use them in R. 
+
+Examples:
+
+- \``test perparation course`\` 
+- \``math score`\`
+
+Notice how `race/ethnicity` is connected with a parenthese \\ and `parent_eduction` is connected with an underscore \_ . Neither need the back-ticks around it.
+
+Remember this in the following exercises
+
+:::
 
 
 ## Exercise 1: Visualizing a Distribution using a Histogram

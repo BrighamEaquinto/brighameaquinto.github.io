@@ -1,6 +1,6 @@
 ---
 title: "Lesson 1: Introduction & Installation"
-# subtitle: 
+subtitle: What is Data Science?
 toc: true
 eval: false
 ---

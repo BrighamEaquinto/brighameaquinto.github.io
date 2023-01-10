@@ -3,7 +3,7 @@
 toc: true
 listing: 
   - id: Weeks
-    fields: [title, subtitle]
+    fields: [title, subtitle] #image
     contents: "lessons/*.qmd"
 # image: images/website_thumbnail.png
 # logo: images/website_thumbnail.png

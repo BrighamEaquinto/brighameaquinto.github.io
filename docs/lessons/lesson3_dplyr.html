@@ -199,7 +199,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
       <h1 class="title">Lesson 3: First Three Wrangling Verbs</h1>
-            <p class="subtitle lead">Learning the dplyr package</p>
+            <p class="subtitle lead">Learning the dplyr package (part 1)</p>
                       </div>
   </div>
     
@@ -794,49 +794,57 @@ Operators to use in Filter Statements
 <section id="question-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
 <p>Select the age, sex, and bmi columns</p>
+<div class="columns">
+<div class="column" style="width:20%;">
+
+</div><div class="column" style="width:60%;">
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <thead>
 <tr class="header">
-<th style="text-align: right;">age</th>
-<th style="text-align: left;">sex</th>
-<th style="text-align: right;">bmi</th>
+<th style="text-align: center;">age</th>
+<th style="text-align: center;">sex</th>
+<th style="text-align: center;">bmi</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">19</td>
-<td style="text-align: left;">female</td>
-<td style="text-align: right;">27.900</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">27.900</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">18</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">33.770</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">33.770</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">28</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">33.000</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">33.000</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">33</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">22.705</td>
+<td style="text-align: center;">33</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">22.705</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">32</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">28.880</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">28.880</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">31</td>
-<td style="text-align: left;">female</td>
-<td style="text-align: right;">25.740</td>
+<td style="text-align: center;">31</td>
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">25.740</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div><div class="column" style="width:20%;">
+
 </div>
 </div>
 <div class="cell">
@@ -852,55 +860,55 @@ Operators to use in Filter Statements
 <h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
 <p>Select the <code>charges</code>, <code>region</code>, and <code>age</code> columns.</p>
 <div class="columns">
-<div class="column" style="width:30%;">
+<div class="column" style="width:20%;">
 
-</div><div class="column" style="width:40%;">
+</div><div class="column" style="width:60%;">
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <thead>
 <tr class="header">
-<th style="text-align: right;">charges</th>
-<th style="text-align: left;">region</th>
-<th style="text-align: right;">age</th>
+<th style="text-align: center;">charges</th>
+<th style="text-align: center;">region</th>
+<th style="text-align: center;">age</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">16884.924</td>
-<td style="text-align: left;">southwest</td>
-<td style="text-align: right;">19</td>
+<td style="text-align: center;">16884.924</td>
+<td style="text-align: center;">southwest</td>
+<td style="text-align: center;">19</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">1725.552</td>
-<td style="text-align: left;">southeast</td>
-<td style="text-align: right;">18</td>
+<td style="text-align: center;">1725.552</td>
+<td style="text-align: center;">southeast</td>
+<td style="text-align: center;">18</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">4449.462</td>
-<td style="text-align: left;">southeast</td>
-<td style="text-align: right;">28</td>
+<td style="text-align: center;">4449.462</td>
+<td style="text-align: center;">southeast</td>
+<td style="text-align: center;">28</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">21984.471</td>
-<td style="text-align: left;">northwest</td>
-<td style="text-align: right;">33</td>
+<td style="text-align: center;">21984.471</td>
+<td style="text-align: center;">northwest</td>
+<td style="text-align: center;">33</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">3866.855</td>
-<td style="text-align: left;">northwest</td>
-<td style="text-align: right;">32</td>
+<td style="text-align: center;">3866.855</td>
+<td style="text-align: center;">northwest</td>
+<td style="text-align: center;">32</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">3756.622</td>
-<td style="text-align: left;">southeast</td>
-<td style="text-align: right;">31</td>
+<td style="text-align: center;">3756.622</td>
+<td style="text-align: center;">southeast</td>
+<td style="text-align: center;">31</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-</div><div class="column" style="width:30%;">
+</div><div class="column" style="width:20%;">
 
 </div>
 </div>
@@ -916,77 +924,85 @@ Operators to use in Filter Statements
 <section id="question-3" class="level3">
 <h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
 <p>Filter the data where <code>sex</code> is only male and <code>region</code> is only northeast.</p>
+<div class="columns">
+<div class="column" style="width:5%;">
+
+</div><div class="column" style="width:90%;">
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <thead>
 <tr class="header">
-<th style="text-align: right;">age</th>
-<th style="text-align: left;">sex</th>
-<th style="text-align: right;">bmi</th>
-<th style="text-align: right;">children</th>
-<th style="text-align: left;">smoker</th>
-<th style="text-align: left;">region</th>
-<th style="text-align: right;">charges</th>
+<th style="text-align: center;">age</th>
+<th style="text-align: center;">sex</th>
+<th style="text-align: center;">bmi</th>
+<th style="text-align: center;">children</th>
+<th style="text-align: center;">smoker</th>
+<th style="text-align: center;">region</th>
+<th style="text-align: center;">charges</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">37</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">29.830</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">northeast</td>
-<td style="text-align: right;">6406.411</td>
+<td style="text-align: center;">37</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">29.830</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">northeast</td>
+<td style="text-align: center;">6406.411</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">25</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">26.220</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">northeast</td>
-<td style="text-align: right;">2721.321</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">26.220</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">northeast</td>
+<td style="text-align: center;">2721.321</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">23</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">23.845</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">northeast</td>
-<td style="text-align: right;">2395.172</td>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">23.845</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">northeast</td>
+<td style="text-align: center;">2395.172</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">35</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">36.670</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">northeast</td>
-<td style="text-align: right;">39774.276</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">36.670</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">yes</td>
+<td style="text-align: center;">northeast</td>
+<td style="text-align: center;">39774.276</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">38</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">37.050</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">northeast</td>
-<td style="text-align: right;">6079.672</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">37.050</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">northeast</td>
+<td style="text-align: center;">6079.672</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">43</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">27.360</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">northeast</td>
-<td style="text-align: right;">8606.217</td>
+<td style="text-align: center;">43</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">27.360</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">northeast</td>
+<td style="text-align: center;">8606.217</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
 </div>
 </div>
 <div class="cell">
@@ -1005,77 +1021,85 @@ Operators to use in Filter Statements
 <li><code>age</code> is younger than or equal to 40</li>
 <li><code>bmi</code> is greater than 21</li>
 </ul>
+<div class="columns">
+<div class="column" style="width:5%;">
+
+</div><div class="column" style="width:90%;">
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <thead>
 <tr class="header">
-<th style="text-align: right;">age</th>
-<th style="text-align: left;">sex</th>
-<th style="text-align: right;">bmi</th>
-<th style="text-align: right;">children</th>
-<th style="text-align: left;">smoker</th>
-<th style="text-align: left;">region</th>
-<th style="text-align: right;">charges</th>
+<th style="text-align: center;">age</th>
+<th style="text-align: center;">sex</th>
+<th style="text-align: center;">bmi</th>
+<th style="text-align: center;">children</th>
+<th style="text-align: center;">smoker</th>
+<th style="text-align: center;">region</th>
+<th style="text-align: center;">charges</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">19</td>
-<td style="text-align: left;">female</td>
-<td style="text-align: right;">27.900</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">southwest</td>
-<td style="text-align: right;">16884.924</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">27.900</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">yes</td>
+<td style="text-align: center;">southwest</td>
+<td style="text-align: center;">16884.924</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">18</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">33.770</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">southeast</td>
-<td style="text-align: right;">1725.552</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">33.770</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">southeast</td>
+<td style="text-align: center;">1725.552</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">28</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">33.000</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">southeast</td>
-<td style="text-align: right;">4449.462</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">33.000</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">southeast</td>
+<td style="text-align: center;">4449.462</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">33</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">22.705</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">northwest</td>
-<td style="text-align: right;">21984.471</td>
+<td style="text-align: center;">33</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">22.705</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">northwest</td>
+<td style="text-align: center;">21984.471</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">32</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">28.880</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">northwest</td>
-<td style="text-align: right;">3866.855</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">28.880</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">northwest</td>
+<td style="text-align: center;">3866.855</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">31</td>
-<td style="text-align: left;">female</td>
-<td style="text-align: right;">25.740</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">southeast</td>
-<td style="text-align: right;">3756.622</td>
+<td style="text-align: center;">31</td>
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">25.740</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">southeast</td>
+<td style="text-align: center;">3756.622</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
 </div>
 </div>
 <div class="cell">
@@ -1090,94 +1114,102 @@ Operators to use in Filter Statements
 <section id="question-5" class="level3">
 <h3 class="anchored" data-anchor-id="question-5">Question 5</h3>
 <p>Make a new column called <code>bmi_modified</code> that is the of the bmi - 12</p>
+<div class="columns">
+<div class="column" style="width:5%;">
+
+</div><div class="column" style="width:90%;">
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <colgroup>
-<col style="width: 5%">
+<col style="width: 6%">
 <col style="width: 10%">
 <col style="width: 10%">
 <col style="width: 13%">
 <col style="width: 10%">
 <col style="width: 14%">
 <col style="width: 14%">
-<col style="width: 19%">
+<col style="width: 18%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: right;">age</th>
-<th style="text-align: left;">sex</th>
-<th style="text-align: right;">bmi</th>
-<th style="text-align: right;">children</th>
-<th style="text-align: left;">smoker</th>
-<th style="text-align: left;">region</th>
-<th style="text-align: right;">charges</th>
-<th style="text-align: right;">bmi_modified</th>
+<th style="text-align: center;">age</th>
+<th style="text-align: center;">sex</th>
+<th style="text-align: center;">bmi</th>
+<th style="text-align: center;">children</th>
+<th style="text-align: center;">smoker</th>
+<th style="text-align: center;">region</th>
+<th style="text-align: center;">charges</th>
+<th style="text-align: center;">bmi_modified</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">19</td>
-<td style="text-align: left;">female</td>
-<td style="text-align: right;">27.900</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">southwest</td>
-<td style="text-align: right;">16884.924</td>
-<td style="text-align: right;">15.900</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">27.900</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">yes</td>
+<td style="text-align: center;">southwest</td>
+<td style="text-align: center;">16884.924</td>
+<td style="text-align: center;">15.900</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">18</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">33.770</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">southeast</td>
-<td style="text-align: right;">1725.552</td>
-<td style="text-align: right;">21.770</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">33.770</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">southeast</td>
+<td style="text-align: center;">1725.552</td>
+<td style="text-align: center;">21.770</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">28</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">33.000</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">southeast</td>
-<td style="text-align: right;">4449.462</td>
-<td style="text-align: right;">21.000</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">33.000</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">southeast</td>
+<td style="text-align: center;">4449.462</td>
+<td style="text-align: center;">21.000</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">33</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">22.705</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">northwest</td>
-<td style="text-align: right;">21984.471</td>
-<td style="text-align: right;">10.705</td>
+<td style="text-align: center;">33</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">22.705</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">northwest</td>
+<td style="text-align: center;">21984.471</td>
+<td style="text-align: center;">10.705</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">32</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">28.880</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">northwest</td>
-<td style="text-align: right;">3866.855</td>
-<td style="text-align: right;">16.880</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">28.880</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">northwest</td>
+<td style="text-align: center;">3866.855</td>
+<td style="text-align: center;">16.880</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">31</td>
-<td style="text-align: left;">female</td>
-<td style="text-align: right;">25.740</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">southeast</td>
-<td style="text-align: right;">3756.622</td>
-<td style="text-align: right;">13.740</td>
+<td style="text-align: center;">31</td>
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">25.740</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">southeast</td>
+<td style="text-align: center;">3756.622</td>
+<td style="text-align: center;">13.740</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
 </div>
 </div>
 <div class="cell">
@@ -1192,94 +1224,102 @@ Operators to use in Filter Statements
 <section id="question-6" class="level3">
 <h3 class="anchored" data-anchor-id="question-6">Question 6</h3>
 <p>Make a new column called <code>age_modified</code> that is the current age divided by 2</p>
+<div class="columns">
+<div class="column" style="width:5%;">
+
+</div><div class="column" style="width:90%;">
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <colgroup>
-<col style="width: 5%">
+<col style="width: 6%">
 <col style="width: 10%">
 <col style="width: 10%">
 <col style="width: 13%">
 <col style="width: 10%">
 <col style="width: 14%">
 <col style="width: 14%">
-<col style="width: 19%">
+<col style="width: 18%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: right;">age</th>
-<th style="text-align: left;">sex</th>
-<th style="text-align: right;">bmi</th>
-<th style="text-align: right;">children</th>
-<th style="text-align: left;">smoker</th>
-<th style="text-align: left;">region</th>
-<th style="text-align: right;">charges</th>
-<th style="text-align: right;">age_modified</th>
+<th style="text-align: center;">age</th>
+<th style="text-align: center;">sex</th>
+<th style="text-align: center;">bmi</th>
+<th style="text-align: center;">children</th>
+<th style="text-align: center;">smoker</th>
+<th style="text-align: center;">region</th>
+<th style="text-align: center;">charges</th>
+<th style="text-align: center;">age_modified</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">19</td>
-<td style="text-align: left;">female</td>
-<td style="text-align: right;">27.900</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">yes</td>
-<td style="text-align: left;">southwest</td>
-<td style="text-align: right;">16884.924</td>
-<td style="text-align: right;">9.5</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">27.900</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">yes</td>
+<td style="text-align: center;">southwest</td>
+<td style="text-align: center;">16884.924</td>
+<td style="text-align: center;">9.5</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">18</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">33.770</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">southeast</td>
-<td style="text-align: right;">1725.552</td>
-<td style="text-align: right;">9.0</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">33.770</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">southeast</td>
+<td style="text-align: center;">1725.552</td>
+<td style="text-align: center;">9.0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">28</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">33.000</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">southeast</td>
-<td style="text-align: right;">4449.462</td>
-<td style="text-align: right;">14.0</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">33.000</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">southeast</td>
+<td style="text-align: center;">4449.462</td>
+<td style="text-align: center;">14.0</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">33</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">22.705</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">northwest</td>
-<td style="text-align: right;">21984.471</td>
-<td style="text-align: right;">16.5</td>
+<td style="text-align: center;">33</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">22.705</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">northwest</td>
+<td style="text-align: center;">21984.471</td>
+<td style="text-align: center;">16.5</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">32</td>
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">28.880</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">northwest</td>
-<td style="text-align: right;">3866.855</td>
-<td style="text-align: right;">16.0</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">male</td>
+<td style="text-align: center;">28.880</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">northwest</td>
+<td style="text-align: center;">3866.855</td>
+<td style="text-align: center;">16.0</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">31</td>
-<td style="text-align: left;">female</td>
-<td style="text-align: right;">25.740</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">no</td>
-<td style="text-align: left;">southeast</td>
-<td style="text-align: right;">3756.622</td>
-<td style="text-align: right;">15.5</td>
+<td style="text-align: center;">31</td>
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">25.740</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">southeast</td>
+<td style="text-align: center;">3756.622</td>
+<td style="text-align: center;">15.5</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
+
 </div>
 </div>
 <div class="cell">
@@ -1308,48 +1348,48 @@ Operators to use in Filter Statements
 <table class="table table-sm table-striped">
 <thead>
 <tr class="header">
-<th style="text-align: right;">age</th>
-<th style="text-align: left;">sex</th>
-<th style="text-align: right;">charges</th>
-<th style="text-align: right;">real_charges</th>
+<th style="text-align: center;">age</th>
+<th style="text-align: center;">sex</th>
+<th style="text-align: center;">charges</th>
+<th style="text-align: center;">real_charges</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">60</td>
-<td style="text-align: left;">female</td>
-<td style="text-align: right;">28923.14</td>
-<td style="text-align: right;">115692.55</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">28923.14</td>
+<td style="text-align: center;">115692.55</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">62</td>
-<td style="text-align: left;">female</td>
-<td style="text-align: right;">27808.73</td>
-<td style="text-align: right;">111234.90</td>
+<td style="text-align: center;">62</td>
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">27808.73</td>
+<td style="text-align: center;">111234.90</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">56</td>
-<td style="text-align: left;">female</td>
-<td style="text-align: right;">11090.72</td>
-<td style="text-align: right;">44362.87</td>
+<td style="text-align: center;">56</td>
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">11090.72</td>
+<td style="text-align: center;">44362.87</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">52</td>
-<td style="text-align: left;">female</td>
-<td style="text-align: right;">10797.34</td>
-<td style="text-align: right;">43189.34</td>
+<td style="text-align: center;">52</td>
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">10797.34</td>
+<td style="text-align: center;">43189.34</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">60</td>
-<td style="text-align: left;">female</td>
-<td style="text-align: right;">13228.85</td>
-<td style="text-align: right;">52915.39</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">13228.85</td>
+<td style="text-align: center;">52915.39</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">59</td>
-<td style="text-align: left;">female</td>
-<td style="text-align: right;">14001.13</td>
-<td style="text-align: right;">56004.54</td>
+<td style="text-align: center;">59</td>
+<td style="text-align: center;">female</td>
+<td style="text-align: center;">14001.13</td>
+<td style="text-align: center;">56004.54</td>
 </tr>
 </tbody>
 </table>

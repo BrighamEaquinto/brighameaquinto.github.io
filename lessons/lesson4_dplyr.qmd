@@ -1,6 +1,6 @@
 ---
 title: "Lesson 4: Last Three Wrangling Verbs"
-subtitle: Learning the dplyr package
+subtitle: Learning the dplyr package (part 2)
 toc: true
 ---
 
@@ -10,7 +10,6 @@ Before we do any exercises, make sure to run this code:
 ```{r}
 #| message: false
 #| warning: false
-#| code-overflow: wrap
 
 library(tidyverse)
 dat <- read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv")
