@@ -4,42 +4,7 @@
     "href": "index.html",
     "title": "DSS R BootCamp",
     "section": "",
-    "text": "Lesson 1: Introduction & Installation\n\n\nWhat is Data Science?\n\n\n\n\n \n\n\n\n\n\n\nLesson 2: Reading Data\n\n\nLearning the readr package\n\n\n\n\n \n\n\n\n\n\n\nLesson 3: First Three Wrangling Verbs\n\n\nLearning the dplyr package (part 1)\n\n\n\n\n \n\n\n\n\n\n\nLesson 4: Last Three Wrangling Verbs\n\n\nLearning the dplyr package (part 2)\n\n\n\n\n \n\n\n\n\n\n\nLesson 5: Graphing Part 1\n\n\nLearning the ggplot2 package (part 1)\n\n\n\n\n \n\n\n\n\n\n\nLesson 6: Graphing Part 2\n\n\nLearning the ggplot2 package (part 2)\n\n\n\n\n \n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "lessons/extra/lesson7_practice.html",
-    "href": "lessons/extra/lesson7_practice.html",
-    "title": "Lesson 7: All Together",
-    "section": "",
-    "text": "Click to download data"
-  },
-  {
-    "objectID": "lessons/extra/lesson7_practice.html#part-1",
-    "href": "lessons/extra/lesson7_practice.html#part-1",
-    "title": "Lesson 7: All Together",
-    "section": "Part 1",
-    "text": "Part 1\nShow me a distribution of the departure delay times by each carrier for flights that depart after 5pm\n\n\n\n\n\n\nIdea for Graph"
-  },
-  {
-    "objectID": "lessons/extra/lesson7_practice.html#part-2",
-    "href": "lessons/extra/lesson7_practice.html#part-2",
-    "title": "Lesson 7: All Together",
-    "section": "Part 2",
-    "text": "Part 2\nWhich airports out of JFK, LGA, & EWR have the lowest average departure delay time?\n\n\nCode\nflights %>% \n    filter(!is.na(dep_delay), origin %in% c('JFK', 'LGA', 'EWR')) %>% \n    group_by(origin) %>% \n    summarise(Average = mean(dep_delay)) %>% \n    knitr::kable()\n\n\n\n\n\norigin\nAverage\n\n\n\n\nEWR\n15.10795\n\n\nJFK\n12.11216\n\n\nLGA\n10.34688"
-  },
-  {
-    "objectID": "lessons/extra/lesson8_python.html#r",
-    "href": "lessons/extra/lesson8_python.html#r",
-    "title": "Lesson 8: R vs. Python",
-    "section": "R",
-    "text": "R\n\nlibrary(tidyverse)\nlibrary(knitr)\n\n\niris %>% \n  select(Species, Sepal.Width, Sepal.Length) %>% \n  filter(Sepal.Width >= 3, Species %in% c(\"setosa\", \"virginica\")) %>% \n  mutate(\n    Sepal_Ratio = round(Sepal.Width/Sepal.Length, 4), \n    small_ratio = ifelse(Sepal_Ratio < 0.7, 1, 0)) %>%\n  arrange(Species, desc(Sepal.Length)) %>% \n  head()\n\n  Species Sepal.Width Sepal.Length Sepal_Ratio small_ratio\n1  setosa         4.0          5.8      0.6897           1\n2  setosa         4.4          5.7      0.7719           0\n3  setosa         3.8          5.7      0.6667           1\n4  setosa         4.2          5.5      0.7636           0\n5  setosa         3.5          5.5      0.6364           1\n6  setosa         3.9          5.4      0.7222           0"
-  },
-  {
-    "objectID": "lessons/extra/lesson8_python.html#python",
-    "href": "lessons/extra/lesson8_python.html#python",
-    "title": "Lesson 8: R vs. Python",
-    "section": "Python",
-    "text": "Python\n\nimport pandas as pd\nimport numpy as np\n\n\n\n\n\n(iris\n  .filter([\"Species\", \"Sepal.Width\", \"Sepal.Length\"])\n  .query('(`Sepal.Width` >= 3) & (Species in [\"setosa\", \"virginica\"])')\n  .assign(\n    Sepal_Ratio = lambda x: round( x['Sepal.Width'] / x['Sepal.Length'], 4), \n    small_ratio = lambda x: np.where(x['Sepal_Ratio'], 1, 0))\n  .sort_values([\"Species\", \"Sepal.Length\"], ascending = [True, False])\n  .head() )\n\n   Species  Sepal.Width  Sepal.Length  Sepal_Ratio  small_ratio\n14  setosa          4.0           5.8       0.6897            1\n15  setosa          4.4           5.7       0.7719            1\n18  setosa          3.8           5.7       0.6667            1\n33  setosa          4.2           5.5       0.7636            1\n36  setosa          3.5           5.5       0.6364            1"
+    "text": "Lesson 1: Introduction & Installation\n\n\nWhat is Data Science?\n\n\n\n\n \n\n\n\n\n\n\nLesson 2: Reading Data\n\n\nLearning the readr package\n\n\n\n\n \n\n\n\n\n\n\nLesson 3: First Three Wrangling Verbs\n\n\nLearning the dplyr package (part 1)\n\n\n\n\n \n\n\n\n\n\n\nLesson 4: Last Three Wrangling Verbs\n\n\nLearning the dplyr package (part 2)\n\n\n\n\n \n\n\n\n\n\n\nLesson 5: Graphing Part 1\n\n\nLearning the ggplot2 package (part 1)\n\n\n\n\n \n\n\n\n\n\n\nLesson 6: Graphing Part 2\n\n\nLearning the ggplot2 package (part 2)\n\n\n\n\n \n\n\n\n\n\n\nLesson 7: What is ‘Tidy’ Data\n\n\nLearning the tidyr package\n\n\n\n\n \n\n\n\n\n\n\nLesson 8: Practice, Practice, Practice\n\n\nLet’s examine & improve your skills\n\n\n\n\n \n\n\n\n\n\n\nLesson 9: R vs. Python\n\n\n‘R’ Bootcamp, huh?\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "lessons/lesson1_intro.html#course-outline",
@@ -362,5 +327,47 @@
     "title": "Lesson 6: Graphing Part 2",
     "section": "Scales",
     "text": "Scales\n\n\nCode\nggplot(iris, aes(Petal.Width, Petal.Length, color = Species))+\n  geom_point()+\n  scale_x_continuous(breaks = seq(0, 4, 1))+\n  scale_y_continuous(breaks = seq(0,10,1))\n\nggplot(mpg, aes(class, fill = class))+\n  geom_bar()+\n  # scale_x_discrete(limits = c(\"2seater\"))\n  scale_fill_manual(values = c(\"blue\", \"blue\", \"blue\", \"blue\", \"blue\", \"blue\", \"red\"))\n\n# scale_x_continuous(\n#   breaks = seq(15, 40, by = 5), \n#   labels = , \n#   limits = \n#   )\n\n# scale_colour_brewer(palette = \"Set1\")\n\n# scale_colour_manual(values = c(Republican = \"red\", Democratic = \"blue\"))"
+  },
+  {
+    "objectID": "lessons/lesson7_tidyr.html",
+    "href": "lessons/lesson7_tidyr.html",
+    "title": "Lesson 7: What is ‘Tidy’ Data",
+    "section": "",
+    "text": "Rows and columns\nHandling NA values\nPivoting"
+  },
+  {
+    "objectID": "lessons/lesson8_practice.html",
+    "href": "lessons/lesson8_practice.html",
+    "title": "Lesson 8: Practice, Practice, Practice",
+    "section": "",
+    "text": "Click to download data"
+  },
+  {
+    "objectID": "lessons/lesson8_practice.html#part-1",
+    "href": "lessons/lesson8_practice.html#part-1",
+    "title": "Lesson 8: Practice, Practice, Practice",
+    "section": "Part 1",
+    "text": "Part 1\nShow me a distribution of the departure delay times by each carrier for flights that depart after 5pm\n\n\n\n\n\n\nIdea for Graph"
+  },
+  {
+    "objectID": "lessons/lesson8_practice.html#part-2",
+    "href": "lessons/lesson8_practice.html#part-2",
+    "title": "Lesson 8: Practice, Practice, Practice",
+    "section": "Part 2",
+    "text": "Part 2\nWhich airports out of JFK, LGA, & EWR have the lowest average departure delay time?\nflights %>% filter(!is.na(dep_delay), origin %in% c(‘JFK’, ‘LGA’, ‘EWR’)) %>% group_by(origin) %>% summarise(Average = mean(dep_delay)) %>% ’’ knitr::kable() ```’’’’’"
+  },
+  {
+    "objectID": "lessons/lesson9_python.html#r",
+    "href": "lessons/lesson9_python.html#r",
+    "title": "Lesson 9: R vs. Python",
+    "section": "R",
+    "text": "R\n\nlibrary(tidyverse)\nlibrary(knitr)\n\n\niris %>% \n  select(Species, Sepal.Width, Sepal.Length) %>% \n  filter(Sepal.Width >= 3, Species %in% c(\"setosa\", \"virginica\")) %>% \n  mutate(\n    Sepal_Ratio = round(Sepal.Width/Sepal.Length, 4), \n    small_ratio = ifelse(Sepal_Ratio < 0.7, 1, 0)) %>%\n  arrange(Species, desc(Sepal.Length)) %>% \n  head()\n\n  Species Sepal.Width Sepal.Length Sepal_Ratio small_ratio\n1  setosa         4.0          5.8      0.6897           1\n2  setosa         4.4          5.7      0.7719           0\n3  setosa         3.8          5.7      0.6667           1\n4  setosa         4.2          5.5      0.7636           0\n5  setosa         3.5          5.5      0.6364           1\n6  setosa         3.9          5.4      0.7222           0"
+  },
+  {
+    "objectID": "lessons/lesson9_python.html#python",
+    "href": "lessons/lesson9_python.html#python",
+    "title": "Lesson 9: R vs. Python",
+    "section": "Python",
+    "text": "Python\n\nimport pandas as pd\nimport numpy as np\n\n\n\n\n\n(iris\n  .filter([\"Species\", \"Sepal.Width\", \"Sepal.Length\"])\n  .query('(`Sepal.Width` >= 3) & (Species in [\"setosa\", \"virginica\"])')\n  .assign(\n    Sepal_Ratio = lambda x: round( x['Sepal.Width'] / x['Sepal.Length'], 4), \n    small_ratio = lambda x: np.where(x['Sepal_Ratio'], 1, 0))\n  .sort_values([\"Species\", \"Sepal.Length\"], ascending = [True, False])\n  .head() )\n\n   Species  Sepal.Width  Sepal.Length  Sepal_Ratio  small_ratio\n14  setosa          4.0           5.8       0.6897            1\n15  setosa          4.4           5.7       0.7719            1\n18  setosa          3.8           5.7       0.6667            1\n33  setosa          4.2           5.5       0.7636            1\n36  setosa          3.5           5.5       0.6364            1"
   }
 ]

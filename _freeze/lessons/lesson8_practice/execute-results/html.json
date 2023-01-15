@@ -1,0 +1,16 @@
+{
+  "hash": "b7547a3b0875a698c018f20779d265e1",
+  "result": {
+    "markdown": "---\ntitle: \"Lesson 8: Practice, Practice, Practice\"\nsubtitle: Let's examine & improve your skills\ncode-fold: true\ntoc: true\n---\n\n::: {.cell}\n\n:::\n\n\n\n\n<a href=\"flights.csv\" download>Click to download data</a>\n\n\n## Part 1\n\nShow me a distribution of the departure delay times by each carrier for flights that depart after 5pm\n\n:::{.callout-note collapse=\"true\"}\n# Idea for Graph\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](lesson8_practice_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\n:::\n\n## Part 2 \n\nWhich airports out of JFK, LGA, & EWR have the lowest average departure delay time? \n\n\nflights %>% \n    filter(!is.na(dep_delay), origin %in% c('JFK', 'LGA', 'EWR')) %>% \n    group_by(origin) %>% \n    summarise(Average = mean(dep_delay)) %>% \n   '' knitr::kable()\n```'''''",
+    "supporting": [
+      "lesson8_practice_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -15,6 +15,21 @@ warning: false
 ![](ggplot2.png){fig-align="center" width="125.05" height="145.55"}
 
 
+<!-- 
+The four main plots we will go over today:
+
+- histogram
+- boxplot
+- scatterplot
+- bar plot
+
+What kinds of data do we have? In general, we have:
+
+- numerical
+- categorical  
+-->
+
+
 ```{r}
 #| echo: false
 #| message: false
