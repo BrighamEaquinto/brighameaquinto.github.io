@@ -1,22 +1,36 @@
 [
   {
+    "objectID": "blog/books.html",
+    "href": "blog/books.html",
+    "title": "Data Science Book Resources",
+    "section": "",
+    "text": "R4DS\n\nfirst edition\nsecond edition\n\nR Packages\nAdvanced R\nMastering Shiny\nGrammer of Graphics Plot\n\n\n\n\n\nTidyModels\nNew Torch for R book\n\n\n\n\n\n\n\n\nTidyverse Style Guide\nTidyverse Design Guide"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "DSS R BootCamp",
     "section": "",
-    "text": "Lesson 1: Introduction & Installation\n\n\nWhat is Data Science?\n\n\n\n\n \n\n\n\n\n\n\nLesson 2: Reading Data\n\n\nLearning the readr package\n\n\n\n\n \n\n\n\n\n\n\nLesson 3: First Three Wrangling Verbs\n\n\nLearning the dplyr package (part 1)\n\n\n\n\n \n\n\n\n\n\n\nLesson 4: Last Three Wrangling Verbs\n\n\nLearning the dplyr package (part 2)\n\n\n\n\n \n\n\n\n\n\n\nLesson 5: Graphing Part 1\n\n\nLearning the ggplot2 package (part 1)\n\n\n\n\n \n\n\n\n\n\n\nLesson 6: Graphing Part 2\n\n\nLearning the ggplot2 package (part 2)\n\n\n\n\n \n\n\n\n\n\n\nLesson 7: What is ‘Tidy’ Data\n\n\nLearning the tidyr package\n\n\n\n\n \n\n\n\n\n\n\nLesson 8: Practice, Practice, Practice\n\n\nLet’s examine & improve your skills\n\n\n\n\n \n\n\n\n\n\n\nLesson 9: R vs. Python\n\n\n‘R’ Bootcamp, huh?\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Lesson 01: Introduction & Installation\n\n\nWhat is Data Science?\n\n\n\n\n \n\n\n\n\n\n\nLesson 02: Reading Data\n\n\nLearning the readr package\n\n\n\n\n \n\n\n\n\n\n\nLesson 03: First Three Wrangling Verbs\n\n\nLearning the dplyr package (part 1)\n\n\n\n\n \n\n\n\n\n\n\nLesson 04: Last Three Wrangling Verbs\n\n\nLearning the dplyr package (part 2)\n\n\n\n\n \n\n\n\n\n\n\nLesson 05: Graphing Part 1\n\n\nLearning the ggplot2 package (part 1)\n\n\n\n\n \n\n\n\n\n\n\nLesson 06: Graphing Part 2\n\n\nLearning the ggplot2 package (part 2)\n\n\n\n\n \n\n\n\n\n\n\nLesson 07: What is ‘Tidy’ Data\n\n\nLearning the tidyr package\n\n\n\n\n \n\n\n\n\n\n\nLesson 08: Practice, Practice, Practice\n\n\nLet’s examine & improve your skills\n\n\n\n\n \n\n\n\n\n\n\nLesson 09: R vs. Python\n\n\n‘R’ Bootcamp, huh?\n\n\n\n\n \n\n\n\n\n\n\nLesson 10: Who’s Observable\n\n\n‘R’ Bootcamp, huh?\n\n\n\n\n \n\n\n\n\n\n\nLesson 11: Who’s Julia?\n\n\nSeriously, this is ‘R’ Bootcamp!\n\n\n\n\n \n\n\n\n\n\n\nLesson 12: SQL, Sequel to What?\n\n\nThe SQL to R\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "lessons/lesson10_observable.html",
+    "href": "lessons/lesson10_observable.html",
+    "title": "Lesson 9: Who’s Observable",
+    "section": "",
+    "text": "library(tidyverse)\n\n\npenguin_data <- read_csv(\"https://gist.githubusercontent.com/slopp/ce3b90b9168f2f921784de84fa445651/raw/4ecf3041f0ed4913e7c230758733948bc561f434/penguins.csv\")\n\n\nimport { aq, op } from \"@uwdata/arquero\"\n\n\n\n\n\n\n\ndata = FileAttachment(\"C:\\Users\\Bethany\\Downloads\\palmer-penguins.csv\")\n\n\n\n\n\n\n\nconsole.log(data)"
   },
   {
     "objectID": "lessons/lesson1_intro.html#course-outline",
     "href": "lessons/lesson1_intro.html#course-outline",
-    "title": "Lesson 1: Introduction & Installation",
+    "title": "Lesson 01: Introduction & Installation",
     "section": "Course Outline:",
     "text": "Course Outline:\nThe purpose of R Bootcamp is to be able to read, wrangle, and visualize data using R in RStudio. By the end of the course you will be able to contribute to a society project next semester."
   },
   {
     "objectID": "lessons/lesson1_intro.html#what-is-data-which-kind-of-data-are-we-going-to-use",
     "href": "lessons/lesson1_intro.html#what-is-data-which-kind-of-data-are-we-going-to-use",
-    "title": "Lesson 1: Introduction & Installation",
+    "title": "Lesson 01: Introduction & Installation",
     "section": "What is Data? Which Kind of Data Are We Going to Use?",
     "text": "What is Data? Which Kind of Data Are We Going to Use?\nWe will be working with tabular data (think excel files; rows and columns). Other data includes pictures, videos, and audio."
   },
@@ -100,35 +114,35 @@
   {
     "objectID": "lessons/lesson3_dplyr.html",
     "href": "lessons/lesson3_dplyr.html",
-    "title": "Lesson 3: First Three Wrangling Verbs",
+    "title": "Lesson 03: First Three Wrangling Verbs",
     "section": "",
     "text": "This lesson is focused on the first three wrangling verbs: select(), filter(), and mutate().\nThis will be our starting dataframe used in each of the examples below."
   },
   {
     "objectID": "lessons/lesson3_dplyr.html#selecting-columns",
     "href": "lessons/lesson3_dplyr.html#selecting-columns",
-    "title": "Lesson 3: First Three Wrangling Verbs",
+    "title": "Lesson 03: First Three Wrangling Verbs",
     "section": "Selecting Columns",
     "text": "Selecting Columns\nSyntax: select()\nThink of it as selecting check boxes for each column to use. Any selected, whether it’s just one column or whether they’re many columns, will be available once this select() code is completed.\n\n\n\nScenario\nSay we want this dataframe to the right where not all of the columns are needed, only the manufacturer, model, cty, and hwy columns. select() allows us to achieve this.\n\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ncty\nhwy\n\n\n\n\naudi\na4\n18\n29\n\n\naudi\na4\n21\n29\n\n\naudi\na4\n20\n31\n\n\naudi\na4\n21\n30\n\n\naudi\na4\n16\n26\n\n\n\n\n\n\n\n\nCode Solution\n\nmpg %>% \n    select(manufacturer, model, cty, hwy)"
   },
   {
     "objectID": "lessons/lesson3_dplyr.html#filtering-rows",
     "href": "lessons/lesson3_dplyr.html#filtering-rows",
-    "title": "Lesson 3: First Three Wrangling Verbs",
+    "title": "Lesson 03: First Three Wrangling Verbs",
     "section": "Filtering Rows",
     "text": "Filtering Rows\nSyntax: filter()\nFiltering is used in the scenarios like, “Only need students that are age 16 years old”, or “Only the the redwood trees in this forest that are taller than 30 ft”.\n\n\n\nScenario\nSay we want this dataframe to the right where the cars are made by ford (manufacturer column) and the amount of highway miles per gallon is greater than 20 (hwy column). filter() allows allows us to achieve this.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\nclass\n\n\n\n\nford\nmustang\n3.8\n1999\n6\nmanual(m5)\nr\n18\n26\nr\nsubcompact\n\n\nford\nmustang\n3.8\n1999\n6\nauto(l4)\nr\n18\n25\nr\nsubcompact\n\n\nford\nmustang\n4.0\n2008\n6\nmanual(m5)\nr\n17\n26\nr\nsubcompact\n\n\nford\nmustang\n4.0\n2008\n6\nauto(l5)\nr\n16\n24\nr\nsubcompact\n\n\nford\nmustang\n4.6\n1999\n8\nauto(l4)\nr\n15\n21\nr\nsubcompact\n\n\nford\nmustang\n4.6\n1999\n8\nmanual(m5)\nr\n15\n22\nr\nsubcompact\n\n\n\n\n\n\n\n\nCode Solution\n\nmpg %>%\n    filter(manufacturer == \"ford\", hwy > 20)\n\n\n\n\n\n\n\nOperators to use in Filter Statements\n\n\n\n\n\n\n\nBasic Operators:\n> greater than\n< less than\n== equals\n>= greater than or equal to\n<= less than or equal to\n\n\n\nAdvace Operators\n!= is not equal to\n%in% c() is in"
   },
   {
     "objectID": "lessons/lesson3_dplyr.html#making-new-columns",
     "href": "lessons/lesson3_dplyr.html#making-new-columns",
-    "title": "Lesson 3: First Three Wrangling Verbs",
+    "title": "Lesson 03: First Three Wrangling Verbs",
     "section": "Making New Columns",
     "text": "Making New Columns\nSyntax: mutate()\nThink of the mutate() verb as starting with one column and change it to where you want it to become–mutating a column. You can make new columns not based on columns, based on one column, or based on multiple columns.\n\n\n\nScenario\nSay we want this dataframe to the right (make sure to scroll to see the other columns) where there was an error in the data and the city miles per gallon needs 5 more miles than what it currently had (cty column) and we need the a column for the engine displacement (displ column) divided by the number of cylinders (cylcolumn). In reality this second task is not a useful but we’re doing it for practice sake.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\nclass\nnew_col\n\n\n\n\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n23\n29\np\ncompact\n0.4500000\n\n\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n26\n29\np\ncompact\n0.4500000\n\n\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n25\n31\np\ncompact\n0.5000000\n\n\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n26\n30\np\ncompact\n0.5000000\n\n\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n21\n26\np\ncompact\n0.4666667\n\n\naudi\na4\n2.8\n1999\n6\nmanual(m5)\nf\n23\n26\np\ncompact\n0.4666667\n\n\n\n\n\n\n\n\nCode Solution\n\nmpg %>%\n    mutate(cty = cty + 5, new_col = displ/cyl)"
   },
   {
     "objectID": "lessons/lesson3_dplyr.html#practice-exercises",
     "href": "lessons/lesson3_dplyr.html#practice-exercises",
-    "title": "Lesson 3: First Three Wrangling Verbs",
+    "title": "Lesson 03: First Three Wrangling Verbs",
     "section": "Practice Exercises",
     "text": "Practice Exercises\nNew dataset in use for the practices exercises:\n\nlibrary(tidyverse)\ndat <- read_csv(\"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv\")\n\n\nQuestion 1\nSelect the age, sex, and bmi columns\n\n\n\n\n\n\n\n\n\nage\nsex\nbmi\n\n\n\n\n19\nfemale\n27.900\n\n\n18\nmale\n33.770\n\n\n28\nmale\n33.000\n\n\n33\nmale\n22.705\n\n\n32\nmale\n28.880\n\n\n31\nfemale\n25.740\n\n\n\n\n\n\n\n\n\n\n\nCode Solution\ndat %>% \n    select(age, sex, bmi)\n\n\n\n\n\nQuestion 2\nSelect the charges, region, and age columns.\n\n\n\n\n\n\n\n\n\ncharges\nregion\nage\n\n\n\n\n16884.924\nsouthwest\n19\n\n\n1725.552\nsoutheast\n18\n\n\n4449.462\nsoutheast\n28\n\n\n21984.471\nnorthwest\n33\n\n\n3866.855\nnorthwest\n32\n\n\n3756.622\nsoutheast\n31\n\n\n\n\n\n\n\n\n\n\n\nCode Solution\ndat %>% \n    select(charges, region, age)\n\n\n\n\n\nQuestion 3\nFilter the data where sex is only male and region is only northeast.\n\n\n\n\n\n\n\n\n\nage\nsex\nbmi\nchildren\nsmoker\nregion\ncharges\n\n\n\n\n37\nmale\n29.830\n2\nno\nnortheast\n6406.411\n\n\n25\nmale\n26.220\n0\nno\nnortheast\n2721.321\n\n\n23\nmale\n23.845\n0\nno\nnortheast\n2395.172\n\n\n35\nmale\n36.670\n1\nyes\nnortheast\n39774.276\n\n\n38\nmale\n37.050\n1\nno\nnortheast\n6079.672\n\n\n43\nmale\n27.360\n3\nno\nnortheast\n8606.217\n\n\n\n\n\n\n\n\n\n\n\nCode Solution\ndat %>% \n    filter(sex == \"male\", region == \"northeast\")\n\n\n\n\n\nQuestion 4\nFilter the data like this:\n\nage is younger than or equal to 40\nbmi is greater than 21\n\n\n\n\n\n\n\n\n\n\nage\nsex\nbmi\nchildren\nsmoker\nregion\ncharges\n\n\n\n\n19\nfemale\n27.900\n0\nyes\nsouthwest\n16884.924\n\n\n18\nmale\n33.770\n1\nno\nsoutheast\n1725.552\n\n\n28\nmale\n33.000\n3\nno\nsoutheast\n4449.462\n\n\n33\nmale\n22.705\n0\nno\nnorthwest\n21984.471\n\n\n32\nmale\n28.880\n0\nno\nnorthwest\n3866.855\n\n\n31\nfemale\n25.740\n0\nno\nsoutheast\n3756.622\n\n\n\n\n\n\n\n\n\n\n\nCode Solution\ndat %>% \n    filter(age <= 40, bmi > 21)\n\n\n\n\n\nQuestion 5\nMake a new column called bmi_modified that is the of the bmi - 12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nage\nsex\nbmi\nchildren\nsmoker\nregion\ncharges\nbmi_modified\n\n\n\n\n19\nfemale\n27.900\n0\nyes\nsouthwest\n16884.924\n15.900\n\n\n18\nmale\n33.770\n1\nno\nsoutheast\n1725.552\n21.770\n\n\n28\nmale\n33.000\n3\nno\nsoutheast\n4449.462\n21.000\n\n\n33\nmale\n22.705\n0\nno\nnorthwest\n21984.471\n10.705\n\n\n32\nmale\n28.880\n0\nno\nnorthwest\n3866.855\n16.880\n\n\n31\nfemale\n25.740\n0\nno\nsoutheast\n3756.622\n13.740\n\n\n\n\n\n\n\n\n\n\n\nCode Solution\ndat %>% \n    mutate(bmi_modified = bmi - 12) \n\n\n\n\n\nQuestion 6\nMake a new column called age_modified that is the current age divided by 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nage\nsex\nbmi\nchildren\nsmoker\nregion\ncharges\nage_modified\n\n\n\n\n19\nfemale\n27.900\n0\nyes\nsouthwest\n16884.924\n9.5\n\n\n18\nmale\n33.770\n1\nno\nsoutheast\n1725.552\n9.0\n\n\n28\nmale\n33.000\n3\nno\nsoutheast\n4449.462\n14.0\n\n\n33\nmale\n22.705\n0\nno\nnorthwest\n21984.471\n16.5\n\n\n32\nmale\n28.880\n0\nno\nnorthwest\n3866.855\n16.0\n\n\n31\nfemale\n25.740\n0\nno\nsoutheast\n3756.622\n15.5\n\n\n\n\n\n\n\n\n\n\n\nCode Solution\ndat %>% \n    mutate(age_modified = age/2) \n\n\n\n\n\nQuestion 7: Combining It All Together\n\n\n\nOnly use the age, sex, and charges columns\nMake sure the age column is greater than 50 and there are only females\nMake a new column called real_charges which is the charges times 4\n\n\n\n\n\n\n\n\n\nage\nsex\ncharges\nreal_charges\n\n\n\n\n60\nfemale\n28923.14\n115692.55\n\n\n62\nfemale\n27808.73\n111234.90\n\n\n56\nfemale\n11090.72\n44362.87\n\n\n52\nfemale\n10797.34\n43189.34\n\n\n60\nfemale\n13228.85\n52915.39\n\n\n59\nfemale\n14001.13\n56004.54\n\n\n\n\n\n\n\n\n\nCode Solution\ndat %>% \n    select(age, sex, charges) %>% \n    filter(age > 50, sex == \"female\") %>% \n    mutate(real_charges = charges * 4)"
   },
@@ -331,7 +345,7 @@
   {
     "objectID": "lessons/lesson7_tidyr.html",
     "href": "lessons/lesson7_tidyr.html",
-    "title": "Lesson 7: What is ‘Tidy’ Data",
+    "title": "Lesson 07: What is ‘Tidy’ Data",
     "section": "",
     "text": "Rows and columns\nHandling NA values\nPivoting"
   },
@@ -369,5 +383,19 @@
     "title": "Lesson 9: R vs. Python",
     "section": "Python",
     "text": "Python\n\nimport pandas as pd\nimport numpy as np\n\n\n\n\n\n(iris\n  .filter([\"Species\", \"Sepal.Width\", \"Sepal.Length\"])\n  .query('(`Sepal.Width` >= 3) & (Species in [\"setosa\", \"virginica\"])')\n  .assign(\n    Sepal_Ratio = lambda x: round( x['Sepal.Width'] / x['Sepal.Length'], 4), \n    small_ratio = lambda x: np.where(x['Sepal_Ratio'], 1, 0))\n  .sort_values([\"Species\", \"Sepal.Length\"], ascending = [True, False])\n  .head() )\n\n   Species  Sepal.Width  Sepal.Length  Sepal_Ratio  small_ratio\n14  setosa          4.0           5.8       0.6897            1\n15  setosa          4.4           5.7       0.7719            1\n18  setosa          3.8           5.7       0.6667            1\n33  setosa          4.2           5.5       0.7636            1\n36  setosa          3.5           5.5       0.6364            1"
+  },
+  {
+    "objectID": "lessons/lesson01_intro.html#course-outline",
+    "href": "lessons/lesson01_intro.html#course-outline",
+    "title": "Lesson 01: Introduction & Installation",
+    "section": "Course Outline:",
+    "text": "Course Outline:\nThe purpose of R Bootcamp is to be able to read, wrangle, and visualize data using R in RStudio. By the end of the course you will be able to contribute to a society project next semester."
+  },
+  {
+    "objectID": "lessons/lesson01_intro.html#what-is-data-which-kind-of-data-are-we-going-to-use",
+    "href": "lessons/lesson01_intro.html#what-is-data-which-kind-of-data-are-we-going-to-use",
+    "title": "Lesson 01: Introduction & Installation",
+    "section": "What is Data? Which Kind of Data Are We Going to Use?",
+    "text": "What is Data? Which Kind of Data Are We Going to Use?\nWe will be working with tabular data (think excel files; rows and columns). Other data includes pictures, videos, and audio."
   }
 ]

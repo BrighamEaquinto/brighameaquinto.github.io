@@ -1,5 +1,5 @@
 ---
-title: "Lesson 8: Practice, Practice, Practice"
+title: "Lesson 08: Practice, Practice, Practice"
 subtitle: Let's examine & improve your skills
 code-fold: true
 toc: true

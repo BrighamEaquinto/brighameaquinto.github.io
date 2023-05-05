@@ -1,7 +1,6 @@
 ---
-title: "Lesson 9: R vs. Python"
+title: "Lesson 09: R vs. Python"
 subtitle: "'R' Bootcamp, huh?"
-format: html
 warning: false
 toc: true 
 ---

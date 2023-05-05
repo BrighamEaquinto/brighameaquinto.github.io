@@ -10,7 +10,10 @@
       "/lessons/lesson6_ggplot.html",
       "/lessons/lesson7_tidyr.html",
       "/lessons/lesson8_practice.html",
-      "/lessons/lesson9_python.html"
+      "/lessons/lesson9_python.html",
+      "/lessons/lesson10_observable.html",
+      "/lessons/lesson11_julia.html",
+      "/lessons/lesson12_sql.html"
     ]
   }
 ]

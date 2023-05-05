@@ -17,7 +17,7 @@ format:
     css: styles.css
     page-layout: full
     title-block-banner: false
-    # title-block-banner-color: green # this changes the color of the title of the website
+    # title-block-banner-color: green # change color of  title of the website
     title-block-categories: true
     title-block-style: default
     # title-prefix: hey # 
@@ -52,12 +52,12 @@ website:
             href: lessons/lesson5_ggplot.qmd
           - text: "Visualizing Part 2"
             href: lessons/lesson6_ggplot.qmd
-      # - text: Extras
-      #   menu: 
-      #     - text: Practice 1
-      #       href: lessons/extra/lesson7_practice.qmd
-      #     - text: R or Python?
-      #       href: lessons/extra/lesson8_python.qmd 
+      - text: Extras
+        menu: 
+          - text: Practice 1
+            href: lessons/extra/lesson7_practice.qmd
+          - text: R or Python?
+            href: lessons/extra/lesson8_python.qmd 
       #     - text: Other
       #       href: other/Reading Data/reading_data.qmd
   page-footer: 

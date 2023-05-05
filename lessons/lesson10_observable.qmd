@@ -1,0 +1,28 @@
+---
+title: "Lesson 10: Who's Observable"
+subtitle: "'R' Bootcamp, huh?"
+warning: false
+toc: true 
+---
+
+
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+penguin_data <- read_csv("https://gist.githubusercontent.com/slopp/ce3b90b9168f2f921784de84fa445651/raw/4ecf3041f0ed4913e7c230758733948bc561f434/penguins.csv")
+``` 
+
+```{ojs}
+import { aq, op } from "@uwdata/arquero"
+```
+
+```{ojs}
+data = FileAttachment("C:\Users\Bethany\Downloads\palmer-penguins.csv")
+```
+
+```{ojs}
+console.log(data)
+```

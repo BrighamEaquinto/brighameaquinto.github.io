@@ -1,5 +1,5 @@
 ---
-title: "Lesson 7: What is 'Tidy' Data"
+title: "Lesson 07: What is 'Tidy' Data"
 subtitle: Learning the tidyr package
 toc: true
 ---

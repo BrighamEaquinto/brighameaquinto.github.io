@@ -1,5 +1,5 @@
 ---
-title: "Lesson 5: Graphing Part 1"
+title: "Lesson 05: Graphing Part 1"
 subtitle: Learning the ggplot2 package (part 1)
 toc: true
 fig-align: center

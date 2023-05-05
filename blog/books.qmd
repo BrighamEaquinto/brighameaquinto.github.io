@@ -1,0 +1,49 @@
+---
+title: "Data Science Book Resources"
+subtitle: "'R' Bootcamp, huh?"
+format: html
+toc: true 
+---
+
+# R 
+
+## Wickham Books 
+
+1. R4DS 
+    - first edition
+    - second edition
+2. R Packages 
+3. Advanced R 
+4. Mastering Shiny
+5. Grammer of Graphics Plot
+
+## Other R Books
+
+1. TidyModels
+2. New Torch for R book
+
+## R Manuals
+
+
+## Other
+
+1. Tidyverse Style Guide 
+2. Tidyverse Design Guide
+
+
+# Python 
+
+1. The R4DS equivalent written by Wes McKinney "Python for Data Analysis, 3E"
+2. Altair Website/Book "Visualization Curiculim"
+    - I guess this was originally by UWVisualization Lab 
+
+
+# Observable 
+
+# Julia
+
+
+# Theory
+
+- Deep Learning book collection
+- Word talk through like groupby summrise, groupby mutate, grammer of graphics theory, slice to get the top of each group...

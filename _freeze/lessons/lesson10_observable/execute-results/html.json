@@ -1,0 +1,14 @@
+{
+  "hash": "a0ee3268acbea1ce20067dfccdea58fb",
+  "result": {
+    "markdown": "---\ntitle: \"Lesson 9: Who's Observable\"\nsubtitle: \"'R' Bootcamp, huh?\"\nformat: html\nwarning: false\ntoc: true \n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\npenguin_data <- read_csv(\"https://gist.githubusercontent.com/slopp/ce3b90b9168f2f921784de84fa445651/raw/4ecf3041f0ed4913e7c230758733948bc561f434/penguins.csv\")\n```\n:::\n\n```{ojs}\nimport { aq, op } from \"@uwdata/arquero\"\n```\n\n```{ojs}\ndata = FileAttachment(\"C:\\Users\\Bethany\\Downloads\\palmer-penguins.csv\")\n```\n\n```{ojs}\nconsole.log(data)\n```\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

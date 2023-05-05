@@ -1,5 +1,5 @@
 ---
-title: "Lesson 1: Introduction & Installation"
+title: "Lesson 01: Introduction & Installation"
 subtitle: What is Data Science?
 toc: true
 eval: false

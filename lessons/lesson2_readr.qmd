@@ -1,5 +1,5 @@
 ---
-title: "Lesson 2: Reading Data"
+title: "Lesson 02: Reading Data"
 subtitle: Learning the readr package
 image: https://raw.githubusercontent.com/rstudio/hex-stickers/main/SVG/readr.svg
 toc: true
