@@ -1,6 +1,7 @@
 ---
 title: "Lesson 06: Graphing Part 2"
-subtitle: Learning the ggplot2 package (part 2)
+subtitle: Making graphs pretty
+image: ggplot2.png
 toc: true
 fig-align: center
 fig-width: 8

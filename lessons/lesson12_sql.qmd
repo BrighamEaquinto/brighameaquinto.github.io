@@ -1,6 +1,7 @@
 ---
 title: "Lesson 12: SQL, Sequel to What?"
 subtitle: "The SQL to R"
+image: Database-Logo-Transparent-Background.png
 warning: false
 toc: true 
 ---

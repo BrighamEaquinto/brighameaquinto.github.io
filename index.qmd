@@ -1,10 +1,29 @@
 ---
 # title: "R Bootcamp"
 toc: true
+# listing: 
+#   - id: Weeks
+#     fields: [title, subtitle] #image
+#     contents: "lessons/*.qmd"
 listing: 
   - id: Weeks
-    fields: [title, subtitle] #image
-    contents: "lessons/*.qmd"
+    contents: 
+      - lessons\lesson1_intro.qmd
+      - lessons\lesson2_readr.qmd
+      - lessons\lesson3_dplyr.qmd
+      - lessons\lesson4_dplyr.qmd
+      - lessons\lesson5_ggplot.qmd
+      - lessons\lesson6_ggplot.qmd
+      - lessons\lesson7_tidyr.qmd
+      - lessons\lesson8_practice.qmd
+      - lessons\lesson9_python.qmd
+    fields: [title, subtitle, image]
+  # - id: Extras
+  #   contents: 
+  #     - lessons/lesson10_observable.qmd
+  #     - lessons/lesson11_julia.qmd
+  #     - lessons/lesson12_sql.qmd
+  #   fields: [title, subtitle, image]
 # image: images/website_thumbnail.png
 # logo: images/website_thumbnail.png
 categories: false
@@ -16,6 +35,4 @@ title-block-style: none
 ---
 
 ![](images/website_thumbnail.png){ style="display: block; margin: 0 auto" }
-
-<br>
 

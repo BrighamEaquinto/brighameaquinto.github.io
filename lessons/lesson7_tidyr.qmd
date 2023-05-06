@@ -1,6 +1,7 @@
 ---
-title: "Lesson 07: What is 'Tidy' Data"
-subtitle: Learning the tidyr package
+title: "Lesson 07: What is 'Tidy' Data?"
+subtitle: Reshaping data
+image: https://raw.githubusercontent.com/rstudio/hex-stickers/main/SVG/tidyr.svg
 toc: true
 ---
 

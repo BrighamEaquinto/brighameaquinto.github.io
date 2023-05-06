@@ -1,6 +1,7 @@
 ---
 title: "Lesson 04: Last Three Wrangling Verbs"
-subtitle: Learning the dplyr package (part 2)
+subtitle: Learning `group_by()`, `summarise()`, and `arrange()`
+image: dplyr.jpg
 toc: true
 ---
 

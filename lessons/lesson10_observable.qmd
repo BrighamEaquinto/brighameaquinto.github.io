@@ -1,6 +1,7 @@
 ---
-title: "Lesson 10: Who's Observable"
-subtitle: "'R' Bootcamp, huh?"
+title: "Lesson 10: Observable"
+subtitle: "What are we observing?"
+image: observable_logo.png
 warning: false
 toc: true 
 ---

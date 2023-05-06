@@ -1,6 +1,7 @@
 ---
 title: "Lesson 09: R vs. Python"
 subtitle: "'R' Bootcamp, huh?"
+image: "python-logo-only.png"
 warning: false
 toc: true 
 ---
