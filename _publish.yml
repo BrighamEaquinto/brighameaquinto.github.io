@@ -1,4 +1,4 @@
 - source: project
   quarto-pub:
     - id: e1d8ce32-15c1-4edd-bc21-3ea2a0d338d2
-      url: 'https://quartopub.com/sites/youngbrigham/dss-r-bootcamp'
+      url: 'https://youngbrigham.quarto.pub/dss-r-bootcamp'

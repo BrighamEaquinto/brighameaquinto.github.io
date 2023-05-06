@@ -7,6 +7,34 @@
     "text": "R4DS\n\nfirst edition\nsecond edition\n\nR Packages\nAdvanced R\nMastering Shiny\nGrammer of Graphics Plot\n\n\n\n\n\nTidyModels\nNew Torch for R book\n\n\n\n\n\n\n\n\nTidyverse Style Guide\nTidyverse Design Guide"
   },
   {
+    "objectID": "blog/books.html#wickham-books",
+    "href": "blog/books.html#wickham-books",
+    "title": "Data Science Book Resources",
+    "section": "",
+    "text": "R4DS\n\nfirst edition\nsecond edition\n\nR Packages\nAdvanced R\nMastering Shiny\nGrammer of Graphics Plot"
+  },
+  {
+    "objectID": "blog/books.html#other-r-books",
+    "href": "blog/books.html#other-r-books",
+    "title": "Data Science Book Resources",
+    "section": "",
+    "text": "TidyModels\nNew Torch for R book"
+  },
+  {
+    "objectID": "blog/books.html#other",
+    "href": "blog/books.html#other",
+    "title": "Data Science Book Resources",
+    "section": "",
+    "text": "Tidyverse Style Guide\nTidyverse Design Guide"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DSS R BootCamp",
+    "section": "",
+    "text": "Lesson 01: Introduction & Installation\n\n\nWhat is Data Science?\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 02: Reading Data\n\n\nLearning the readr package\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 03: First Three Wrangling Verbs\n\n\nLearning select(), mutate(), and filter()\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 04: Last Three Wrangling Verbs\n\n\nLearning group_by(), summarise(), and arrange()\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 05: Graphing Part 1\n\n\nLearning histograms, bar plots, boxplots, and scatter plots\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 06: Graphing Part 2\n\n\nMaking graphs pretty\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 07: What is ‘Tidy’ Data?\n\n\nReshaping data\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 08: Practice, Practice, Practice\n\n\nLet’s examine & improve your skills\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 09: R vs. Python\n\n\n‘R’ Bootcamp, huh?\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "lessons/lesson10_observable.html",
     "href": "lessons/lesson10_observable.html",
     "title": "Lesson 10: Observable",
@@ -338,7 +366,7 @@
   {
     "objectID": "lessons/lesson7_tidyr.html",
     "href": "lessons/lesson7_tidyr.html",
-    "title": "Lesson 07: What is ‘Tidy’ Data",
+    "title": "Lesson 07: What is ‘Tidy’ Data?",
     "section": "",
     "text": "Rows and columns\nHandling NA values\nPivoting"
   },
@@ -361,7 +389,7 @@
     "href": "lessons/lesson8_practice.html#part-2",
     "title": "Lesson 8: Practice, Practice, Practice",
     "section": "Part 2",
-    "text": "Part 2\nWhich airports out of JFK, LGA, & EWR have the lowest average departure delay time?\nflights %>% filter(!is.na(dep_delay), origin %in% c(‘JFK’, ‘LGA’, ‘EWR’)) %>% group_by(origin) %>% summarise(Average = mean(dep_delay)) %>% ’’ knitr::kable() ```’’’’’"
+    "text": "Part 2\nWhich airports out of JFK, LGA, & EWR have the lowest average departure delay time?\nflights %&gt;% filter(!is.na(dep_delay), origin %in% c(‘JFK’, ‘LGA’, ‘EWR’)) %&gt;% group_by(origin) %&gt;% summarise(Average = mean(dep_delay)) %&gt;% ’’ knitr::kable() ```’’’’’"
   },
   {
     "objectID": "lessons/lesson9_python.html#r",
@@ -376,12 +404,5 @@
     "title": "Lesson 09: R vs. Python",
     "section": "Python",
     "text": "Python\n\nimport pandas as pd\nimport numpy as np\n\n\n(iris\n  .filter([\"Species\", \"Sepal.Width\", \"Sepal.Length\"])\n  .query('(`Sepal.Width` &gt;= 3) & (Species in [\"setosa\", \"virginica\"])')\n  .assign(\n    Sepal_Ratio = lambda x: round( x['Sepal.Width'] / x['Sepal.Length'], 4), \n    small_ratio = lambda x: np.where(x['Sepal_Ratio'], 1, 0))\n  .sort_values([\"Species\", \"Sepal.Length\"], ascending = [True, False])\n  .head() )\n\n   Species  Sepal.Width  Sepal.Length  Sepal_Ratio  small_ratio\n14  setosa          4.0           5.8       0.6897            1\n15  setosa          4.4           5.7       0.7719            1\n18  setosa          3.8           5.7       0.6667            1\n33  setosa          4.2           5.5       0.7636            1\n36  setosa          3.5           5.5       0.6364            1"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "DSS R BootCamp",
-    "section": "",
-    "text": "Lesson 01: Introduction & Installation\n\n\nWhat is Data Science?\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 02: Reading Data\n\n\nLearning the readr package\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 03: First Three Wrangling Verbs\n\n\nLearning select(), mutate(), and filter()\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 04: Last Three Wrangling Verbs\n\n\nLearning group_by(), summarise(), and arrange()\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 05: Graphing Part 1\n\n\nLearning histograms, bar plots, boxplots, and scatter plots\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 06: Graphing Part 2\n\n\nMaking graphs pretty\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 07: What is ‘Tidy’ Data?\n\n\nReshaping data\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 08: Practice, Practice, Practice\n\n\nLet’s examine & improve your skills\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 09: R vs. Python\n\n\n‘R’ Bootcamp, huh?\n\n\n\n\n \n\n\n\n\nNo matching items"
   }
 ]
