@@ -1,59 +1,143 @@
 [
   {
-    "objectID": "blog/books.html",
-    "href": "blog/books.html",
-    "title": "Data Science Book Resources",
-    "section": "",
-    "text": "R4DS\n\nfirst edition\nsecond edition\n\nR Packages\nAdvanced R\nMastering Shiny\nGrammer of Graphics Plot\n\n\n\n\n\nTidyModels\nNew Torch for R book\n\n\n\n\n\n\n\n\nTidyverse Style Guide\nTidyverse Design Guide"
-  },
-  {
-    "objectID": "blog/books.html#wickham-books",
-    "href": "blog/books.html#wickham-books",
-    "title": "Data Science Book Resources",
-    "section": "",
-    "text": "R4DS\n\nfirst edition\nsecond edition\n\nR Packages\nAdvanced R\nMastering Shiny\nGrammer of Graphics Plot"
-  },
-  {
-    "objectID": "blog/books.html#other-r-books",
-    "href": "blog/books.html#other-r-books",
-    "title": "Data Science Book Resources",
-    "section": "",
-    "text": "TidyModels\nNew Torch for R book"
-  },
-  {
-    "objectID": "blog/books.html#other",
-    "href": "blog/books.html#other",
-    "title": "Data Science Book Resources",
-    "section": "",
-    "text": "Tidyverse Style Guide\nTidyverse Design Guide"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "notes.html",
+    "href": "notes.html",
     "title": "DSS R BootCamp",
     "section": "",
-    "text": "Lesson 01: Introduction & Installation\n\n\nWhat is Data Science?\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 02: Reading Data\n\n\nLearning the readr package\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 03: First Three Wrangling Verbs\n\n\nLearning select(), mutate(), and filter()\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 04: Last Three Wrangling Verbs\n\n\nLearning group_by(), summarise(), and arrange()\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 05: Graphing Part 1\n\n\nLearning histograms, bar plots, boxplots, and scatter plots\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 06: Graphing Part 2\n\n\nMaking graphs pretty\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 07: What is ‘Tidy’ Data?\n\n\nReshaping data\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 08: Practice, Practice, Practice\n\n\nLet’s examine & improve your skills\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nLesson 09: R vs. Python\n\n\n‘R’ Bootcamp, huh?\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "RLib/R-Infrastructure/R Package Dev/Devtools\nR manuals (like data types and structures)\n\nPython version of all this jazz\nHadley Books R Manuals Tidyverse style and design Tidymodels and Torch for R Book Deep learning books I like\nPandas Books by Wes Mckiney Python “Manuals”"
   },
   {
-    "objectID": "lessons/lesson10_observable.html",
-    "href": "lessons/lesson10_observable.html",
-    "title": "Lesson 10: Observable",
+    "objectID": "lessons/lesson8_practice.html",
+    "href": "lessons/lesson8_practice.html",
+    "title": "Lesson 8: Practice, Practice, Practice",
     "section": "",
-    "text": "library(tidyverse)\n\n\npenguin_data &lt;- read_csv(\"https://gist.githubusercontent.com/slopp/ce3b90b9168f2f921784de84fa445651/raw/4ecf3041f0ed4913e7c230758733948bc561f434/penguins.csv\")\n\n\nimport { aq, op } from \"@uwdata/arquero\"\n\n\n\n\n\n\n\ndata = FileAttachment(\"C:\\Users\\Bethany\\Downloads\\palmer-penguins.csv\")\n\n\n\n\n\n\n\nconsole.log(data)"
+    "text": "Click to download data"
   },
   {
-    "objectID": "lessons/lesson1_intro.html#course-outline",
-    "href": "lessons/lesson1_intro.html#course-outline",
-    "title": "Lesson 01: Introduction & Installation",
-    "section": "Course Outline:",
-    "text": "Course Outline:\nThe purpose of R Bootcamp is to be able to read, wrangle, and visualize data using R in RStudio. By the end of the course you will be able to contribute to a society project next semester."
+    "objectID": "lessons/lesson8_practice.html#part-1",
+    "href": "lessons/lesson8_practice.html#part-1",
+    "title": "Lesson 8: Practice, Practice, Practice",
+    "section": "Part 1",
+    "text": "Part 1\nShow me a distribution of the departure delay times by each carrier for flights that depart after 5pm\n\n\n\n\n\n\nIdea for Graph"
   },
   {
-    "objectID": "lessons/lesson1_intro.html#what-is-data-which-kind-of-data-are-we-going-to-use",
-    "href": "lessons/lesson1_intro.html#what-is-data-which-kind-of-data-are-we-going-to-use",
-    "title": "Lesson 01: Introduction & Installation",
-    "section": "What is Data? Which Kind of Data Are We Going to Use?",
-    "text": "What is Data? Which Kind of Data Are We Going to Use?\nWe will be working with tabular data (think excel files; rows and columns). Other data includes pictures, videos, and audio."
+    "objectID": "lessons/lesson8_practice.html#part-2",
+    "href": "lessons/lesson8_practice.html#part-2",
+    "title": "Lesson 8: Practice, Practice, Practice",
+    "section": "Part 2",
+    "text": "Part 2\nWhich airports out of JFK, LGA, & EWR have the lowest average departure delay time?\nflights %&gt;% filter(!is.na(dep_delay), origin %in% c(‘JFK’, ‘LGA’, ‘EWR’)) %&gt;% group_by(origin) %&gt;% summarise(Average = mean(dep_delay)) %&gt;% ’’ knitr::kable() ```’’’’’"
+  },
+  {
+    "objectID": "lessons/lesson6_ggplot.html",
+    "href": "lessons/lesson6_ggplot.html",
+    "title": "Lesson 06: Graphing Part 2",
+    "section": "",
+    "text": "library(tidyverse)\n\ndat &lt;- read_csv(\"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv\")"
+  },
+  {
+    "objectID": "lessons/lesson6_ggplot.html#labeling",
+    "href": "lessons/lesson6_ggplot.html#labeling",
+    "title": "Lesson 06: Graphing Part 2",
+    "section": "Labeling",
+    "text": "Labeling\n\nlabs()\nExplanation\nThe labs() function is used to add label to the plot like the x-axis, the y-axis, and title.\nOptions:\n\ntitle\nsubtitle\n\ncaption\nx\ny\n\nExample\n\n\nCode\nggplot(dat, aes(x = region, fill = sex))+\n    geom_bar()+ \n    labs(title = \"Counts of Regions\", x = \"Regions\", y = \"Amount\", fill = \"Sex\")+ \n    theme_bw()"
+  },
+  {
+    "objectID": "lessons/lesson6_ggplot.html#faceting",
+    "href": "lessons/lesson6_ggplot.html#faceting",
+    "title": "Lesson 06: Graphing Part 2",
+    "section": "Faceting",
+    "text": "Faceting\n\nfacet_wrap() & facet_grid()\nThis of faceting as a third variable.\n\nfacet_wrap()\n\n\n\n\n\n\n\n\nCode\nggplot(dat, aes(x = region, fill = sex))+\n            geom_bar()+ \n            facet_wrap(~sex)+\n            labs(title = \"Faceted Graph\", x = \"\", y = \"Amount\", fill = \"Sex\")+\n            theme(\n                title = element_text(size = 20), \n                axis.title = element_text(size = 10), \n                legend.title = element_text(size = 10), \n                legend.position = \"none\")"
+  },
+  {
+    "objectID": "lessons/lesson6_ggplot.html#themes",
+    "href": "lessons/lesson6_ggplot.html#themes",
+    "title": "Lesson 06: Graphing Part 2",
+    "section": "Themes",
+    "text": "Themes\nThe following theme options affect all the non-data aspects\n\n+ theme_bw()\n+ theme_linedraw()\n+ theme_light()\n+ theme_dark()\n+ theme_minimal()\n+ theme_classic()\n+ theme_void()\n+ theme_test()"
+  },
+  {
+    "objectID": "lessons/lesson6_ggplot.html#coloring",
+    "href": "lessons/lesson6_ggplot.html#coloring",
+    "title": "Lesson 06: Graphing Part 2",
+    "section": "Coloring",
+    "text": "Coloring\n\nAesthetic\nIt is possible to set colors dynamically based on column of data or to set it as a static color.\n\nfill and color inside aesthetic to a column of data\nfill and color outside aesthetic to a static color\n\nSetting colors dynamically and statically.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMore Examples for Better Understanding\n\n\n\n\n\n\n\n\nCase 1\ngeom_bar(aes(x = Petal.Length), fill = \"orange\")\n\nfill is set to ‘orange’ outside the aesthetic\ncolor is not used\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCase 2\ngeom_bar(aes(x = Petal.Length), color = \"black\")\n\nfill is not used\ncolor is set to ‘black’ outside the aesthetic\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCase 3\ngeom_bar(aes(x = Petal.Length), fill = \"orange\", color = \"black\")\n\nfill is set to ‘orange’ outside of the aesthetic\ncolor is set to ‘black’ outside of the aesthetic\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCase 4\nYou can do a combination of inside and outside of the aesthetic.\ngeom_bar(aes(x = Petal.Length, fill = Species), color = \"black\")\n\nfill is set to ‘orange’ inside of the aesthetic\ncolor is set to Species outside of the aesthetic. Notice this is a column in the dataset, not a static color."
+  },
+  {
+    "objectID": "lessons/lesson6_ggplot.html#scales",
+    "href": "lessons/lesson6_ggplot.html#scales",
+    "title": "Lesson 06: Graphing Part 2",
+    "section": "Scales",
+    "text": "Scales\n\n\nCode\nggplot(iris, aes(Petal.Width, Petal.Length, color = Species))+\n  geom_point()+\n  scale_x_continuous(breaks = seq(0, 4, 1))+\n  scale_y_continuous(breaks = seq(0,10,1))\n\nggplot(mpg, aes(class, fill = class))+\n  geom_bar()+\n  # scale_x_discrete(limits = c(\"2seater\"))\n  scale_fill_manual(values = c(\"blue\", \"blue\", \"blue\", \"blue\", \"blue\", \"blue\", \"red\"))\n\n# scale_x_continuous(\n#   breaks = seq(15, 40, by = 5), \n#   labels = , \n#   limits = \n#   )\n\n# scale_colour_brewer(palette = \"Set1\")\n\n# scale_colour_manual(values = c(Republican = \"red\", Democratic = \"blue\"))"
+  },
+  {
+    "objectID": "lessons/lesson4_dplyr.html",
+    "href": "lessons/lesson4_dplyr.html",
+    "title": "Lesson 04: Last Three Wrangling Verbs",
+    "section": "",
+    "text": "Before we do any exercises, make sure to run this code:\nlibrary(tidyverse)\ndat &lt;- read_csv(\"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv\")\nThis is our dataset for this practice:"
+  },
+  {
+    "objectID": "lessons/lesson4_dplyr.html#lets-learn-about-group_by-summarise",
+    "href": "lessons/lesson4_dplyr.html#lets-learn-about-group_by-summarise",
+    "title": "Lesson 04: Last Three Wrangling Verbs",
+    "section": "Let’s learn about group_by() & summarise()",
+    "text": "Let’s learn about group_by() & summarise()\nWhat if we want to learn:\n\nthe average BMI by gender\nthe total sum of charges by region in the US\nmin & max of children by  age\n\nAll of these are examples uses for group_by() and summarise() statements."
+  },
+  {
+    "objectID": "lessons/lesson4_dplyr.html#examples-1-average-bmi-by-gender",
+    "href": "lessons/lesson4_dplyr.html#examples-1-average-bmi-by-gender",
+    "title": "Lesson 04: Last Three Wrangling Verbs",
+    "section": "Examples 1: Average BMI by Gender",
+    "text": "Examples 1: Average BMI by Gender\n\ndat %&gt;% \n    group_by(sex) %&gt;%\n    summarise(Average_Age = mean(age)) \n\n\n\n\n\nsex\nAverage_Age\n\n\n\n\nfemale\n39.50302\n\n\nmale\n38.91716"
+  },
+  {
+    "objectID": "lessons/lesson4_dplyr.html#examples-2-average-bmi-by-age",
+    "href": "lessons/lesson4_dplyr.html#examples-2-average-bmi-by-age",
+    "title": "Lesson 04: Last Three Wrangling Verbs",
+    "section": "Examples 2: Average BMI by Age",
+    "text": "Examples 2: Average BMI by Age\n\ndat %&gt;% \n    group_by(age) %&gt;% \n    summarise(mean(bmi)) %&gt;% \n    head() \n\n\n\n\n\nage\nmean(bmi)\n\n\n\n\n18\n31.32616\n\n\n19\n28.59691\n\n\n20\n30.63276\n\n\n21\n28.18571\n\n\n22\n31.08768\n\n\n23\n31.45446"
+  },
+  {
+    "objectID": "lessons/lesson4_dplyr.html#exercise-1-sum-of-charges-by-region",
+    "href": "lessons/lesson4_dplyr.html#exercise-1-sum-of-charges-by-region",
+    "title": "Lesson 04: Last Three Wrangling Verbs",
+    "section": "Exercise 1: Sum of Charges by Region",
+    "text": "Exercise 1: Sum of Charges by Region\nUse the code below to get you started. Find the sum of the charges by region.\nStarter Code:\n\ndat %&gt;% \n    group_by(______) %&gt;% \n    summarise(_____________ = ___(_______))\n\nAttempt the code above then use this dropdown for help\n\n\nAnswer\ndat %&gt;% \n    group_by(region) %&gt;% \n    summarise(Total_Charges = sum(charges))\n\n\nThis is the correct output:\n\n\n\n\nregion\nTotal_Charges\n\n\n\n\nnortheast\n4343669\n\n\nnorthwest\n4035712\n\n\nsoutheast\n5363690\n\n\nsouthwest\n4012755"
+  },
+  {
+    "objectID": "lessons/lesson4_dplyr.html#exercise-2-min-max-of-children-by-age",
+    "href": "lessons/lesson4_dplyr.html#exercise-2-min-max-of-children-by-age",
+    "title": "Lesson 04: Last Three Wrangling Verbs",
+    "section": "Exercise 2: Min & Max of Children by Age",
+    "text": "Exercise 2: Min & Max of Children by Age\nUse the code below to get you started. Find the minimum and maximum amount of children by age.\nStarter Code:\n\ndat %&gt;% \n    group_by(___) %&gt;%\n    summarise(\n        Min = ___(________),\n        Max = ___(________)\n        ) %&gt;% \n    head()\n\n\n\nAnswer\ndat %&gt;% \n    group_by(age) %&gt;%\n    summarise(\n        Min = min(children),\n        Max = max(children)\n        ) %&gt;% \n    head() \n\n\nThis is the correct output:\n\n\n\n\nage\nMin\nMax\n\n\n\n\n18\n0\n4\n\n\n19\n0\n5\n\n\n20\n0\n5\n\n\n21\n0\n4"
+  },
+  {
+    "objectID": "lessons/lesson4_dplyr.html#exercise-3-average-charges-by-sex-and-by-smoker",
+    "href": "lessons/lesson4_dplyr.html#exercise-3-average-charges-by-sex-and-by-smoker",
+    "title": "Lesson 04: Last Three Wrangling Verbs",
+    "section": "Exercise 3: Average Charges by Sex and by Smoker",
+    "text": "Exercise 3: Average Charges by Sex and by Smoker\nHere no starter code is given. If you need to, look back at previous code chunks for guidence.\nTry as best as possible to mimic the results below.\nOnly use the dropdown answer when you’ve tried as much as possible.\n\n\nAnswer\ndat %&gt;% \n    group_by(sex, smoker) %&gt;% \n    summarise(\n        Average_Charges = mean(charges), \n        Total_Charges = sum(charges)) \n\n\nThis is the correct output:\n\n\n\n\nsex\nsmoker\nAverage_Charges\nTotal_Charges\n\n\n\n\nfemale\nno\n8762.297\n4792977\n\n\nfemale\nyes\n30678.996\n3528085\n\n\nmale\nno\n8087.205\n4181085\n\n\nmale\nyes\n33042.006\n5253679"
+  },
+  {
+    "objectID": "lessons/lesson4_dplyr.html#exercise-4-storm-dataset---wind-and-air-pressure",
+    "href": "lessons/lesson4_dplyr.html#exercise-4-storm-dataset---wind-and-air-pressure",
+    "title": "Lesson 04: Last Three Wrangling Verbs",
+    "section": "Exercise 4: Storm Dataset - Wind and Air Pressure",
+    "text": "Exercise 4: Storm Dataset - Wind and Air Pressure\nThis dataset is bult into R so you already have it. It is called storms. This is a new dataset so you may want to either view() it or use the head() method on it.\nFind the average and standard deviation of the wind speed and air pressure by storm category.\n\n\nAnswer\nstorms %&gt;% \n    group_by(category) %&gt;% \n    summarise(\n        mean(wind),\n        sd(wind), \n        mean(pressure), \n        sd(pressure)\n        ) %&gt;% knitr::kable()\n\n\nThis is the correct output:\n\n\n\n\ncategory\nmean(wind)\nsd(wind)\nmean(pressure)\nsd(pressure)\n\n\n\n\n-1\n27.49482\n3.702448\n1007.5390\n3.900209\n\n\n0\n45.66392\n8.231625\n999.2910\n6.837831\n\n\n1\n70.95140\n5.454009\n981.1887\n9.125784\n\n\n2\n89.41923\n3.873391\n966.9359\n9.018024\n\n\n3\n104.48157\n4.246545\n953.9124\n9.168259\n\n\n4\n122.10462\n6.383000\n939.3942\n9.788015\n\n\n5\n145.58140\n5.862072\n917.4070\n12.732892"
+  },
+  {
+    "objectID": "lessons/lesson4_dplyr.html#exercise-5-summarizing-by-month",
+    "href": "lessons/lesson4_dplyr.html#exercise-5-summarizing-by-month",
+    "title": "Lesson 04: Last Three Wrangling Verbs",
+    "section": "Exercise 5: Summarizing by Month",
+    "text": "Exercise 5: Summarizing by Month\nFind the mean, median, and standard deviation of wind speed by month.\nOnly use the dropdown answer when you’ve tried as much as possible.\n\n\nAnswer\nstorms %&gt;% \n    group_by(month) %&gt;% \n    summarise(\n        Mean_Wind = mean(wind), \n        Median = median(wind), \n        St_Dev = sd(wind)\n        ) \n\n\nThis is the correct output:\n\n\n\n\nmonth\nMean_Wind\nMedian\nSt_Dev\n\n\n\n\n1\n50.33333\n50\n12.312969\n\n\n4\n44.61538\n45\n5.937711\n\n\n5\n36.27778\n35\n9.011887\n\n\n6\n37.55348\n35\n12.676257\n\n\n7\n41.74973\n40\n18.711162\n\n\n8\n51.75471\n45\n25.584917\n\n\n9\n57.54597\n50\n28.192273\n\n\n10\n56.49272\n50\n25.795906\n\n\n11\n53.30986\n50\n22.702523\n\n\n12\n47.88000\n45\n14.608659"
+  },
+  {
+    "objectID": "lessons/lesson4_dplyr.html#exercise-6-airquality-dataset---summarising-by-month",
+    "href": "lessons/lesson4_dplyr.html#exercise-6-airquality-dataset---summarising-by-month",
+    "title": "Lesson 04: Last Three Wrangling Verbs",
+    "section": "Exercise 6: Airquality Dataset - Summarising by Month",
+    "text": "Exercise 6: Airquality Dataset - Summarising by Month\nThis example is very similar to the previous example. This is a new datset and hopefully doing the same thing with another dataset will solidify the concept.\nThis dataset is bult into R so you already have it. It is called airquality. This is a new dataset so you may want to either view() it or use the head() method on it.\n\n\nAnswer\nairquality %&gt;% \n    group_by(Month) %&gt;% \n    summarise(\n        Mean_Wind = mean(Wind), \n        Median = median(Wind), \n        St_Dev = sd(Wind)\n        ) \n\n\nThis is the correct output:\n\n\n\n\nMonth\nMean_Wind\nMedian\nSt_Dev\n\n\n\n\n5\n11.622581\n11.5\n3.531450\n\n\n6\n10.266667\n9.7\n3.769234\n\n\n7\n8.941935\n8.6\n3.035981\n\n\n8\n8.793548\n8.6\n3.225930\n\n\n9\n10.180000\n10.3\n3.461254"
   },
   {
     "objectID": "lessons/lesson2_readr.html",
@@ -133,6 +217,62 @@
     "text": "Practice 6: 🌺 Iris 🌻\nInstructions:\n\nLook at the iris dataset (this dataset is built into R)\n\n\n\n\n\n\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa\n\n\n\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nhead(iris)\n\nView(iris)"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DSS R BootCamp",
+    "section": "",
+    "text": "Lesson 01: Introduction & Installation\n\n\nWhat is Data Science?\n\n\n\n\n \n\n\n\n\n\n\nLesson 02: Reading Data\n\n\nLearning the readr package\n\n\n\n\n \n\n\n\n\n\n\nLesson 03: First Three Wrangling Verbs\n\n\nLearning select(), mutate(), and filter()\n\n\n\n\n \n\n\n\n\n\n\nLesson 04: Last Three Wrangling Verbs\n\n\nLearning group_by(), summarise(), and arrange()\n\n\n\n\n \n\n\n\n\n\n\nLesson 05: Graphing Part 1\n\n\nLearning histograms, bar plots, boxplots, and scatter plots\n\n\n\n\n \n\n\n\n\n\n\nLesson 06: Graphing Part 2\n\n\nMaking graphs pretty\n\n\n\n\n \n\n\n\n\n\n\nLesson 07: What is ‘Tidy’ Data?\n\n\nReshaping data\n\n\n\n\n \n\n\n\n\n\n\nLesson 08: Practice, Practice, Practice\n\n\nLet’s examine & improve your skills\n\n\n\n\n \n\n\n\n\n\n\nLesson 09: R vs. Python\n\n\n‘R’ Bootcamp, huh?\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/books.html",
+    "href": "blog/books.html",
+    "title": "Data Science Book Resources",
+    "section": "",
+    "text": "R4DS\n\nfirst edition\nsecond edition\n\nR Packages\nAdvanced R\nMastering Shiny\nGrammer of Graphics Plot\n\n\n\n\n\nTidyModels\nNew Torch for R book\n\n\n\n\n\n\n\n\nTidyverse Style Guide\nTidyverse Design Guide"
+  },
+  {
+    "objectID": "blog/books.html#wickham-books",
+    "href": "blog/books.html#wickham-books",
+    "title": "Data Science Book Resources",
+    "section": "",
+    "text": "R4DS\n\nfirst edition\nsecond edition\n\nR Packages\nAdvanced R\nMastering Shiny\nGrammer of Graphics Plot"
+  },
+  {
+    "objectID": "blog/books.html#other-r-books",
+    "href": "blog/books.html#other-r-books",
+    "title": "Data Science Book Resources",
+    "section": "",
+    "text": "TidyModels\nNew Torch for R book"
+  },
+  {
+    "objectID": "blog/books.html#other",
+    "href": "blog/books.html#other",
+    "title": "Data Science Book Resources",
+    "section": "",
+    "text": "Tidyverse Style Guide\nTidyverse Design Guide"
+  },
+  {
+    "objectID": "lessons/lesson10_observable.html",
+    "href": "lessons/lesson10_observable.html",
+    "title": "Lesson 10: Observable",
+    "section": "",
+    "text": "library(tidyverse)\n\n\npenguin_data &lt;- read_csv(\"https://gist.githubusercontent.com/slopp/ce3b90b9168f2f921784de84fa445651/raw/4ecf3041f0ed4913e7c230758733948bc561f434/penguins.csv\")\n\n\nimport { aq, op } from \"@uwdata/arquero\"\n\n\n\n\n\n\n\ndata = FileAttachment(\"C:\\Users\\Bethany\\Downloads\\palmer-penguins.csv\")\n\n\n\n\n\n\n\nconsole.log(data)"
+  },
+  {
+    "objectID": "lessons/lesson1_intro.html#course-outline",
+    "href": "lessons/lesson1_intro.html#course-outline",
+    "title": "Lesson 01: Introduction & Installation",
+    "section": "Course Outline:",
+    "text": "Course Outline:\nThe purpose of R Bootcamp is to be able to read, wrangle, and visualize data using R in RStudio. By the end of the course you will be able to contribute to a society project next semester."
+  },
+  {
+    "objectID": "lessons/lesson1_intro.html#what-is-data-which-kind-of-data-are-we-going-to-use",
+    "href": "lessons/lesson1_intro.html#what-is-data-which-kind-of-data-are-we-going-to-use",
+    "title": "Lesson 01: Introduction & Installation",
+    "section": "What is Data? Which Kind of Data Are We Going to Use?",
+    "text": "What is Data? Which Kind of Data Are We Going to Use?\nWe will be working with tabular data (think excel files; rows and columns). Other data includes pictures, videos, and audio."
+  },
+  {
     "objectID": "lessons/lesson3_dplyr.html",
     "href": "lessons/lesson3_dplyr.html",
     "title": "Lesson 03: First Three Wrangling Verbs",
@@ -166,76 +306,6 @@
     "title": "Lesson 03: First Three Wrangling Verbs",
     "section": "Practice Exercises",
     "text": "Practice Exercises\nNew dataset in use for the practices exercises:\n\nlibrary(tidyverse)\ndat &lt;- read_csv(\"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv\")\n\n\nQuestion 1\nSelect the age, sex, and bmi columns\n\n\n\n\n\n\n\n\n\nage\nsex\nbmi\n\n\n\n\n19\nfemale\n27.900\n\n\n18\nmale\n33.770\n\n\n28\nmale\n33.000\n\n\n33\nmale\n22.705\n\n\n32\nmale\n28.880\n\n\n31\nfemale\n25.740\n\n\n\n\n\n\n\n\n\n\n\nCode Solution\ndat %&gt;% \n    select(age, sex, bmi)\n\n\n\n\n\nQuestion 2\nSelect the charges, region, and age columns.\n\n\n\n\n\n\n\n\n\ncharges\nregion\nage\n\n\n\n\n16884.924\nsouthwest\n19\n\n\n1725.552\nsoutheast\n18\n\n\n4449.462\nsoutheast\n28\n\n\n21984.471\nnorthwest\n33\n\n\n3866.855\nnorthwest\n32\n\n\n3756.622\nsoutheast\n31\n\n\n\n\n\n\n\n\n\n\n\nCode Solution\ndat %&gt;% \n    select(charges, region, age)\n\n\n\n\n\nQuestion 3\nFilter the data where sex is only male and region is only northeast.\n\n\n\n\n\n\n\n\n\nage\nsex\nbmi\nchildren\nsmoker\nregion\ncharges\n\n\n\n\n37\nmale\n29.830\n2\nno\nnortheast\n6406.411\n\n\n25\nmale\n26.220\n0\nno\nnortheast\n2721.321\n\n\n23\nmale\n23.845\n0\nno\nnortheast\n2395.172\n\n\n35\nmale\n36.670\n1\nyes\nnortheast\n39774.276\n\n\n38\nmale\n37.050\n1\nno\nnortheast\n6079.672\n\n\n43\nmale\n27.360\n3\nno\nnortheast\n8606.217\n\n\n\n\n\n\n\n\n\n\n\nCode Solution\ndat %&gt;% \n    filter(sex == \"male\", region == \"northeast\")\n\n\n\n\n\nQuestion 4\nFilter the data like this:\n\nage is younger than or equal to 40\nbmi is greater than 21\n\n\n\n\n\n\n\n\n\n\nage\nsex\nbmi\nchildren\nsmoker\nregion\ncharges\n\n\n\n\n19\nfemale\n27.900\n0\nyes\nsouthwest\n16884.924\n\n\n18\nmale\n33.770\n1\nno\nsoutheast\n1725.552\n\n\n28\nmale\n33.000\n3\nno\nsoutheast\n4449.462\n\n\n33\nmale\n22.705\n0\nno\nnorthwest\n21984.471\n\n\n32\nmale\n28.880\n0\nno\nnorthwest\n3866.855\n\n\n31\nfemale\n25.740\n0\nno\nsoutheast\n3756.622\n\n\n\n\n\n\n\n\n\n\n\nCode Solution\ndat %&gt;% \n    filter(age &lt;= 40, bmi &gt; 21)\n\n\n\n\n\nQuestion 5\nMake a new column called bmi_modified that is the of the bmi - 12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nage\nsex\nbmi\nchildren\nsmoker\nregion\ncharges\nbmi_modified\n\n\n\n\n19\nfemale\n27.900\n0\nyes\nsouthwest\n16884.924\n15.900\n\n\n18\nmale\n33.770\n1\nno\nsoutheast\n1725.552\n21.770\n\n\n28\nmale\n33.000\n3\nno\nsoutheast\n4449.462\n21.000\n\n\n33\nmale\n22.705\n0\nno\nnorthwest\n21984.471\n10.705\n\n\n32\nmale\n28.880\n0\nno\nnorthwest\n3866.855\n16.880\n\n\n31\nfemale\n25.740\n0\nno\nsoutheast\n3756.622\n13.740\n\n\n\n\n\n\n\n\n\n\n\nCode Solution\ndat %&gt;% \n    mutate(bmi_modified = bmi - 12) \n\n\n\n\n\nQuestion 6\nMake a new column called age_modified that is the current age divided by 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nage\nsex\nbmi\nchildren\nsmoker\nregion\ncharges\nage_modified\n\n\n\n\n19\nfemale\n27.900\n0\nyes\nsouthwest\n16884.924\n9.5\n\n\n18\nmale\n33.770\n1\nno\nsoutheast\n1725.552\n9.0\n\n\n28\nmale\n33.000\n3\nno\nsoutheast\n4449.462\n14.0\n\n\n33\nmale\n22.705\n0\nno\nnorthwest\n21984.471\n16.5\n\n\n32\nmale\n28.880\n0\nno\nnorthwest\n3866.855\n16.0\n\n\n31\nfemale\n25.740\n0\nno\nsoutheast\n3756.622\n15.5\n\n\n\n\n\n\n\n\n\n\n\nCode Solution\ndat %&gt;% \n    mutate(age_modified = age/2) \n\n\n\n\n\nQuestion 7: Combining It All Together\n\n\n\nOnly use the age, sex, and charges columns\nMake sure the age column is greater than 50 and there are only females\nMake a new column called real_charges which is the charges times 4\n\n\n\n\n\n\n\n\n\nage\nsex\ncharges\nreal_charges\n\n\n\n\n60\nfemale\n28923.14\n115692.55\n\n\n62\nfemale\n27808.73\n111234.90\n\n\n56\nfemale\n11090.72\n44362.87\n\n\n52\nfemale\n10797.34\n43189.34\n\n\n60\nfemale\n13228.85\n52915.39\n\n\n59\nfemale\n14001.13\n56004.54\n\n\n\n\n\n\n\n\n\nCode Solution\ndat %&gt;% \n    select(age, sex, charges) %&gt;% \n    filter(age &gt; 50, sex == \"female\") %&gt;% \n    mutate(real_charges = charges * 4)"
-  },
-  {
-    "objectID": "lessons/lesson4_dplyr.html",
-    "href": "lessons/lesson4_dplyr.html",
-    "title": "Lesson 04: Last Three Wrangling Verbs",
-    "section": "",
-    "text": "Before we do any exercises, make sure to run this code:\nlibrary(tidyverse)\ndat &lt;- read_csv(\"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv\")\nThis is our dataset for this practice:"
-  },
-  {
-    "objectID": "lessons/lesson4_dplyr.html#lets-learn-about-group_by-summarise",
-    "href": "lessons/lesson4_dplyr.html#lets-learn-about-group_by-summarise",
-    "title": "Lesson 04: Last Three Wrangling Verbs",
-    "section": "Let’s learn about group_by() & summarise()",
-    "text": "Let’s learn about group_by() & summarise()\nWhat if we want to learn:\n\nthe average BMI by gender\nthe total sum of charges by region in the US\nmin & max of children by  age\n\nAll of these are examples uses for group_by() and summarise() statements."
-  },
-  {
-    "objectID": "lessons/lesson4_dplyr.html#examples-1-average-bmi-by-gender",
-    "href": "lessons/lesson4_dplyr.html#examples-1-average-bmi-by-gender",
-    "title": "Lesson 04: Last Three Wrangling Verbs",
-    "section": "Examples 1: Average BMI by Gender",
-    "text": "Examples 1: Average BMI by Gender\n\ndat %&gt;% \n    group_by(sex) %&gt;%\n    summarise(Average_Age = mean(age)) \n\n\n\n\n\nsex\nAverage_Age\n\n\n\n\nfemale\n39.50302\n\n\nmale\n38.91716"
-  },
-  {
-    "objectID": "lessons/lesson4_dplyr.html#examples-2-average-bmi-by-age",
-    "href": "lessons/lesson4_dplyr.html#examples-2-average-bmi-by-age",
-    "title": "Lesson 04: Last Three Wrangling Verbs",
-    "section": "Examples 2: Average BMI by Age",
-    "text": "Examples 2: Average BMI by Age\n\ndat %&gt;% \n    group_by(age) %&gt;% \n    summarise(mean(bmi)) %&gt;% \n    head() \n\n\n\n\n\nage\nmean(bmi)\n\n\n\n\n18\n31.32616\n\n\n19\n28.59691\n\n\n20\n30.63276\n\n\n21\n28.18571\n\n\n22\n31.08768\n\n\n23\n31.45446"
-  },
-  {
-    "objectID": "lessons/lesson4_dplyr.html#exercise-1-sum-of-charges-by-region",
-    "href": "lessons/lesson4_dplyr.html#exercise-1-sum-of-charges-by-region",
-    "title": "Lesson 04: Last Three Wrangling Verbs",
-    "section": "Exercise 1: Sum of Charges by Region",
-    "text": "Exercise 1: Sum of Charges by Region\nUse the code below to get you started. Find the sum of the charges by region.\nStarter Code:\n\ndat %&gt;% \n    group_by(______) %&gt;% \n    summarise(_____________ = ___(_______))\n\nAttempt the code above then use this dropdown for help\n\n\nAnswer\ndat %&gt;% \n    group_by(region) %&gt;% \n    summarise(Total_Charges = sum(charges))\n\n\nThis is the correct output:\n\n\n\n\nregion\nTotal_Charges\n\n\n\n\nnortheast\n4343669\n\n\nnorthwest\n4035712\n\n\nsoutheast\n5363690\n\n\nsouthwest\n4012755"
-  },
-  {
-    "objectID": "lessons/lesson4_dplyr.html#exercise-2-min-max-of-children-by-age",
-    "href": "lessons/lesson4_dplyr.html#exercise-2-min-max-of-children-by-age",
-    "title": "Lesson 04: Last Three Wrangling Verbs",
-    "section": "Exercise 2: Min & Max of Children by Age",
-    "text": "Exercise 2: Min & Max of Children by Age\nUse the code below to get you started. Find the minimum and maximum amount of children by age.\nStarter Code:\n\ndat %&gt;% \n    group_by(___) %&gt;%\n    summarise(\n        Min = ___(________),\n        Max = ___(________)\n        ) %&gt;% \n    head()\n\n\n\nAnswer\ndat %&gt;% \n    group_by(age) %&gt;%\n    summarise(\n        Min = min(children),\n        Max = max(children)\n        ) %&gt;% \n    head() \n\n\nThis is the correct output:\n\n\n\n\nage\nMin\nMax\n\n\n\n\n18\n0\n4\n\n\n19\n0\n5\n\n\n20\n0\n5\n\n\n21\n0\n4"
-  },
-  {
-    "objectID": "lessons/lesson4_dplyr.html#exercise-3-average-charges-by-sex-and-by-smoker",
-    "href": "lessons/lesson4_dplyr.html#exercise-3-average-charges-by-sex-and-by-smoker",
-    "title": "Lesson 04: Last Three Wrangling Verbs",
-    "section": "Exercise 3: Average Charges by Sex and by Smoker",
-    "text": "Exercise 3: Average Charges by Sex and by Smoker\nHere no starter code is given. If you need to, look back at previous code chunks for guidence.\nTry as best as possible to mimic the results below.\nOnly use the dropdown answer when you’ve tried as much as possible.\n\n\nAnswer\ndat %&gt;% \n    group_by(sex, smoker) %&gt;% \n    summarise(\n        Average_Charges = mean(charges), \n        Total_Charges = sum(charges)) \n\n\nThis is the correct output:\n\n\n\n\nsex\nsmoker\nAverage_Charges\nTotal_Charges\n\n\n\n\nfemale\nno\n8762.297\n4792977\n\n\nfemale\nyes\n30678.996\n3528085\n\n\nmale\nno\n8087.205\n4181085\n\n\nmale\nyes\n33042.006\n5253679"
-  },
-  {
-    "objectID": "lessons/lesson4_dplyr.html#exercise-4-storm-dataset---wind-and-air-pressure",
-    "href": "lessons/lesson4_dplyr.html#exercise-4-storm-dataset---wind-and-air-pressure",
-    "title": "Lesson 04: Last Three Wrangling Verbs",
-    "section": "Exercise 4: Storm Dataset - Wind and Air Pressure",
-    "text": "Exercise 4: Storm Dataset - Wind and Air Pressure\nThis dataset is bult into R so you already have it. It is called storms. This is a new dataset so you may want to either view() it or use the head() method on it.\nFind the average and standard deviation of the wind speed and air pressure by storm category.\n\n\nAnswer\nstorms %&gt;% \n    group_by(category) %&gt;% \n    summarise(\n        mean(wind),\n        sd(wind), \n        mean(pressure), \n        sd(pressure)\n        ) %&gt;% knitr::kable()\n\n\nThis is the correct output:\n\n\n\n\ncategory\nmean(wind)\nsd(wind)\nmean(pressure)\nsd(pressure)\n\n\n\n\n-1\n27.49482\n3.702448\n1007.5390\n3.900209\n\n\n0\n45.66392\n8.231625\n999.2910\n6.837831\n\n\n1\n70.95140\n5.454009\n981.1887\n9.125784\n\n\n2\n89.41923\n3.873391\n966.9359\n9.018024\n\n\n3\n104.48157\n4.246545\n953.9124\n9.168259\n\n\n4\n122.10462\n6.383000\n939.3942\n9.788015\n\n\n5\n145.58140\n5.862072\n917.4070\n12.732892"
-  },
-  {
-    "objectID": "lessons/lesson4_dplyr.html#exercise-5-summarizing-by-month",
-    "href": "lessons/lesson4_dplyr.html#exercise-5-summarizing-by-month",
-    "title": "Lesson 04: Last Three Wrangling Verbs",
-    "section": "Exercise 5: Summarizing by Month",
-    "text": "Exercise 5: Summarizing by Month\nFind the mean, median, and standard deviation of wind speed by month.\nOnly use the dropdown answer when you’ve tried as much as possible.\n\n\nAnswer\nstorms %&gt;% \n    group_by(month) %&gt;% \n    summarise(\n        Mean_Wind = mean(wind), \n        Median = median(wind), \n        St_Dev = sd(wind)\n        ) \n\n\nThis is the correct output:\n\n\n\n\nmonth\nMean_Wind\nMedian\nSt_Dev\n\n\n\n\n1\n50.33333\n50\n12.312969\n\n\n4\n44.61538\n45\n5.937711\n\n\n5\n36.27778\n35\n9.011887\n\n\n6\n37.55348\n35\n12.676257\n\n\n7\n41.74973\n40\n18.711162\n\n\n8\n51.75471\n45\n25.584917\n\n\n9\n57.54597\n50\n28.192273\n\n\n10\n56.49272\n50\n25.795906\n\n\n11\n53.30986\n50\n22.702523\n\n\n12\n47.88000\n45\n14.608659"
-  },
-  {
-    "objectID": "lessons/lesson4_dplyr.html#exercise-6-airquality-dataset---summarising-by-month",
-    "href": "lessons/lesson4_dplyr.html#exercise-6-airquality-dataset---summarising-by-month",
-    "title": "Lesson 04: Last Three Wrangling Verbs",
-    "section": "Exercise 6: Airquality Dataset - Summarising by Month",
-    "text": "Exercise 6: Airquality Dataset - Summarising by Month\nThis example is very similar to the previous example. This is a new datset and hopefully doing the same thing with another dataset will solidify the concept.\nThis dataset is bult into R so you already have it. It is called airquality. This is a new dataset so you may want to either view() it or use the head() method on it.\n\n\nAnswer\nairquality %&gt;% \n    group_by(Month) %&gt;% \n    summarise(\n        Mean_Wind = mean(Wind), \n        Median = median(Wind), \n        St_Dev = sd(Wind)\n        ) \n\n\nThis is the correct output:\n\n\n\n\nMonth\nMean_Wind\nMedian\nSt_Dev\n\n\n\n\n5\n11.622581\n11.5\n3.531450\n\n\n6\n10.266667\n9.7\n3.769234\n\n\n7\n8.941935\n8.6\n3.035981\n\n\n8\n8.793548\n8.6\n3.225930\n\n\n9\n10.180000\n10.3\n3.461254"
   },
   {
     "objectID": "lessons/lesson5_ggplot.html#histogram-counting-the-number-of-numeric-occurances",
@@ -322,74 +392,11 @@
     "text": "Exercise 8:\nPrompt: Using the iris dataset (which is built into R and ready to use) make the histogram below. Look at the x-axis, y-axis, and legend for the columns to use.\nInstructions:\n\nRemake the plot below\n\n\n\n\n\n\nAnswer:\n\n\nCode Solution\nggplot(iris, aes(Petal.Length, fill = Species))+\n    geom_histogram()"
   },
   {
-    "objectID": "lessons/lesson6_ggplot.html",
-    "href": "lessons/lesson6_ggplot.html",
-    "title": "Lesson 06: Graphing Part 2",
-    "section": "",
-    "text": "library(tidyverse)\n\ndat &lt;- read_csv(\"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv\")"
-  },
-  {
-    "objectID": "lessons/lesson6_ggplot.html#labeling",
-    "href": "lessons/lesson6_ggplot.html#labeling",
-    "title": "Lesson 06: Graphing Part 2",
-    "section": "Labeling",
-    "text": "Labeling\n\nlabs()\nExplanation\nThe labs() function is used to add label to the plot like the x-axis, the y-axis, and title.\nOptions:\n\ntitle\nsubtitle\n\ncaption\nx\ny\n\nExample\n\n\nCode\nggplot(dat, aes(x = region, fill = sex))+\n    geom_bar()+ \n    labs(title = \"Counts of Regions\", x = \"Regions\", y = \"Amount\", fill = \"Sex\")+ \n    theme_bw()"
-  },
-  {
-    "objectID": "lessons/lesson6_ggplot.html#faceting",
-    "href": "lessons/lesson6_ggplot.html#faceting",
-    "title": "Lesson 06: Graphing Part 2",
-    "section": "Faceting",
-    "text": "Faceting\n\nfacet_wrap() & facet_grid()\nThis of faceting as a third variable.\n\nfacet_wrap()\n\n\n\n\n\n\n\n\nCode\nggplot(dat, aes(x = region, fill = sex))+\n            geom_bar()+ \n            facet_wrap(~sex)+\n            labs(title = \"Faceted Graph\", x = \"\", y = \"Amount\", fill = \"Sex\")+\n            theme(\n                title = element_text(size = 20), \n                axis.title = element_text(size = 10), \n                legend.title = element_text(size = 10), \n                legend.position = \"none\")"
-  },
-  {
-    "objectID": "lessons/lesson6_ggplot.html#themes",
-    "href": "lessons/lesson6_ggplot.html#themes",
-    "title": "Lesson 06: Graphing Part 2",
-    "section": "Themes",
-    "text": "Themes\nThe following theme options affect all the non-data aspects\n\n+ theme_bw()\n+ theme_linedraw()\n+ theme_light()\n+ theme_dark()\n+ theme_minimal()\n+ theme_classic()\n+ theme_void()\n+ theme_test()"
-  },
-  {
-    "objectID": "lessons/lesson6_ggplot.html#coloring",
-    "href": "lessons/lesson6_ggplot.html#coloring",
-    "title": "Lesson 06: Graphing Part 2",
-    "section": "Coloring",
-    "text": "Coloring\n\nAesthetic\nIt is possible to set colors dynamically based on column of data or to set it as a static color.\n\nfill and color inside aesthetic to a column of data\nfill and color outside aesthetic to a static color\n\nSetting colors dynamically and statically.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMore Examples for Better Understanding\n\n\n\n\n\n\n\n\nCase 1\ngeom_bar(aes(x = Petal.Length), fill = \"orange\")\n\nfill is set to ‘orange’ outside the aesthetic\ncolor is not used\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCase 2\ngeom_bar(aes(x = Petal.Length), color = \"black\")\n\nfill is not used\ncolor is set to ‘black’ outside the aesthetic\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCase 3\ngeom_bar(aes(x = Petal.Length), fill = \"orange\", color = \"black\")\n\nfill is set to ‘orange’ outside of the aesthetic\ncolor is set to ‘black’ outside of the aesthetic\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCase 4\nYou can do a combination of inside and outside of the aesthetic.\ngeom_bar(aes(x = Petal.Length, fill = Species), color = \"black\")\n\nfill is set to ‘orange’ inside of the aesthetic\ncolor is set to Species outside of the aesthetic. Notice this is a column in the dataset, not a static color."
-  },
-  {
-    "objectID": "lessons/lesson6_ggplot.html#scales",
-    "href": "lessons/lesson6_ggplot.html#scales",
-    "title": "Lesson 06: Graphing Part 2",
-    "section": "Scales",
-    "text": "Scales\n\n\nCode\nggplot(iris, aes(Petal.Width, Petal.Length, color = Species))+\n  geom_point()+\n  scale_x_continuous(breaks = seq(0, 4, 1))+\n  scale_y_continuous(breaks = seq(0,10,1))\n\nggplot(mpg, aes(class, fill = class))+\n  geom_bar()+\n  # scale_x_discrete(limits = c(\"2seater\"))\n  scale_fill_manual(values = c(\"blue\", \"blue\", \"blue\", \"blue\", \"blue\", \"blue\", \"red\"))\n\n# scale_x_continuous(\n#   breaks = seq(15, 40, by = 5), \n#   labels = , \n#   limits = \n#   )\n\n# scale_colour_brewer(palette = \"Set1\")\n\n# scale_colour_manual(values = c(Republican = \"red\", Democratic = \"blue\"))"
-  },
-  {
     "objectID": "lessons/lesson7_tidyr.html",
     "href": "lessons/lesson7_tidyr.html",
     "title": "Lesson 07: What is ‘Tidy’ Data?",
     "section": "",
     "text": "Rows and columns\nHandling NA values\nPivoting"
-  },
-  {
-    "objectID": "lessons/lesson8_practice.html",
-    "href": "lessons/lesson8_practice.html",
-    "title": "Lesson 8: Practice, Practice, Practice",
-    "section": "",
-    "text": "Click to download data"
-  },
-  {
-    "objectID": "lessons/lesson8_practice.html#part-1",
-    "href": "lessons/lesson8_practice.html#part-1",
-    "title": "Lesson 8: Practice, Practice, Practice",
-    "section": "Part 1",
-    "text": "Part 1\nShow me a distribution of the departure delay times by each carrier for flights that depart after 5pm\n\n\n\n\n\n\nIdea for Graph"
-  },
-  {
-    "objectID": "lessons/lesson8_practice.html#part-2",
-    "href": "lessons/lesson8_practice.html#part-2",
-    "title": "Lesson 8: Practice, Practice, Practice",
-    "section": "Part 2",
-    "text": "Part 2\nWhich airports out of JFK, LGA, & EWR have the lowest average departure delay time?\nflights %&gt;% filter(!is.na(dep_delay), origin %in% c(‘JFK’, ‘LGA’, ‘EWR’)) %&gt;% group_by(origin) %&gt;% summarise(Average = mean(dep_delay)) %&gt;% ’’ knitr::kable() ```’’’’’"
   },
   {
     "objectID": "lessons/lesson9_python.html#r",

@@ -17,7 +17,7 @@ listing:
       - lessons\lesson7_tidyr.qmd
       - lessons\lesson8_practice.qmd
       - lessons\lesson9_python.qmd
-    fields: [title, subtitle, image]
+    fields: [title, subtitle]
   # - id: Extras
   #   contents: 
   #     - lessons/lesson10_observable.qmd
