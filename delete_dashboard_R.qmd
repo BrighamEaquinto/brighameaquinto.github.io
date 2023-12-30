@@ -1,0 +1,164 @@
+---
+title: "Palmer Penguins"
+format: dashboard
+---
+
+```{r}
+#| include: false
+
+library(tidyverse)
+library(palmerpenguins)
+# data(package = 'palmerpenguins')
+
+ojs_define(penguins_OJS = penguins)
+```
+
+```{ojs}
+// | output: false
+penguins = transpose(penguins_OJS)
+```
+
+
+
+# Page 1
+
+## {.sidebar}
+```{ojs}
+viewof bill_length_min = Inputs.range(
+  [32, 50], 
+  {value: 35, step: 1, label: "Bill length (min):"}
+)
+viewof islands = Inputs.checkbox(
+  ["Torgersen", "Biscoe", "Dream"], 
+  { value: ["Torgersen", "Biscoe"], 
+    label: "Islands:"
+  }
+)
+```
+
+```{ojs}
+filtered = penguins.filter(function(penguin) {
+  return bill_length_min < penguin.bill_length_mm &&
+         islands.includes(penguin.island);
+})
+```
+
+## Row
+
+```{r}
+#| content: valuebox
+#| title: "Penguin Count"
+#| color: primary
+nrow(penguins)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Penguin Count"
+#| color: green
+nrow(penguins)
+```
+
+::: {.card title="My Title"}
+This text will be displayed within a card
+:::
+
+
+## Row 
+
+
+```{ojs}
+Plot.rectY(filtered, 
+  Plot.binX(
+    {y: "count"}, 
+    {x: "body_mass_g", fill: "species", thresholds: 20}
+  ))
+  .plot({
+    facet: {
+      data: filtered,
+      x: "sex",
+      y: "species",
+      marginRight: 80
+    },
+    marks: [
+      Plot.frame(),
+    ]
+  }
+)
+```
+
+
+
+
+
+
+# Page 2
+
+## Row
+
+```{r}
+#| content: valuebox
+#| title: "Penguin Count"
+#| color: primary
+nrow(penguins)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Penguin Count"
+#| color: green
+nrow(penguins)
+```
+
+::: {.card title="My Title"}
+This text will be displayed within a card
+:::
+
+
+## Row {height=70%}
+
+```{r}
+head(penguins)
+```
+
+```{r}
+#| title: Option 2
+knitr::kable(penguins)
+```
+
+## Row {height=30%}
+
+### Column {.tabset}
+
+```{ojs}
+//| title: Chart 2
+Plot.dot(
+    penguins, 
+    {x: "bill_length_mm", y: "bill_depth_mm", fill: "species"}
+    ).plot()
+```
+
+
+```{r}
+#| title: Chart 3
+print("1")
+```
+
+### Column
+
+```{r}
+print("1")
+```
+
+::: {.card title="My Title"}
+This text will be displayed within a card
+:::
+
+
+# Page 3
+
+I'm thinking that if you use ggplot2 and you want interactivity, the solution is shiny. 
+
+If you think shiny is a little silly and would prefer a more professional approach and still be in Quarto, use observable. It has plotting capabilities and interactive user input capabilities. The R/Python to ObservableJS connection is `ojs_define()`. I would not wrangle in observable though. 
+At the same time, if you're in the R space, use R things!
+

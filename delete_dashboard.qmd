@@ -1,0 +1,109 @@
+---
+title: "Palmer Penguins"
+format: dashboard
+---
+
+
+```{python}
+#| include: false
+from palmerpenguins import load_penguins
+penguins = load_penguins()
+ojs_define(penguins_OJS = penguins)
+```
+
+
+
+# Page 1
+
+## Row
+
+
+```{python}
+#| content: valuebox
+#| title: "Penguin Count"
+#| color: primary
+len(penguins)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Penguin Count"
+#| color: green
+len(penguins)
+```
+
+::: {.card title="My Title"}
+This text will be displayed within a card
+:::
+
+
+
+## Row {height=70%}
+
+```{python}
+penguins.head()
+```
+
+```{python}
+#| title: Option 2
+from IPython.display import Markdown
+from tabulate import tabulate
+Markdown( 
+  tabulate(penguins, showindex=False, 
+           headers=penguins.columns)
+)
+```
+
+## Row {height=30%}
+
+### Column {.tabset}
+
+```{python}
+#| title: Chart 2
+print("1")
+```
+
+```{python}
+#| title: Chart 3
+print("1")
+```
+
+### Column
+
+```{python}
+print("1")
+```
+
+::: {.card title="My Title"}
+This text will be displayed within a card
+:::
+
+# Page 2
+
+
+I'm thinking that if you use ggplot2 and you want interactivity, the solution is shiny. 
+
+If you think shiny is a little silly and would prefer a more professional approach and still be in Quarto, use observable. It has plotting capabilities and interactive user input capabilities. The R/Python to ObservableJS connection is `ojs_define()`. I would not wrangle in observable though. 
+At the same time, if you're in the R space, use R things!
+
+
+```{python}
+# import pandas as pd
+# penguins = pd.read_csv("palmer-penguins.csv")
+ojs_define(data2 = penguins)
+```
+
+
+```{ojs}
+filtered = transpose(data2).filter(function(penguin) {
+  return penguin.bill_length_mm;
+})
+```
+
+
+```{ojs}
+Plot.dot(
+    penguins, 
+      {x: "bill_length_mm", y: "bill_depth_mm"}
+    ).plot()
+```
